@@ -91,3 +91,7 @@ Cloud/.env
 Cloud/credentials/service-account.json
 Cloud/infrastructure/terraform/terraform.tfvars
 
+# Sensitive files
+Cloud/.env
+Cloud/credentials/service-account.json
+Cloud/infrastructure/terraform/terraform.tfvars
