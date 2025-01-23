@@ -100,7 +100,7 @@ def parse_join_metrics(**context):
     log_path = get_log_path(context['task_instance'], task_id='run_dbt_join_summary_analysis')
     return extract_join_metrics(log_path)
 
-DBT_TEST_CMD = 'cd /opt/airflow/dbt_reddit_summary_cloud && source /opt/airflow/.env && dbt deps && dbt test --select {selector}'
+DBT_TEST_CMD = 'cd /opt/airflow/dbt_reddit_summary_cloud && dbt deps && dbt test --select {selector}'
 
 def trigger_vm_shutdown(**context):
     """

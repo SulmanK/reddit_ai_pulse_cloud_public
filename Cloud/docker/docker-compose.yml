@@ -37,6 +37,8 @@ x-common-env: &common-env
   AIRFLOW__SMTP__SMTP_MAIL_FROM: ${ALERT_EMAIL}
   AIRFLOW__SMTP__SMTP_STARTTLS: "true"
   AIRFLOW__SMTP__SMTP_SSL: "false"
+  BIGQUERY_DATASET_PROCESSED: ${BIGQUERY_DATASET_PROCESSED}
+  BIGQUERY_DATASET_RAW: ${BIGQUERY_DATASET_RAW}
 
 x-common-volumes: &common-volumes
   - ..:/opt/airflow
