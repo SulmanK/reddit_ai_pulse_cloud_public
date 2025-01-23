@@ -168,8 +168,8 @@ The diagram above illustrates the flow of data through our system, from collecti
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/SulmanK/reddit_ai_pulse_cloud_private.git
-   cd reddit_ai_pulse_cloud_private/Cloud
+   git clone https://github.com/SulmanK/reddit_ai_pulse_cloud_public.git
+   cd reddit_ai_pulse_cloud_public/Cloud
    ```
 
 2. **Configure GCP Authentication**
