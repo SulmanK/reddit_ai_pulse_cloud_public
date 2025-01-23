@@ -1,0 +1,418 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: "{{ var('project_id') }}"
+    schema: raw_data
+    tables:
+      - name: raw_dataengineering
+        columns: &raw_columns
+          - name: post_id
+            tests:
+              - not_null
+              - unique
+              - dbt_utils.not_empty_string
+          - name: subreddit
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+              - accepted_values:
+                  values: ["dataengineering", "datascience", "MachineLearning", "ClaudeAI", "singularity", "LocalLLaMA", "OpenAI", "StableDiffusion"]
+          - name: score
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: -2147483648  # Min value for INT
+                  max_value: 2147483647   # Max value for INT
+                  inclusive: true
+              - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} >= 0"
+          - name: comments
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: created_utc
+            tests:
+              - not_null
+
+      - name: raw_datascience
+        columns: *raw_columns
+      - name: raw_machinelearning
+        columns: *raw_columns
+      - name: raw_claudeai
+        columns: *raw_columns
+      - name: raw_singularity
+        columns: *raw_columns
+      - name: raw_localllama
+        columns: *raw_columns
+      - name: raw_openai
+        columns: *raw_columns
+      - name: raw_stablediffusion
+        columns: *raw_columns 
+
+  - name: processed_data
+    database: "{{ var('project_id') }}"
+    schema: processed_data
+    tables:
+      - name: posts_dataengineering
+        columns: &processed_posts_columns
+          - name: post_id
+            description: "Unique identifier for the post"
+            tests:
+              - unique
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: subreddit
+            description: "Subreddit name"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+              - accepted_values:
+                  values: ["dataengineering", "datascience", "MachineLearning", "ClaudeAI", "singularity", "LocalLLaMA", "OpenAI", "StableDiffusion"]
+          - name: title
+            description: "Post title"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: author
+            description: "Post author"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: url
+            description: "Post URL"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: score
+            description: "Post score"
+            tests:
+              - not_null
+              - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} >= 0"
+              - dbt_utils.accepted_range:
+                  min_value: -2147483648  # Min value for INT
+                  max_value: 2147483647   # Max value for INT
+                  inclusive: true
+          - name: created_utc
+            description: "Post creation timestamp"
+            tests:
+              - not_null
+
+      - name: posts_datascience
+        columns: *processed_posts_columns
+      - name: posts_machinelearning
+        columns: *processed_posts_columns
+      - name: posts_claudeai
+        columns: *processed_posts_columns
+      - name: posts_singularity
+        columns: *processed_posts_columns
+      - name: posts_localllama
+        columns: *processed_posts_columns
+      - name: posts_openai
+        columns: *processed_posts_columns
+      - name: posts_stablediffusion
+        columns: *processed_posts_columns
+
+      - name: comments_dataengineering
+        columns: &processed_comments_columns
+          - name: comment_id
+            description: "Unique identifier for the comment"
+            tests:
+              - unique
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: post_id
+            description: "Reference to parent post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: body
+            description: "Comment content"
+          - name: author
+            description: "Comment author"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: created_utc
+            description: "Comment creation timestamp"
+            tests:
+              - not_null
+
+      - name: comments_datascience
+        columns: *processed_comments_columns
+      - name: comments_machinelearning
+        columns: *processed_comments_columns
+      - name: comments_claudeai
+        columns: *processed_comments_columns
+      - name: comments_singularity
+        columns: *processed_comments_columns
+      - name: comments_localllama
+        columns: *processed_comments_columns
+      - name: comments_openai
+        columns: *processed_comments_columns
+      - name: comments_stablediffusion
+        columns: *processed_comments_columns
+
+  - name: summary_analytics
+    database: "{{ var('project_id') }}"
+    schema: processed_data
+    description: "Tables related to comment summarization and sentiment analysis pipeline"
+    tables:
+      - name: daily_summary_data
+        description: "The daily summary of posts"
+        columns:
+          - name: id
+            description: "Technical ID"
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: -2147483648  # Min value for INT
+                  max_value: 2147483647   # Max value for INT
+                  inclusive: true
+          - name: subreddit
+            description: "The subreddit of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+              - accepted_values:
+                  values: ["dataengineering", "datascience", "MachineLearning", "ClaudeAI", "singularity", "LocalLLaMA", "OpenAI", "StableDiffusion"]
+          - name: post_id
+            description: "The ID of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: post_score
+            description: "The score of the post"
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: -2147483648  # Min value for INT
+                  max_value: 2147483647   # Max value for INT
+                  inclusive: true
+              - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} >= 0"
+          - name: post_url
+            description: "The URL of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: comment_id
+            description: "The id of the associated comment"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: summary_date
+            description: "The date the summary was generated"
+            tests:
+              - not_null
+          - name: post_content
+            description: "The title of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: comment_body
+            description: "The body of the associated comment"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+
+      - name: current_summary_staging
+        description: "Staging view for the current daily summary"
+        columns:
+          - name: subreddit
+            description: "The subreddit of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+              - accepted_values:
+                  values: ["dataengineering", "datascience", "MachineLearning", "ClaudeAI", "singularity", "LocalLLaMA", "OpenAI", "StableDiffusion"]
+          - name: post_id
+            description: "The ID of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: post_score
+            description: "The score of the post"
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: -2147483648  # Min value for INT
+                  max_value: 2147483647   # Max value for INT
+                  inclusive: true
+              - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} >= 0"
+          - name: post_url
+            description: "The URL of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: comment_id
+            description: "The id of the associated comment"
+            tests:  
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: summary_date
+            description: "The date the summary was generated"
+            tests:
+              - not_null
+          - name: post_content
+            description: "The title of the post"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: comment_body
+            description: "The body of the associated comment"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+
+      - name: text_summary_results
+        description: "Table containing summarized text results for comments"
+        columns:
+          - name: comment_id
+            description: "Unique identifier for the comment"
+            tests:
+              - unique
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: comment_summary
+            description: "AI-generated summary of the comment"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+
+      - name: sentiment_analysis_results
+        description: "The sentiment analysis of comments"
+        columns:
+          - name: comment_id
+            description: "Unique identifier for the comment"
+            tests:
+              - unique
+              - not_null
+              - dbt_utils.not_empty_string
+          - name: sentiment_score
+            description: "The probability score from the emotion classifier (0-1 range)"
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: 0
+                  max_value: 1
+                  inclusive: true
+          - name: sentiment_label
+            description: "The sentiment label"
+            tests:
+              - not_null
+              - dbt_utils.not_empty_string
+              - accepted_values:
+                  values: ["Positive", "Negative", "Neutral"]
+
+models:
+  - name: current_summary_staging
+    description: "Staging table for the current daily summary"
+    config:
+      materialized: view
+    columns:
+      - name: id
+        description: "Unique post ID"
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: -2147483648  # Min value for INT
+              max_value: 2147483647   # Max value for INT
+              inclusive: true
+      - name: subreddit
+        description: "The subreddit of the post"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+          - accepted_values:
+              values: ["dataengineering", "datascience", "MachineLearning", "ClaudeAI", "singularity", "LocalLLaMA", "OpenAI", "StableDiffusion"]
+      - name: post_id
+        description: "The ID of the post"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: post_score
+        description: "The score of the post"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} >= 0"
+          - dbt_utils.accepted_range:
+              min_value: -2147483648  # Min value for INT
+              max_value: 2147483647   # Max value for INT
+              inclusive: true
+      - name: post_url
+        description: "The URL of the post"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: comment_id
+        description: "The id of the associated comment"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: summary_date
+        description: "The date the summary was generated"
+        tests:
+          - not_null
+      - name: post_content
+        description: "The title of the post"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: comment_body
+        description: "The body of the associated comment"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+  
+  - name: joined_summary_analysis
+    description: "Combined view of daily summaries with text summaries and sentiment analysis"
+    columns:
+      - name: comment_body
+        description: "The body of the comment"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+          - valid_comment_length
+
+      - name: comment_summary
+        description: "The AI-generated summary of the comment"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+          - summary_quality
+
+      - name: sentiment_score
+        description: "The probability score from the emotion classifier (0-1 range)"
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1
+              inclusive: true
+
+      - name: sentiment_label
+        description: "The sentiment label"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+          - accepted_values:
+              values: ["Positive", "Negative", "Neutral"]
+
+  - name: update_processing_status
+    description: "Update the needs_processing column"
+    columns:
+      - name: comment_id
+        description: "The id of the associated comment"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      
+      - name: post_id
+        description: "The id of the associated post"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string

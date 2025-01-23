@@ -1,0 +1,303 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+        "title": "Gemini Analysis Metrics",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 0},
+        "targets": [
+          {
+            "expr": "reddit_gemini_subreddits",
+            "legendFormat": "Subreddits Processed",
+            "refId": "A"
+          },
+          {
+            "expr": "reddit_gemini_outputs",
+            "legendFormat": "Outputs Generated",
+            "refId": "B"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "multi",
+            "sort": "desc"
+          },
+          "legend": {
+            "showLegend": true,
+            "displayMode": "list",
+            "placement": "bottom"
+          },
+          "viz": true
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "bars",
+              "lineWidth": 0,
+              "fillOpacity": 40,
+              "spanNulls": false,
+              "barWidth": 0.35,
+              "axisPlacement": "auto",
+              "pointSize": 8,
+              "lineInterpolation": "linear",
+              "showPoints": "always"
+            },
+            "color": {
+              "mode": "fixed",
+              "fixedColor": "#37872D"
+            },
+            "unit": "short",
+            "decimals": 0
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byFrameRefID",
+                "options": "A"
+              },
+              "properties": [
+                {
+                  "id": "custom.axisPlacement",
+                  "value": "left"
+                },
+                {
+                  "id": "custom.axisLabel",
+                  "value": "Subreddits"
+                },
+                {
+                  "id": "custom.drawStyle",
+                  "value": "line"
+                },
+                {
+                  "id": "custom.fillOpacity",
+                  "value": 0
+                },
+                {
+                  "id": "custom.lineWidth",
+                  "value": 4
+                },
+                {
+                  "id": "custom.pointSize",
+                  "value": 12
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed",
+                    "fixedColor": "#B7950B"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byFrameRefID",
+                "options": "B"
+              },
+              "properties": [
+                {
+                  "id": "custom.axisPlacement",
+                  "value": "right"
+                },
+                {
+                  "id": "custom.axisLabel",
+                  "value": "Outputs"
+                },
+                {
+                  "id": "custom.fillOpacity",
+                  "value": 20
+                },
+                {
+                  "id": "custom.barWidth",
+                  "value": 0.35
+                }
+              ]
+            }
+          ]
+        }
+      },
+    {
+      "title": "Task Durations (Minutes)",
+      "type": "bargauge",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+      "targets": [
+        {
+          "expr": "reddit_ingest_preprocess_duration_seconds_sum / 60",
+          "legendFormat": "Ingest"
+        },
+        {
+          "expr": "reddit_gemini_duration_sum / 60",
+          "legendFormat": "Gemini"
+        },
+        {
+          "expr": "reddit_summarize_duration_seconds_sum / 60",
+          "legendFormat": "Summarize"
+        },
+        {
+          "expr": "reddit_sentiment_duration_seconds_sum / 60",
+          "legendFormat": "Sentiment"
+        },
+        {
+          "expr": "reddit_join_model_duration_seconds_sum / 60",
+          "legendFormat": "Join"
+        }
+      ],
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": ["lastNotNull"],
+          "fields": ""
+        },
+        "orientation": "horizontal",
+        "displayMode": "basic",
+        "showUnfilled": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 1,
+          "mappings": [],
+          "min": 0,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "green"
+          },
+          "unit": "m"
+        }
+      }
+    },
+    {
+      "title": "Processing Metrics",
+      "type": "gauge",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+      "targets": [
+        {"expr": "reddit_ingest_preprocess_posts_total", "legendFormat": "Posts"},
+        {"expr": "reddit_ingest_preprocess_summaries_total", "legendFormat": "Comments"},
+        {"expr": "reddit_summarize_summaries_added", "legendFormat": "Summaries"},
+        {"expr": "reddit_sentiment_processed_total", "legendFormat": "Sentiment"},
+        {"expr": "reddit_joined_table_rows", "legendFormat": "Valid Outputs"}
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "min": 0,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "green"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" }
+            ]
+          }
+        }
+      }
+    },
+    {
+        "title": "DBT Test Results",
+        "type": "gauge",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
+        "targets": [
+          {"expr": "reddit_dbt_raw_sources_tests_passed", "legendFormat": "Raw Sources Passed"},
+          {"expr": "reddit_dbt_raw_sources_tests_failed", "legendFormat": "Raw Sources Failed"},
+          {"expr": "reddit_dbt_staging_models_tests_passed", "legendFormat": "Staging Passed"},
+          {"expr": "reddit_dbt_staging_models_tests_failed", "legendFormat": "Staging Failed"},
+          {"expr": "reddit_dbt_summarize_models_tests_passed", "legendFormat": "Summarize Passed"},
+          {"expr": "reddit_dbt_summarize_models_tests_failed", "legendFormat": "Summarize Failed"},
+          {"expr": "reddit_dbt_sentiment_analysis_tests_passed", "legendFormat": "Sentiment Passed"},
+          {"expr": "reddit_dbt_sentiment_analysis_tests_failed", "legendFormat": "Sentiment Failed"},
+          {"expr": "reddit_dbt_joined_summary_analysis_tests_passed", "legendFormat": "Join Passed"},
+          {"expr": "reddit_dbt_joined_summary_analysis_tests_failed", "legendFormat": "Join Failed"},
+          {"expr": "reddit_dbt_update_processing_status_tests_passed", "legendFormat": "Status Passed"},
+          {"expr": "reddit_dbt_update_processing_status_tests_failed", "legendFormat": "Status Failed"}
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "fixed"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                { "value": null, "color": "gray" }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": ".*Passed$"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": ".*Failed$"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+    {
+      "title": "Task Attempts",
+      "type": "gauge",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16},
+      "targets": [
+        {"expr": "reddit_ingest_preprocess_attempt", "legendFormat": "Ingest"},
+        {"expr": "reddit_summarize_attempt", "legendFormat": "Summarize"},
+        {"expr": "reddit_sentiment_attempt", "legendFormat": "Sentiment"},
+        {"expr": "reddit_join_attempt", "legendFormat": "Join"}
+      ]
+    },
+    {
+      "title": "Error Rates",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 24, "x": 0, "y": 24},
+      "targets": [
+        {"expr": "rate(reddit_ingest_preprocess_error_total[5m])", "legendFormat": "Ingest Errors"},
+        {"expr": "rate(reddit_summarize_error_total[5m])", "legendFormat": "Summarize Errors"},
+        {"expr": "rate(reddit_sentiment_error_total[5m])", "legendFormat": "Sentiment Errors"},
+        {"expr": "rate(reddit_join_error_total[5m])", "legendFormat": "Join Errors"},
+        {"expr": "rate(reddit_dbt_test_error_total[5m])", "legendFormat": "DBT Errors"}
+      ]
+    }
+
+  ],
+  "refresh": "5s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "title": "Pipeline Metrics",
+  "uid": "pipeline_metrics",
+  "version": 1
+} 

@@ -1,0 +1,217 @@
+mappings:
+  # Ingest and Preprocess metrics
+  - match: "airflow.reddit.ingest_preprocess.duration"
+    name: "reddit_ingest_preprocess_duration_seconds"
+    type: "timing"
+    help: "Duration of the ingest and preprocess task in seconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.ingest_preprocess.processed_posts"
+    name: "reddit_ingest_preprocess_posts_total"
+    type: "gauge"
+    help: "Total number of posts processed in the ingest phase"
+    
+  - match: "airflow.reddit.ingest_preprocess.total_summaries"
+    name: "reddit_ingest_preprocess_summaries_total"
+    type: "gauge"
+    help: "Total number of summaries generated in the preprocess phase"
+    
+  - match: "airflow.reddit.ingest_preprocess.current_attempt"
+    name: "reddit_ingest_preprocess_attempt"
+    type: "gauge"
+    help: "Current attempt number for the ingest and preprocess task"
+    
+  - match: "airflow.reddit.ingest_preprocess.success"
+    name: "reddit_ingest_preprocess_success_total"
+    type: "counter"
+    help: "Number of successful ingest and preprocess task completions"
+    
+  # DBT Test metrics
+  - match: "airflow.reddit.dbt_test.duration"
+    name: "reddit_dbt_test_duration_seconds"
+    type: "timing"
+    help: "Duration of DBT test execution in seconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+
+  - match: "airflow.reddit.dbt_test.test_raw_sources.tests_passed"
+    name: "reddit_dbt_raw_sources_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for raw sources"
+
+  - match: "airflow.reddit.dbt_test.test_raw_sources.tests_failed"
+    name: "reddit_dbt_raw_sources_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for raw sources"
+
+  - match: "airflow.reddit.dbt_test.test_staging_models.tests_passed"
+    name: "reddit_dbt_staging_models_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for staging models"
+
+  - match: "airflow.reddit.dbt_test.test_staging_models.tests_failed"
+    name: "reddit_dbt_staging_models_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for staging models"
+
+  - match: "airflow.reddit.dbt_test.test_summarize_models.tests_passed"
+    name: "reddit_dbt_summarize_models_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for summarize models"
+
+  - match: "airflow.reddit.dbt_test.test_summarize_models.tests_failed"
+    name: "reddit_dbt_summarize_models_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for summarize models"
+
+  - match: "airflow.reddit.dbt_test.test_sentiment_analysis.tests_passed"
+    name: "reddit_dbt_sentiment_analysis_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for sentiment analysis"
+
+  - match: "airflow.reddit.dbt_test.test_sentiment_analysis.tests_failed"
+    name: "reddit_dbt_sentiment_analysis_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for sentiment analysis"
+
+  - match: "airflow.reddit.dbt_test.test_joined_summary_analysis.tests_passed"
+    name: "reddit_dbt_joined_summary_analysis_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for joined summary analysis"
+
+  - match: "airflow.reddit.dbt_test.test_joined_summary_analysis.tests_failed"
+    name: "reddit_dbt_joined_summary_analysis_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for joined summary analysis"
+
+  - match: "airflow.reddit.dbt_test.test_update_processing_status.tests_passed"
+    name: "reddit_dbt_update_processing_status_tests_passed"
+    type: "gauge"
+    help: "Number of DBT tests that passed for update processing status"
+
+  - match: "airflow.reddit.dbt_test.test_update_processing_status.tests_failed"
+    name: "reddit_dbt_update_processing_status_tests_failed"
+    type: "gauge"
+    help: "Number of DBT tests that failed for update processing status"
+    
+  # Summarization metrics
+  - match: "airflow.reddit.summarize.duration"
+    name: "reddit_summarize_duration_seconds"
+    type: "timing"
+    help: "Duration of the summarize task in seconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.summarize.summaries_added"
+    name: "reddit_summarize_summaries_added"
+    type: "gauge"
+    help: "Number of summaries successfully added"
+    
+  - match: "airflow.reddit.summarize.current_attempt"
+    name: "reddit_summarize_attempt"
+    type: "gauge"
+    help: "Current attempt number for the summarize task"
+    
+  - match: "airflow.reddit.summarize.success"
+    name: "reddit_summarize_success_total"
+    type: "counter"
+    help: "Number of successful summarize task completions"
+    
+  # Sentiment Analysis metrics
+  - match: "airflow.reddit.sentiment.duration"
+    name: "reddit_sentiment_duration_seconds"
+    type: "timing"
+    help: "Duration of the sentiment analysis task in seconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.sentiment.sentiments_processed"
+    name: "reddit_sentiment_processed_total"
+    type: "gauge"
+    help: "Number of comments processed for sentiment analysis"
+    
+  - match: "airflow.reddit.sentiment.current_attempt"
+    name: "reddit_sentiment_attempt"
+    type: "gauge"
+    help: "Current attempt number for the sentiment analysis task"
+    
+  - match: "airflow.reddit.sentiment.success"
+    name: "reddit_sentiment_success_total"
+    type: "counter"
+    help: "Number of successful sentiment analysis task completions"
+    
+  # Join Operation metrics
+  - match: "airflow.reddit.join.duration"
+    name: "reddit_join_model_duration_seconds"
+    type: "timing"
+    help: "Duration of the DBT join model execution in seconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.join.records_joined"
+    name: "reddit_joined_table_rows"
+    type: "gauge"
+    help: "Total number of rows in the joined_summary_analysis table"
+    
+  - match: "airflow.reddit.join.current_attempt"
+    name: "reddit_join_attempt"
+    type: "gauge"
+    help: "Current attempt number for the join operation"
+    
+  - match: "airflow.reddit.join.success"
+    name: "reddit_join_success_total"
+    type: "counter"
+    help: "Number of successful DBT join model runs"
+    
+  # Update Processing Status metrics
+  - match: "airflow.reddit.update_status.duration"
+    name: "reddit_processing_status_duration"
+    type: "timing"
+    help: "Duration of processing status update in milliseconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.update_status.records_updated"
+    name: "reddit_processing_status_rows"
+    type: "gauge"
+    help: "Number of rows processed in status update"
+    
+  - match: "airflow.reddit.update_status.current_attempt"
+    name: "reddit_processing_status_attempt"
+    type: "gauge"
+    help: "Current attempt number for processing status update"
+    
+  - match: "airflow.reddit.update_status.success"
+    name: "reddit_processing_status_success_total"
+    type: "counter"
+    help: "Total successful processing status updates"
+
+  # Gemini metrics
+  - match: "airflow.reddit.gemini.duration"
+    name: "reddit_gemini_duration"
+    type: "timing"
+    help: "Duration of Gemini task execution in milliseconds"
+    timer_type: "histogram"
+    buckets: [10, 30, 60, 120, 300, 600, 1800]
+    
+  - match: "airflow.reddit.gemini.outputs_generated"
+    name: "reddit_gemini_outputs"
+    type: "gauge"
+    help: "Number of markdown files generated by Gemini"
+    
+  - match: "airflow.reddit.gemini.subreddits_processed"
+    name: "reddit_gemini_subreddits"
+    type: "gauge"
+    help: "Number of subreddits processed by Gemini"
+    
+  - match: "airflow.reddit.gemini.current_attempt"
+    name: "reddit_gemini_attempt"
+    type: "gauge"
+    help: "Current attempt number for Gemini task"
+    
+  - match: "airflow.reddit.gemini.success"
+    name: "reddit_gemini_success_total"
+    type: "counter"
+    help: "Total successful Gemini task executions"
+

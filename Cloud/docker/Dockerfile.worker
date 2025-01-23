@@ -1,0 +1,77 @@
+FROM apache/airflow:2.8.1-python3.11
+
+USER root
+
+# Install system dependencies and OpenJDK for Spark
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    openjdk-17-jdk \
+    curl \
+    git \
+    python3-dev \
+    gcc \
+    procps \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Set up Java and Spark environment variables
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV SPARK_VERSION=3.3.2
+ENV SPARK_HOME=/opt/spark
+ENV PATH=$JAVA_HOME/bin:$PATH:$SPARK_HOME/bin
+ENV PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH
+ENV PYSPARK_PYTHON=/usr/local/bin/python
+ENV PYSPARK_DRIVER_PYTHON=/usr/local/bin/python
+
+# Verify Java version
+RUN java -version && \
+    echo "JAVA_HOME=$JAVA_HOME"
+
+# Install Spark and GCP connectors
+RUN curl -L -O https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop3.tgz \
+    && tar -xzf spark-${SPARK_VERSION}-bin-hadoop3.tgz \
+    && mv spark-${SPARK_VERSION}-bin-hadoop3 ${SPARK_HOME} \
+    && rm spark-${SPARK_VERSION}-bin-hadoop3.tgz \
+    # Download GCS connector
+    && curl -L -O https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-hadoop3-latest.jar \
+    && mv gcs-connector-hadoop3-latest.jar ${SPARK_HOME}/jars/ \
+    # Download BigQuery connector
+    && curl -L -O https://storage.googleapis.com/spark-lib/bigquery/spark-bigquery-latest_2.12.jar \
+    && mv spark-bigquery-latest_2.12.jar ${SPARK_HOME}/jars/ \
+    && chown -R airflow:root ${SPARK_HOME}
+
+# Create spark-defaults.conf with GCP configurations
+RUN echo 'spark.hadoop.google.cloud.auth.service.account.enable true' >> ${SPARK_HOME}/conf/spark-defaults.conf && \
+    echo 'spark.hadoop.fs.gs.impl org.apache.hadoop.fs.gs.GoogleHadoopFileSystem' >> ${SPARK_HOME}/conf/spark-defaults.conf && \
+    echo 'spark.hadoop.fs.AbstractFileSystem.gs.impl org.apache.hadoop.fs.gs.GoogleHadoopFS' >> ${SPARK_HOME}/conf/spark-defaults.conf
+
+# Create the models directory and set permissions
+RUN mkdir -p /models && chown -R airflow:root /models
+
+USER airflow
+
+# Copy and install worker-specific requirements
+COPY ./requirements/combed_requirements_worker.txt /opt/airflow/requirements_worker.txt
+
+# Install Python packages
+RUN pip install --no-cache-dir -r /opt/airflow/requirements_worker.txt \
+    && rm -rf ~/.cache/pip/*
+
+# Pre-download the summarization model
+RUN python -c "from transformers import AutoModelForSeq2SeqLM, AutoTokenizer; \
+    model_name = 'philschmid/bart-large-cnn-samsum'; \
+    AutoModelForSeq2SeqLM.from_pretrained(model_name, cache_dir='/models'); \
+    AutoTokenizer.from_pretrained(model_name, cache_dir='/models')"
+
+# Pre-download the sentiment analysis model
+RUN python -c "from transformers import AutoModelForSequenceClassification, AutoTokenizer; \
+    model_name = 'SamLowe/roberta-base-go_emotions'; \
+    AutoModelForSequenceClassification.from_pretrained(model_name, cache_dir='/models'); \
+    AutoTokenizer.from_pretrained(model_name, cache_dir='/models')"
+
+# Set environment variables for transformers cache
+ENV TRANSFORMERS_CACHE=/models
+
+# Add GCP-specific environment variables
+ENV GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/credentials/service-account.json
+

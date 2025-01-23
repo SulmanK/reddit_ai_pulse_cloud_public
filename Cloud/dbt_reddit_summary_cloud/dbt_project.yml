@@ -1,0 +1,33 @@
+name: 'dbt_reddit_summary_cloud'
+version: '1.0.0'
+profile: 'reddit_summary'
+
+config-version: 2
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  project_id: reddit-ai-pulse  # Set this to match your .env file
+  subreddits: ['dataengineering', 'datascience', 'machinelearning', 'claudeai',
+   'singularity', 'localllama', 'openai', 'stablediffusion']  # Define all subreddits
+  
+
+models:
+  dbt_reddit_summary_cloud:
+    materialized: table
+    current_summary_staging:
+      materialized: view
+    joined_summary_analysis:
+      materialized: table
+    update_processing_status:
+      materialized: incremental 
+
+

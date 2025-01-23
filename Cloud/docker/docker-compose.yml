@@ -1,0 +1,235 @@
+x-common-env: &common-env
+  AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_DB_USER}:${AIRFLOW_DB_PASSWORD}@postgres/${AIRFLOW_DB_NAME}
+  AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://${AIRFLOW_DB_USER}:${AIRFLOW_DB_PASSWORD}@postgres/${AIRFLOW_DB_NAME}
+  AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
+  AIRFLOW__CORE__LOAD_EXAMPLES: false
+  AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/airflow_project/dags
+  AIRFLOW__LOGGING__BASE_LOG_FOLDER: /opt/airflow/airflow_project/logs
+  AIRFLOW__CORE__PLUGINS_FOLDER: /opt/airflow/airflow_project/plugins
+  AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+  AIRFLOW__LOGGING__FAB_LOGGING_LEVEL: WARNING
+  AIRFLOW__LOGGING__LOGGING_CONFIG_CLASS: airflow.config_templates.airflow_local_settings.DEFAULT_LOGGING_CONFIG
+  AIRFLOW__LOGGING__DELETE_LOCAL_LOGS: "true"
+  AIRFLOW__LOGGING__MAX_LOG_AGE_IN_DAYS: 7
+  PYTHONPATH: /opt/airflow
+  AIRFLOW__METRICS__STATSD_ON: "true"
+  AIRFLOW__METRICS__STATSD_HOST: "statsd-exporter"
+  AIRFLOW__METRICS__STATSD_PORT: "9125"
+  AIRFLOW__METRICS__STATSD_PREFIX: "airflow"
+  AIRFLOW__METRICS__STATSD_ALLOW_LIST: "*"
+  AIRFLOW__METRICS__METRICS_ALLOW_LIST: "*"
+  AIRFLOW__WEBSERVER__EXPOSE_METRICS: 'true'
+  AIRFLOW__METRICS__STATSD_INTERVAL: "30"
+  GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
+  GH_PAT: ${GH_PAT}
+  GH_OWNER: ${GH_OWNER}
+  GH_REPO: ${GH_REPO}
+  GH_WEBSITE_REPO: ${GH_WEBSITE_REPO}
+  GCP_PROJECT_ID: ${GCP_PROJECT_ID}
+  GCS_BUCKET_NAME: ${GCS_BUCKET_NAME}
+  STOP_VM_FUNCTION_URL: ${STOP_VM_FUNCTION_URL}
+  ALERT_EMAIL: ${ALERT_EMAIL}
+  AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+  AIRFLOW__SMTP__SMTP_USER: ${ALERT_EMAIL}
+  AIRFLOW__SMTP__SMTP_PASSWORD: ${ALERT_EMAIL_PASSWORD}
+  AIRFLOW__SMTP__SMTP_PORT: 587
+  AIRFLOW__SMTP__SMTP_MAIL_FROM: ${ALERT_EMAIL}
+  AIRFLOW__SMTP__SMTP_STARTTLS: "true"
+  AIRFLOW__SMTP__SMTP_SSL: "false"
+
+x-common-volumes: &common-volumes
+  - ..:/opt/airflow
+  - ../credentials:/opt/airflow/credentials
+  - ../mlflow:/mlflow
+  - ../results:/opt/airflow/results
+  - ../dbt_reddit_summary_cloud:/opt/airflow/dbt_reddit_summary_cloud
+
+x-airflow-common: &airflow-common
+  volumes: *common-volumes
+  environment:
+    <<: *common-env
+  user: "${AIRFLOW_UID:-50000}:0"
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${AIRFLOW_DB_USER}
+      POSTGRES_PASSWORD: ${AIRFLOW_DB_PASSWORD}
+      POSTGRES_DB: ${AIRFLOW_DB_NAME}
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${AIRFLOW_DB_USER}"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+  redis:
+    image: redis:latest
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 30s
+      retries: 50
+    restart: always
+
+  airflow-webserver:
+    image: ${DOCKER_REGISTRY}/reddit-airflow-webserver:latest
+    <<: *airflow-common
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    ports:
+      - "8080:8080"
+    command: airflow webserver
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 30s
+      retries: 10
+      start_period: 60s
+    restart: always
+
+  airflow-scheduler:
+    image: ${DOCKER_REGISTRY}/reddit-airflow-scheduler:latest
+    <<: *airflow-common
+    depends_on:
+      airflow-webserver:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: airflow scheduler
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 30s
+      retries: 10
+      start_period: 60s
+    restart: always
+
+  airflow-worker:
+    image: ${DOCKER_REGISTRY}/reddit-airflow-worker:latest
+    <<: *airflow-common
+    depends_on:
+      airflow-webserver:
+        condition: service_healthy
+    command: airflow celery worker
+    healthcheck:
+      test: ["CMD-SHELL", 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"']
+      interval: 30s
+      timeout: 30s
+      retries: 5
+    restart: always
+
+  airflow-init:
+    build:
+      context: .
+      dockerfile: Dockerfile.webserver
+    env_file:
+      - ../.env
+    <<: *airflow-common
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      <<: *common-env
+      GIT_PYTHON_REFRESH: quiet
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow db upgrade &&
+      airflow users create -r Admin -u admin -p admin -e admin@example.com -f Anonymous -l Admin
+      "
+
+  mlflow:
+    image: ${DOCKER_REGISTRY}/reddit-mlflow:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../mlflow:/mlflow
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+    restart: always
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:9090"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../.env
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ../grafana/provisioning:/grafana/provisioning
+      - ../grafana/config/grafana.ini:/etc/grafana/grafana.ini
+    environment:
+      - GF_PATHS_PROVISIONING=/grafana/provisioning
+      - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+    depends_on:
+      prometheus:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    ports:
+      - "9121:9121"
+    environment:
+      - REDIS_ADDR=redis://redis:6379
+    depends_on:
+      - redis
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:latest
+    ports:
+      - "9187:9187"
+    environment:
+      - DATA_SOURCE_NAME=postgresql://${AIRFLOW_DB_USER}:${AIRFLOW_DB_PASSWORD}@postgres:5432/${AIRFLOW_DB_NAME}?sslmode=disable
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  statsd-exporter:
+    image: prom/statsd-exporter:v0.24.0
+    container_name: statsd-exporter
+    volumes:
+      - ../config/statsd/statsd.yaml:/home/statsd-mapping-configs.yaml
+    command: >
+      --statsd.listen-udp=:9125 
+      --web.listen-address=:9102 
+      --log.level=debug 
+      --statsd.mapping-config=/home/statsd-mapping-configs.yaml
+    ports:
+      - "9102:9102"
+      - "9125:9125/udp"
+    restart: always
+
+volumes:
+  postgres-db-volume:
+  prometheus_data:
+  grafana_data: 

@@ -1,0 +1,5 @@
+FROM reddit-airflow-base:latest
+
+## base image
+
+USER airflow 

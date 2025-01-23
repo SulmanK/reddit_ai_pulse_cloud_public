@@ -1,0 +1,20 @@
+* Task list
+
+** Reddit API → GCS (raw data) 1 -> 2
+- [X] Python Script to ingest data from reddit API 
+    - [X] Figure out all the content to collect 
+        - Posts
+        - Comments
+    - [X] Figure out how to organize each into a specific date/time 
+        - Get top 10 posts, pull comments from each of those posts -> process those comments with the topic -> 
+    - [X] Organize the JSON files into directories - subreddits/posts/month/day
+
+
+** Apache Spark (ETL/Transformations) 2-> 3
+
+** GCS (processed data) → BigQuery (staging tables)  3
+
+** DBT → BigQuery (final tables/models for reporting)  4 -> 5
+
+** Hugging Face Text Summarizer (for content summarization) -> web app 5
+

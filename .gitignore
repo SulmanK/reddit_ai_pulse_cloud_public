@@ -1,0 +1,93 @@
+# Environment variables
+.env
+.env.*
+
+# Terraform
+*.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Service account keys
+service-account.json
+*-key.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Airflow project structure (keep directories, ignore contents)
+/Cloud/airflow_project/logs/*
+!/Cloud/airflow_project/logs/.gitkeep
+/Cloud/airflow_project/dags/__pycache__/
+/Cloud/airflow_project/plugins/__pycache__/
+!/Cloud/airflow_project/dags/.gitkeep
+!/Cloud/airflow_project/plugins/.gitkeep
+
+# MLflow (keep directory, ignore contents)
+/Cloud/mlflow/*
+!/Cloud/mlflow/.gitkeep
+
+# Logs (keep directory, ignore contents)
+/Cloud/logs/*
+!/Cloud/logs/.gitkeep
+
+# DBT
+/Cloud/dbt_reddit_summary_cloud/logs/
+/Cloud/dbt_reddit_summary_cloud/target/
+/Cloud/dbt_reddit_summary_cloud/dbt_packages/
+
+
+
+# Infrastructure
+/Cloud/infrastructure/terraform/resource_info
+
+# Context folder
+/Context/
+Context/
+Context/**/*
+/Cloud/.env
+/Cloud/.env.backup
+/Cloud/infrastructure/terraform/terraform.tfvars# Sensitive files
+Cloud/.env
+Cloud/credentials/service-account.json
+Cloud/infrastructure/terraform/terraform.tfvars
+# Sensitive files
+Cloud/.env
+Cloud/credentials/service-account.json
+Cloud/infrastructure/terraform/terraform.tfvars
+

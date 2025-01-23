@@ -1,0 +1,6 @@
+FROM reddit-airflow-base:latest
+
+# No additional requirements needed for webserver
+# It uses base requirements
+
+USER airflow 

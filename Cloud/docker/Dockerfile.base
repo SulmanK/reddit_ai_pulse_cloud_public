@@ -1,0 +1,24 @@
+# Base image for all Airflow containers
+FROM apache/airflow:2.8.1-python3.11
+
+USER root
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    git \
+    python3-dev \
+    gcc \
+    procps \
+    && rm -rf /var/lib/apt/lists/*
+
+# Switch back to airflow user
+USER airflow
+
+# Copy requirements (using explicit path)
+COPY ./requirements/combed_requirements_base.txt /opt/airflow/requirements_base.txt
+
+# Install Python packages
+RUN pip install --no-cache-dir -r /opt/airflow/requirements_base.txt \
+    && rm -rf ~/.cache/pip/* 

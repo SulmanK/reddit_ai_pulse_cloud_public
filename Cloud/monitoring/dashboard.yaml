@@ -1,0 +1,31 @@
+displayName: "Airflow VM Automation Dashboard"
+gridLayout:
+  columns: "2"
+  widgets:
+    - title: "VM Start Success Rate"
+      xyChart:
+        dataSets:
+          - timeSeriesQuery:
+              timeSeriesFilter:
+                filter: 'metric.type="custom.googleapis.com/airflow/vm_start_success"'
+              
+    - title: "VM Stop Success Rate"
+      xyChart:
+        dataSets:
+          - timeSeriesQuery:
+              timeSeriesFilter:
+                filter: 'metric.type="custom.googleapis.com/airflow/vm_stop_success"'
+
+    - title: "VM Runtime Duration"
+      xyChart:
+        dataSets:
+          - timeSeriesQuery:
+              timeSeriesFilter:
+                filter: 'compute.googleapis.com/instance/uptime'
+                
+    - title: "Function Errors"
+      xyChart:
+        dataSets:
+          - timeSeriesQuery:
+              timeSeriesFilter:
+                filter: 'resource.type="cloud_function" severity>=ERROR' 
