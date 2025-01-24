@@ -346,7 +346,7 @@ with DAG(
         trigger_rule='all_done',  # Run even if upstream tasks fail
         retries=0,  # Don't retry on failure since VM will be shutting down
         dag=dag,
-        email_on_failure=False,
+        email_on_failure=True,
 
         
         doc="""
