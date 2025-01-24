@@ -69,6 +69,13 @@ resource "google_project_iam_member" "airflow_monitoring_admin" {
   depends_on = [google_project_iam_member.airflow_compute_admin]
 }
 
+resource "google_project_iam_member" "airflow_logging_writer" {
+  project = var.project
+  role    = "roles/logging.logWriter"
+  member  = "serviceAccount:${google_service_account.airflow_service_account.email}"
+  depends_on = [google_project_iam_member.airflow_monitoring_admin]
+}
+
 # Grant permissions to Cloud Run VM Manager Service Account
 resource "google_project_iam_member" "cloud_run_compute_admin" {
   project = var.project
@@ -92,7 +99,8 @@ output "airflow_service_account_email" {
     google_project_iam_member.airflow_storage_admin,
     google_project_iam_member.airflow_bigquery_admin,
     google_project_iam_member.airflow_compute_admin,
-    google_project_iam_member.airflow_monitoring_admin
+    google_project_iam_member.airflow_monitoring_admin,
+    google_project_iam_member.airflow_logging_writer
   ]
 }
 
