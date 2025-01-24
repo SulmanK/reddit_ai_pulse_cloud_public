@@ -115,4 +115,7 @@ Cloud/infrastructure/terraform/terraform.tfvars
 
 # New tfplan patterns
 **/tfplan
-**/terraform/tfplan
+**/terraform/tfplan# Sensitive files
+Cloud/.env
+Cloud/credentials/service-account.json
+Cloud/infrastructure/terraform/terraform.tfvars
