@@ -112,3 +112,7 @@ Cloud/.env
 Cloud/credentials/service-account.json
 Cloud/infrastructure/terraform/terraform.tfvars
 /Cloud/infrastructure/terraform/tfplan
+
+# New tfplan patterns
+**/tfplan
+**/terraform/tfplan

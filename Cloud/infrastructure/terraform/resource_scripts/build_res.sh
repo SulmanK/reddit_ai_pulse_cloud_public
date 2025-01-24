@@ -135,7 +135,7 @@ send_credentials_to_website() {
     if [ ! -f "$credentials_file" ]; then
         log_message "Error: Credentials file not found at $credentials_file"
         return 1
-    }
+    fi
 
     log_message "Sending credentials to $GH_WEBSITE_REPO repository..."
 
