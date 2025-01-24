@@ -142,16 +142,31 @@ send_credentials_to_website() {
     # Create a temporary file for the payload
     local temp_payload=$(mktemp)
 
+    # Read credentials file content safely
+    local creds_content
+    creds_content=$(cat "$credentials_file")
+    if [ $? -ne 0 ]; then
+        log_message "Error: Failed to read credentials file"
+        rm -f "$temp_payload"
+        return 1
+    fi
+
     # Create the full payload JSON using jq to ensure proper formatting
-    jq -n \
+    echo "$creds_content" | jq -n \
         --arg event "update_credentials" \
-        --argjson creds "$(cat $credentials_file)" \
+        --argjson creds "$(cat -)" \
         '{
             event_type: $event,
             client_payload: {
                 credentials: $creds
             }
         }' > "$temp_payload"
+
+    if [ $? -ne 0 ]; then
+        log_message "Error: Failed to create JSON payload"
+        rm -f "$temp_payload"
+        return 1
+    fi
 
     # Debug: Show payload structure (hide sensitive data)
     log_message "Debug: Sending payload with formatted credentials"

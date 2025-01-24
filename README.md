@@ -163,6 +163,7 @@ The diagram above illustrates the flow of data through our system, from collecti
    - Install Terraform
    - Install Docker and Docker Compose
    - Install Git
+   - Install jq (for json parsing)
 
 ### Initial Setup
 
