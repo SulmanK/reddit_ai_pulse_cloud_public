@@ -135,33 +135,26 @@ send_credentials_to_website() {
     if [ ! -f "$credentials_file" ]; then
         log_message "Error: Credentials file not found at $credentials_file"
         return 1
-    fi
+    }
 
     log_message "Sending credentials to $GH_WEBSITE_REPO repository..."
-
-    # Read the content of the credentials file
-    local credentials_content
-    credentials_content=$(< "$credentials_file")
-  
-    # Properly escape characters for JSON
-    local escaped_credentials
-    escaped_credentials=$(printf '%s\n' "$credentials_content" | sed 's/\\/\\\\/g; s/"/\\"/g; s/\//\\\//g; s/\n/\\n/g; s/\r/\\r/g; s/\t/\\t/g')
 
     # Create a temporary file for the payload
     local temp_payload=$(mktemp)
 
-    # Create the full payload JSON with properly escaped credentials
-    cat > "$temp_payload" << EOF
-{
-    "event_type": "update_credentials",
-    "client_payload": {
-        "credentials": "${escaped_credentials}"
-    }
-}
-EOF
+    # Create the full payload JSON using jq to ensure proper formatting
+    jq -n \
+        --arg event "update_credentials" \
+        --argjson creds "$(cat $credentials_file)" \
+        '{
+            event_type: $event,
+            client_payload: {
+                credentials: $creds
+            }
+        }' > "$temp_payload"
 
     # Debug: Show payload structure (hide sensitive data)
-    log_message "Debug: Sending payload with escaped credentials"
+    log_message "Debug: Sending payload with formatted credentials"
 
     # Trigger the workflow using the temp file
     curl -X POST \
