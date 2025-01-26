@@ -2,156 +2,171 @@
 title: "LocalLLaMA Subreddit"
 date: "2025-01-26"
 description: "Analysis of top discussions and trends in the localllama subreddit"
-tags: ["LLM", "AI", "Machine Learning"]
+tags: ["LLM", "Local", "AI"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [Would give up a kidney for a local audio model that’s even half as good as Suno](https://www.reddit.com/r/LocalLLaMA/comments/1ia40om/would_give_up_a_kidney_for_a_local_audio_model/) (Score: 76)
-    *  The discussion revolves around the desire for a local audio model comparable to Suno, with users sharing potential solutions, expressing skepticism, and making humorous comments about the trade-offs involved.
-2.  [7B Model and 8K Examples: Emerging Reasoning with Reinforcement Learning is Both Effective and Efficient](https://hkust-nlp.notion.site/simplerl-reason) (Score: 65)
-    *   This thread discusses the impact of a big company releasing an open-source model, forcing others to share their progress. It also notes the competitive nature of the field.
-3.  [Compared DeepSeek-R1 to DeepSeek-R1-Zero: surprising results](https://i.redd.it/o6fqrfqfk9fe1.png) (Score: 40)
-    *  The conversation centers on the comparison between two DeepSeek models, with some users questioning the benchmark's validity and others noting interesting aspects of the models' reasoning capabilities.
-4.  [[Project] Digits Memory Speed](https://www.reddit.com/r/LocalLLaMA/comments/1ia4mx6/project_digits_memory_speed/) (Score: 38)
-    *  Users discuss the memory speed of Project Digits, comparing it to other technologies, and expressing varied opinions on its usefulness for AI inference, with some being disappointed by the lack of scalability and others remaining optimistic.
-5.  [the MNN team at Alibaba has open-sourced multimodal Android app running without netowrk that supports: Audio , Image and Diffusion Models. with  blazing-fast speeds on cpu with 2.3x faster decoding speeds compared to llama.cpp.](https://www.reddit.com/r/LocalLLaMA/comments/1ia7v0x/the_mnn_team_at_alibaba_has_opensourced/) (Score: 11)
-    *  This post highlights the open-sourcing of a multimodal Android app that runs locally, focusing on its speed and functionality.
-6.  [Aider polyglot benchmark w/ DeepSeek R1 + DeepSeek V3 near o1 performance](https://github.com/Aider-AI/aider/pull/2998) (Score: 10)
-    *  The thread analyzes the benchmark results of DeepSeek R1 and V3, noting their performance compared to o1 and discussing the potential of combining R1 instances for enhanced performance.
-7.  [Which one works better, llama 3.3 70b or deepseek r1 70b?](https://www.reddit.com/r/LocalLLaMA/comments/1ia3iwf/which_one_works_better_llama_33_70b_or_deepseek/) (Score: 10)
-    *  The discussion debates the strengths of Llama 3.3 70b versus Deepseek R1 70b, concluding that the best choice depends on the specific tasks, with some users finding Llama better at following instructions.
-8.  [Make any LLM to think deeper like OpenAI o1 and deepseek R1](https://www.reddit.com/r/LocalLLaMA/comments/1ia2ws8/make_any_llm_to_think_deeper_like_openai_o1_and/) (Score: 4)
-    *  Users examine and test a method to enhance LLM's thinking abilities by using system prompts.
-9.  [A little scene I created using Qwen's new chat](https://www.reddit.com/r/LocalLLaMA/comments/1ia53oi/a_little_scene_i_created_using_qwens_new_chat/) (Score: 4)
-    *  This short thread questions if Qwen can be run locally.
-10. [What is the best local model l for a 12GB VRAM RTX4080 laptop](https://www.reddit.com/r/LocalLLaMA/comments/1ia78wh/what_is_the_best_local_model_l_for_a_12gb_vram/) (Score: 3)
-    *  Users share recommendations for local models suitable for a 12GB VRAM RTX4080 laptop, focusing on models good at coding, math, and conversational tasks, as well as some smaller contenders.
-11. [What is your favorite (small) question generator?](https://www.reddit.com/r/LocalLLaMA/comments/1ia2e0l/what_is_your_favorite_small_question_generator/) (Score: 2)
-    *  Users recommend Phi-4 and Tiger-Gemma-9B-v3 as small question generators.
-12. [Building a new PC for LLM Finetuning Ubuntu or Windows?](https://www.reddit.com/r/LocalLLaMA/comments/1ia4zcj/building_a_new_pc_for_llm_finetuning_ubuntu_or/) (Score: 2)
-    *  The discussion compares Ubuntu and Windows for LLM finetuning, with strong recommendations for Linux due to its ease of use, and questions about dual GPU support in Windows.
-13. [I made a Free & Open-Source FastAPI Template to build online services that uses LLMs!](https://v.redd.it/iesj4wtiw9fe1) (Score: 2)
-    *   The user shares an open-source FastAPI template for building online LLM services.
-14. [How does deepseek r1 learn to think for open-ended questions?](https://www.reddit.com/r/LocalLLaMA/comments/1ia4y13/how_does_deepseek_r1_learn_to_think_for_openended/) (Score: 1)
-    *  Users discuss the mechanics of how DeepSeek R1 learns to think for open-ended questions, noting the role of different experts in the model and how it might be a side effect of other training.
-15. [is this agi?](https://i.redd.it/gprizzw4bafe1.jpeg) (Score: 0)
-    * This thread involves a discussion about the use of resources to run AI models, some users expressing disappointment and negativity.
+1.  [[D] Qwen2.5-1M Release on HuggingFace - The long-context version of Qwen2.5, supporting 1M-token context lengths!](https://www.reddit.com/r/LocalLLaMA/comments/1iaizfb/qwen251m_release_on_huggingface_the_longcontext/) (Score: 256)
+    *   The discussion centers around the release of Qwen2.5-1M, a new model with a 1 million token context window, with excitement and interest in its capabilities and potential use cases.
+2.  [AI models outperformed the champion of TUS (Medical Specialization Exam of Turkey)](https://i.redd.it/x4xd7d7a8dfe1.jpeg) (Score: 70)
+    *   This thread discusses AI models outperforming a medical exam champion, raising questions about the validity of such benchmarks and how they are evaluated.
+3.  [Meet Qwen2.5-7B-Instruct-1M & Qwen2.5-14B-Instruct-1M](https://www.reddit.com/r/LocalLLaMA/comments/1iak7td/meet_qwen257binstruct1m_qwen2514binstruct1m/) (Score: 51)
+    *   This thread announces and discusses the release of Qwen2.5-7B and 14B models with a 1 million token context window, focusing on their potential and hardware requirements.
+4.  [Qwen 2.5 VL incoming](https://www.reddit.com/r/LocalLLaMA/comments/1iaizyk/qwen_25_vl_incoming/) (Score: 44)
+    *   The thread discusses the upcoming release of Qwen 2.5 VL and its potential uses, with some users expressing interest in trying it out.
+5.  [Confucius-o1-14B](https://www.reddit.com/r/LocalLLaMA/comments/1iakhai/confuciuso114b/) (Score: 37)
+    *   This thread discusses a new model named Confucius-o1-14B, with users focusing on its novel training methodology and performance.
+6.  [Baichuan-M1-14B](https://www.reddit.com/r/LocalLLaMA/comments/1ial3b0/baichuanm114b/) (Score: 14)
+    *   The conversation focuses on skepticism about the reported performance of the Baichuan-M1-14B model.
+7.  [What if we could supercharge small models with DeepSeek RL techniques?](https://www.reddit.com/r/LocalLLaMA/comments/1ian3oa/what_if_we_could_supercharge_small_models_with/) (Score: 8)
+    *   This thread discusses the potential of supercharging small language models using techniques from DeepSeek RL, and the community is actively exploring and building tools to apply these concepts to smaller models
+8.  ['Fake reasoning' - A QLora adapter that turns llama into an obvious character, and shows their thinking....](https://www.reddit.com/r/LocalLLaMA/comments/1iaj378/fake_reasoning_a_qlora_adapter_that_turns_llama/) (Score: 4)
+    *   The thread is about a QLora adapter that creates a character-like persona for LLaMA, showing its "thinking," prompting questions and interest from the users
+9.  ["CPU": 15 t/s vs GPU: 17 t/s. Help me make sense of this?](https://www.reddit.com/r/LocalLLaMA/comments/1iambv4/cpu_15_ts_vs_gpu_17_ts_help_me_make_sense_of_this/) (Score: 4)
+    *   Users discuss performance discrepancies between CPU and GPU when running LLMs, focusing on memory bandwidth as a key factor.
+10. [deepseek is a side project pt. 2](https://i.redd.it/bawhrb3ekefe1.jpeg) (Score: 4)
+    *  This thread discusses the efficiency and effectiveness of deepseek.
+11. [Found new interesting DeepSeek-R1 14B Mix.](https://www.reddit.com/r/LocalLLaMA/comments/1iamna1/found_new_interesting_deepseekr1_14b_mix/) (Score: 3)
+     *  This thread shares a DeepSeek-R1 14B mix, with a user recommending an "uncensored" model
+12. [Do you guys think I can Host and run proberly DeepSeek r1 1.5B in Hp elite book i7 16gb ram ?](https://www.reddit.com/r/LocalLLaMA/comments/1iaosrn/do_you_guys_think_i_can_host_and_run_proberly/) (Score: 3)
+    *   This thread discusses the feasibility of running the DeepSeek r1 1.5B model on a laptop, with differing opinions about performance and model quality.
+13. [Is there a simple way to import Safetensors from Hugging Face to Ollama?](https://www.reddit.com/r/LocalLLaMA/comments/1iam8kh/is_there_a_simple_way_to_import_safetensors_from/) (Score: 2)
+    *   The discussion centers around how to import Safetensors models from Hugging Face into Ollama, with users clarifying the need to convert to GGUF format first.
+14. [Anyone using R1 or the distilled models for code autocomplete / FIM? How does it compare to Qwen 2.5 Coder?](https://www.reddit.com/r/LocalLLaMA/comments/1iapkpe/anyone_using_r1_or_the_distilled_models_for_code/) (Score: 2)
+    *    The discussion is about the usability of R1 models for code autocomplete and FIM, with the consensus that it might not be their optimal use case.
+15. [R1 substandard knowledge retrieval in the field of RF/computer vision/defense/neuroscience?](https://www.reddit.com/r/LocalLLaMA/comments/1ial8dk/r1_substandard_knowledge_retrieval_in_the_field/) (Score: 1)
+    *   This thread discusses the perceived substandard performance of the R1 model in specific fields.
+16. [How many r in strawberry? are you sure?: quick rtx3090 24gb benchmark on qwen models...](https://i.redd.it/6a4k30qnrdfe1.png) (Score: 0)
+    *   The discussion is about benchmarking Qwen models on an RTX 3090 and one user is discussing issues with the model.
+17. [Conversational models from 15 months ago will engage in more topics](https://www.reddit.com/r/LocalLLaMA/comments/1iaotk8/conversational_models_from_15_months_ago_will/) (Score: 0)
+     *  This is a very short discussion of conversational models and training data.
 
 # Detailed Analysis by Thread
-**[Would give up a kidney for a local audio model that’s even half as good as Suno (Score: 76)](https://www.reddit.com/r/LocalLLaMA/comments/1ia40om/would_give_up_a_kidney_for_a_local_audio_model/)**
-*  **Summary:** The thread is centered around the desire for a local audio model that can perform as well as Suno. Users discuss existing options, the challenges in replicating Suno's capabilities due to copyright issues, and also provide suggestions for alternative models. There are some lighthearted comments about sacrificing a kidney for a good model.
-*  **Emotion:** The thread is predominantly neutral with a mix of hopefulness and humor. Some comments show a bit of frustration with the lack of open source alternatives.
-*  **Top 3 Points of View:**
-    *   Users are eager for a local audio model that is comparable to Suno, highlighting the strong demand for this capability.
-    *   There is discussion about the difficulty in creating such a model due to copyright concerns and the large datasets required.
-    *   Users offer suggestions for existing models like Kokoro and Stable Audio, while also discussing the limitations of these options and the overall state of local audio model development.
-
-**[7B Model and 8K Examples: Emerging Reasoning with Reinforcement Learning is Both Effective and Efficient (Score: 65)](https://hkust-nlp.notion.site/simplerl-reason)**
-*   **Summary:** This thread discusses the impact of big companies releasing open-source models and the competitive environment that it creates.  It mentions how this pushes others to share their progress and experiences in the field.
-*   **Emotion:**  The overall emotion is neutral with a slight undertone of excitement at the rapid development in the field.  Some users express a positive outlook on the increase in open source models
+**[[D] Qwen2.5-1M Release on HuggingFace - The long-context version of Qwen2.5, supporting 1M-token context lengths! (Score: 256)](https://www.reddit.com/r/LocalLLaMA/comments/1iaizfb/qwen251m_release_on_huggingface_the_longcontext/)**
+*   **Summary:**  This thread discusses the release of Qwen2.5-1M, a version of Qwen2.5 that supports a 1 million token context length. Users are excited about this development and discuss the implications and potential uses of such a model.
+*   **Emotion:** The overall emotional tone is positive and enthusiastic, with users expressing excitement, anticipation, and appreciation for the new model and the work that went into it.
 *   **Top 3 Points of View:**
-    *  The release of open source models forces others to also share.
-    *  The field is highly competitive.
-    *  There is general excitement about the speed of development in this space.
+    *   Users are excited about the long context window and its potential for applications like RAG (Retrieval-Augmented Generation).
+    *   There is some concern about the high VRAM requirements to utilize the full context length.
+    *   Users appreciate the open-source nature of the models and the ability to run them locally.
 
-**[Compared DeepSeek-R1 to DeepSeek-R1-Zero: surprising results (Score: 40)](https://i.redd.it/o6fqrfqfk9fe1.png)**
-*  **Summary:**  The thread features a discussion about the surprising results of comparing DeepSeek-R1 to DeepSeek-R1-Zero.  Users express skepticism about the benchmark used, while noting the interesting aspects of how these models reason.
-*  **Emotion:**  The tone is predominantly neutral with some skepticism and curiosity. There is some excitement about the "way to AGI".
+**[AI models outperformed the champion of TUS (Medical Specialization Exam of Turkey) (Score: 70)](https://i.redd.it/x4xd7d7a8dfe1.jpeg)**
+*   **Summary:** The thread discusses how AI models outperformed the champion of the TUS medical exam in Turkey. It questions the validity of using such tests for benchmarking AI performance.
+*  **Emotion:** The emotional tone is mostly neutral, but there's a hint of skepticism about the significance of AI passing such exams.
 *  **Top 3 Points of View:**
-    *   The thread raises questions about the relevance of the benchmark used.
-    *   Users note interesting elements in how the model repurposes words in its reasoning.
-     *  There is mention of GPT4 Turbo's high ranking in a related benchmark, adding context to the discussion of model performance.
+    *   Some users believe that AI passing written exams is not a significant achievement since they can be trained on the test data.
+    *   There are concerns about how the AI responses are scored, and whether they have definitive answers like math or code.
+    *   Users propose testing AI models with questions that require logic and haven't been answered before.
 
-**[Project Digits Memory Speed (Score: 38)](https://www.reddit.com/r/LocalLLaMA/comments/1ia4mx6/project_digits_memory_speed/)**
-*  **Summary:** The thread discusses the memory speed of Project Digits, comparing it to other technologies. There is a wide range of opinions on its usefulness for AI inference, with some expressing disappointment regarding scalability and performance, and others maintaining a more positive outlook, given it is faster than CPU inference.
-*  **Emotion:** The thread is marked by a mix of negative and neutral sentiments. There is disappointment with the memory speeds and capabilities, but also some optimism about the technology and its potential applications.
-*  **Top 3 Points of View:**
-    *   Some users are disappointed with the memory speeds of Project Digits, arguing that it is not comparable to other technologies available in 2025.
-    *   Others appreciate Project Digits as a step forward, highlighting its faster performance compared to CPU inference for big models.
-    *  There is comparison to the memory bandwidth of other products, like AMD's "strix halo" and Apple's M4 chips, putting the performance of project Digits into perspective
+**[Meet Qwen2.5-7B-Instruct-1M & Qwen2.5-14B-Instruct-1M (Score: 51)](https://www.reddit.com/r/LocalLLaMA/comments/1iak7td/meet_qwen257binstruct1m_qwen2514binstruct1m/)**
+*   **Summary:** This thread is about the release of the Qwen2.5-7B-Instruct-1M and Qwen2.5-14B-Instruct-1M models, highlighting the 1M token context window.
+*   **Emotion:** The overall emotional tone is positive and excited about the release and potential.
+*   **Top 3 Points of View:**
+    *  Users express excitement about the new model and its potential applications.
+    *  There is interest in how the model performs, even with a smaller context window.
+    * There are questions on the hardware requirements to run the new model and how fast it runs on a CPU.
 
-**[the MNN team at Alibaba has open-sourced multimodal Android app running without netowrk that supports: Audio , Image and Diffusion Models. with  blazing-fast speeds on cpu with 2.3x faster decoding speeds compared to llama.cpp. (Score: 11)](https://www.reddit.com/r/LocalLLaMA/comments/1ia7v0x/the_mnn_team_at_alibaba_has_opensourced/)**
-*  **Summary:** This thread announces the open-sourcing of a multimodal Android app from Alibaba that runs locally and supports audio, image, and diffusion models. It highlights the speed of decoding, which is reportedly faster than llama.cpp.
-*  **Emotion:** The tone is predominantly neutral, focusing on the technical aspects and the announcement of the new technology.
-*  **Top 3 Points of View:**
-    *  The main point is the announcement and summary of the capabilities of the open-sourced multimodal Android app, which runs locally.
-    *  It details the models supported, such as audio, image, and diffusion, and mentions the fast decoding speeds.
-    *  The post provides links to the project’s GitHub and website for further information and access.
+**[Qwen 2.5 VL incoming (Score: 44)](https://www.reddit.com/r/LocalLLaMA/comments/1iaizyk/qwen_25_vl_incoming/)**
+*   **Summary:** The thread discusses the upcoming release of Qwen 2.5 VL, a new visual language model.
+*   **Emotion:** The emotional tone is curious and positive, with users expressing interest in the model and its use cases.
+*   **Top 3 Points of View:**
+    *  Users are looking forward to the Qwen 2.5 VL release.
+    *  Some users want to try the model locally to understand its capabilities.
+    * There is the notion of the model being useful for desktop agents.
 
-**[Aider polyglot benchmark w/ DeepSeek R1 + DeepSeek V3 near o1 performance (Score: 10)](https://github.com/Aider-AI/aider/pull/2998)**
-*  **Summary:** The thread presents the results of a benchmark for DeepSeek R1 and V3, comparing their performance to o1 and noting the cost difference. It also speculates on the potential of combining two R1 instances for enhanced performance.
-*  **Emotion:** The overall emotional tone is neutral, focusing on the technical and factual aspects of the benchmark results and their implications. There is a hint of optimism about potential enhancements.
-*  **Top 3 Points of View:**
-    *   The thread highlights that DeepSeek R1 + V3 achieve performance close to o1 at a fraction of the cost.
-    *   The discussion proposes combining two R1 models, suggesting this could improve performance even further by utilizing each models strengths.
-    *  The thread references a prior benchmark for R1+Sonnet, which acts as a point of comparison for the new results.
+**[Confucius-o1-14B (Score: 37)](https://www.reddit.com/r/LocalLLaMA/comments/1iakhai/confuciuso114b/)**
+*   **Summary:**  This thread is about the release of the Confucius-o1-14B model, and users are discussing its training methodology and performance.
+*   **Emotion:** The thread has a neutral to positive tone, with interest in the details of this model.
+*   **Top 3 Points of View:**
+    *  Users are curious how this model compares to others like deepseek-r1:14b.
+    *  There is a lot of interest in the stage 2 methodology of how the model was trained.
+    *  Users report good initial performance in testing it locally.
 
-**[Which one works better, llama 3.3 70b or deepseek r1 70b? (Score: 10)](https://www.reddit.com/r/LocalLLaMA/comments/1ia3iwf/which_one_works_better_llama_33_70b_or_deepseek/)**
-*  **Summary:** This thread is a comparison of Llama 3.3 70b and Deepseek R1 70b. Users conclude the choice depends on the specific task, with some noting Llama's strength in instruction following and others that Deepseek requires specific prompting to get desired results.
-*  **Emotion:** The overall emotion of the thread is neutral, focusing on the comparative technical aspects of the models.
-*  **Top 3 Points of View:**
-    *  The consensus is that the choice between models depends on the task at hand.
-    *  Deepseek requires verbose and detailed system prompts to guide it, unlike Llama.
-    *   Llama 3.3 is found to be more consistent with instruction following.
+**[Baichuan-M1-14B (Score: 14)](https://www.reddit.com/r/LocalLLaMA/comments/1ial3b0/baichuanm114b/)**
+*   **Summary:** This thread discusses the Baichuan-M1-14B model, with a focus on skepticism about its reported performance.
+*   **Emotion:** The emotional tone is skeptical, with users doubting the validity of the benchmark scores.
+*   **Top 3 Points of View:**
+    *  Users question where the 20 trillion high-quality data comes from for training the model from scratch.
+    *  There are doubts about the validity of the benchmark scores.
+    *  Users are waiting for independent testing of the model before drawing conclusions.
 
-**[Make any LLM to think deeper like OpenAI o1 and deepseek R1 (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1ia2ws8/make_any_llm_to_think_deeper_like_openai_o1_and/)**
-*  **Summary:**  This discussion revolves around a method to improve LLM's thinking capabilities by using specific system prompts. Users share their results of using this technique.
-*  **Emotion:** The thread exhibits a mix of positive and neutral emotions, with some curiosity and willingness to test and experiment with the provided system prompt.
-*  **Top 3 Points of View:**
-    *  The main idea is to use system prompts to make any LLM think deeper.
-    *  Users are intrigued by the idea and plan to test this system prompt themselves.
-    *  There's a query on whether benchmarks have been conducted to check if adding the "thinking" step improves the results.
+**[What if we could supercharge small models with DeepSeek RL techniques? (Score: 8)](https://www.reddit.com/r/LocalLLaMA/comments/1ian3oa/what_if_we_could_supercharge_small_models_with/)**
+*   **Summary:** The thread explores the possibility of using DeepSeek RL techniques to enhance small models, referencing a paper where it was tested and the use of distillation.
+*   **Emotion:** The emotional tone is curious and interested in technical exploration.
+*   **Top 3 Points of View:**
+    *  The users discuss the fact that distillation from a large model to smaller model is better than doing RL on smaller models directly.
+    *  There is excitement about replicating the training pipeline of DeepSeek with the help of Hugging Face.
+    *  Users are brainstorming ways to push this further using verifiable rewards.
 
-**[A little scene I created using Qwen's new chat (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1ia53oi/a_little_scene_i_created_using_qwens_new_chat/)**
-*  **Summary:** This thread includes a user sharing a scene generated with Qwen's new chat and other users asking if this can be run locally.
-*  **Emotion:** The tone is neutral, focused on the inquiry about local use.
-*  **Top 3 Points of View:**
-    *  A user has created a scene using Qwen's new chat.
-    *  There is a question about the model being run locally.
+**['Fake reasoning' - A QLora adapter that turns llama into an obvious character, and shows their thinking.... (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1iaj378/fake_reasoning_a_qlora_adapter_that_turns_llama/)**
+*   **Summary:** This thread is about a QLora adapter that gives LLaMA a character persona that shows its "thinking process," prompting questions and interest from other users
+*   **Emotion:**  The emotional tone is generally positive, with amusement and curiosity about the adapter.
+*   **Top 3 Points of View:**
+    *   Users find the idea of the adapter humorous and interesting.
+    *   There is a user that is using similar concept with a system prompt.
+    *   Users are interested in the prompt used to generate the data.
 
-**[What is the best local model l for a 12GB VRAM RTX4080 laptop (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1ia78wh/what_is_the_best_local_model_l_for_a_12gb_vram/)**
-*  **Summary:** This thread asks for recommendations for local models that are suitable for a 12GB VRAM RTX4080 laptop, with users offering specific models based on their specialties in coding, math, and conversational tasks, as well as some smaller models that can fit within the VRAM.
-*  **Emotion:** The overall tone is neutral, focused on providing factual and practical information to the user.
-*  **Top 3 Points of View:**
-    *   Users recommend different models based on various task categories (coding, math, conversational).
-    *   There's a discussion of smaller models that can fit into 12GB of VRAM for those not requiring larger models.
-    *  Personal experiences with various models are shared to guide the user, highlighting the subjective performance of the models.
+**["CPU": 15 t/s vs GPU: 17 t/s. Help me make sense of this? (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1iambv4/cpu_15_ts_vs_gpu_17_ts_help_me_make_sense_of_this/)**
+*   **Summary:**  The thread is about unexpected performance between CPU and GPU when running LLMs, and how memory bandwidth plays a large role in performance.
+*  **Emotion:** The emotional tone is neutral, with some curiosity and helpfulness from the users.
+*   **Top 3 Points of View:**
+    *   Users are pointing out that memory bandwidth is a key factor instead of raw computational power.
+    *   There is a suggestion to run the model compiled without GPU support.
+    *  Users are asking about how to run docker+rocm on specific GPU.
 
-**[What is your favorite (small) question generator? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1ia2e0l/what_is_your_favorite_small_question_generator/)**
-*  **Summary:** This short thread discusses small question generators and suggests models like Phi-4 and Tiger-Gemma-9B-v3.
-*  **Emotion:** The tone is neutral, focused on making technical suggestions
-*  **Top 3 Points of View:**
-    *   Phi-4 is recommended.
-    *   Tiger-Gemma-9B-v3 is mentioned as an alternative if Phi-4 is too large.
+**[deepseek is a side project pt. 2 (Score: 4)](https://i.redd.it/bawhrb3ekefe1.jpeg)**
+*   **Summary:** This is a short discussion about how Deepseek is a side project.
+*   **Emotion:**  The tone of the discussion is positive and somewhat agreeing that the effort put in to the project will make it successful.
+*   **Top 3 Points of View:**
+    *   The users believe the project will be successful.
 
-**[Building a new PC for LLM Finetuning Ubuntu or Windows? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1ia4zcj/building_a_new_pc_for_llm_finetuning_ubuntu_or/)**
-*  **Summary:** This thread compares the suitability of Ubuntu and Windows for LLM finetuning. Users strongly recommend Ubuntu or any Linux distro, citing easier setup and performance. There is a question about Windows's dual GPU support.
-*  **Emotion:** The overall tone is neutral with a strong leaning towards recommending Linux over Windows for LLM finetuning purposes.
-*  **Top 3 Points of View:**
-    *   Linux is strongly recommended for LLM finetuning because it's easier to setup and use.
-    *   One user claims that there is no difference in performance when using dual GPUs in Windows vs Linux.
-    *   There's a humorous comment that linux is for work and windows is for solitaire.
+**[Found new interesting DeepSeek-R1 14B Mix. (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1iamna1/found_new_interesting_deepseekr1_14b_mix/)**
+*   **Summary:** This thread is about a new DeepSeek-R1 14B Mix, with the suggestion of trying an "uncensored" model.
+*  **Emotion:** The emotional tone is positive and curious about new model releases.
+*   **Top 3 Points of View:**
+    *   Users are curious about the new models.
+    *   There is also a recommendation for "uncensored" models.
 
-**[I made a Free & Open-Source FastAPI Template to build online services that uses LLMs! (Score: 2)](https://v.redd.it/iesj4wtiw9fe1)**
-*  **Summary:** The user shares a free, open-source FastAPI template to help build online services using LLMs, along with links to the repository and a hosted configuration.
-*  **Emotion:** The emotional tone is neutral and informative, focusing on technical details.
-*  **Top 3 Points of View:**
-    *  There is an offer of a free and open-source FastAPI template for LLM services.
-    *  Links are provided to the repository and a hosted configuration.
-    *  The template is intended to enable fast development of online microservices that leverage LLMs.
+**[Do you guys think I can Host and run proberly DeepSeek r1 1.5B in Hp elite book i7 16gb ram ? (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1iaosrn/do_you_guys_think_i_can_host_and_run_proberly/)**
+*  **Summary:** The thread is about the viability of running the DeepSeek r1 1.5B model on a laptop and performance expectations.
+*  **Emotion:** The tone of the discussion is mixed, with some users stating that the model sucks, while others report acceptable performance.
+*   **Top 3 Points of View:**
+    *   Some users report that the model can run on a laptop.
+    *   Some users say that the model is not very good.
+    *   Users are suggesting to use specific tools to get better performance.
 
-**[How does deepseek r1 learn to think for open-ended questions? (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1ia4y13/how_does_deepseek_r1_learn_to_think_for_openended/)**
-*  **Summary:** The thread examines how DeepSeek R1 learns to think for open-ended questions, touching on its nature as a MoE and the role of training data. It also discusses the lack of improvement in software engineering tasks.
-*  **Emotion:** The thread's emotion is primarily neutral, focusing on technical aspects and data analysis.
-*  **Top 3 Points of View:**
-    *  The question is raised whether Deepseek R1 is a mixture of experts.
-    *  The post references that the reasoning abilities of DeepSeek R1 might stem from reinforcement learning on coding and math data, not from specific training on open ended tasks.
-    *  The paper suggests that DeepSeek R1 did not improve much on software engineering tasks because of the lack of specific training data for that.
+**[Is there a simple way to import Safetensors from Hugging Face to Ollama? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1iam8kh/is_there_a_simple_way_to_import_safetensors_from/)**
+*   **Summary:** This thread discusses how to import Safetensors models into Ollama.
+*   **Emotion:** The tone of the discussion is informative and helpful.
+*   **Top 3 Points of View:**
+    *   Ollama does not support Safetensors directly, only GGUF files.
+    *   Users suggest converting Safetensors to GGUF format first.
+    *   Users suggest using GGUF files directly from Hugging Face.
 
-**[is this agi? (Score: 0)](https://i.redd.it/gprizzw4bafe1.jpeg)**
-*  **Summary:** This thread has a user asking if a post is an example of AGI. The thread turns negative with a user commenting about people wasting resources on AI models instead of improving their own lives.
-*  **Emotion:** This thread contains negative emotions. Some are disappointed by people spending money on AI models instead of themselves, while another user calls the original post "dumb".
+**[Anyone using R1 or the distilled models for code autocomplete / FIM? How does it compare to Qwen 2.5 Coder? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1iapkpe/anyone_using_r1_or_the_distilled_models_for_code/)**
+*   **Summary:** The thread questions whether the R1 models are good for code autocomplete and FIM.
+*   **Emotion:** The overall tone is mostly negative, as the user reports that the models are not optimal for code autocomplete and FIM.
+*   **Top 3 Points of View:**
+    *   The R1 and distilled models are not the optimal use case for code autocompletion.
+
+**[R1 substandard knowledge retrieval in the field of RF/computer vision/defense/neuroscience? (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1ial8dk/r1_substandard_knowledge_retrieval_in_the_field/)**
+*   **Summary:**  This thread discusses the reported issues with the R1 model in specific niche fields.
+*  **Emotion:** The emotional tone is somewhat negative, due to the issues being discussed with the R1 model.
 *  **Top 3 Points of View:**
-   *   One user expresses disappointment and sarcasm about the resources being spent on LLMs, saying it's "dystopian."
-   *  The same user expresses negativity about people using the models as "GFs" instead of other personal improvement activities.
-    * Another user simply says "no, this is a dumb post".
+    * The R1 model has subpar performance in certain specialized fields.
+    * One user disliked the poem.
+    * A user has a political comment not related to the topic.
+
+**[How many r in strawberry? are you sure?: quick rtx3090 24gb benchmark on qwen models... (Score: 0)](https://i.redd.it/6a4k30qnrdfe1.png)**
+*   **Summary:** The thread discusses an apparent issue with the model identifying the number of "r"s in the word strawberry.
+*   **Emotion:** The emotional tone is neutral, as it seems that users are trying to figure out why the model is producing the wrong answers.
+*    **Top 3 Points of View:**
+    *  Users are trying to understand why the model misidentifies the number of "r"s in strawberry.
+    * Users are mentioning that the model might get confused by other words.
+    * There is a user providing a GIF as a response.
+
+**[Conversational models from 15 months ago will engage in more topics (Score: 0)](https://www.reddit.com/r/LocalLLaMA/comments/1iaotk8/conversational_models_from_15_months_ago_will/)**
+*  **Summary:** This thread mentions that older conversational models are better at discussing a wider range of topics.
+*   **Emotion:** The emotional tone is neutral and informational.
+*   **Top 3 Points of View:**
+    *  Different training data might be the reason why newer models engage in less topics.
