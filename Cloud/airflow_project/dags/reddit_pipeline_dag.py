@@ -21,6 +21,7 @@ Owner: Sulman Khan
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
+from airflow.operators.email import EmailOperator
 from airflow.stats import Stats
 from datetime import datetime, timedelta
 import os
@@ -147,6 +148,20 @@ with DAG(
     catchup=False,
     max_active_runs=1
 ) as dag:
+
+    # Start Pipeline Email Notification
+    start_pipeline_email = EmailOperator(
+        task_id='send_start_email',
+        to='{{ var.value.ALERT_EMAIL }}',
+        subject='Reddit Pipeline Started',
+        html_content="""
+        <h3>Reddit AI Pulse Pipeline Started</h3>
+        <p>The data processing pipeline has been initiated.</p>
+        <p>Start Time: {{ ts }}</p>
+        <p>Run ID: {{ run_id }}</p>
+        """,
+        dag=dag
+    )
 
     # 1st Stage: Ingest and Preprocess
     ingest_task = PythonOperator(
@@ -357,8 +372,24 @@ with DAG(
         """
     )
     
+    # Success Pipeline Email Notification
+    success_pipeline_email = EmailOperator(
+        task_id='send_success_email',
+        to='{{ var.value.ALERT_EMAIL }}',
+        subject='Reddit Pipeline Completed Successfully',
+        html_content="""
+        <h3>Reddit AI Pulse Pipeline Completed</h3>
+        <p>The data processing pipeline has completed successfully.</p>
+        <p>Start Time: {{ ts }}</p>
+        <p>End Time: {{ data_interval_end }}</p>
+        <p>Run ID: {{ run_id }}</p>
+        """,
+        trigger_rule='all_success',  # Only send if all upstream tasks succeeded
+        dag=dag
+    )
+
     # Define task dependencies
-    ingest_task >> ingest_metrics_task >> \
+    start_pipeline_email >> ingest_task >> ingest_metrics_task >> \
     dbt_test_raw_sources >> dbt_test_raw_metrics_task >> \
     dbt_staging_task >> dbt_test_staging_models >> dbt_test_staging_metrics_task >> \
     summarize_task >> summarize_metrics_task >> dbt_test_summarize_models >> dbt_test_summarize_metrics_task  >> \
@@ -366,4 +397,4 @@ with DAG(
     dbt_join_summary_analysis_task >> join_metrics_task >> dbt_test_joined_summary_analysis_task >> dbt_test_joined_summary_analysis_metrics_task >> \
     task_update_status >> test_processing_status_metrics >> dbt_test_update_processing_status >> dbt_test_update_processing_status_metrics >> \
     gemini_task >> test_gemini_metrics >> \
-    push_gemini_results_task >> shutdown_vm 
+    push_gemini_results_task >> success_pipeline_email >> shutdown_vm 
