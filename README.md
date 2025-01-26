@@ -230,7 +230,7 @@ The diagram above illustrates the flow of data through our system, from collecti
    - Track ML experiments in MLflow
 
 5. **Check the website**
-    - [Website](https://reddit-text-insight-and-sentiment-website-local.vercel.app/)
+    - [Website](https://reddit-ai-pulse.vercel.app/)
     - [Blog](https://sulmank.github.io/Blog/writing/2025/01/23/Reddit%20AI%20Pulse%20%28Cloud%29/)
 
 ### DBT Data Transformations
