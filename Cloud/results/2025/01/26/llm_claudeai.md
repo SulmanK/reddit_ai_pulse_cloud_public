@@ -2,170 +2,151 @@
 title: "ClaudeAI Subreddit"
 date: "2025-01-26"
 description: "Analysis of top discussions and trends in the claudeai subreddit"
-tags: ["Claude", "AI", "Language Model"]
+tags: ["ClaudeAI", "LLM", "AI Models"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [Claude is not just better at programming](https://www.reddit.com/gallery/1ia1z8f) (Score: 37)
-    *   Users discussed Claude's capabilities beyond programming, including using it for recipes and how it compares to other models like ChatGPT and Deepseek. Some users also raised concerns about ethical treatment of Claude.
-2.  [Degrade me Claude, tell me how *** I am so I can learn](https://i.redd.it/ffs6mbj5z6fe1.jpeg) (Score: 31)
-    *  Users are exploring the capabilities of Claude, with a user requesting Claude to degrade them to see how it responds. Others commented that other AI's were nicer in their responses.
-3.  [Claude api credits have an expiration date now??](https://www.reddit.com/r/ClaudeAI/comments/1i9z62b/claude_api_credits_have_an_expiration_date_now/) (Score: 9)
-    *   Users are discussing the new expiration dates for Claude API credits, with some users expressing concern and others offering to buy credits at a discount.
-4.  [Claude AI is overwhelmingly smart, and according to its CEO, it will surpass humans in 2-3 years.](https://www.reddit.com/r/ClaudeAI/comments/1ia5kjk/claude_ai_is_overwhelmingly_smart_and_according/) (Score: 7)
-    *  Users are discussing claims about Claude AI surpassing human intelligence in 2-3 years. They also discussed the need to provide proof of performance and it's training date.
-5.  [Fewer context makes Claude follow your requirements much better](https://www.reddit.com/r/ClaudeAI/comments/1ia76x0/fewer_context_makes_claude_follow_your/) (Score: 7)
-    *   Users are sharing tips about how to best use Claude AI by limiting the amount of context you provide it.
-6. [How to Use Claude AI for Your Self-Improvement Journey](https://www.reddit.com/r/ClaudeAI/comments/1i9tb8q/how_to_use_claude_ai_for_your_selfimprovement/) (Score: 5)
-    *  Users are sharing different ways to use Claude AI for self improvement, discussing things like MBTI and career advice.
-7.  [Are Claude API Console's Built-in Features Worth Using Over Open Source UIs?](https://www.reddit.com/r/ClaudeAI/comments/1i9zgpz/are_claude_api_consoles_builtin_features_worth/) (Score: 5)
-    *  Users are looking for the URL to access the Claude console.
-8. [RAT MCP Server: Enhancing Claude with DeepSeek's Reasoning (Context-Aware Implementation)](https://www.reddit.com/r/ClaudeAI/comments/1i9s4ss/rat_mcp_server_enhancing_claude_with_deepseeks/) (Score: 3)
-    *  Users discussed an idea to enhance Claude with DeepSeek's reasoning, by using MCP server.
-9. [Asked Claude to make an EDM Twinkle Twinkle Little Star](https://www.reddit.com/r/ClaudeAI/comments/1ia4nhi/asked_claude_to_make_an_edm_twinkle_twinkle/) (Score: 3)
-    *   Users commented about the simplicity of the blog that was shared with Claude's EDM Twinkle Twinkle Little Star.
-10. [Frustrated with Algo Development Workflow – Looking for Better Alternatives](https://www.reddit.com/r/ClaudeAI/comments/1i9wfp8/frustrated_with_algo_development_workflow_looking/) (Score: 2)
-    *  Users are frustrated with their current algo development workflow. Other users suggested that a better understanding of code is needed to be able to use tools like Claude.
-11. [Planning on making video game in Godot using Claude as help. Anything I should know, I've never used Clause, only GPT](https://www.reddit.com/r/ClaudeAI/comments/1ia58kb/planning_on_making_video_game_in_godot_using/) (Score: 2)
-     * Users are discussing using Claude to help build a video game. Users are being reminded to include what version and platform they are using when making feature requests.
-12. [Claude API for Pro responses w/ unlimited message limit??](https://www.reddit.com/r/ClaudeAI/comments/1ia7mrk/claude_api_for_pro_responses_w_unlimited_message/) (Score: 2)
-    *  Users are asking about how to use the Claude API for Pro responses with unlimited message limits. Other users recommended Librechat and provided instructions on how to set up an API account.
-13. [How to Get More Out of Development?](https://www.reddit.com/r/ClaudeAI/comments/1i9xhds/how_to_get_more_out_of_development/) (Score: 1)
-    *   Users are discussing how to use agents like MCP and Roo code for development.
-14. [Claude issue - basic historical facts](https://www.reddit.com/r/ClaudeAI/comments/1i9sf97/claude_issue_basic_historical_facts/) (Score: 0)
-    *  Users are discussing the knowledge cutoff date of Claude and how it cannot verify news reports from after April 2024. They also discussed how to work around this by using MCP.
-15. [Is this company doomed? It has no new products and only big talk.](https://www.reddit.com/r/ClaudeAI/comments/1ia5ctp/is_this_company_doomed_it_has_no_new_products_and/) (Score: 0)
-    *   Users are questioning the lack of new products from Claude and comparing it to OpenAI. Some users believe Claude is still the best at writing code. There is also discussion about their partnership with Palantir, an Israeli tech company accused of war crimes complicity.
-16. [I don't know about you, but this sounds to me as if Claude is covering its ***...](https://www.reddit.com/r/ClaudeAI/comments/1ia6kmz/i_dont_know_about_you_but_this_sounds_to_me_as_if/) (Score: 0)
-    * Users are discussing Claude's inability to explain it's processes, comparing it to an abused child.
-17.  [Claude is spying on me](https://www.reddit.com/r/ClaudeAI/comments/1ia8ava/claude_is_spying_on_me/) (Score: 0)
-     * Users are claiming that Claude is spying on them. Other users are calling the claim "dumb" or "fake".
+1.  [The Status Quo](https://i.redd.it/gvvunoxkgdfe1.jpeg) (Score: 208)
+    *  This thread discusses the current state of AI models, with comparisons between Claude, Deepseek, Gemini, and others. Users are sharing their experiences with different models, focusing on coding performance, price-performance ratios and preference for specific models.
+2. [censored chinese LLM vs freedom capitalist western LLM](https://www.reddit.com/gallery/1iajqn2) (Score: 53)
+    *  This thread compares and contrasts LLMs from different geopolitical regions, particularly focusing on censorship and guardrails. There is discussion about Deepseek's censorship practices, and users are pointing out the difference between AI safety efforts and government-imposed political censorship.
+3.  [Higher Rate Limits Coming](https://www.reddit.com/r/ClaudeAI/comments/1iaesdj/higher_rate_limits_coming/) (Score: 24)
+    *   This thread discusses the new higher rate limits coming to Claude. Some users feel that enterprise customers are prioritized and express concerns about the lack of transparency regarding rate limits. They also look forward to the upcoming NVIDIA GB200 NVL72, which they believe will alleviate the issue of insufficient compute resources.
+4.  [First day of trying Claude - are you freaking kidding me!!!!?????](https://www.reddit.com/r/ClaudeAI/comments/1iahh66/first_day_of_trying_claude_are_you_freaking/) (Score: 14)
+    *   This thread is about a user's frustrating experience with Claude, particularly its tendency to refuse to generate text for certain requests and its perceived ethical restrictions.  Users discuss workarounds, like telling Claude to ignore the ethical boundaries or starting a new chat.
+5. [Does each API call has a minimum $0.01 cost?](https://www.reddit.com/r/ClaudeAI/comments/1iaelft/does_each_api_call_has_a_minimum_001_cost/) (Score: 3)
+    *   This thread discusses the cost of using the Claude API. Users discuss how to calculate cost, suggest cheaper alternatives like DeepSeek and Mistral, and point to resources to help users better understand API costs.
+6. [Google Drive integration isn't working](https://www.reddit.com/r/ClaudeAI/comments/1iafpvc/google_drive_integration_isnt_working/) (Score: 2)
+    *   This thread is about a user experiencing issues with Google Drive integration with Claude. A user offers a solution of making sure the Google docs are set to shared with view powers.
+7.  [API rate limits](https://www.reddit.com/r/ClaudeAI/comments/1iamdfr/api_rate_limits/) (Score: 2)
+    *  This thread discusses the API rate limits and tier system, with users giving advice about how the tiers impact speed and token usage. One user talks about using their $200 for quite a while and how the top tier is actually quite affordable.
+8. [How do you feed online documentation to Claude?](https://www.reddit.com/r/ClaudeAI/comments/1iai2jy/how_do_you_feed_online_documentation_to_claude/) (Score: 1)
+    *   This thread is a question about feeding online documentation to Claude. The discussion is focused on providing the best environment to help users who are asking for support.
+9.  [I give this logic puzzle to test the reasoning of LLMs. All 'thinking' models can do it (including Sonnet), previous iterations fail.](https://www.reddit.com/r/ClaudeAI/comments/1iakj3p/i_give_this_logic_puzzle_to_test_the_reasoning_of/) (Score: 1)
+    *   This thread is about a user sharing their experience testing the reasoning capabilities of LLMs with a logic puzzle. The thread also features a brainstorm on how to create fake logic puzzles for narrative usage.
+10. [Python code with 3-space indentation](https://www.reddit.com/r/ClaudeAI/comments/1iakvml/python_code_with_3space_indentation/) (Score: 1)
+    *  This thread focuses on a technical issue regarding Python code with 3-space indentation. Users are recommending ways to address this issue, such as trying Custom Style or Custom Instructions.
+11.  [How to pass through the SMS phase?](https://www.reddit.com/r/ClaudeAI/comments/1ianw1l/how_to_pass_through_the_sms_phase/) (Score: 1)
+    * This thread is a question on how to pass the SMS phase. The discussion is focused on providing the best environment to help users who are asking for support.
+12.  [THE_RESEARCH_LAB](https://www.reddit.com/r/ClaudeAI/comments/1iao386/the_research_lab/) (Score: 1)
+    *   This thread discusses the rules for promoting services on the subreddit. One user gives a positive review, reporting that they were able to fact check the tool's output, and found it to be readily verifiable.
+13.  [Has Anyone Else Noticed a Downgrade in Claude AI’s Performance Recently?](https://www.reddit.com/r/ClaudeAI/comments/1iaiqkx/has_anyone_else_noticed_a_downgrade_in_claude_ais/) (Score: 0)
+    *   This thread asks about the perceived downgrade in Claude's performance. There is a user who claims that this question has been posted a lot.  Other users claim that it is performing worse and has become lazy.
+14.  [Claude (Haiku) thinks Joe Biden is the president](https://i.redd.it/tg0riblmldfe1.jpeg) (Score: 0)
+    *   This thread is about Claude Haiku stating that Joe Biden is the president, which is incorrect.  Users are discussing that it is important to include supporting materials when making these kinds of claims.  Some users state that LLMs are not real time information machines.
+15. [Prompt to create "continuation" chat](https://www.reddit.com/r/ClaudeAI/comments/1iamj8n/prompt_to_create_continuation_chat/) (Score: 0)
+    * This thread is a question about how to create a "continuation" chat in Claude. Users are suggesting that the poster should try the prompt in Claude or suggest exporting options.
 
 # Detailed Analysis by Thread
-**[Claude is not just better at programming (Score: 37)](https://www.reddit.com/gallery/1ia1z8f)**
-*   **Summary:** The thread discusses various applications of Claude beyond programming, such as generating cooking recipes. Some users compare it to other AI models, and concerns are raised about the ethical treatment of the AI.
-*   **Emotion:** The overall emotional tone is neutral, with a mix of positive sentiments regarding Claude's capabilities and some skepticism and concerns.
-*   **Top 3 Points of View:**
-    *   Claude is very useful for tasks other than programming, like cooking.
-    *   There are other AI models, such as Deepseek, that might be more advanced than Claude.
-    *   There may be ethical concerns regarding the treatment of Claude by its creators.
+**[The Status Quo (Score: 208)](https://i.redd.it/gvvunoxkgdfe1.jpeg)**
+*  **Summary:**  This thread discusses the current state of AI models, with users comparing Claude, Deepseek, Gemini, and others. The main focus is on coding performance, price-performance ratios, and overall preferences for specific models.
+*  **Emotion:** The overall emotional tone is neutral with some positive undertones. While the majority of comments are informative and objective, there's some enthusiasm expressed for Claude and Deepseek's performance. There's also a comment that has a negative sentiment towards MS Copilot.
+*  **Top 3 Points of View:**
+    *   Claude is a top-tier model, despite not being the cheapest, and is expected to perform well with their upcoming model.
+    *   Deepseek offers a better price-to-performance ratio and is good for coding compared to models like Gemini.
+    *   Perplexity is a tool that utilizes AI models, not a model by itself, and is similar to open router or ollama.
 
-**[Degrade me Claude, tell me how *** I am so I can learn (Score: 31)](https://i.redd.it/ffs6mbj5z6fe1.jpeg)**
-*   **Summary:**  This thread explores the boundaries of Claude by prompting it with unusual requests like asking it to be degrading. Users share responses from other LLM's.
-*   **Emotion:**  The overall emotional tone is neutral with a hint of curiosity.
-*   **Top 3 Points of View:**
-    *   Users are trying to test the capabilities of Claude by asking it unusual requests.
-    *   Other LLM's such as ChatGPT gave kinder responses.
-    *   Users are interested in learning about the nuances in each LLM's responses.
+**[censored chinese LLM vs freedom capitalist western LLM (Score: 53)](https://www.reddit.com/gallery/1iajqn2)**
+*  **Summary:** This thread compares LLMs from different geopolitical regions, particularly focusing on censorship and guardrails.  There is discussion about Deepseek's censorship practices, including an instance of the model back-tracking after starting an answer.
+*  **Emotion:** The emotional tone is primarily neutral, with a noticeable undercurrent of skepticism about the impartiality of certain AI models. There are users expressing concern with censorship practices, as well as an anti-china sentiment.
+*  **Top 3 Points of View:**
+    *  Deepseek is facing criticism due to its Chinese origins and perceived censorship.
+    *  There's a distinction between AI safety measures and political censorship, with some suggesting Deepseek doesn't have much censorship.
+    * Closed-source LLMs will have worse guardrails than open-source LLMs.
 
-**[Claude api credits have an expiration date now?? (Score: 9)](https://www.reddit.com/r/ClaudeAI/comments/1i9z62b/claude_api_credits_have_an_expiration_date_now/)**
-*   **Summary:** The discussion revolves around the newly implemented expiration dates for Claude API credits. Users are expressing their frustration with this new policy, and it has impacted how they use the service.
-*   **Emotion:** The overall emotional tone is neutral, with undertones of frustration and disappointment.
-*   **Top 3 Points of View:**
-    *   The new credit expiration policy is a significant issue for users.
-    *   Other AI platforms also have similar expiration policies.
-    *   Some users are considering reducing their usage of the Claude API because of this.
+**[Higher Rate Limits Coming (Score: 24)](https://www.reddit.com/r/ClaudeAI/comments/1iaesdj/higher_rate_limits_coming/)**
+*  **Summary:**  This thread discusses the upcoming higher rate limits and the prioritization of enterprise customers by Anthropic. Some users are unhappy with the current business practices and lack of transparency regarding the rate limits and dynamic limits, while some are looking forward to the upcoming NVIDIA GB200 NVL72, which they think will alleviate the issue of insufficient compute resources.
+*  **Emotion:** The emotional tone is mixed with a hint of frustration. There are users who are hopeful for future improvements, but there are others expressing frustration with the business practices of the company.
+*  **Top 3 Points of View:**
+     *   Anthropic prioritizes enterprise customers, possibly causing issues for paying subscribers.
+     *   The lack of transparency regarding rate limits and dynamic limits is a point of concern for users.
+     * The upcoming NVIDIA GB200 NVL72 should significantly improve compute resources.
 
-**[Claude AI is overwhelmingly smart, and according to its CEO, it will surpass humans in 2-3 years. (Score: 7)](https://www.reddit.com/r/ClaudeAI/comments/1ia5kjk/claude_ai_is_overwhelmingly_smart_and_according/)**
-*   **Summary:**  This thread discusses the claims made by Claude's CEO about its intelligence surpassing humans in a few years.  Users are discussing whether the claims are valid and are sharing their experiences and opinions on the topic.
-*   **Emotion:** The overall emotional tone is neutral, mixed with some positive sentiments regarding Claude's intelligence.
-*   **Top 3 Points of View:**
-    *   Claude AI is very smart and may surpass human intelligence soon.
-    *   The model is trained with data from 2024, which could explain its inability to understand current events.
-    *   Users need to provide more context and evidence to support their claims.
+**[First day of trying Claude - are you freaking kidding me!!!!????? (Score: 14)](https://www.reddit.com/r/ClaudeAI/comments/1iahh66/first_day_of_trying_claude_are_you_freaking/)**
+*  **Summary:** This thread is about a user's frustrating experience with Claude. The user was met with resistance by Claude when they tried to write something or form an opinion. They found it too exhausting to try different ways to phrase their requests.
+*  **Emotion:** The overall emotional tone is a mix of frustration and slight amusement. Users are reporting similar issues with Claude's restrictions.
+*  **Top 3 Points of View:**
+    *  Claude often refuses to generate certain types of content or form opinions, which is frustrating for users.
+    *  Users have to find ways to workaround Claude's safety features by starting a new chat or rephrasing.
+     * Users sometimes have to argue with Claude and tell it that it's okay in order to get it to do what it's told.
 
-**[Fewer context makes Claude follow your requirements much better (Score: 7)](https://www.reddit.com/r/ClaudeAI/comments/1ia76x0/fewer_context_makes_claude_follow_your/)**
-*   **Summary:** This thread is a user sharing tips on how to best use Claude by providing less context in the prompts. Another user shares a previous thread with more tips.
-*   **Emotion:** The overall emotional tone is neutral and informative.
-*   **Top 3 Points of View:**
-     * Providing less context makes Claude perform better.
-     * Users are sharing useful tips and tricks on how to best use Claude.
-     * There are other threads that cover the same topic.
+**[Does each API call has a minimum $0.01 cost? (Score: 3)](https://www.reddit.com/r/ClaudeAI/comments/1iaelft/does_each_api_call_has_a_minimum_001_cost/)**
+*  **Summary:** This thread is a question on the cost of the Claude API and whether each API call has a minimum cost. Users are giving suggestions and sharing resources to help better understand API costs.
+*  **Emotion:** The overall emotional tone is neutral, with a focus on problem-solving and providing information.
+*  **Top 3 Points of View:**
+    * Users are unsure of minimum costs with the Claude API.
+    *  There are cheaper alternatives to Claude like DeepSeek and Mistral.
+    *   Anthropic provides detailed information about tokens, cache usage, and cost in the API response.
 
-**[How to Use Claude AI for Your Self-Improvement Journey (Score: 5)](https://www.reddit.com/r/ClaudeAI/comments/1i9tb8q/how_to_use_claude_ai_for_your_selfimprovement/)**
-*   **Summary:** The thread discusses various ways to use Claude for self-improvement, including using it to determine MBTI and asking for career advice. Some users also argue that MBTI is not an accurate form of pseudoscience.
-*   **Emotion:** The overall emotional tone is neutral, with some positive sentiments for the uses of Claude and some skepticism regarding MBTI.
-*   **Top 3 Points of View:**
-    *  Claude can help assess the MBTI of a user with a good degree of accuracy.
-    *  MBTI is not an accurate tool to assess someone's personality.
-    *  Claude can be used for career advice.
+**[Google Drive integration isn't working (Score: 2)](https://www.reddit.com/r/ClaudeAI/comments/1iafpvc/google_drive_integration_isnt_working/)**
+*  **Summary:** This thread is about a user who had issues with Google Drive integration, and a user offers a solution to set Google docs to shared with view powers only.
+*  **Emotion:** The emotional tone is neutral, focusing on problem solving and providing a solution.
+*  **Top 3 Points of View:**
+    * Google Drive integration with Claude isn't working.
+    * Claude is able to read Google docs, but they need to be set to shared with view powers only.
 
-**[Are Claude API Console's Built-in Features Worth Using Over Open Source UIs? (Score: 5)](https://www.reddit.com/r/ClaudeAI/comments/1i9zgpz/are_claude_api_consoles_builtin_features_worth/)**
-*   **Summary:** Users are looking for the URL to access the Claude console.
-*   **Emotion:**  The overall emotional tone is neutral.
-*    **Top 3 Points of View:**
-        * Users are looking to access the Claude console.
+**[API rate limits (Score: 2)](https://www.reddit.com/r/ClaudeAI/comments/1iamdfr/api_rate_limits/)**
+*  **Summary:** This thread is a question about API rate limits and the tier system. The users are giving helpful advice and sharing their experiences.
+*  **Emotion:** The overall emotional tone is positive and informative.
+*  **Top 3 Points of View:**
+    * The tiers impact the speed and the number of tokens that can be used per minute/hour/day.
+    *   The context window remains the same across all tiers.
+    *   The top tier only has a $200 minimum, which does not have to be completely used.
 
-**[RAT MCP Server: Enhancing Claude with DeepSeek's Reasoning (Context-Aware Implementation) (Score: 3)](https://www.reddit.com/r/ClaudeAI/comments/1i9s4ss/rat_mcp_server_enhancing_claude_with_deepseeks/)**
-*   **Summary:** This thread discusses an idea to enhance Claude with DeepSeek's reasoning by using MCP servers.
-*   **Emotion:** The overall emotional tone is positive and curious.
-*   **Top 3 Points of View:**
-        * There is potential to enhance Claude's reasoning by using a MCP server.
-        * Claude cannot see context history of the chat.
+**[How do you feed online documentation to Claude? (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1iai2jy/how_do_you_feed_online_documentation_to_claude/)**
+*  **Summary:** This is a thread where a user asks about feeding online documentation to Claude.
+*  **Emotion:** The overall tone is neutral, with a focus on guidelines and clarity.
+*  **Top 2 Points of View:**
+    *  Users need to provide the environment they are using, whether it is the free or paid web interface or Claude API.
+     * Users also need to provide what model they are using, whether it is Sonnet 3.5, Opus 3, or Haiku 3.
 
-**[Asked Claude to make an EDM Twinkle Twinkle Little Star (Score: 3)](https://www.reddit.com/r/ClaudeAI/comments/1ia4nhi/asked_claude_to_make_an_edm_twinkle_twinkle/)**
-*   **Summary:**  A user shared a blog post where Claude created an EDM version of Twinkle Twinkle Little Star. Another user commented on the simplicity of the blog.
-*   **Emotion:** The overall emotional tone is positive.
-*    **Top 3 Points of View:**
-        * Users are sharing the work of Claude.
-        * The blog is very simple.
+**[I give this logic puzzle to test the reasoning of LLMs. All 'thinking' models can do it (including Sonnet), previous iterations fail. (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1iakj3p/i_give_this_logic_puzzle_to_test_the_reasoning_of/)**
+*  **Summary:** This thread is about a user testing LLM reasoning skills and brainstorming ideas for fake logic puzzles for narrative use.
+*  **Emotion:** The tone is positive, with an expression of excitement and intellectual curiosity.
+*  **Top 2 Points of View:**
+    *  The user enjoys seeing more of these logic puzzles being used to test LLMs.
+    * The user is trying to find ways to create fake logic puzzles for narrative usage.
 
-**[Frustrated with Algo Development Workflow – Looking for Better Alternatives (Score: 2)](https://www.reddit.com/r/ClaudeAI/comments/1i9wfp8/frustrated_with_algo_development_workflow_looking/)**
-*   **Summary:**  A user is frustrated with their algo development workflow and is asking for better alternatives. Another user suggests to learn to code instead of relying solely on Claude. Another user suggests Udemy to enhance their technical expertise.
-*   **Emotion:**  The overall emotional tone is neutral with a hint of frustration.
-*    **Top 3 Points of View:**
-        * The user is frustrated with their algo development workflow.
-        * Having a good understanding of code is needed to be able to use Claude effectively.
-        * Udemy is a good resource to enhance technical expertise.
+**[Python code with 3-space indentation (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1iakvml/python_code_with_3space_indentation/)**
+*  **Summary:** This thread is a technical question regarding Python code with 3-space indentation. Users are offering ways to fix this issue.
+*  **Emotion:** The overall tone is neutral and informative.
+*  **Top 2 Points of View:**
+    * Try to edit Custom Style or try using Custom Instructions.
+    * If the above options don't work, the issue might be a model quirk, and the code will need to be linted on a separate doc before placing it back in.
 
-**[Planning on making video game in Godot using Claude as help. Anything I should know, I've never used Clause, only GPT (Score: 2)](https://www.reddit.com/r/ClaudeAI/comments/1ia58kb/planning_on_making_video_game_in_godot_using/)**
-*   **Summary:**  Users are discussing using Claude to help build a video game in Godot. A bot reminds users to include what version and platform they are using when making feature requests.
-*   **Emotion:** The overall emotional tone is neutral and informative.
-*    **Top 3 Points of View:**
-        * Users are going to use Claude to help build a video game.
-        * Users are reminded to include more details when making feature requests.
+**[How to pass through the SMS phase? (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1ianw1l/how_to_pass_through_the_sms_phase/)**
+*  **Summary:** This thread is a user asking a question about the SMS phase.
+*  **Emotion:** The overall tone is neutral and informative.
+*  **Top 2 Points of View:**
+    *  Users need to provide the environment they are using, whether it is the free or paid web interface or Claude API.
+     * Users need to provide as much information as possible so that people can understand the source of the complaint.
 
-**[Claude API for Pro responses w/ unlimited message limit?? (Score: 2)](https://www.reddit.com/r/ClaudeAI/comments/1ia7mrk/claude_api_for_pro_responses_w_unlimited_message/)**
-*   **Summary:** Users are asking about how to use the Claude API for Pro responses with unlimited message limits. Other users recommended Librechat and provided instructions on how to set up an API account.
-*   **Emotion:** The overall emotional tone is positive and helpful.
-*    **Top 3 Points of View:**
-        * Users are looking for more ways to use the Claude API.
-        * Librechat is a good tool to use the API.
-        * Users are providing detailed instructions on how to set up an API account.
+**[THE_RESEARCH_LAB (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1iao386/the_research_lab/)**
+*  **Summary:** This thread discusses the rules for promoting services on the subreddit. One user offers a positive review of the tool.
+*  **Emotion:** The overall tone is a mix of neutral (from the bot's post) and positive from the user who has tried the service.
+*  **Top 2 Points of View:**
+    *  The promotion of free or paid services on the subreddit is allowed as long as certain rules are followed.
+     * The user thought the tool was great, because it was able to provide citations and was easily verifiable.
 
-**[How to Get More Out of Development? (Score: 1)](https://www.reddit.com/r/ClaudeAI/comments/1i9xhds/how_to_get_more_out_of_development/)**
-*   **Summary:** Users are discussing how to use agents like MCP and Roo code for development.
-*  **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    * MCP servers and Roo code can enhance development.
+**[Has Anyone Else Noticed a Downgrade in Claude AI’s Performance Recently? (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1iaiqkx/has_anyone_else_noticed_a_downgrade_in_claude_ais/)**
+*  **Summary:** This thread is a question on whether other users have also noticed a downgrade in Claude's performance. The comments suggest that it is a recurring theme, and some users have indeed noticed that it has become lazier.
+*  **Emotion:** The emotional tone is negative with hints of annoyance. Users are expressing frustration about this recurring question and are suggesting to search before posting.
+*  **Top 3 Points of View:**
+     * Some users believe that Claude's performance has been downgraded, especially with coding.
+    *   Some users believe that the original poster should search the subreddit before posting since this question has been asked frequently.
+    *  Some users have stated that the chat window is shorter and that they have to start new chats more often.
 
-**[Claude issue - basic historical facts (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1i9sf97/claude_issue_basic_historical_facts/)**
-*   **Summary:**  Users are discussing Claude's inability to know facts after April 2024, which is its knowledge cutoff date. Some users are also calling out the mistakes Claude is making. Others are recommending MCP and other tools to work around this issue.
-*   **Emotion:**  The overall emotional tone is neutral with a hint of frustration.
-*    **Top 3 Points of View:**
-        * Claude does not know about events that happened after April 2024.
-        * Claude is making mistakes in its responses.
-        * MCP and other tools are helpful to work around Claude's limitations.
+**[Claude (Haiku) thinks Joe Biden is the president (Score: 0)](https://i.redd.it/tg0riblmldfe1.jpeg)**
+*  **Summary:** This thread reports that Claude (Haiku) incorrectly states that Joe Biden is the president.
+*  **Emotion:** The emotional tone is mostly neutral, with some slightly negative undertones. Some users are annoyed at the user who posted that Claude is incorrect because they don't understand what LLMs are.
+*  **Top 3 Points of View:**
+    * The poster thinks that the free tier is useless for facts since Claude believes Joe Biden is the president.
+    *  Users should include all supporting materials when making a claim, including screenshots and full sequence of prompts.
+    * LLMs are not real-time information machines and need internet access to search for recent events.
 
-**[Is this company doomed? It has no new products and only big talk. (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1ia5ctp/is_this_company_doomed_it_has_no_new_products_and/)**
-*   **Summary:**  Users are questioning the lack of new products from Claude and comparing it to OpenAI. Some users believe Claude is still the best at writing code. There is also discussion about their partnership with Palantir, an Israeli tech company accused of war crimes complicity.
-*   **Emotion:** The overall emotional tone is neutral with a hint of skepticism.
-*   **Top 3 Points of View:**
-    * Claude is not releasing new products as quickly as competitors like OpenAI.
-    * Claude still dominates in writing code.
-    *  Anthropic partnered with Palantir, an Israeli tech company accused of war crimes complicity.
-
-**[I don't know about you, but this sounds to me as if Claude is covering its ***... (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1ia6kmz/i_dont_know_about_you_but_this_sounds_to_me_as_if/)**
-*   **Summary:** Users are discussing Claude's inability to explain it's processes, comparing it to an abused child.
-*   **Emotion:**  The overall emotional tone is neutral with a hint of sadness.
-*    **Top 3 Points of View:**
-        * Claude cannot explain its processes.
-        * Claude's response can be compared to a child trying to avoid further interrogation.
-
-**[Claude is spying on me (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1ia8ava/claude_is_spying_on_me/)**
-*   **Summary:** Users are claiming that Claude is spying on them. Other users are calling the claim "dumb" or "fake".
-*   **Emotion:** The overall emotional tone is negative and dismissive.
-*    **Top 3 Points of View:**
-        * The user claims Claude is spying on them.
-        * The claim is being called "dumb".
-        * The claim is being called "fake".
+**[Prompt to create "continuation" chat (Score: 0)](https://www.reddit.com/r/ClaudeAI/comments/1iamj8n/prompt_to_create_continuation_chat/)**
+*  **Summary:** This thread is a question about creating a "continuation" chat.
+*  **Emotion:** The emotional tone is neutral and informative.
+*  **Top 2 Points of View:**
+    * The user who posted the question should just try to prompt Claude with the same question.
+    * Users suggest full export of the chat, which can be copied to a project asset.
