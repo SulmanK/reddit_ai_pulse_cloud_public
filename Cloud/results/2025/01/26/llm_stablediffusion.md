@@ -2,148 +2,110 @@
 title: "Stable Diffusion Subreddit"
 date: "2025-01-26"
 description: "Analysis of top discussions and trends in the stablediffusion subreddit"
-tags: ["stable diffusion", "AI", "GPU", "image generation"]
+tags: ["stable diffusion", "AI", "image generation"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [Honest question, in 2025 should I sell my 7900xtx and go Nvidia for stable diffusion?](https://www.reddit.com/r/StableDiffusion/comments/1ia1djq/honest_question_in_2025_should_i_sell_my_7900xtx/) (Score: 19)
-    *   Users debated whether to switch from an AMD 7900xtx to Nvidia for better performance with Stable Diffusion.
-2. [My Development As An AI Artist](https://www.reddit.com/r/StableDiffusion/comments/1ia4fn2/my_development_as_an_ai_artist/) (Score: 10)
-    *   The discussion revolved around the original poster's journey using AI, their experience of growth as an "AI artist" and whether they could call themselves an artist.
-3.  [Using SDXl and Neu (https://kingroka.itch.io/neu) to create normal maps with a preview rendered using an glsl shader](https://v.redd.it/5v792a2xi8fe1) (Score: 6)
-    *   The thread discussed using SDXL and Neu to generate normal maps for 3D rendering and textures.
-4.  [Creating character without a LORa, whats' the right technique?](https://www.reddit.com/r/StableDiffusion/comments/1ia66bm/creating_character_without_a_lora_whats_the_right/) (Score: 2)
-    *   Users talked about the techniques for creating a character without using a Lora and the need to draw masks in place.
-5.  [Colab notebooks to train Flux Lora and Hunyuan Lora](https://www.reddit.com/r/StableDiffusion/comments/1ia69a2/colab_notebooks_to_train_flux_lora_and_hunyuan/) (Score: 2)
-    *   The thread focused on Colab notebooks for training specific types of LoRAs.
-6.  [What's happening with Adetailer?](https://www.reddit.com/r/StableDiffusion/comments/1ia7kvi/whats_happening_with_adetailer/) (Score: 2)
-    *   The discussion was about adetailer models and their use with SDXL and Flux.
-7.  [AI Upscaler that upscales images captured via a phone](https://www.reddit.com/r/StableDiffusion/comments/1ia0pe2/ai_upscaler_that_upscales_images_captured_via_a/) (Score: 1)
-    *   Users were looking for a good AI upscaler to enhance images taken by a phone.
-8.  [How do I stress test a new build for training LoRAs, ControlNet + Hires.Fix?](https://www.reddit.com/r/StableDiffusion/comments/1ia3esz/how_do_i_stress_test_a_new_build_for_training/) (Score: 1)
-    *   The thread discussed how to stress test a new computer build for AI training and what tools to use.
-9.  [Looking for a place to get upscalers (tried civitai)](https://www.reddit.com/r/StableDiffusion/comments/1ia3rxf/looking_for_a_place_to_get_upscalers_tried_civitai/) (Score: 1)
-    *   The discussion was focused on finding alternative sources for AI upscalers.
-10. [Best current methods for inpanting?](https://www.reddit.com/r/StableDiffusion/comments/1ia6mwu/best_current_methods_for_inpanting/) (Score: 1)
-    *   Users discussed the best inpainting methods, comparing different tools and techniques.
-11. [Lets be Learning Buddies](https://www.reddit.com/r/StableDiffusion/comments/1ia8asg/lets_be_learning_buddies/) (Score: 1)
-    *   The user requested for learning buddies, and received several links to helpful resources.
-12. [Trying to do this but it keeps saying this. what does it mean? 😭](https://i.redd.it/kequ5bv7y8fe1.jpeg) (Score: 0)
-    *  The discussion centered around troubleshooting an error related to GPU usage with Stable Diffusion.
-13. [PNG info from directory, what to put in directory?](https://www.reddit.com/r/StableDiffusion/comments/1ia4j5j/png_info_from_directory_what_to_put_in_directory/) (Score: 0)
-    *   The thread involved a user asking for guidance on how to use the PNG info from a directory.
-14. [Tiktoker that does insanely realistic monster vids](https://www.reddit.com/r/StableDiffusion/comments/1ia5csl/tiktoker_that_does_insanely_realistic_monster_vids/) (Score: 0)
-    *   The discussion revolved around a Tiktoker that does realistic monster vids, and how to create a similar videos using SD.
+1.  [Added simple shadows using a ray tracing algorithm. Not perfect but a more experienced shadersmith could do much more I imagine.](https://v.redd.it/l814bec8ndfe1) (Score: 157)
+    *   Users are discussing the implementation of ray tracing for shadows in a stable diffusion context, asking technical questions and offering suggestions.
+
+2. [What AI does @meowmeowaiart use? i cant find any info about that](https://v.redd.it/02w3yqdn1efe1) (Score: 78)
+    *  Users are trying to identify the AI model used to create the animations from @meowmeowaiart, with some reacting negatively to the content.
+3.  [SDXL, various models, various workflows. Going through some 2024 stuff.](https://www.reddit.com/gallery/1iajvlx) (Score: 29)
+    *  Users are admiring the storytelling and composition of the generated images and are asking for the workflows and models used.
+4.  [Fear the Polar Sheep of the Icy Wasteland!](https://i.redd.it/5gxpmvjaudfe1.png) (Score: 11)
+    * A user shares an image of a polar bear/sheep hybrid they generated using SD 1.5 with a specific prompt.
+
+5.  [I implemented validation datasets with stable loss in Musubi Tuner for HunyuanVideo (credit u/spacepxl)](https://github.com/kohya-ss/musubi-tuner/pull/63) (Score: 9)
+    *  Users are discussing a new implementation of validation datasets, and troubleshooting issues with setup.
+6.  [Camera Circuit Bending - Flux.dev](https://www.reddit.com/gallery/1iamsup) (Score: 8)
+    *  A user shares a LoRA that focuses on glitch art and circuit-bending effects and provides details on how to use it.
+7.  [Best way to start with SD and AI in general](https://www.reddit.com/r/StableDiffusion/comments/1iamhly/best_way_to_start_with_sd_and_ai_in_general/) (Score: 3)
+    *  Users are giving different advice to a beginner in the stable diffusion world.
+8.  [How to generate images in this painting styles  ?](https://www.reddit.com/r/StableDiffusion/comments/1iakrlu/how_to_generate_images_in_this_painting_styles/) (Score: 0)
+    * Users are discussing how to generate images with specific painting style, with one user providing a sample prompt and general advice.
+9. [ADetailer is sometimes too strong](https://www.reddit.com/r/StableDiffusion/comments/1ialr5q/adetailer_is_sometimes_too_strong/) (Score: 0)
+    *  Users are providing advice to someone having issues with ADetailer and ways to adjust the settings.
+10. [How to get a worm's eye perspective without getting a literal worm in the image? Any other prompt/solution?](https://i.redd.it/9elad8rq4efe1.png) (Score: 0)
+    *  Users are giving prompt suggestions for creating a worm's eye perspective.
 
 # Detailed Analysis by Thread
-**[Honest question, in 2025 should I sell my 7900xtx and go Nvidia for stable diffusion? (Score: 19)](https://www.reddit.com/r/StableDiffusion/comments/1ia1djq/honest_question_in_2025_should_i_sell_my_7900xtx/)**
-*   **Summary:** The discussion centers around whether an AMD 7900xtx user should switch to an Nvidia GPU for better performance in Stable Diffusion. Users shared their experiences with both brands, focusing on CUDA cores and software support.
-*   **Emotion:** The overall emotional tone is mixed, with some negativity around AMD's software support and some positive sentiments towards Nvidia's performance. There are also neutral opinions offering advice.
-*   **Top 3 Points of View:**
-    *   Nvidia GPUs are generally much better for Stable Diffusion due to CUDA cores and better software support.
-    *   AMD cards are "ok" for basic stuff, but have a high chance of issues with updates and are difficult to troubleshoot due to lack of information.
-    *   If using Stable Diffusion for work, Nvidia is the preferred choice for stability and speed, but if it is just a hobby, there is no rush to switch from AMD.
+**[[D] Added simple shadows using a ray tracing algorithm. Not perfect but a more experienced shadersmith could do much more I imagine. (Score: 157)](https://v.redd.it/l814bec8ndfe1)**
+*  **Summary:**  The user shared their work implementing a simple ray tracing algorithm for shadows, and is looking for feedback and suggestions.
+*  **Emotion:** The overall tone is neutral, with some users expressing excitement about the potential implications.
+*  **Top 3 Points of View:**
+    * Users asked for examples of more open scenes, like forests or city streets.
+    *  Users asked technical questions about how the normal maps were generated.
+    *  Users expressed positive feedback, commenting that the work was very nice.
 
-**[My Development As An AI Artist (Score: 10)](https://www.reddit.com/r/StableDiffusion/comments/1ia4fn2/my_development_as_an_ai_artist/)**
-*   **Summary:** The thread discusses the original poster's evolution as an "AI artist," from initially being amazed by the technology, to later trying to express something with their creations. It delves into the definition of art and the role of AI.
-*  **Emotion:**  The emotional tone is mixed, with some users expressing positivity and others being critical of the poster. There's a general discussion about the nature of AI art, and the "artist" label.
-*   **Top 3 Points of View:**
-    *   The poster's claim of being an "artist" using AI is pretentious and that their results are derivative, they need to improve their fundamentals by looking into art history.
-    *   The use of AI makes the user a director/producer and not an artist, and that the GPU and tech are the artist.
-    *   Users shared their own journey with AI, emphasizing the importance of expression and thinking about what makes an image look like "AI trash".
+**[What AI does @meowmeowaiart use? i cant find any info about that (Score: 78)](https://v.redd.it/02w3yqdn1efe1)**
+*  **Summary:** Users are trying to identify the AI model used by @meowmeowaiart and are expressing varied reactions to the content, with some being critical.
+*  **Emotion:** The emotional tone is mixed, with some users expressing curiosity, while others show negativity.
+*  **Top 3 Points of View:**
+    *   Some users reacted negatively to the content, describing it as "incel rage bait" and "terrible".
+    *   Some users were curious about the technology behind the animation.
+    *   Users are suggesting different AI models as possibilities.
 
-**[Using SDXl and Neu (https://kingroka.itch.io/neu) to create normal maps with a preview rendered using an glsl shader (Score: 6)](https://v.redd.it/5v792a2xi8fe1)**
-*   **Summary:** This thread details a workflow of using SDXL and Neu to generate textures and normal maps with OpenGL shaders, and discusses the benefits of using depth models to produce normal maps compared with other methods.
-*   **Emotion:** The general emotion is neutral, with a focus on technical details and questions.
-*   **Top 3 Points of View:**
-    *  The user is working on adding OpenGL shaders to Neu, using SDXL to generate a texture, Depth Anything V2, and then shaders to generate the normal map and apply lighting.
-    *   The question was raised whether this method produces tileable normal maps.
-    *   Users wonder how this method compares to generating normal maps directly with a model instead of using depth models and shaders.
+**[SDXL, various models, various workflows. Going through some 2024 stuff. (Score: 29)](https://www.reddit.com/gallery/1iajvlx)**
+*  **Summary:** The user shared several AI-generated images created with SDXL using different models and workflows. They are revisiting some of their work from 2024.
+*  **Emotion:** The emotional tone is positive, with users expressing admiration for the storytelling and composition.
+*  **Top 3 Points of View:**
+    *  Users are praising the unique storytelling aspects of the images.
+    *  Users are requesting the workflows and models used to generate the images.
+    *  Users are especially impressed by the surreal horror aspect of the images.
 
-**[Creating character without a LORa, whats' the right technique? (Score: 2)](https://www.reddit.com/r/StableDiffusion/comments/1ia66bm/creating_character_without_a_lora_whats_the_right/)**
-*   **Summary:** The thread discusses techniques for creating a specific character in AI without using a LoRA (Low-Rank Adaptation model), focusing on inpainting and regional guidance.
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   Creating a character without a LORA requires lots of iterations of inpainting and regional guidance.
-    *   Tools that require uploading masks as separate files are not suitable for this process, but instead, it's better to use tools that allows drawing masks in place.
-    *   The process of creating a character in AI, is time consuming, requiring a hundred times inpainting.
+**[Fear the Polar Sheep of the Icy Wasteland! (Score: 11)](https://i.redd.it/5gxpmvjaudfe1.png)**
+*  **Summary:** The user shared an image of a polar bear/sheep hybrid created using Stable Diffusion 1.5 and a specific prompt for a card game. The user expressed they are now afraid of the idea of polar bear sheep hybrids because of their creation.
+*  **Emotion:** The emotional tone is slightly negative, due to the user stating they are now afraid of the subject matter they created, with a hint of humor.
+*  **Top 3 Points of View:**
+    *  The user shared the prompt they used to generate the image.
+    *   The user expressed fear at the concept of the generated image.
+    * The post serves as an example of an image for a card game.
 
-**[Colab notebooks to train Flux Lora and Hunyuan Lora (Score: 2)](https://www.reddit.com/r/StableDiffusion/comments/1ia69a2/colab_notebooks_to_train_flux_lora_and_hunyuan/)**
-*   **Summary:** This thread is about Colab notebooks for training Flux LoRA and Hunyuan LoRA models. Users asked about specific resources and technical requirements for training those models.
-*   **Emotion:** The general sentiment is positive.
-*   **Top 3 Points of View:**
-    *  Users are interested in the minimum memory requirements for using diffusion pipe for Hunyuan LoRA.
-    *  Users thanked the original poster for their work.
-    *  Users asked about any Colab that works well for doing a full fine-tune of Flux.
+**[I implemented validation datasets with stable loss in Musubi Tuner for HunyuanVideo (credit u/spacepxl) (Score: 9)](https://github.com/kohya-ss/musubi-tuner/pull/63)**
+*  **Summary:**  A user implemented validation datasets with stable loss in Musubi Tuner for HunyuanVideo. Users are discussing the implementation and troubleshooting issues.
+*  **Emotion:** The emotional tone is mostly neutral, with positive feedback for the implementation.
+*  **Top 3 Points of View:**
+    *  Users are grateful for the work put into the implementation.
+    * Users are reporting errors with the setup and dataset configuration.
+    *  Users are sharing their own related contributions and work.
 
-**[What's happening with Adetailer? (Score: 2)](https://www.reddit.com/r/StableDiffusion/comments/1ia7kvi/whats_happening_with_adetailer/)**
-*   **Summary:** The discussion revolves around the use of Adetailer models with SDXL and Flux and its compatibilities with different models.
-*   **Emotion:** The overall tone is neutral and informative.
-*   **Top 3 Points of View:**
-    *  There are many adetailer models on Civitai.
-    *  Users don't need models explicitly made for SDXL and Flux, they work on their own.
-    *  The user is trying to help the OP by stating that there are models on civitai.
+**[Camera Circuit Bending - Flux.dev (Score: 8)](https://www.reddit.com/gallery/1iamsup)**
+*  **Summary:** A user shares their first LoRA focused on glitch art and circuit-bending effects, offering generation recommendations and tips for usage.
+*  **Emotion:** The emotional tone is positive, as the user is excited to share their creation, and users seem receptive to trying it.
+*  **Top 3 Points of View:**
+    * The user explained the features and purpose of their LoRA and linked to where it can be downloaded.
+    * The user provided recommendations for generation settings.
+    * The user invited feedback for future improvements and plans for future iterations.
 
-**[AI Upscaler that upscales images captured via a phone (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1ia0pe2/ai_upscaler_that_upscales_images_captured_via_a/)**
-*   **Summary:** The thread is a user seeking recommendations for AI upscalers that can enhance images taken with a phone.
-*   **Emotion:** The emotion is neutral and helpful.
-*   **Top 3 Points of View:**
-    * Topaz or Gigapixel are recommended as possible solutions.
-    * The quality of the result depends on the model used in the background.
-    * The results of one model might vary greatly depending on the image.
+**[Best way to start with SD and AI in general (Score: 3)](https://www.reddit.com/r/StableDiffusion/comments/1iamhly/best_way_to_start_with_sd_and_ai_in_general/)**
+*  **Summary:** Users are offering advice to a beginner on how to get started with Stable Diffusion and AI image generation, with various recommendations for software and hardware.
+*  **Emotion:** The overall tone is helpful and informative with a mix of positive and neutral opinions.
+*  **Top 3 Points of View:**
+    *  Some users recommend starting with cheap online services before investing in hardware.
+    *  Some users recommend ComfyUI, mentioning its advantages and suggesting resources for learning it.
+    *  Users are offering a variety of recommendations for software (EasyDiffusion, SwarmUI, Fooocus) and hardware.
 
-**[How do I stress test a new build for training LoRAs, ControlNet + Hires.Fix? (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1ia3esz/how_do_i_stress_test_a_new_build_for_training/)**
-*   **Summary:** The discussion is about stress testing a new computer build for training LoRAs.
-*   **Emotion:** The sentiment is neutral and informative.
-*   **Top 3 Points of View:**
-   * The user recommended using MSI after burner.
-   *   Set the GPU to 80% power, fans to 75%, and CPU cooler to 75%.
-    * The user suggests removing overclocks for higher stability and less heat.
+**[How to generate images in this painting styles  ? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1iakrlu/how_to_generate_images_in_this_painting_styles/)**
+*  **Summary:** A user is asking how to generate images in a specific painting style. Another user provided a sample prompt and general advice on finding similar images.
+*  **Emotion:** The emotional tone is neutral.
+*  **Top 3 Points of View:**
+    * A user suggested using the metadata of similar images on Civitai as a starting point.
+    *  A user suggested using ChatGPT for art style names and a starting prompt.
+    * A user provided a sample prompt for a retro-futuristic image with specific art style guidelines.
 
-**[Looking for a place to get upscalers (tried civitai) (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1ia3rxf/looking_for_a_place_to_get_upscalers_tried_civitai/)**
-*   **Summary:** The thread is about a user looking for good upscalers, and recommendations are made by other users.
-*   **Emotion:** The sentiment is neutral, with some helpful advice given.
-*   **Top 3 Points of View:**
-    *   If upscaling with SD1.5, there will be a lot of artifacts when denoising is high, and it's recommended to use Flux for upscaling.
-    *  RealESRGUN_x2Plus does not corrupt fine textures and eyes.
-    *  There are no machine learning model-based upscalers for upscaling latents, only the "dumb" latent upscaling followed by an antialiasing filter.
+**[ADetailer is sometimes too strong (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1ialr5q/adetailer_is_sometimes_too_strong/)**
+*  **Summary:** A user is experiencing issues with ADetailer being too strong, and other users are offering advice on how to adjust settings to fix this.
+*  **Emotion:** The emotional tone is neutral, with helpful advice being provided.
+*  **Top 3 Points of View:**
+    * Users are suggesting adjusting the denoise level.
+    * Users are recommending lowering the inpainting resolution.
+    * Users are giving advice to change the inpainting cfg and the model.
 
-**[Best current methods for inpanting? (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1ia6mwu/best_current_methods_for_inpanting/)**
-*   **Summary:** The users in the thread are discussing and recommending methods for inpainting.
-*   **Emotion:** The sentiment is neutral and helpful.
-*   **Top 3 Points of View:**
-    * Invoke's inpainting is very good.
-    *  Comfyui with flux fill is consistent all around.
-    *  For faces, flux with pulid is recommended.
-
-**[Lets be Learning Buddies (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1ia8asg/lets_be_learning_buddies/)**
-*   **Summary:** A user is looking for learning buddies and advice on learning Stable Diffusion, and another user shares a story from their youth.
-*   **Emotion:** The emotional tone is mostly neutral with a mix of positivity and a personal anecdote.
-*   **Top 3 Points of View:**
-    *   The user asked for learning buddies.
-    *  A user recommended the pixaroma series of videos for learning Stable Diffusion.
-    *  Another user tells a story of an incident in the 80s.
-
-**[Trying to do this but it keeps saying this. what does it mean? 😭 (Score: 0)](https://i.redd.it/kequ5bv7y8fe1.jpeg)**
-*   **Summary:** The discussion is troubleshooting an error message, and offering possible solutions.
-*   **Emotion:** The general tone is neutral and helpful, as users try to help solve the original poster's problem.
-*   **Top 3 Points of View:**
-    *   The error happens when no GPU is detected.
-    *   If using AMD, AMD Amuse can be used.
-    *   A1111 is outdated and it's recommended to switch to Forge/reForge, or Comfyui.
-
-**[PNG info from directory, what to put in directory? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1ia4j5j/png_info_from_directory_what_to_put_in_directory/)**
-*   **Summary:** The thread is about a user trying to use PNG info from a directory in img2img batch processing but encountering issues.
-*   **Emotion:** The emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   The user was trying to use images and text files with prompts to append to the img2img prompt.
-    *   It was unclear what exactly needs to be in the directory for it to work.
-    *   The user is asking what needs to be there for the info to be appended in batch mode.
-
-**[Tiktoker that does insanely realistic monster vids (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1ia5csl/tiktoker_that_does_insanely_realistic_monster_vids/)**
-*   **Summary:** The thread is a discussion about a Tiktoker who creates realistic monster videos, and how to recreate it in stable diffusion.
-*   **Emotion:** The overall emotion is neutral and curious.
-*   **Top 3 Points of View:**
-    *   Users ask for alternative links since Tik Tok is banned.
-    *  Some users believe the videos are too complex to be reproduced.
-    * The videos are not that amazing and Hunyuan can do that.
+**[How to get a worm's eye perspective without getting a literal worm in the image? Any other prompt/solution? (Score: 0)](https://i.redd.it/9elad8rq4efe1.png)**
+*  **Summary:** A user is asking for advice on how to create a worm's eye perspective in their images without getting a literal worm in the image.
+*  **Emotion:** The emotional tone is neutral, with users providing helpful suggestions.
+*  **Top 3 Points of View:**
+    *  Users suggested using the prompt "low-angle shot".
+    *  Users suggested using the prompt "shot from below".
+     * Users suggested adding a LORA for a better result.
