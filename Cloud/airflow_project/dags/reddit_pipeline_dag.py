@@ -149,10 +149,15 @@ with DAG(
     max_active_runs=1
 ) as dag:
 
+    # Get email from environment
+    alert_email = os.environ.get("ALERT_EMAIL")
+    if not alert_email:
+        raise ValueError("ALERT_EMAIL environment variable not set")
+
     # Start Pipeline Email Notification
     start_pipeline_email = EmailOperator(
         task_id='send_start_email',
-        to='{{ var.value.ALERT_EMAIL }}',
+        to=alert_email,
         subject='Reddit Pipeline Started',
         html_content="""
         <h3>Reddit AI Pulse Pipeline Started</h3>
@@ -375,7 +380,7 @@ with DAG(
     # Success Pipeline Email Notification
     success_pipeline_email = EmailOperator(
         task_id='send_success_email',
-        to='{{ var.value.ALERT_EMAIL }}',
+        to=alert_email,
         subject='Reddit Pipeline Completed Successfully',
         html_content="""
         <h3>Reddit AI Pulse Pipeline Completed</h3>
