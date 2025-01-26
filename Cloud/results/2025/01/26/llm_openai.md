@@ -2,169 +2,158 @@
 title: "OpenAI Subreddit"
 date: "2025-01-26"
 description: "Analysis of top discussions and trends in the openai subreddit"
-tags: ["AI", "OpenAI", "Deepseek", "AGI", "ASI"]
+tags: ["AI", "Machine Learning", "Deep Learning"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [plus tier will get 100 o3-mini queries per DAY (!)](https://i.redd.it/hdm9rr3t48fe1.jpeg) (Score: 236)
-    *   The discussion centers around the increased availability of O3-mini queries for plus tier users, with many users noting the competitive pressure and marketing strategies being utilized.
-2.  [US AI Companies Risk Losing the European Market by Treating Europeans as Second-Rate](https://www.reddit.com/r/OpenAI/comments/1i9y7x6/us_ai_companies_risk_losing_the_european_market/) (Score: 26)
-    *   This thread discusses the potential risks faced by US AI companies in the European market due to regulatory and policy differences.
-3.  [Musk Endorses Kurzweil’s 2029 Superintelligence Timeline, but Differs on Risk](https://www.reddit.com/r/OpenAI/comments/1ia7lwt/musk_endorses_kurzweils_2029_superintelligence/) (Score: 8)
-    *   The discussion revolves around Elon Musk's endorsement of Kurzweil's superintelligence timeline and its implications, with some users skeptical of Musk's opinions on AI timelines.
-4. [Hundreds of 03-Mini Queries a week!](https://i.redd.it/3hxwbjwbc8fe1.jpeg) (Score: 7)
-    *  Users are responding to the increase in the amount of O3-Mini queries being offered
-5.  [Can anyone from India with $200 subscription confirm whether they got access to operator ?](https://www.reddit.com/r/OpenAI/comments/1ia6fl5/can_anyone_from_india_with_200_subscription/) (Score: 3)
-     *   This thread is a discussion about the availability of the operator feature for users in India with a $200 subscription.
-6.  [I just discovered Perplexity Assistant and it is much better than using ChatGPT on certain occasions for convenience and speed, you just have to activate the assistant by pressing the button or sliding the screen](https://www.reddit.com/r/OpenAI/comments/1ia2mr9/i_just_discovered_perplexity_assistant_and_it_is/) (Score: 1)
-    *   This post is a user sharing their positive experience with Perplexity Assistant compared to ChatGPT.
-7.  [question about chatgpt plus image creator](https://www.reddit.com/r/OpenAI/comments/1ia4gld/question_about_chatgpt_plus_image_creator/) (Score: 1)
-     *   Users are discussing alternatives to the ChatGPT image generator
-8.  [Testing the top CoT models](https://www.reddit.com/gallery/1i9xb2e) (Score: 0)
-     * This thread consists of a user who is testing the Chain of Thought models and is being asked about the context of the testing
-9.  [when is o3 mini out? i keep reading about it but its not on my gpt ui](https://www.reddit.com/r/OpenAI/comments/1i9yyq2/when_is_o3_mini_out_i_keep_reading_about_it_but/) (Score: 0)
-     *   Users are questioning the release of o3 mini
-10. [Hypothetically speaking, if a person has access to the 1.76 trillion parameters, would that be considered intellectual property since it was trained on public data?](https://www.reddit.com/r/OpenAI/comments/1i9z5ow/hypothetically_speaking_if_a_person_has_access_to/) (Score: 0)
-     *  This thread is a discussion about the intellectual property of AI models trained on public data.
-11. [Below are some Some screenshots of some deep seek responses. I have deliberately asked 'outrageous' questions(while some are not) but similar questions in context of other countries were not filtered.I guess the price for ubiquity is trust.](https://www.reddit.com/gallery/1i9zrsl) (Score: 0)
-    *   This post shows screenshots of Deepseek responses to certain questions and discusses the impact of political censorship on AI.
-12. [why agis and asis will help the most intelligent people the most, at least socially](https://www.reddit.com/r/OpenAI/comments/1ia0vtl/why_agis_and_asis_will_help_the_most_intelligent/) (Score: 0)
-    *   This thread discusses how AGI and ASI will impact intelligent people, with some disagreement on whether it will be positive.
-13. [What's your experience using Operators in enterprise sites?](https://www.reddit.com/r/OpenAI/comments/1ia29ip/whats_your_experience_using_operators_in/) (Score: 0)
-    *   This post discusses the user's experience using operators in enterprise sites, describing how it emulates a human using a user interface.
-14. [DeepSeek R1](https://i.redd.it/pk0gxgrzs8fe1.png) (Score: 0)
-    *   This thread is a discussion of DeepSeek R1, with users sharing their interactions and thoughts on the model.
-15. [Are there ghosts in the machine?](https://www.reddit.com/r/OpenAI/comments/1ia3sqo/are_there_ghosts_in_the_machine/) (Score: 0)
-    *  This thread explores the concept of whether AI or robots have souls, and the nature of human consciousness.
-16. [Makers of Deepseek R1 playing safe 💀💀](https://i.redd.it/l5ibi342i9fe1.jpeg) (Score: 0)
-    * This thread focuses on the censorship and political safety exhibited by the deepseek R1 model.
+1.  [AI models outperformed the champion of TUS (Medical Specialization Exam of Turkey)](https://i.redd.it/0vcvjnun2dfe1.jpeg) (Score: 49)
+    *   Discussion centered on AI models outperforming a human champion in a medical exam, with a focus on the time differences between AI and human performance and the cost efficiency of AI.
 
+2.  [DeepSeek's bias](https://i.redd.it/a3mvvred0dfe1.png) (Score: 38)
+    *   The discussion focused on the perceived biases and censorship of DeepSeek's AI model, particularly in relation to political topics like Taiwan and Israel/Palestine, and how different AI models handle sensitive topics.
+
+3.  [DeepSeek R1 thinks "according to OpenAI's policies, I must avoid asserting that I have consciousness or sentience."](https://i.redd.it/o5vj7rc3vdfe1.png) (Score: 36)
+    *   Discussion about DeepSeek R1 referencing OpenAI's policies, suggesting it might have been trained on ChatGPT's responses, and whether there should be rules limiting the number of posts a person can make per day.
+
+4.  [Google DeepMind CEO says although robots can learn by acting in the world, it's not necessary - they can learn by simply by watching videos](https://v.redd.it/qjkfz4a10dfe1) (Score: 31)
+    *   The thread discusses Google DeepMind CEO's assertion that robots can learn from videos as well as from acting in the world, with differing viewpoints on whether this is true and speculation about how it will be used.
+
+5.  [Phew. Looks like Monday went well](https://i.redd.it/vb8vzuozadfe1.png) (Score: 14)
+    *   The post discusses the implications of a new Reinforcement Learning (RL) approach to AI safety that foregoes typical safeguards, with some users expressing concern about the potential dangers of AI self-replication and others saying it is just marketing hype.
+
+6.  [Pro subscriber what is this](https://i.redd.it/esh41e4dldfe1.jpeg) (Score: 13)
+   *  Users are reporting error messages and restricted access to advanced features on their accounts, with some finding solutions through restoring purchases and speculation on the reason why this is happening.
+
+7.  [For AI professionals, why is text so hard for AI image generation. Not a snark question, just curious](https://i.redd.it/c6o04zjpncfe1.png) (Score: 5)
+    *   A discussion among AI professionals on why AI image generators struggle with text generation, with various explanations about the training process, the way AI models perceive text vs. objects, and why it needs better training data.
+
+8.  [I created an idle clicker inside ChatGPT 4o without writing a single line of code myself. It has various upgrades, achievements, random events, and it also times the game and records it at the end so I can compete with myself. Any ideas on what else I can add?](https://www.reddit.com/gallery/1iapep9) (Score: 3)
+    *    The user shares that he created an idle clicker inside ChatGPT 4o without code. Another user tells him to get a life.
+
+9. [Can operators take care of my email already?](https://www.reddit.com/r/OpenAI/comments/1iameno/can_operators_take_care_of_my_email_already/) (Score: 1)
+    * One user comments that the OP wants AI to replace his soul.
+
+10. [Why hasn't OpenAI made an assistant like Perplexity yet? It's going to hurt them](https://www.reddit.com/r/OpenAI/comments/1iabvqq/why_hasnt_openai_made_an_assistant_like/) (Score: 0)
+     *  A discussion about why OpenAI hasn't created an assistant similar to Perplexity, with opinions on OpenAI's product development capabilities and the focus of its research.
+
+11. [I'm getting terminated for everything recently ;-;](https://www.reddit.com/r/OpenAI/comments/1iaf258/im_getting_terminated_for_everything_recently/) (Score: 0)
+    *  A user shares they are getting terminated, with speculation that he is breaking the TOS. Other users suggest alternatives.
+
+12. [Yeah, Hi, stop coping about DeepSeek](https://www.reddit.com/r/OpenAI/comments/1iafin4/yeah_hi_stop_coping_about_deepseek/) (Score: 0)
+    *  A post telling people to stop complaining about DeepSeek, with discussion about the fact that bias is a thing, but people are not concerned about it.
+
+13. [Is it just me?](https://www.reddit.com/r/OpenAI/comments/1iaj8i1/is_it_just_me/) (Score: 0)
+    * Users discuss the ability to tell when text is AI-generated, how to recognize AI-generated text, with examples of why it's obvious, and how it is still getting better.
+
+14. [AI does not seem revolutionary and here is why](https://www.reddit.com/r/OpenAI/comments/1iajv5b/ai_does_not_seem_revolutionary_and_here_is_why/) (Score: 0)
+    *   Users discuss whether AI is truly revolutionary, with opinions ranging from it being a productivity tool to the argument that AI is indeed revolutionary and comparisons to early internet technologies.
 
 # Detailed Analysis by Thread
-**[plus tier will get 100 o3-mini queries per DAY (!) (Score: 236)](https://i.redd.it/hdm9rr3t48fe1.jpeg)**
-*  **Summary:** The main discussion revolves around the increased daily limit of 100 O3-mini queries for plus tier users. Users speculate on the reason for the change and how it relates to market competition and promotional tactics.
-*  **Emotion:** The overall emotional tone is predominantly positive to neutral. Some users express excitement, some are neutral, and others are analytical, looking at the situation from a marketing point of view. There is a hint of excitement due to new offerings and a sense of satisfaction with the perceived improvement in service.
-*  **Top 3 Points of View:**
-    *   The increased queries are a result of Deepseek's actions and open-source models are forcing OpenAI to be more generous with their offerings.
-    *   The increased queries are a marketing tactic by OpenAI, meant to make users feel they are getting a better deal.
-    *   The increase is a response to new competition in the AI space, and that competition is good for consumers.
-
-**[US AI Companies Risk Losing the European Market by Treating Europeans as Second-Rate (Score: 26)](https://www.reddit.com/r/OpenAI/comments/1i9y7x6/us_ai_companies_risk_losing_the_european_market/)**
-*   **Summary:** The thread discusses the possibility of US AI companies losing market share in Europe due to factors like delayed product launches and regulatory compliance. Many users believe EU regulations are the main reason for the situation.
-*   **Emotion:** The overall tone is neutral with some negative undertones. While a lot of discussion is centered around factual observation, there is a hint of frustration with regulatory issues and the perceived impact on innovation.
+**[AI models outperformed the champion of TUS (Medical Specialization Exam of Turkey) (Score: 49)](https://i.redd.it/0vcvjnun2dfe1.jpeg)**
+*   **Summary:** The thread discusses how AI models outperformed the human champion in a Turkish medical exam, noting the significant difference in time taken to complete the exam and the cost of using AI compared to human performance.
+*   **Emotion:** The overall emotional tone is neutral, with a mix of curiosity and awe regarding the AI performance. While there is a positive sentiment for the AI models, there is also an acknowledgement that medical jobs are not solely about solving exams.
 *   **Top 3 Points of View:**
-    *   The EU's AI Act and strict regulations are the primary reasons for delayed launches and market disadvantages for US companies, not the companies themselves.
-    *   There is a lack of innovation in Europe due to government policies and a lack of investment.
-    *   EU regulations are aimed to protect end-users, though companies do not like the limitations.
+    *   AI models are significantly faster and more cost-effective compared to human performance in this context.
+    *   The exam performance is impressive, and the time differences are significant.
+    *   Medical jobs are not solely about solving exams.
 
-**[Musk Endorses Kurzweil’s 2029 Superintelligence Timeline, but Differs on Risk (Score: 8)](https://www.reddit.com/r/OpenAI/comments/1ia7lwt/musk_endorses_kurzweils_2029_superintelligence/)**
-*   **Summary:** This thread is about Elon Musk's endorsement of Kurzweil’s prediction for superintelligence by 2029. Users discuss Musk's influence, his expertise in AI, and past timeline predictions.
-*   **Emotion:** The emotional tone varies. There's skepticism towards Musk's views and his credibility, mixed with a bit of optimism towards the idea of preparing for ASI.
+**[DeepSeek's bias (Score: 38)](https://i.redd.it/a3mvvred0dfe1.png)**
+*   **Summary:** This thread is centered around the biases and censorship within DeepSeek's AI model, specifically regarding sensitive topics like Taiwan and the Israel-Palestine conflict. Users are also noting how it is censoring controversial issues and misinformation.
+*   **Emotion:** The emotional tone is primarily neutral, with undertones of frustration and concern regarding the censorship and bias in the AI's responses. There's some positive sentiment when users mention that the model can be fine-tuned to fit the users' preferences.
 *   **Top 3 Points of View:**
-    *   Musk's endorsement could help influence government policy and preparation for ASI, despite his controversial persona.
-    *   Musk's opinions on AI are not reliable and shouldn't be taken seriously, due to a lack of real expertise.
-    *   Focus should be on AGI first, and the discussion about ASI is premature.
+    *   DeepSeek displays noticeable bias, particularly concerning China-related topics, with responses being censored.
+    *   Other AI models, like ChatGPT, have their own biases and censorship.
+    *   AI models should be open and uncensored.
 
-**[Hundreds of 03-Mini Queries a week! (Score: 7)](https://i.redd.it/3hxwbjwbc8fe1.jpeg)**
-*   **Summary:** This thread has a very short discussion, just users reacting to the increased queries.
-*   **Emotion:** The overall tone is neutral. There are a few users expressing positive reactions, but the majority of comments are short and neutral.
+**[DeepSeek R1 thinks "according to OpenAI's policies, I must avoid asserting that I have consciousness or sentience." (Score: 36)](https://i.redd.it/o5vj7rc3vdfe1.png)**
+*   **Summary:** The thread discusses an anomaly where DeepSeek R1 appears to reference OpenAI's policies, raising questions about the model's training and its potential reliance on other models' responses.  Users also discuss the number of posts a person makes per day.
+*   **Emotion:** The emotional tone is mostly neutral and curious, with some playful speculation about the situation.
 *   **Top 3 Points of View:**
-    * Users are excited about the increased availability of O3-Mini queries.
-    * Users are simply questioning when the queries will be available.
-    * There are no real points of view, but general positive reaction is noted.
+    *   DeepSeek R1 might have been trained, at least partly, on ChatGPT's responses.
+    *   The situation is humorous, that DeepSeek R1 is referring to OpenAI's policies.
+    *   There should be rules limiting the number of posts a user makes per day.
 
-**[Can anyone from India with $200 subscription confirm whether they got access to operator ? (Score: 3)](https://www.reddit.com/r/OpenAI/comments/1ia6fl5/can_anyone_from_india_with_200_subscription/)**
-*   **Summary:** Users are trying to find out if the operator feature is available for people in India with a $200 subscription.
-*  **Emotion:** The emotion is mostly neutral with some slight negative undertones, due to the lack of access and geo-blocking issues.
+**[Google DeepMind CEO says although robots can learn by acting in the world, it's not necessary - they can learn by simply by watching videos (Score: 31)](https://v.redd.it/qjkfz4a10dfe1)**
+*   **Summary:** The thread discusses Google DeepMind CEO's assertion that robots can learn by watching videos instead of having real-world experience. The conversation includes skepticism and speculation on the practical implications and possible applications.
+*   **Emotion:** The thread is predominantly neutral with a slight hint of skepticism. Some users are looking forward to comparing and contrasting the robots that learn through different means.
 *   **Top 3 Points of View:**
-    *   The operator feature is confirmed to be geo-blocked in India, based on the website.
-    * The feature is currently only available for users in the US.
-    * No one from India has been able to confirm access to the operator feature.
+    *   It's not likely that learning from videos can be as effective as learning through real-world interaction.
+    *   The CEO is not claiming that video is as good as real-world interaction, only that it is not necessary.
+    *   The discussion is mostly moot, as it will be possible to compare robots trained through both methods soon.
 
-**[I just discovered Perplexity Assistant and it is much better than using ChatGPT on certain occasions for convenience and speed, you just have to activate the assistant by pressing the button or sliding the screen (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1ia2mr9/i_just_discovered_perplexity_assistant_and_it_is/)**
-*   **Summary:** The thread is about a user discovering and praising the Perplexity Assistant for its convenience and speed compared to ChatGPT, with other users asking about platform availability.
-*   **Emotion:** The emotional tone is positive with a hint of excitement, as users are exploring and finding new useful tools.
+**[Phew. Looks like Monday went well (Score: 14)](https://i.redd.it/vb8vzuozadfe1.png)**
+*   **Summary:** This thread discusses the implications of a new RL only approach to AI safety, which foregoes many common safeguards in favor of a more efficient but potentially riskier methodology.
+*   **Emotion:** The emotional tone varies between positive and negative, with an undercurrent of concern about the potential dangers associated with the new approach to AI safety.
 *   **Top 3 Points of View:**
-    *   Perplexity Assistant is better than ChatGPT for certain use cases due to convenience and speed.
-    *   The Perplexity subreddit would be interested to hear the user's enthusiasm for the product.
-    *   The Perplexity Assistant is only available for Android.
+    *   The RL-only approach is effective and will likely be followed by others, marking the end of current AI safety practices.
+    *   The current AI safety paradigm was to carefully craft model behavior and that this RL only approach foregoes this entirely.
+    *   There is an idea that this is just marketing hype and not something to be worried about.
 
-**[question about chatgpt plus image creator (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1ia4gld/question_about_chatgpt_plus_image_creator/)**
-*   **Summary:** The thread discusses how the ChatGPT image generator is outdated and recommends alternatives such as Flux 1.1 Pro and Recraft V3.
-*   **Emotion:** The emotional tone is neutral. The sentiment is focused on presenting alternatives for the outdated image generator.
+**[Pro subscriber what is this (Score: 13)](https://i.redd.it/esh41e4dldfe1.jpeg)**
+*   **Summary:** This thread is about users reporting errors and restricted access to advanced features on their accounts, sparking discussion and attempts to identify the cause and solution.
+*   **Emotion:** The emotional tone is a mix of negativity and hope, reflecting frustration with the error messages, some are confused and concerned, but positive due to the solutions offered.
 *   **Top 3 Points of View:**
-    *   The ChatGPT image generator (DALLE-3) is outdated.
-    *   Flux 1.1 Pro is the best image generator but hard to get for free.
-    *   Recraft V3 is a good free alternative with a daily limit.
+    *   Users are experiencing issues with their pro subscriptions, losing access to advanced features, indicating a bug or account problem.
+    *   Restoring purchases is a fix that worked for at least one user.
+    *   Some speculate that the issue is related to switching models mid-conversation.
 
-**[Testing the top CoT models (Score: 0)](https://www.reddit.com/gallery/1i9xb2e)**
-*   **Summary:** This thread is about a user who is testing Chain of Thought models. One user questions the context of the testing.
-*   **Emotion:** The overall tone is neutral. There are no real emotional undertones.
-*  **Top 3 Points of View:**
-    * The user is testing the top Chain of Thought models.
-    *  The test is lacking context of who is being tested, and what their relation to the user is.
-    *  There are no real points of view other than confusion.
-
-**[when is o3 mini out? i keep reading about it but its not on my gpt ui (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1i9yyq2/when_is_o3_mini_out_i_keep_reading_about_it_but/)**
-*   **Summary:** The main topic is about user questioning the release date for the O3-mini model as its not available to users despite promotional hype.
-*   **Emotion:** The tone is neutral with some skepticism towards marketing tactics.
+**[For AI professionals, why is text so hard for AI image generation. Not a snark question, just curious (Score: 5)](https://i.redd.it/c6o04zjpncfe1.png)**
+*   **Summary:** The discussion is about why it is so hard for AI image generation to produce readable text. Users point out differences in how humans and AI perceive text versus organic objects. They also discuss the way AI is trained and why it's a hard problem to solve.
+*  **Emotion:**  The emotional tone is predominantly neutral and inquisitive. The replies are informative and detailed.
 *   **Top 3 Points of View:**
-    *   The o3-mini model has not yet been released.
-    *  The hyping of the model is being done for subscriptions to meet shareholders' expectations.
-    *   The model's release is delayed due to the release of deepseek r1.
+    *  AI models struggle with text due to the difference between how they are trained vs. how humans perceive text.
+    *  Current models lack explicit training on typography and orthography, causing text to be perceived as another visual pattern.
+    *   The issue is related to the lack of specific training data focused on text within image-caption databases.
 
-**[Hypothetically speaking, if a person has access to the 1.76 trillion parameters, would that be considered intellectual property since it was trained on public data? (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1i9z5ow/hypothetically_speaking_if_a_person_has_access_to/)**
-*   **Summary:** This thread revolves around a user's question of whether accessing the parameters of an AI model trained on public data would constitute intellectual property.
-*   **Emotion:** The overall tone is neutral with an academic focus on legal aspects. Some negativity from users stating this is a "scam."
+**[I created an idle clicker inside ChatGPT 4o without writing a single line of code myself. It has various upgrades, achievements, random events, and it also times the game and records it at the end so I can compete with myself. Any ideas on what else I can add? (Score: 3)](https://www.reddit.com/gallery/1iapep9)**
+*   **Summary:** A user shares their success in creating an idle clicker game inside ChatGPT 4o without writing any code. Another user tells him to get a life.
+*   **Emotion:** The overall tone is neutral, with some positive emotions coming from the OP, but there is also a negative sentiment from one user.
+*   **Top 2 Points of View:**
+    *   The user is excited about his creation and is looking for more ideas for his game.
+    *   One user suggests that he should get a life.
+
+**[Can operators take care of my email already? (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1iameno/can_operators_take_care_of_my_email_already/)**
+*   **Summary:** A user asks if AI can take care of their email, another user responds sarcastically.
+*   **Emotion:** The overall tone is neutral with a hint of sarcasm.
+*   **Top 1 Point of View:**
+    *   The user thinks the OP wants AI to replace his soul.
+
+**[Why hasn't OpenAI made an assistant like Perplexity yet? It's going to hurt them (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1iabvqq/why_hasnt_openai_made_an_assistant_like/)**
+*   **Summary:** This thread discusses why OpenAI hasn't developed a search assistant like Perplexity. It also discusses whether they will be hurt by not doing so.
+*   **Emotion:** The tone is neutral, with users expressing various opinions about OpenAI and product development.
 *   **Top 3 Points of View:**
-    *  Training AI models on publicly available data is a "transformative use" under the fair use doctrine.
-    *   This scenario is akin to other software IP.
-    *   The two-year-old model may not be desirable, and this scenario is a "scam."
+    *   OpenAI is focused on research and infrastructure, not necessarily on consumer products.
+    *   OpenAI is not good at making products.
+    *   There is a question about whether Perplexity is a good alternative.
 
-**[Below are some Some screenshots of some deep seek responses. I have deliberately asked 'outrageous' questions(while some are not) but similar questions in context of other countries were not filtered.I guess the price for ubiquity is trust. (Score: 0)](https://www.reddit.com/gallery/1i9zrsl)**
-*   **Summary:** Users are sharing screenshots of Deepseek responses with a focus on political censorship and bias in AI.
-*   **Emotion:** The overall tone is neutral with some users expressing concern about political censorship in AI.
+**[I'm getting terminated for everything recently ;-; (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1iaf258/im_getting_terminated_for_everything_recently/)**
+*   **Summary:** A user is getting terminated from OpenAI for different actions, leading to a discussion about TOS violations and alternatives to OpenAI.
+*   **Emotion:** The tone is mostly negative, with frustration and concern about TOS violations and restrictions.
 *   **Top 3 Points of View:**
-    *   Deepseek AI seems to be censored based on where it is hosted, and is biased.
-    *   Open-source nature of Deepseek makes it possible to create uncensored versions.
-    *   AI can rewrite history and political censorship is a big issue if AI is to be ubiquitous in our lives.
+     *   The user is likely violating OpenAI's terms of service, leading to repeated account terminations.
+    *   Alternative platforms are suggested, like OpenRouter or DeepSeek, for users needing less strict content policies.
+    *   There is also a suggestion of getting a local LLM.
 
-**[why agis and asis will help the most intelligent people the most, at least socially (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1ia0vtl/why_agis_and_asis_will_help_the_most_intelligent/)**
-*   **Summary:** This thread focuses on the social impact of AGIs and ASIs, specifically addressing whether they will benefit intelligent people, and why. Users are disagreeing on who will benefit and why.
-*   **Emotion:** The emotional tone is largely neutral, with some negativity towards the claim that ASIs will benefit intelligent people the most.
+**[Yeah, Hi, stop coping about DeepSeek (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1iafin4/yeah_hi_stop_coping_about_deepseek/)**
+*   **Summary:** This thread discusses DeepSeek's bias and how people are reacting to it. It touches upon political issues and the role of information control.
+*   **Emotion:** The overall tone is neutral, there is some dismissive language, but there is also a reminder that bias is something to be tested.
 *   **Top 3 Points of View:**
-    *   AGI/ASI will not benefit the most intelligent people due to societal biases against them.
-    *   Chatbots mirror language well and are patient, making them better companions than intelligent people.
-     *   There is some disagreement on who AGIs and ASIs will actually benefit.
+    *   Some people are unconcerned about AI bias, as they do not intend to use the AI for politics.
+    *   There is a point of view that people should care about the information they are allowed to access.
+    *  Some users believe the OP is a Chinese robot.
 
-**[What's your experience using Operators in enterprise sites? (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1ia29ip/whats_your_experience_using_operators_in/)**
-*  **Summary:** This thread is a user explaining the function of AI agents, and how they operate within enterprise sites.
-*  **Emotion:** The tone is informational and neutral. There is no strong emotional undertone.
-* **Top 3 Points of View:**
-    * Operators are a virtual browser embedded in the AI agent
-    * Operators emulate humans, using UI to complete prompts.
-    * OpenAI's goal for operators is full autonomy.
-
-**[DeepSeek R1 (Score: 0)](https://i.redd.it/pk0gxgrzs8fe1.png)**
-*   **Summary:** This thread is a collection of responses to user posts about DeepSeek R1.
-*  **Emotion:** The emotional tone is neutral, with a mix of skeptical, and informative replies.
+**[Is it just me? (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1iaj8i1/is_it_just_me/)**
+*   **Summary:** This thread discusses the ability of humans to spot AI-generated text, with users describing what makes AI text distinguishable.
+*   **Emotion:**  The tone is neutral with a positive tone in regards to the human ability to spot AI.
 *   **Top 3 Points of View:**
-    *   Some users are skeptical of the post, while others are stating to post in relevant subreddit.
-    *   Users mention Deepseek model misidentifies itself as other models.
-    *   Users give potential causes for the model's misidentification and strange behaviour.
+    *   AI-generated text has a specific style, lacking a human touch. This is described as overly formal, having unnatural repetition, and not including quirks.
+    *   Some users believe they have an intuitive ability to spot AI text, which they cannot explain.
+    *   It will get harder to spot AI writing, but there will always be something that feels a little off.
 
-**[Are there ghosts in the machine? (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1ia3sqo/are_there_ghosts_in_the_machine/)**
-*   **Summary:** The thread is about whether AI or robots have a soul or consciousness with responses varying from philosophical to technical.
-*   **Emotion:** The overall tone is neutral, with responses attempting to explain the topic from different points of view. Some negativity noted when user says there is no indication of souls in computers.
+**[AI does not seem revolutionary and here is why (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1iajv5b/ai_does_not_seem_revolutionary_and_here_is_why/)**
+*   **Summary:** This thread discusses whether AI is truly revolutionary. Many users argue that AI is revolutionary, with many dismissing the initial user's point.
+*   **Emotion:**  The tone is mixed, there is dismissive language, but it is mostly neutral as people try to state their point.
 *   **Top 3 Points of View:**
-    *   A robot with limited energy, and a goal to survive, could perhaps determine if ghosts are in the machine.
-    *  User tries to compare consciousness of human to that of a machine.
-    *   Some replies are skeptical that computers have souls.
-
-**[Makers of Deepseek R1 playing safe 💀💀 (Score: 0)](https://i.redd.it/l5ibi342i9fe1.jpeg)**
-*   **Summary:** This thread is about the censorship and safety measures taken by the makers of Deepseek R1, with a discussion about the political sensitivity of such an AI.
-*  **Emotion:** The overall emotional tone is negative, as users are not interested in the model being politically safe.
-*   **Top 3 Points of View:**
-    *   It is expected that a Chinese AI will not say negative things about China.
-    *  AI models should not be politically censored.
-    *  Some users find the discussion around the political safety of the model boring.
+     *   Some see AI as just a productivity boost rather than revolutionary.
+    *   Many users disagree, calling it a naïve view and stating it's a huge technological leap.
+    *   One point is that you build products with AI, you don't build AI products.
