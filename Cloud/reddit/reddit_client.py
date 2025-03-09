@@ -72,11 +72,28 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
         blob_name = get_gcs_blob_name(subreddit_name, batch_timestamp)
         blob = bucket.blob(blob_name)
         
-        # Convert to newline-delimited JSON
-        ndjson_data = '\n'.join(json.dumps(post) for post in posts)
+        # If no posts, create a dummy file with a placeholder message
+        if not posts:
+            dummy_post = {
+                "subreddit": subreddit_name,
+                "post_id": "no_posts_today",
+                "title": "There are no posts for this subreddit today",
+                "author": "placeholder",
+                "url": f"https://www.reddit.com/r/{subreddit_name}/",
+                "score": 0,
+                "created_utc": batch_timestamp.timestamp(),
+                "ingestion_timestamp": batch_timestamp.timestamp(),
+                "comments": []
+            }
+            ndjson_data = json.dumps(dummy_post)
+            logger.info(f"No posts found for {subreddit_name}, creating dummy file: {blob_name}")
+        else:
+            # Convert to newline-delimited JSON
+            ndjson_data = '\n'.join(json.dumps(post) for post in posts)
+            logger.info(f"Saved {len(posts)} posts to GCS: {blob_name}")
+            
         blob.upload_from_string(ndjson_data)
         
-        logger.info(f"Saved {len(posts)} posts to GCS: {blob_name}")
     except Exception as e:
         logger.error(f"Error saving to GCS: {e}")
         raise
@@ -215,10 +232,10 @@ def fetch_and_save_posts(reddit: praw.Reddit, storage_client: storage.Client,
                 logger.error(f"Error processing post {post.id}: {e}")
                 continue
 
+        # Always save to GCS, even if new_posts is empty
+        save_to_gcs(storage_client, bucket_name, subreddit_name, new_posts)
+        
         if new_posts:
-            # Save to GCS
-            save_to_gcs(storage_client, bucket_name, subreddit_name, new_posts)
-            
             # Update processing metadata with retry logic
             update_processing_metadata(
                 bigquery_client,
