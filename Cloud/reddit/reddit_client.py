@@ -74,9 +74,12 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
         
         # If no posts, create a dummy file with a placeholder message
         if not posts:
+            # Create a timestamp string to ensure unique IDs
+            timestamp_str = str(int(batch_timestamp.timestamp()))
+            
             # Create a dummy comment with the same structure as real comments
             dummy_comment = {
-                "comment_id": "no_comments_today",
+                "comment_id": f"no_comments_{timestamp_str}",
                 "author": "placeholder",
                 "body": "This is a placeholder comment for a day with no posts",
                 "created_utc": batch_timestamp.timestamp()
@@ -84,7 +87,7 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
             
             dummy_post = {
                 "subreddit": subreddit_name,
-                "post_id": "no_posts_today",
+                "post_id": f"no_posts_{timestamp_str}",
                 "title": "There are no posts for this subreddit today",
                 "author": "placeholder",
                 "url": f"https://www.reddit.com/r/{subreddit_name}/",
