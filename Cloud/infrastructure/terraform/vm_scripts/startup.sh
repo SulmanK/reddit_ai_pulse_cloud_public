@@ -128,7 +128,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SECRET_DOWNLOADED" = false ]; do
   else
     RETRY_COUNT=$((RETRY_COUNT+1))
     log_message "Failed to download secrets (attempt $RETRY_COUNT/$MAX_RETRIES), retrying in 10 seconds..."
-    sleep 10
+    sleep 60
   fi
 done
 
