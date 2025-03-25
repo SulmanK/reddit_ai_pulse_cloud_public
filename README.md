@@ -167,7 +167,7 @@ The diagram above illustrates the flow of data through our system, from collecti
       - Compute Admin
       - IAM Admin
       - Service Account Admin
-   - Update (bucket_name, project_id, sa_email, alert_email, alert_password,  docker-registry, dbt_project.yml: proj id) # Notes for Me
+   - Update (bucket_name, project_id, sa_email, alert_email, alert_password,  docker-registry, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me
    
 
 
