@@ -225,7 +225,7 @@ The diagram above illustrates the flow of data through our system, from collecti
 
 2. **View the services on your local machine**
    ```bash
-   gcloud compute ssh airflow@airflow-reddit   --zone=us-central1-a   --project=reddit-ai-pulse-1   -- -L 8080:localhost:8080   -L 5000:localhost:5000   -L 3000:localhost:3000   -L 9090:localhost:9090
+   gcloud compute ssh airflow@airflow-reddit   --zone=us-central1-a   --project=$GCP_PROJECT_ID   -- -L 8080:localhost:8080   -L 5000:localhost:5000   -L 3000:localhost:3000   -L 9090:localhost:9090
    ```
     - Airflow: http://localhost:8080 (admin/admin)
     - MLflow: http://localhost:5000
