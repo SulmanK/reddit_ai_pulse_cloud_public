@@ -111,13 +111,31 @@ if [ -z "$BUCKET_NAME" ]; then
     exit 1
 fi
 
-# Fetch secrets from GCS
+# Fetch secrets from GCS with retries
 log_message "Fetching secrets from GCS..."
 log_message "Using bucket: ${BUCKET_NAME}"
 
-# Download secrets with proper permissions
-gsutil cp gs://${BUCKET_NAME}/secrets/.env /opt/airflow/.env
-gsutil cp gs://${BUCKET_NAME}/secrets/service-account.json /opt/airflow/credentials/service-account.json
+# Try to download secrets with retries
+MAX_RETRIES=10
+RETRY_COUNT=0
+SECRET_DOWNLOADED=false
+
+while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SECRET_DOWNLOADED" = false ]; do
+  if gsutil cp gs://${BUCKET_NAME}/secrets/.env /opt/airflow/.env && \
+     gsutil cp gs://${BUCKET_NAME}/secrets/service-account.json /opt/airflow/credentials/service-account.json; then
+    SECRET_DOWNLOADED=true
+    log_message "Successfully downloaded secrets on attempt $((RETRY_COUNT+1))"
+  else
+    RETRY_COUNT=$((RETRY_COUNT+1))
+    log_message "Failed to download secrets (attempt $RETRY_COUNT/$MAX_RETRIES), retrying in 10 seconds..."
+    sleep 10
+  fi
+done
+
+if [ "$SECRET_DOWNLOADED" = false ]; then
+  log_message "Error: Failed to download secrets after $MAX_RETRIES attempts"
+  exit 1
+fi
 
 # Set proper permissions for secrets
 chown ${AIRFLOW_UID}:0 /opt/airflow/.env /opt/airflow/credentials/service-account.json
