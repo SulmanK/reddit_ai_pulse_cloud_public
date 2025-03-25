@@ -6,158 +6,136 @@ tags: ["stable diffusion", "AI", "image generation"]
 ---
 
 # Overall Ranking and Top Discussions
-
-1.  [[D] Twins Hinahima – 95% AI-Generated Anime scheduled to air on March 28](https://v.redd.it/qbhtq1kmnpqe1) (Score: 82)
-    *   The thread discusses the upcoming release of an AI-generated anime, "Twins Hinahima," and the potential for local generation of similar content.
-2.  [Exploring how an image prompt builds](https://v.redd.it/u4e3hn4r5qqe1) (Score: 37)
-    *   This thread features a video exploring how image prompts are constructed and built upon, with users discussing the impact of different models and potential issues with image quality.
-3.  [My suffering just won't end](https://www.reddit.com/r/StableDiffusion/comments/1jj2fje/my_suffering_just_wont_end/) (Score: 22)
-    *   The thread discusses issues with ComfyUI, errors, missing nodes, and general instability when working with video AI models. Solutions and workarounds are offered.
-4.  [Reve: Reve Reveals "Halfmoon"—Their Stealth Text2Image Model That Currently Sits At #1 On The Artificial Analysis Text-to-Image Leaderboard](https://www.reddit.com/r/StableDiffusion/comments/1jj9gza/reve_reve_reveals_halfmoontheir_stealth/) (Score: 12)
-    *   The discussion centers on a new text-to-image model called "Halfmoon" by Reve, with users expressing skepticism due to the lack of publicly available weights and concerns about censorship.
-5.  [Flower Power 3](https://i.imgur.com/leHyxjj.jpeg) (Score: 6)
-    *   A user shares an image, described as "Flower Power 3," and receives positive feedback.
-6.  [Help converting to fp8e5m2](https://www.reddit.com/r/StableDiffusion/comments/1jj5871/help_converting_to_fp8e5m2/) (Score: 5)
-    *   The thread is about converting files to fp8e5m2, with a user providing instructions and warnings about potential RAM issues.
-7.  [[Release] MCP Server for ForgeUI/Automatic1111 - Simplified Image Generation Management](https://www.reddit.com/r/StableDiffusion/comments/1jj4w1f/release_mcp_server_for_forgeuiautomatic1111/) (Score: 3)
-    *   A new MCP Server for ForgeUI/Automatic1111 has been released. A user asks what it is.
-8.  [With the same setup, when I change the prompt, the image quality differs; the colors in the image seem darker. In some cases, when I try a different prompt, the image quality even gets worse. Why does this happen?](https://www.reddit.com/r/StableDiffusion/comments/1jj2fad/with_the_same_setup_when_i_change_the_prompt_the/) (Score: 2)
-    *   The user discusses prompt-related changes in image quality and color. The discussion involves model behavior influenced by prompt patterns and potential style mimicking.
-9.  [What's the best tool to create an image like this?](https://i.redd.it/p0zi2w640rqe1.png) (Score: 1)
-    *   The user is asking what is the best tool to create an image, and other users suggest to use photoshop, water paint, and crayons.
-10. [Lost with Flux](https://www.reddit.com/r/StableDiffusion/comments/1jj3gty/lost_with_flux/) (Score: 1)
-    *   A user is having a problem with Flux, and other users discuss Forge Flux Schnell, NF4 model, and GGUF format.
-11. [Is it possible to use mask on FlowEdit V2V?](https://www.reddit.com/r/StableDiffusion/comments/1jj8zb0/is_it_possible_to_use_mask_on_flowedit_v2v/) (Score: 1)
-    *   The user is asking if it is possible to use mask on FlowEdit V2V, and another user questions how to move the mask frame to frame, assuming the subject masked is not stationary either in its local space or from the camera POV.
-12. [World's first completely AI generated font using Reve!](https://www.reddit.com/gallery/1jjbgrs) (Score: 0)
-    *   The user claims that this is the "World's first completely AI generated font using Reve!", but other users claims that it literally isn't.
-13. [Valley girl RVC voice model?](https://www.reddit.com/r/StableDiffusion/comments/1jj2a2g/valley_girl_rvc_voice_model/) (Score: 0)
-    *   A user is asking about a Valley girl RVC voice model. Another user suggest to check out the AI Hub discord, as there are a bunch of voices there.
-14. [Which are the best programs to make a short-film with AI?](https://www.reddit.com/r/StableDiffusion/comments/1jj6eqx/which_are_the_best_programs_to_make_a_shortfilm/) (Score: 0)
-    *   The user asks about programs to make a short film with AI, and others suggest kling ai is nor free but has best quality and Wan 2.1.
-15. [Any advice on de-NS FW-ing an SDXL checkpoint?](https://www.reddit.com/r/StableDiffusion/comments/1jj6g3l/any_advice_on_dens_fwing_an_sdxl_checkpoint/) (Score: 0)
-    *   The user asks for advice on de-NS FW-ing an SDXL checkpoint. The discussion revolves around the difficulty of removing NSFW content and possible methods for filtering or retraining.
-16. [SD 1.5 + Lora = Terrible Results](https://www.reddit.com/r/StableDiffusion/comments/1jj6pp2/sd_15_lora_terrible_results/) (Score: 0)
-    *   The user is having terrible results and asks for help. Other users recommends to use a finetuned sd1.5 checkpoint like Photon or Juggernaut.
+1.  [comfystream: native real-time comfyui extension](https://v.redd.it/ecyviy7mlvqe1) (Score: 4)
+    *   A native real-time ComfyUI extension is discussed, with users sharing their experiences and future build plans for real-time stable diffusion.
+2.  [Does it matter if the order of the ComfyUI nodes TeaCache/ModelSamplingSD3 are swapped?](https://i.redd.it/npaimbrfqvqe1.png) (Score: 4)
+    *   The user asks whether or not the order of certain ComfyUI nodes matters.
+3.  [Gpt-4o image can do it! (Wine glass filled to the brim)](https://i.redd.it/fwhec1i16wqe1.jpeg) (Score: 3)
+    *   A user shares an image generated by GPT-4o, prompting curiosity from others.
+4.  [Noob question: Do I need to add steps when using LoRas? With 4/8/lightning checkpoints?](https://www.reddit.com/r/StableDiffusion/comments/1jjq6um/noob_question_do_i_need_to_add_steps_when_using/) (Score: 3)
+    *   A newbie asks if they need to add steps when using LoRas.
+5.  [Wan 2.1 I2v "In Harmony" (All generated on H100)](https://v.redd.it/nbxitbt5pvqe1) (Score: 2)
+    *   User shares images generated on H100.
+6.  [xformers incompatibility and share function issue](https://i.redd.it/99dekq9tyvqe1.png) (Score: 1)
+    *   A user is experiencing incompatibility issues with xformers.
+7.  [🔥 ComfyUI x Gemini : Pose Change](https://i.redd.it/9vmu938ptvqe1.png) (Score: 1)
+    *   A ComfyUI workflow using Gemini for pose changes is showcased, sparking requests for the workflow details.
+8.  [Whats the best Virtual Try-On model today?](https://www.reddit.com/r/StableDiffusion/comments/1jjsjbz/whats_the_best_virtual_tryon_model_today/) (Score: 1)
+    *   User asks about the best Virtual Try-On model.
+9.  [How do I mix two Lora ethnicities? I want to mix an Asian ethnicity with a European one, where the Asian part is more evident.](https://www.reddit.com/r/StableDiffusion/comments/1jjop0m/how_do_i_mix_two_lora_ethnicities_i_want_to_mix/) (Score: 1)
+    *   User needs help on how to mix two Lora ethnicities.
+10. [Need help with AutismMix_confetti](https://www.reddit.com/r/StableDiffusion/comments/1jjoo2v/need_help_with_autismmix_confetti/) (Score: 1)
+    *   User needs help with AutismMix_confetti.
+11. [Why does the AnimateDiff output look like this, despite it having 15 sampling steps? And how can I fix this?](https://i.redd.it/nc7hb21muvqe1.gif) (Score: 0)
+    *   A user seeks help to fix a chaotic-looking AnimateDiff output.
+12. [Should I use apple's ml-stable-diffusion if I have security concerns or is it just a false sense of security?](https://www.reddit.com/r/StableDiffusion/comments/1jjq7bf/should_i_use_apples_mlstablediffusion_if_i_have/) (Score: 0)
+    *   A user raises concerns about the security of using Apple's ml-stable-diffusion.
+13. [I'm just mindblown about this](https://www.reddit.com/r/StableDiffusion/comments/1jjoxzc/im_just_mindblown_about_this/) (Score: 0)
+    *   User is mindblown about something.
+14. [anyone else think hyunyuan video absolutely sucks? "a man in an army uniform jumps into an icecream-truck with barney the dinosaur painted on the side of the van"](https://www.reddit.com/r/StableDiffusion/comments/1jjouxy/anyone_else_think_hyunyuan_video_absolutely_sucks/) (Score: 0)
+    *   A user expresses dissatisfaction with the hyunyuan video model.
 
 # Detailed Analysis by Thread
 
-**[ [D] Twins Hinahima – 95% AI-Generated Anime scheduled to air on March 28 (Score: 82)](https://v.redd.it/qbhtq1kmnpqe1)**
-*  **Summary:** The discussion centers around the upcoming AI-generated anime "Twins Hinahima." Users are discussing its quality, the feasibility of creating similar projects locally, and the tools and techniques involved (e.g., LoRAs, 3D assets, interpolation). Some users note current limitations and the need for human intervention.
-*  **Emotion:** The overall emotional tone is mixed, with a blend of positive (impressive, can't wait) and negative (head turning was so bad) sentiments, along with neutral observations regarding the technical aspects.
+**[comfystream: native real-time comfyui extension (Score: 4)](https://v.redd.it/ecyviy7mlvqe1)**
+*  **Summary:** The post discusses a native real-time ComfyUI extension. One user excitedly shares their experience with real-time stable diffusion, their hardware setup, and future plans.
+*  **Emotion:** The overall emotional tone is Positive, driven by excitement about real-time stable diffusion and future hardware upgrades.
 *  **Top 3 Points of View:**
-    *   The anime is impressive, better than CGI, and highlights the potential of AI in animation.
-    *   The head turning animation is poorly executed, showing the current limitations of AI.
-    *   Creating such anime locally is possible but requires time, skill, effort, and potentially renting powerful hardware.
+    *   The extension enables real-time ComfyUI functionality.
+    *   The poster is excited about the technology and is investing in high-end hardware for it.
+    *   The technology can be used for various real-time applications, including creating avatars.
 
-**[Exploring how an image prompt builds (Score: 37)](https://v.redd.it/u4e3hn4r5qqe1)**
-*  **Summary:** This thread is centered on a video showcasing the evolution of an image as the prompt is built. Users react to the video, commenting on the prompt's impact on the final image. Some users also criticize the image quality.
-*  **Emotion:** The emotional tone is primarily positive, with users expressing appreciation for the video ("cool vid!") and amusement at the prompt's effects. However, there is some negative sentiment related to image quality.
+**[Does it matter if the order of the ComfyUI nodes TeaCache/ModelSamplingSD3 are swapped? (Score: 4)](https://i.redd.it/npaimbrfqvqe1.png)**
+*  **Summary:** The user asks whether or not the order of certain ComfyUI nodes matters.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   The video offers a unique view into the process of prompt-based image generation.
-    *   The sudden change in trees from "trees" to "fir trees" due to the misspelling of "fur" as "fir" is notable.
-    *   The image quality is poor for Stable Diffusion 3.5, indicating incorrect sampler settings.
+    *   The user is looking for technical advise.
 
-**[My suffering just won't end (Score: 22)](https://www.reddit.com/r/StableDiffusion/comments/1jj2fje/my_suffering_just_wont_end/)**
-*  **Summary:** The thread is about resolving errors and instability issues in ComfyUI, particularly related to video AI models. Users share potential causes and solutions, including version mismatches, cache clearing, and alternative workflows.
-*  **Emotion:** The overall emotional tone is negative, reflecting frustration with the software's instability and the difficulty in troubleshooting errors. However, the responses are generally helpful and neutral in tone.
+**[Gpt-4o image can do it! (Wine glass filled to the brim) (Score: 3)](https://i.redd.it/fwhec1i16wqe1.jpeg)**
+*  **Summary:** A user shares an image generated by GPT-4o, prompting curiosity from others.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   ComfyUI is prone to errors and instability, especially with video AI models and frequent updates.
-    *   Errors are often due to version mismatches between Torch, CUDA, Triton, and Sage.
-    *   Potential solutions include clearing the cache directory, using a simpler workflow, and switching to Linux.
+    *   The user is looking to share an image that was created using GPT-4o.
 
-**[Reve: Reve Reveals "Halfmoon"—Their Stealth Text2Image Model That Currently Sits At #1 On The Artificial Analysis Text-to-Image Leaderboard (Score: 12)](https://www.reddit.com/r/StableDiffusion/comments/1jj9gza/reve_reve_reveals_halfmoontheir_stealth/)**
-*  **Summary:** This thread discusses "Halfmoon", a new text-to-image model from Reve. Users are skeptical, pointing out that its ranking is meaningless without open-source weights and expressing concerns about possible censorship.
-*  **Emotion:** The general emotional tone is negative and skeptical, bordering on apathetic. There's a sense of disappointment and distrust, especially regarding the lack of open access.
+**[Noob question: Do I need to add steps when using LoRas? With 4/8/lightning checkpoints? (Score: 3)](https://www.reddit.com/r/StableDiffusion/comments/1jjq6um/noob_question_do_i_need_to_add_steps_when_using/)**
+*  **Summary:** A newbie asks if they need to add steps when using LoRas.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   The lack of publicly available weights makes the model irrelevant to the community.
-    *   The model may be censored, limiting its usefulness.
-    *   There is little interest in closed-source AI models, especially given the focus on open-source development in the community.
+    *   The user is looking for technical advise.
+    *   Loras don't need extra steps.
+    *   Quantized models are smaller fit into available VRAM.
 
-**[Flower Power 3 (Score: 6)](https://i.imgur.com/leHyxjj.jpeg)**
-*  **Summary:** User shares an image, described as "Flower Power 3," and receives positive feedback.
-*  **Emotion:** The emotional tone is overwhelmingly positive, driven by the simple and direct compliment.
+**[Wan 2.1 I2v "In Harmony" (All generated on H100) (Score: 2)](https://v.redd.it/nbxitbt5pvqe1)**
+*  **Summary:** User shares images generated on H100.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   The image is very pretty.
+    *   The user shares an image.
+    *   The image was generated on H100.
+    *   The model looks impressive.
 
-**[Help converting to fp8e5m2 (Score: 5)](https://www.reddit.com/r/StableDiffusion/comments/1jj5871/help_converting_to_fp8e5m2/)**
-*  **Summary:** The thread is about converting files to fp8e5m2. A user provides instructions using `pip install safetensors` and shares a script, along with warnings about the process potentially consuming significant RAM.
-*  **Emotion:** The emotional tone is primarily neutral, focusing on technical advice and potential risks.
+**[xformers incompatibility and share function issue (Score: 1)](https://i.redd.it/99dekq9tyvqe1.png)**
+*  **Summary:** A user is experiencing incompatibility issues with xformers.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   Converting files to fp8e5m2 requires using a specific script and editing filepaths.
-    *   The conversion process can consume a lot of RAM and potentially crash the computer.
-    *   Huggingface spaces would be ideal but limit the ram and storage so much.
+    *   The user is having incompatibility issues with xformers.
+    *   The user is wondering which version of xformers to install.
 
-**[[Release] MCP Server for ForgeUI/Automatic1111 - Simplified Image Generation Management (Score: 3)](https://www.reddit.com/r/StableDiffusion/comments/1jj4w1f/release_mcp_server_for_forgeuiautomatic1111/)**
-*  **Summary:** A new MCP Server for ForgeUI/Automatic1111 has been released. A user asks what it is.
-*  **Emotion:** The emotional tone is neutral and inquisitive.
+**[🔥 ComfyUI x Gemini : Pose Change (Score: 1)](https://i.redd.it/9vmu938ptvqe1.png)**
+*  **Summary:** A ComfyUI workflow using Gemini for pose changes is showcased, sparking requests for the workflow details.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   A user is curious about what MCP Server is.
+    *   Gemini can be used in ComfyUI to change from one pose to many different poses.
+    *   Users would like the workflow for the post.
+    *   Posts should be removed if there is no workflow.
 
-**[With the same setup, when I change the prompt, the image quality differs; the colors in the image seem darker. In some cases, when I try a different prompt, the image quality even gets worse. Why does this happen? (Score: 2)](https://www.reddit.com/r/StableDiffusion/comments/1jj2fad/with_the_same_setup_when_i_change_the_prompt_the/)**
-*  **Summary:** The user discusses prompt-related changes in image quality, with colors appearing darker and overall quality worsening with different prompts. The discussion involves model behavior influenced by prompt patterns and potential style mimicking.
-*  **Emotion:** The emotional tone is neutral, with users seeking and providing technical explanations.
+**[Whats the best Virtual Try-On model today? (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1jjsjbz/whats_the_best_virtual_tryon_model_today/)**
+*  **Summary:** User asks about the best Virtual Try-On model.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   The image quality and color differences are a problem.
-    *   The Illustrious model is trained on different images and styles, and the model may mimic a particular artist's style.
-    *   You can try using normal VAE decode instead of tiled and try to adhere to its preferable resolution.
+    *   The user is looking for technical advise.
+    *   User has tested Flux fill dev + Flux ace subject.
 
-**[What's the best tool to create an image like this? (Score: 1)](https://i.redd.it/p0zi2w640rqe1.png)**
-*  **Summary:** The user is asking what is the best tool to create an image.
-*  **Emotion:** The emotional tone is neutral.
+**[How do I mix two Lora ethnicities? I want to mix an Asian ethnicity with a European one, where the Asian part is more evident. (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1jjop0m/how_do_i_mix_two_lora_ethnicities_i_want_to_mix/)**
+*  **Summary:** User needs help on how to mix two Lora ethnicities.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   Photoshop
-    *   Water paint
-    *   Crayons in the hands of a child
+    *   The user is looking for technical advise.
 
-**[Lost with Flux (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1jj3gty/lost_with_flux/)**
-*  **Summary:** A user is having a problem with Flux, and other users discuss Forge Flux Schnell, NF4 model, and GGUF format.
-*  **Emotion:** The emotional tone is neutral and informative.
+**[Need help with AutismMix_confetti (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1jjoo2v/need_help_with_autismmix_confetti/)**
+*  **Summary:** User needs help with AutismMix_confetti.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   Try Forge Flux Schnell
-    *   Use NF4 model
-    *   GGUF format
+    *   The user is looking for technical advise.
+    *   AutismMix has a strong default style.
+    *   Illustrious/NoobAI models are good at generating fanart style of a drawing.
 
-**[Is it possible to use mask on FlowEdit V2V? (Score: 1)](https://www.reddit.com/r/StableDiffusion/comments/1jj8zb0/is_it_possible_to_use_mask_on_flowedit_v2v/)**
-*  **Summary:** The user is asking if it is possible to use mask on FlowEdit V2V, and another user questions how to move the mask frame to frame, assuming the subject masked is not stationary either in its local space or from the camera POV.
-*  **Emotion:** The emotional tone is positive and inquisitive.
+**[Why does the AnimateDiff output look like this, despite it having 15 sampling steps? And how can I fix this? (Score: 0)](https://i.redd.it/nc7hb21muvqe1.gif)**
+*  **Summary:** A user seeks help to fix a chaotic-looking AnimateDiff output.
+*  **Emotion:** The overall emotional tone is Negative.
 *  **Top 3 Points of View:**
-    *   It is possible to use mask on FlowEdit V2V.
-    *   How to move the mask frame to frame, assuming the subject masked is not stationary either in its local space or from the camera POV?
+    *   The user needs technical advise.
+    *   The image should have a seizure warning.
+    *   Could be a bad lora, bad animatediff checkpoint, or a bad checkpoint in general.
 
-**[World's first completely AI generated font using Reve! (Score: 0)](https://www.reddit.com/gallery/1jjbgrs)**
-*  **Summary:** The user claims that this is the "World's first completely AI generated font using Reve!", but other users claims that it literally isn't.
-*  **Emotion:** The emotional tone is neutral.
+**[Should I use apple's ml-stable-diffusion if I have security concerns or is it just a false sense of security? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jjq7bf/should_i_use_apples_mlstablediffusion_if_i_have/)**
+*  **Summary:** A user raises concerns about the security of using Apple's ml-stable-diffusion.
+*  **Emotion:** The overall emotional tone is Positive.
 *  **Top 3 Points of View:**
-    *   This is the "World's first completely AI generated font using Reve!"
-    *   It literally isn't the "World's first completely AI generated font using Reve!"
-    *   Here is the X thread: https://x.com/HiSohan/status/1904255815810482526?t=uMKRpEf7D52qZT1wMb6PuA&s=19
+    *   The user is asking about security concerns.
+    *   The best way to care about privacy is to use a VM.
+    *   Try drawthings its on the Mac App Store so it should be fairly secure.
 
-**[Valley girl RVC voice model? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jj2a2g/valley_girl_rvc_voice_model/)**
-*  **Summary:** A user is asking about a Valley girl RVC voice model.
-*  **Emotion:** The emotional tone is neutral.
+**[I'm just mindblown about this (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jjoxzc/im_just_mindblown_about_this/)**
+*  **Summary:** User is mindblown about something.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   Check out the AI Hub discord. Bunch of voices there. I'm sure you can find an Applejack voice.
+    *   The user is mindblown.
+    *   Prompt: 1girl, wearing dominos employee uniform hat, wearing bikini, holding pizza slice, in modern kitchen.
 
-**[Which are the best programs to make a short-film with AI? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jj6eqx/which_are_the_best_programs_to_make_a_shortfilm/)**
-*  **Summary:** The user asks about programs to make a short film with AI.
-*  **Emotion:** The emotional tone is positive.
+**[anyone else think hyunyuan video absolutely sucks? "a man in an army uniform jumps into an icecream-truck with barney the dinosaur painted on the side of the van" (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jjouxy/anyone_else_think_hyunyuan_video_absolutely_sucks/)**
+*  **Summary:** A user expresses dissatisfaction with the hyunyuan video model.
+*  **Emotion:** The overall emotional tone is Neutral.
 *  **Top 3 Points of View:**
-    *   kling ai is nor free but has best quality
-    *   You could wait for Wan 2.1 to bring last frame in the next update and run the 720p version on a H100 on Runpod.
-
-**[Any advice on de-NS FW-ing an SDXL checkpoint? (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jj6g3l/any_advice_on_dens_fwing_an_sdxl_checkpoint/)**
-*  **Summary:** The user asks for advice on de-NS FW-ing an SDXL checkpoint. The discussion revolves around the difficulty of removing NSFW content and possible methods for filtering or retraining.
-*  **Emotion:** The emotional tone is neutral and slightly pessimistic.
-*  **Top 3 Points of View:**
-    *   It's difficult to completely remove NSFW content from a model.
-    *   Filtering NSFW content post-output might be a better approach.
-    *   For home use, you might engage the old "safety mode" or de-nudify it.
-
-**[SD 1.5 + Lora = Terrible Results (Score: 0)](https://www.reddit.com/r/StableDiffusion/comments/1jj6pp2/sd_15_lora_terrible_results/)**
-*  **Summary:** The user is having terrible results and asks for help.
-*  **Emotion:** The emotional tone is neutral and informative.
-*  **Top 3 Points of View:**
-    *   The base sd1.5 model isn't very good.
-    *   use a finetuned sd1.5 checkpoint like Photon or Juggernaut.
-    *   can u make a screen shot of the workflow? so i can see what your working with
+    *   Hyunyuan video absolutely sucks.
+    *   The videos are not stable.
+    *   The user should reach out to Skippy for help.
