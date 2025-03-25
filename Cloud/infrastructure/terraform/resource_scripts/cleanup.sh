@@ -120,7 +120,7 @@ echo "[$TIMESTAMP] 4. Deleting GCS buckets..."
 buckets=$(gsutil ls 2>/dev/null || true)
 for bucket in $buckets; do
     if [[ "$bucket" == "gs://$GCP_PROJECT_ID"* || \
-          "$bucket" == "gs://reddit-ai-pulse"* || \
+          "$bucket" == "gs://reddit-ai-pulse-1"* || \
           "$bucket" == "gs://gcf-sources-"* ]]; then
         TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
         echo "[$TIMESTAMP] Deleting bucket: $bucket"

@@ -143,6 +143,9 @@ The diagram above illustrates the flow of data through our system, from collecti
 1. **Google Cloud Platform (GCP) Setup**
    - Create a Google Account
    - Create a new project
+   - Add in permissions to cloud 
+      - gcloud auth application-default login
+      - gcloud auth application-default set-quota-project --PROJ_ID
    - Enable required APIs:
       ```bash
       gcloud services enable cloudresourcemanager.googleapis.com \
@@ -157,6 +160,16 @@ The diagram above illustrates the flow of data through our system, from collecti
                            storage.googleapis.com \
                            networkmanagement.googleapis.com
       ```
+   - Add Roles to main account
+      - Project Owner or Editor
+      - BigQuery Admin
+      - Storage Admin
+      - Compute Admin
+      - IAM Admin
+      - Service Account Admin
+   - Update (bucket_name, project_id, sa_email, alert_email, alert_password,  docker-registry, dbt_project.yml: proj id) # Notes for Me
+   
+
 
 2. **Local Development Environment**
    - Install Google Cloud SDK
@@ -177,6 +190,8 @@ The diagram above illustrates the flow of data through our system, from collecti
    ```bash
    gcloud auth login
    gcloud config set project YOUR_PROJECT_ID
+   gcloud auth application-default login
+   gcloud auth application-default set-quota-project --PROJ_ID
    ```
 
 3. **Environment Configuration**
@@ -210,7 +225,7 @@ The diagram above illustrates the flow of data through our system, from collecti
 
 2. **View the services on your local machine**
    ```bash
-   gcloud compute ssh airflow@airflow-reddit   --zone=us-central1-a   --project=reddit-ai-pulse   -- -L 8080:localhost:8080   -L 5000:localhost:5000   -L 3000:localhost:3000   -L 9090:localhost:9090
+   gcloud compute ssh airflow@airflow-reddit   --zone=us-central1-a   --project=reddit-ai-pulse-1   -- -L 8080:localhost:8080   -L 5000:localhost:5000   -L 3000:localhost:3000   -L 9090:localhost:9090
    ```
     - Airflow: http://localhost:8080 (admin/admin)
     - MLflow: http://localhost:5000
