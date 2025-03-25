@@ -15,7 +15,7 @@ clean-targets:
   - "dbt_packages"
 
 vars:
-  project_id: reddit-ai-pulse-1  # Set this to match your .env file
+  project_id: "{{ target.project }}"  # Set this to match your .env file
   subreddits: ['dataengineering', 'datascience', 'machinelearning', 'claudeai',
    'singularity', 'localllama', 'openai', 'stablediffusion']  # Define all subreddits
   
