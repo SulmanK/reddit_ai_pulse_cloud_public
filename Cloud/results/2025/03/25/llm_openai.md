@@ -2,136 +2,101 @@
 title: "OpenAI Subreddit"
 date: "2025-03-25"
 description: "Analysis of top discussions and trends in the openai subreddit"
-tags: ["openai", "AI", "language models"]
+tags: ["openai", "image generation", "AI ethics"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [I was trying to test and play with Sora and my prompt was simple, to make some vegetables and fruit come to life, but apparently they look like they try make their own little veggies :)](https://v.redd.it/0mapfvrv4pqe1) (Score: 54)
-    *   A user shares their experience of using Sora to animate vegetables and fruits, with the resulting animation showing the produce creating their own smaller versions.
-2.  [I saw some people talking that they got the number 27 when asking Pick a number from 1 to 50](https://i.redd.it/hn5r893kmpqe1.png) (Score: 33)
-    *   Users discuss an apparent bias in language models to pick the number 27 when prompted to choose a number between 1 and 50.
-3.  [I got accepted into one of the most prestigious AI masters, but I fear AI will make it obsolete](https://www.reddit.com/r/OpenAI/comments/1jiz0xt/i_got_accepted_into_one_of_the_most_prestigious/) (Score: 17)
-    *   A newly admitted AI masters student expresses concern that AI advancements will render their degree irrelevant.
-4.  [Open Source Deep Research using the OpenAI Agents SDK](https://github.com/qx-labs/agents-deep-research) (Score: 14)
-    *   Users discuss an open-source project for deep research using the OpenAI Agents SDK, differentiating between workflow and agentic approaches to AI research.
-5.  [Those damn PDF files](https://www.reddit.com/r/OpenAI/comments/1jj1whf/those_damn_pdf_files/) (Score: 7)
-    *   Users discuss the difficulty of getting ChatGPT to reliably read and analyze PDFs.
-6.  [ChatGPT changed its creativity overnight?](https://www.reddit.com/gallery/1jjbraf) (Score: 5)
-    *   A user asks if ChatGPT changed its creativity overnight
-7.  [Significant nerfing of o3-mini (academic/STEM coding)](https://www.reddit.com/r/OpenAI/comments/1jj3sfv/significant_nerfing_of_o3mini_academicstem_coding/) (Score: 3)
-    *   A user reports a perceived decline in the performance of the o3-mini model, particularly in academic and STEM-related coding tasks.
-8.  [Options to use ChatGPT to evaluate hundreds of PDFs](https://www.reddit.com/r/OpenAI/comments/1jj7lay/options_to_use_chatgpt_to_evaluate_hundreds_of/) (Score: 3)
-    *   Users discuss different methods and tools for using ChatGPT to evaluate large numbers of PDF documents, including using the OpenAI API and SaaS solutions.
-9.  [Has anyone noticed tighter moderation in ChatGPT recently? (Model Specs new updates?)](https://www.reddit.com/r/OpenAI/comments/1jj5cu6/has_anyone_noticed_tighter_moderation_in_chatgpt/) (Score: 2)
-    *   Users discuss whether ChatGPT's moderation has become stricter, possibly due to a recent OpenAI study on affective use.
-10. [Where to find voice actors open to AI voice conversion (e.g., RVC) for fandubs?](https://www.reddit.com/r/OpenAI/comments/1jj0886/where_to_find_voice_actors_open_to_ai_voice/) (Score: 1)
-    *   A user seeks recommendations for finding voice actors who are open to having their voices used for AI voice conversion in fan-made dubs.
-11. [One of my chats stuck at "processing". I cant even stop it.](https://www.reddit.com/r/OpenAI/comments/1jj1owp/one_of_my_chats_stuck_at_processing_i_cant_even/) (Score: 1)
-    *   A user describes a stuck chat in ChatGPT and asks how to resolve the issue, with another user providing a solution.
-12. [Deep Research compared - my exeprience : ChatGPT, Gemini, Grok, Deep Seek](https://www.reddit.com/r/OpenAI/comments/1jj4bvk/deep_research_compared_my_exeprience_chatgpt/) (Score: 1)
-    *   A user shares their experience comparing the deep research capabilities of ChatGPT, Gemini, Grok, and Deep Seek.
-13. [What's going on here? My plan clearly states 2 simultaneous generations yet it's telling me only 1 now??](https://imgur.com/a/JAOPoyO) (Score: 0)
-    *   A user reports an issue with their OpenAI plan, where they are unable to generate two simultaneous generations as their plan states.
-14. [OpenAI puts the brakes on research](https://www.reddit.com/r/OpenAI/comments/1jixawd/openai_puts_the_brakes_on_research/) (Score: 0)
-    *   Users discuss OpenAI's reported slowdown in research efforts, particularly concerning ChatGPT's ability to summarize linked articles.
+1.  [OpenAI 4o Image Generation](https://youtu.be/E9RN8jX--uc?si=86_RkE8kj5ecyLcF) (Score: 112)
+    *   Users discuss the new OpenAI 4o image generation capabilities, its availability in different regions, and its integration with the API and iOS app.
+2.  [OpenAI Claims Breakthrough in Image Creation for ChatGPT - WSJ](https://www.wsj.com/articles/openai-claims-breakthrough-in-image-creation-for-chatgpt-62ed0318) (Score: 35)
+    *   Users discuss the new image generation capabilities of ChatGPT.
+3.  Eric Schmidt says a "a modest death event (Chernobyl-level)" might be necessary to scare everybody into taking AI risks seriously, but we shouldn't wait for a Hiroshima to take action](https://v.redd.it/1fubz7jpjuqe1) (Score: 29)
+    *   Users discuss Eric Schmidt's controversial statement about AI risks and the need for a significant event to raise awareness.
+4.  [It's perfect](https://i.redd.it/vvemy8vc4wqe1.png) (Score: 22)
+    *   Users celebrate achieving a previously thought "impossible" image generation result.
+5.  [OpenAI’s new image generator aims to be practical enough for designers and advertisers](https://www.technologyreview.com/2025/03/25/1113745/openais-new-image-generator-aims-to-be-practical-enough-for-designers-and-advertisers/?utm_medium=tr_social&utm_source=reddit&utm_campaign=site_visitor.unpaid.engagement) (Score: 9)
+    *   Users inquire about access to OpenAI's new image generator.
+6.  [I built an open source SDK for OpenAI computer use](https://www.reddit.com/r/OpenAI/comments/1jjo952/i_built_an_open_source_sdk_for_openai_computer_use/) (Score: 6)
+    *   Users discuss an open-source SDK for OpenAI computer use, inquiring about its functionality and accessibility.
+7.  [Account Terminated Due to False Claims?](https://www.reddit.com/r/OpenAI/comments/1jjqd3s/account_terminated_due_to_false_claims/) (Score: 2)
+    *   Users discuss terminated accounts due to false claims.
+8.  [My ChatGPT Pro won't work no matter what I do. Has anyone experienced this before?](https://www.reddit.com/gallery/1jjshsa) (Score: 1)
+    *   A user asks for help regarding their ChatGPT Pro account not working.
+9.  [Question: How does one apply ethics to the use of AI within various fields and industries?](https://www.reddit.com/r/OpenAI/comments/1jjlp3s/question_how_does_one_apply_ethics_to_the_use_of/) (Score: 1)
+    *   Users discuss how to apply ethics to the use of AI.
+10. [The Hustle Starts at Dawn. No Excuses](https://v.redd.it/3bdifbsskvqe1) (Score: 0)
+    *   Users react to a video, comparing it to Elon Musk and Donald Trump.
 
 # Detailed Analysis by Thread
-**[I was trying to test and play with Sora and my prompt was simple, to make some vegetables and fruit come to life, but apparently they look like they try make their own little veggies :) (Score: 54)](https://v.redd.it/0mapfvrv4pqe1)**
-*  **Summary:** A user shares their experience of using Sora to animate vegetables and fruits, with the resulting animation showing the produce creating their own smaller versions. Comments range from humorous observations to technical questions about the video and its content.
-*  **Emotion:** The overall emotional tone is neutral with a slight leaning toward positive due to amusement and lightheartedness.
+
+**[OpenAI 4o Image Generation (Score: 112)](https://youtu.be/E9RN8jX--uc?si=86_RkE8kj5ecyLcF)**
+*  **Summary:**  Users are discussing the new OpenAI 4o image generation capabilities, its availability in different regions, and its integration with the API and iOS app. Some are impressed with the text generation capabilities, while others are experiencing issues with access and are curious about model details.
+*  **Emotion:** The overall emotional tone is positive, with excitement about the new features. There is also some frustration expressed regarding availability issues.
 *  **Top 3 Points of View:**
-    *   The video is amusing and slightly suggestive, prompting playful comments.
-    *   The video is technically impressive, showcasing Sora's capabilities.
-    *   The video quality is questioned.
+    *   The image generation is impressive, particularly the text rendering.
+    *   The feature is not yet available to all users or in all regions.
+    *   There are questions about which model the iOS app is using.
 
-**[I saw some people talking that they got the number 27 when asking Pick a number from 1 to 50 (Score: 33)](https://i.redd.it/hn5r893kmpqe1.png)**
-*  **Summary:** Users discuss an apparent bias in language models to pick the number 27 when prompted to choose a number between 1 and 50. They share screenshots and results from different language models.
-*  **Emotion:** The overall emotional tone is negative, driven by confusion and some disappointment.
+**[OpenAI Claims Breakthrough in Image Creation for ChatGPT - WSJ (Score: 35)](https://www.wsj.com/articles/openai-claims-breakthrough-in-image-creation-for-chatgpt-62ed0318)**
+*  **Summary:**  Users are discussing the new image generation capabilities of ChatGPT, referencing a WSJ article. They are sharing examples, asking about availability, and commenting on the improvements over previous models.
+*  **Emotion:** The overall emotional tone is neutral, with a mix of curiosity and cautious optimism.
 *  **Top 3 Points of View:**
-    *   Many models exhibit a bias toward the number 27.
-    *   This behavior is an example of how LLMs work.
-    *   Some models return different numbers, indicating inconsistency.
+    *   The new image generation shows significant improvement, particularly in text rendering.
+    *   The 4o image generation is rolling out to different user groups.
+    *   Some users are already experiencing the updated model and sharing their results.
 
-**[I got accepted into one of the most prestigious AI masters, but I fear AI will make it obsolete (Score: 17)](https://www.reddit.com/r/OpenAI/comments/1jiz0xt/i_got_accepted_into_one_of_the_most_prestigious/)**
-*  **Summary:** A newly admitted AI masters student expresses concern that AI advancements will render their degree irrelevant. Commenters offer a range of perspectives, from encouraging the student to pursue the degree for networking and foundational knowledge, to suggesting alternative paths.
-*  **Emotion:** The overall emotional tone is neutral.
+**[Eric Schmidt says a "a modest death event (Chernobyl-level)" might be necessary to scare everybody into taking AI risks seriously, but we shouldn't wait for a Hiroshima to take action (Score: 29)](https://v.redd.it/1fubz7jpjuqe1)**
+*  **Summary:** Users are reacting to a controversial statement by Eric Schmidt about the need for a significant event to highlight the risks of AI.
+*  **Emotion:** The overall emotional tone is negative and critical, expressing disbelief and concern over Schmidt's statement.
 *  **Top 3 Points of View:**
-    *   Pursuing the degree is valuable for networking and adapting to the changing AI landscape.
-    *   The degree will provide foundational knowledge and open up future opportunities.
-    *   Practical skills gained in the industry are more valuable than a masters degree.
+    *   Schmidt's statement is inappropriate and reflects a lack of ethical consideration.
+    *   AI-related harm is already occurring and disproportionately affects certain populations.
+    *   Focus should be on proactive measures and ethical development rather than waiting for a catastrophe.
 
-**[Open Source Deep Research using the OpenAI Agents SDK (Score: 14)](https://github.com/qx-labs/agents-deep-research)**
-*  **Summary:** Users discuss an open-source project for deep research using the OpenAI Agents SDK, differentiating between workflow and agentic approaches to AI research.
-*  **Emotion:** The overall emotional tone is positive, with users expressing appreciation for the shared resource.
+**[It's perfect (Score: 22)](https://i.redd.it/vvemy8vc4wqe1.png)**
+*  **Summary:** The user is celebrating a successful image generation.
+*  **Emotion:** The emotional tone of the thread is neutral.
 *  **Top 3 Points of View:**
-    *   The project is well-structured and valuable.
-    *   Workflow approaches are favored over purely agentic approaches due to stability.
-    *   Frameworks like pydantic-ai and logfire can enhance monitoring.
+    *   The user is excited to have finally generated an image that was previously considered impossible.
 
-**[Those damn PDF files (Score: 7)](https://www.reddit.com/r/OpenAI/comments/1jj1whf/those_damn_pdf_files/)**
-*  **Summary:** Users discuss the difficulty of getting ChatGPT to reliably read and analyze PDFs.
-*  **Emotion:** The overall emotional tone is slightly negative due to the frustration around PDF handling.
+**[OpenAI’s new image generator aims to be practical enough for designers and advertisers (Score: 9)](https://www.technologyreview.com/2025/03/25/1113745/openais-new-image-generator-aims-to-be-practical-enough-for-designers-and-advertisers/?utm_medium=tr_social&utm_source=reddit&utm_campaign=site_visitor.unpaid.engagement)**
+*  **Summary:** The user is inquiring about access to the image generator.
+*  **Emotion:** The emotional tone of the thread is neutral.
 *  **Top 3 Points of View:**
-    *   PDF handling in ChatGPT is currently unreliable.
-    *   A workaround involves converting PDFs to LaTeX using Overleaf.
-    *   There is a general need for better PDF integration.
+    *   Users are generally interested in gaining access to the image generator.
 
-**[ChatGPT changed its creativity overnight? (Score: 5)](https://www.reddit.com/gallery/1jjbraf)**
-*  **Summary:** A user asks if ChatGPT changed its creativity overnight
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *  Try asking for the generation id.
-
-**[Significant nerfing of o3-mini (academic/STEM coding) (Score: 3)](https://www.reddit.com/r/OpenAI/comments/1jj3sfv/significant_nerfing_of_o3mini_academicstem_coding/)**
-*  **Summary:** A user reports a perceived decline in the performance of the o3-mini model, particularly in academic and STEM-related coding tasks.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *  Chatgpt is notoriously unreliable mathematically. The only way to get it to accurately calculate anything is to enter the caveat: "Use python in this calculation".
-
-**[Options to use ChatGPT to evaluate hundreds of PDFs (Score: 3)](https://www.reddit.com/r/OpenAI/comments/1jj7lay/options_to_use_chatgpt_to_evaluate_hundreds_of/)**
-*  **Summary:** Users discuss different methods and tools for using ChatGPT to evaluate large numbers of PDF documents, including using the OpenAI API and SaaS solutions.
-*  **Emotion:** The overall emotional tone is negative.
+**[I built an open source SDK for OpenAI computer use (Score: 6)](https://www.reddit.com/r/OpenAI/comments/1jjo952/i_built_an_open_source_sdk_for_openai_computer_use/)**
+*  **Summary:** Users are discussing the new open source SDK, it's functionality, accessibility, and compatibility with other computer agents.
+*  **Emotion:** The emotional tone of the thread is neutral.
 *  **Top 3 Points of View:**
-    *   Using the OpenAI API is a viable approach for evaluating multiple PDFs.
-    *   ChatGPT is unreliable when reading PDFs.
-    *   SaaS solutions like Azure AI Search may offer a more scalable option.
+    *   The SDK appears to be helpful for computer-use integration.
+    *   The users want to know where to find the tool.
+    *   The users are wondering whether it works with other computer agents.
 
-**[Has anyone noticed tighter moderation in ChatGPT recently? (Model Specs new updates?) (Score: 2)](https://www.reddit.com/r/OpenAI/comments/1jj5cu6/has_anyone_noticed_tighter_moderation_in_chatgpt/)**
-*  **Summary:** Users discuss whether ChatGPT's moderation has become stricter, possibly due to a recent OpenAI study on affective use.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *   The tighter moderation is possibly related to the affective use study that they recently published.
-
-**[Where to find voice actors open to AI voice conversion (e.g., RVC) for fandubs? (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1jj0886/where_to_find_voice_actors_open_to_ai_voice/)**
-*  **Summary:** A user seeks recommendations for finding voice actors who are open to having their voices used for AI voice conversion in fan-made dubs.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *  One voice actor says they are, but would like further information on the project.
-
-**[One of my chats stuck at "processing". I cant even stop it. (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1jj1owp/one_of_my_chats_stuck_at_processing_i_cant_even/)**
-*  **Summary:** A user describes a stuck chat in ChatGPT and asks how to resolve the issue, with another user providing a solution.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *  You can delete the chat in the left navigation column and then start a new one.
-
-**[Deep Research compared - my exeprience : ChatGPT, Gemini, Grok, Deep Seek (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1jj4bvk/deep_research_compared_my_exeprience_chatgpt/)**
-*  **Summary:** A user shares their experience comparing the deep research capabilities of ChatGPT, Gemini, Grok, and Deep Seek.
-*  **Emotion:** The overall emotional tone is negative.
+**[Account Terminated Due to False Claims? (Score: 2)](https://www.reddit.com/r/OpenAI/comments/1jjqd3s/account_terminated_due_to_false_claims/)**
+*  **Summary:** The users are asking about the time span between the notifications and suggesting switching companies.
+*  **Emotion:** The emotional tone of the thread is neutral.
 *  **Top 3 Points of View:**
-    *   Free Grok > chatGPT.
-    *   The paid gemini deep research is better than the free version.
-    *   This post is not meant to be flattery for the OpenAI team.
+    *   Users are seeking information about account termination procedures.
+    *   Users suggesting looking at other companies.
 
-**[What's going on here? My plan clearly states 2 simultaneous generations yet it's telling me only 1 now?? (Score: 0)](https://imgur.com/a/JAOPoyO)**
-*  **Summary:** A user reports an issue with their OpenAI plan, where they are unable to generate two simultaneous generations as their plan states.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 1 Points of View:**
-    *   Even on Pro you can't concurrently generate 2 videos in 1080P.
-
-**[OpenAI puts the brakes on research (Score: 0)](https://www.reddit.com/r/OpenAI/comments/1jixawd/openai_puts_the_brakes_on_research/)**
-*  **Summary:** Users discuss OpenAI's reported slowdown in research efforts, particularly concerning ChatGPT's ability to summarize linked articles.
-*  **Emotion:** The overall emotional tone is neutral.
+**[My ChatGPT Pro won't work no matter what I do. Has anyone experienced this before? (Score: 1)](https://www.reddit.com/gallery/1jjshsa)**
+*  **Summary:** The user has issues with ChatGPT Pro not working.
+*  **Emotion:** The emotional tone of the thread is neutral.
 *  **Top 3 Points of View:**
-    *   GPT can't summarize links.
-    *   GPT can read an entire article from a URL.
-    *   That sounds like total bs.
+    *   The chat is down due to rolling out features.
+
+**[Question: How does one apply ethics to the use of AI within various fields and industries? (Score: 1)](https://www.reddit.com/r/OpenAI/comments/1jjlp3s/question_how_does_one_apply_ethics_to_the_use_of/)**
+*  **Summary:** Users are talking about transitioning people into other roles.
+*  **Emotion:** The emotional tone of the thread is neutral.
+*  **Top 3 Points of View:**
+    *   The interests of people should be placed above profit.
+    *   People need to be transition to other roles due to AI.
+
+**[The Hustle Starts at Dawn. No Excuses (Score: 0)](https://v.redd.it/3bdifbsskvqe1)**
+*  **Summary:** The users are comparing the video to Elon Musk and Donald Trump.
+*  **Emotion:** The overall emotional tone is positive.
+*  **Top 3 Points of View:**
+    *   Elon making breakfast.
+    *   The abonimation lol.
+    *   Trump trying to twerk.
