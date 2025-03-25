@@ -8,7 +8,7 @@ resource "google_service_account" "airflow_sa" {
 # Add a delay to ensure service account is fully propagated
 resource "time_sleep" "wait_for_sa" {
   depends_on = [google_service_account.airflow_sa]
-  create_duration = "30s"
+  create_duration = "90s"
 }
 
 # Grant Storage Admin role
