@@ -2,155 +2,119 @@
 title: "LocalLLaMA Subreddit"
 date: "2025-03-26"
 description: "Analysis of top discussions and trends in the localllama subreddit"
-tags: ["LLM", "Local AI", "Models"]
+tags: ["LLM", "Local Models", "AI"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [We are just 3 months into 2025](https://www.reddit.com/r/LocalLLaMA/comments/1jjvo4e/we_are_just_3_months_into_2025/) (Score: 213)
-    *   The thread discusses the rapid advancements and releases of new AI models in the first three months of 2025, with users commenting on specific models and the pace of innovation.
-2.  [1.78bit DeepSeek-V3-0324 - 230GB Unsloth Dynamic GGUF](https://www.reddit.com/r/LocalLLaMA/comments/1jk0qjs/178bit_deepseekv30324_230gb_unsloth_dynamic_gguf/) (Score: 102)
-    *   This thread is about the release of a new quantization of the DeepSeek-V3-0324 model, with users discussing its performance, asking questions about quantization methods, and comparing it to other models.
-3.  [Gemini Coder - support for 2.5 Pro with AI Studio has landed!](https://marketplace.visualstudio.com/items?itemName=robertpiosik.gemini-coder) (Score: 20)
-    *   The thread discusses the release of Gemini Coder. Some users are excited about the potential of the tool.
-4.  [:|](https://i.redd.it/6c6z4mxrtwqe1.png) (Score: 18)
-    *   This thread depicts a humorous situation related to the cost of hardware required to run local LLMs and the expense of acquiring sufficient GPUs.
-5.  [Extensive llama.cpp benchmark for quality degradation by quantization](https://www.reddit.com/r/LocalLLaMA/comments/1jjwj88/extensive_llamacpp_benchmark_for_quality/) (Score: 14)
-    *   The thread discusses a benchmark for quality degradation due to quantization in llama.cpp. Users express skepticism about the results, particularly concerning low-bit quantization.
-6.  [typia (20,000x faster validator) challenges to Agentic AI framework, with its compiler skill, easier than MCP](https://typia.io/articles/typia-challenges-to-agentic-ai-with-its-compiler-skill.html) (Score: 12)
-    *   The thread discusses the challenges to Agentic AI framework. Users are seeking proof of capabilities and demonstrable advantages over existing solutions.
-7.  [Does anyone use local LLM via Ollama on their MacBook Pro or similiar? Curious about your choices...](https://www.reddit.com/r/LocalLLaMA/comments/1jjybda/does_anyone_use_local_llm_via_ollama_on_their/) (Score: 3)
-    *   Users share their experiences using local LLMs via Ollama on their MacBook Pros, discussing their motivations for going local, the benefits, and the limitations.
-8.  [Where to start learning about AI?](https://www.reddit.com/r/LocalLLaMA/comments/1jjysyz/where_to_start_learning_about_ai/) (Score: 3)
-    *   Users provide recommendations and resources for beginners who want to start learning about AI, including online courses, video tutorials, and tools for running LLMs locally.
-9.  [Model Recommendations](https://www.reddit.com/r/LocalLLaMA/comments/1jjwr7u/model_recommendations/) (Score: 1)
-    *   Users give model recommendations depending on the usecase and specifications, especially VRAM constraints.
-10. [Tried OWL with Gemini 2.5 Pro](https://www.reddit.com/r/LocalLLaMA/comments/1jjzt56/tried_owl_with_gemini_25_pro/) (Score: 1)
-    *   The thread discusses a project with Gemini 2.5 Pro that seems to be game changing for the blind.
-11. [What are the best code simulations that you guys ask a LLM to run in order to test its capabilities?](https://www.reddit.com/r/LocalLLaMA/comments/1jk07iw/what_are_the_best_code_simulations_that_you_guys/) (Score: 1)
-    *   The thread is about the best code simulations to test the capabilities of LLMs.
-12. [What are the build requirements for running a 70b model at readable speeds with no quant?](https://www.reddit.com/r/LocalLLaMA/comments/1jk2usg/what_are_the_build_requirements_for_running_a_70b/) (Score: 1)
-    *   Users discuss hardware requirements for running a 70b model with no quantisation, and the trade-offs involved.
-13. [48GB Build for 32B Model](https://www.reddit.com/r/LocalLLaMA/comments/1jk3eqy/48gb_build_for_32b_model/) (Score: 1)
-    *   The thread is about building a system with 48GB of VRAM for running a 32B model, and the best price/performance balance for the build.
-14. [Qwen3 blog? or is it fake? (https://qwen3.org/)](https://i.redd.it/iosc4mre3xqe1.png) (Score: 0)
-    *   Users discuss whether a purported blog about Qwen3 is legitimate, with most concluding it is fake due to various inconsistencies.
-15. [This ai race will induce ADHD some day](https://www.reddit.com/r/LocalLLaMA/comments/1jk05t8/this_ai_race_will_induce_adhd_some_day/) (Score: 0)
-    *   The thread is about the rapid pace of AI development and its potential to cause "ADHD."
+1.  [Qwen 2.5 Omni 7B is out](https://www.reddit.com/r/LocalLLaMA/comments/1jkgvxn/qwen_25_omni_7b_is_out/) (Score: 174)
+    * Discusses the release of the Qwen 2.5 Omni 7B model and its features, including function calling, multimodal capabilities, and performance benchmarks.
+2.  [Qwen releases Qwen/Qwen2.5-Omni-7B](https://huggingface.co/Qwen/Qwen2.5-Omni-7B) (Score: 78)
+    * Focuses on the release of the Qwen/Qwen2.5-Omni-7B model, addressing the lack of streamlined ways to make multimodal models work together, the model's performance in European languages, and the absence of image output capabilities.
+3.  [China may effectively ban at least some Nvidia GPUs. What will Nvidia do with all those GPUs if they can't sell them in China?](https://www.reddit.com/r/LocalLLaMA/comments/1jkix1t/china_may_effectively_ban_at_least_some_nvidia/) (Score: 61)
+    * Centers around a potential ban on Nvidia GPUs in China, exploring the implications for Nvidia, potential alternative markets, and China's push for domestic GPUs.
+4.  [Mismatch between official DeepSeek-V3.1 livebench score and my local test results.](https://www.reddit.com/r/LocalLLaMA/comments/1jkhlk6/mismatch_between_official_deepseekv31_livebench/) (Score: 22)
+    * Discusses discrepancies between official and local test results for DeepSeek-V3.1 on LiveBench, suggesting potential issues with testing setups and highlighting the challenges of fully replicating official evaluations due to private datasets.
+5.  [How Llama’s Licenses Have Evolved Over Time](https://notes.victor.earth/how-llamas-licenses-have-evolved-over-time/) (Score: 6)
+    *  Discusses the evolution of Llama's licenses, the leak of Llama 1, and the ethics of restricting base models behind EULAs, especially after using Anna's Archive data.
+6.  [My university is looking to potnetially self host an llm for research groups and students. Look for suggestions and hardware need estimates :)](https://www.reddit.com/r/LocalLLaMA/comments/1jkjdq1/my_university_is_looking_to_potnetially_self_host/) (Score: 6)
+    * Seeks suggestions and hardware need estimates for a university looking to self-host an LLM for research and students, comparing hardware, operational costs, and quantized versions
+7.  [How to clone my voice with TTS models such as Orpheus?](https://www.reddit.com/r/LocalLLaMA/comments/1jkk844/how_to_clone_my_voice_with_tts_models_such_as/) (Score: 5)
+    *  Asks for help on how to clone a voice with TTS models like Orpheus, discussing creating a voice model, cutting samples, transcribing, and using a wide range of emotions.
+8.  [For what are you guys building such huge vram racks? What do you use your beefed up local models for?](https://www.reddit.com/r/LocalLLaMA/comments/1jkibdu/for_what_are_you_guys_building_such_huge_vram/) (Score: 3)
+    * Inquires about the purposes of building large VRAM racks and the uses of beefed-up local models, including processing regrets, enterprise resource planning, and having a local option for AI.
+9.  [Cline with mistral-small:latest:24b on Mac book pro M4 - 48GB version](https://www.reddit.com/r/LocalLLaMA/comments/1jkiux7/cline_with_mistralsmalllatest24b_on_mac_book_pro/) (Score: 3)
+    * Shares information about using Cline with mistral-small:latest:24b on a Mac book pro M4, specifically asking about the quant used and tokens/s achieved.
+10. [Multi modality is currently terrible in open source](https://www.reddit.com/r/LocalLLaMA/comments/1jkkcd2/multi_modality_is_currently_terrible_in_open/) (Score: 2)
+    * States that multi-modality is currently terrible in open source.
+11. [We need a Llama.cpp alternative for AMD.](https://www.reddit.com/r/LocalLLaMA/comments/1jkl91j/we_need_a_llamacpp_alternative_for_amd/) (Score: 2)
+    *  Suggests the need for a Llama.cpp alternative for AMD.
+12. [Best tool/workflow to deep clone websites](https://www.reddit.com/r/LocalLLaMA/comments/1jkihxa/best_toolworkflow_to_deep_clone_websites/) (Score: 0)
+    *  Asks for the best tool/workflow to deep clone websites, praising Aider for referencing HTML files and using Gemini to create a TikTok clone.
 
 # Detailed Analysis by Thread
-**[We are just 3 months into 2025 (Score: 213)](https://www.reddit.com/r/LocalLLaMA/comments/1jjvo4e/we_are_just_3_months_into_2025/)**
-*  **Summary:** The thread discusses the rapid advancements and releases of new AI models in the first three months of 2025, with users commenting on specific models and the pace of innovation.
-*  **Emotion:** The overall emotional tone is neutral, with elements of negativity and positivity, likely due to the discussion of both excitement and frustration associated with the rapid pace of AI development.
+**[Qwen 2.5 Omni 7B is out (Score: 174)](https://www.reddit.com/r/LocalLLaMA/comments/1jkgvxn/qwen_25_omni_7b_is_out/)**
+*  **Summary:** This thread is about the release of the Qwen 2.5 Omni 7B model. Users are discussing its features, like function calling, multimodal capabilities, and performance benchmarks. Some are also sharing links to demo spaces and expressing excitement about using the model.
+*  **Emotion:** The overall emotional tone is positive, with many users expressing excitement and anticipation.
 *  **Top 3 Points of View:**
-    *   The pace of AI model releases is incredibly fast, with new models appearing weekly.
-    *   Some models are being unintentionally or intentionally excluded from lists.
-    *   American AI companies are lagging behind Chinese AI companies in model development.
+    * Excitement about the new Qwen 2.5 Omni 7B model and its potential applications.
+    * Inquiry about function calling support in the model.
+    * Interest in comparing the model against Qwen2.5-VL-7B for VQA tasks.
 
-**[1.78bit DeepSeek-V3-0324 - 230GB Unsloth Dynamic GGUF (Score: 102)](https://www.reddit.com/r/LocalLLaMA/comments/1jk0qjs/178bit_deepseekv30324_230gb_unsloth_dynamic_gguf/)**
-*  **Summary:** This thread is about the release of a new quantization of the DeepSeek-V3-0324 model, with users discussing its performance, asking questions about quantization methods, and comparing it to other models.
-*  **Emotion:** The overall emotional tone is positive and neutral, with many expressing gratitude and excitement about the new release.
+**[Qwen releases Qwen/Qwen2.5-Omni-7B (Score: 78)](https://huggingface.co/Qwen/Qwen2.5-Omni-7B)**
+*  **Summary:**  The thread discusses the release of Qwen/Qwen2.5-Omni-7B. Users are commenting on the lack of streamlined ways to make multimodal models work together, the painful regression compared to the base model, and expressing excitement about testing real-time conversation.
+*  **Emotion:** The overall emotional tone is mixed, with excitement tempered by concerns about benchmark regressions.
 *  **Top 3 Points of View:**
-    *   The new 2.71-bit quantization of DeepSeek-V3-0324 performs well compared to the full model.
-    *   Users are interested in the correlation between downstream quality and perplexity in custom quantizations.
-    *   The Unsloth team is praised for their amazing work and thorough documentation.
+    * Frustration with the lack of streamlined ways to use multimodal models.
+    * Concern about the regression in traditional benchmarks compared to the base model.
+    * Excitement to test the model's real-time conversation capabilities.
 
-**[Gemini Coder - support for 2.5 Pro with AI Studio has landed! (Score: 20)](https://marketplace.visualstudio.com/items?itemName=robertpiosik.gemini-coder)**
-*  **Summary:** The thread discusses the release of Gemini Coder. Some users are excited about the potential of the tool.
-*  **Emotion:** The overall emotional tone is generally positive, with some skepticism.
+**[China may effectively ban at least some Nvidia GPUs. What will Nvidia do with all those GPUs if they can't sell them in China? (Score: 61)](https://www.reddit.com/r/LocalLLaMA/comments/1jkix1t/china_may_effectively_ban_at_least_some_nvidia/)**
+*  **Summary:** The discussion revolves around the possibility of China banning some Nvidia GPUs. It includes speculation on what Nvidia might do with the GPUs if they can't be sold in China, the potential for AMD to benefit, and the broader implications for China's domestic GPU development.
+*  **Emotion:** The emotional tone is largely neutral, with some undertones of concern and speculation.
 *  **Top 3 Points of View:**
-    *   The extension supports local models
-    *   Users are excited about the tool.
+    * Nvidia will find alternative markets to sell the GPUs, such as the Middle East and Southeast Asia.
+    * AMD could benefit from the ban due to its more power-efficient GPUs.
+    * The ban could accelerate China's development of domestic GPUs like Huawei's Ascend.
 
-**[:| (Score: 18)](https://i.redd.it/6c6z4mxrtwqe1.png)**
-*  **Summary:** This thread depicts a humorous situation related to the cost of hardware required to run local LLMs and the expense of acquiring sufficient GPUs.
-*  **Emotion:** The overall emotional tone is neutral, tinged with humor.
+**[Mismatch between official DeepSeek-V3.1 livebench score and my local test results. (Score: 22)](https://www.reddit.com/r/LocalLLaMA/comments/1jkhlk6/mismatch_between_official_deepseekv31_livebench/)**
+*  **Summary:** This thread discusses the mismatch between official and local LiveBench scores for DeepSeek-V3.1. Users are sharing their test results and configurations, and speculating on possible reasons for the discrepancies.
+*  **Emotion:** The emotional tone is inquisitive and collaborative, with users seeking to understand and resolve the performance differences.
 *  **Top 3 Points of View:**
-    *   Running local LLMs can be very expensive due to hardware costs.
-    *   A large number of GPUs are needed to run models effectively.
-    *   The cost of high-end GPUs is very high.
+    * There may be suboptimal settings used in the official LiveBench evaluation.
+    * A portion of the official evaluation is private and cannot be fully replicated.
+    * The LiveBench code or settings might not be handling all cases correctly.
 
-**[Extensive llama.cpp benchmark for quality degradation by quantization (Score: 14)](https://www.reddit.com/r/LocalLLaMA/comments/1jjwj88/extensive_llamacpp_benchmark_for_quality/)**
-*  **Summary:** The thread discusses a benchmark for quality degradation due to quantization in llama.cpp. Users express skepticism about the results, particularly concerning low-bit quantization.
-*  **Emotion:** The overall emotional tone is neutral, with some skepticism.
+**[How Llama’s Licenses Have Evolved Over Time (Score: 6)](https://notes.victor.earth/how-llamas-licenses-have-evolved-over-time/)**
+*  **Summary:** The thread discusses an article about the evolution of Llama's licenses. A key point is that Llama 1 was leaked and not intended to be released as it was, which caused initial licensing issues. Another perspective calls for an end to restrictions on base models, especially after accusations of using data from Anna's Archive.
+*  **Emotion:** The emotional tone is neutral.
 *  **Top 3 Points of View:**
-    *   Low-bit quants (e.g., 4-bit) are significantly worse than 8-bit quants in terms of quality.
-    *   The results of the benchmark paper seem inaccurate.
-    *   Links to resources with information of quantization are listed.
+    * The initial release of Llama 1 was unintentional and complicated the licensing.
+    * There is a call to end restrictions on the base models.
 
-**[typia (20,000x faster validator) challenges to Agentic AI framework, with its compiler skill, easier than MCP (Score: 12)](https://typia.io/articles/typia-challenges-to-agentic-ai-with-its-compiler-skill.html)**
-*  **Summary:** The thread discusses the challenges to Agentic AI framework. Users are seeking proof of capabilities and demonstrable advantages over existing solutions.
-*  **Emotion:** The overall emotional tone is neutral.
+**[My university is looking to potnetially self host an llm for research groups and students. Look for suggestions and hardware need estimates :) (Score: 6)](https://www.reddit.com/r/LocalLLaMA/comments/1jkjdq1/my_university_is_looking_to_potnetially_self_host/)**
+*  **Summary:** The thread asks for suggestions and hardware estimates for self-hosting an LLM at a university. Comments range from utilizing OpenRouter and LibreChat API calls to detailed estimates including hardware costs, server requirements, and operational costs.
+*  **Emotion:** The emotional tone is informative and helpful, with users providing suggestions and estimates.
 *  **Top 3 Points of View:**
-    *   There is a demand for tangible results.
-    *   Show that you have achieved things before believing you.
+    * Hardware setup: 20 NVIDIA A100 80GB GPUs and 3 servers are required.
+    * A detailed cost estimate is provided, totaling around $450,000 for hardware.
+    * Alternatives to self-hosting, like OpenRouter and LibreChat, are suggested.
 
-**[Does anyone use local LLM via Ollama on their MacBook Pro or similiar? Curious about your choices... (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1jjybda/does_anyone_use_local_llm_via_ollama_on_their/)**
-*  **Summary:** Users share their experiences using local LLMs via Ollama on their MacBook Pros, discussing their motivations for going local, the benefits, and the limitations.
-*  **Emotion:** The overall emotional tone is neutral.
+**[How to clone my voice with TTS models such as Orpheus? (Score: 5)](https://www.reddit.com/r/LocalLLaMA/comments/1jkk844/how_to_clone_my_voice_with_tts_models_such_as/)**
+*  **Summary:** A user asks for advice on voice cloning. Responses suggest splicing audio samples into roughly 10-second clips and transcribing them for training data.
+*  **Emotion:** The emotional tone is inquisitive and helpful, providing practical advice.
 *  **Top 3 Points of View:**
-    *   Privacy, security, and control are the biggest reasons for switching to local LLMs.
-    *   Apple Silicon is great for its (V)RAM.
-    *   Longer context lengths are slow.
+    * Voice cloning involves creating a voice model by using voice samples and cutting them into smaller snippets.
+    * Those snippets can be transcribed to use as training data.
 
-**[Where to start learning about AI? (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1jjysyz/where_to_start_learning_about_ai/)**
-*  **Summary:** Users provide recommendations and resources for beginners who want to start learning about AI, including online courses, video tutorials, and tools for running LLMs locally.
-*  **Emotion:** The overall emotional tone is positive.
+**[For what are you guys building such huge vram racks? What do you use your beefed up local models for? (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1jkibdu/for_what_are_you_guys_building_such_huge_vram/)**
+*  **Summary:** The discussion centers around the purpose of large VRAM setups, citing reasons such as local AI processing, enterprise resource planning, and avoiding reliance on external services.
+*  **Emotion:** The general tone is neutral and informative.
 *  **Top 3 Points of View:**
-    *   There is a love of [DeepLearning.AI](http://DeepLearning.AI).
-    *   Ollama is a popular choice for running LLMs locally.
-    *   If you have a specific use-case that sparks your interest in LLMs, start working on it and search for tutorials for that specific thing.
+    * Large VRAM racks are used to process regrets
+    * To ensure having local option for AI, in case certain models or model providers get banned.
 
-**[Model Recommendations (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1jjwr7u/model_recommendations/)**
-*  **Summary:** Users give model recommendations depending on the usecase and specifications, especially VRAM constraints.
-*  **Emotion:** The overall emotional tone is neutral.
+**[Cline with mistral-small:latest:24b on Mac book pro M4 - 48GB version (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1jkiux7/cline_with_mistralsmalllatest24b_on_mac_book_pro/)**
+*  **Summary:** User asking about quantization and tokens per second with `mistral-small:latest:24b` on a Macbook Pro.
+*  **Emotion:** Inquisitive.
 *  **Top 3 Points of View:**
-    *   Gemma 3 27b or mistral small 32b  given you have enough vram else your stuck with smaller models
-    *   Best model very much depends on what you're trying to do with it.
-    *   QwQ 32b 4.25b, Mistral Small 3.1 24b Q6 are good recommendations for 24GB vram.
+    * Seeking specific performance data from user experience with particular hardware / software configuration.
 
-**[Tried OWL with Gemini 2.5 Pro (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1jjzt56/tried_owl_with_gemini_25_pro/)**
-*  **Summary:** The thread discusses a project with Gemini 2.5 Pro that seems to be game changing for the blind.
-*  **Emotion:** The overall emotional tone is positive.
+**[Multi modality is currently terrible in open source (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1jkkcd2/multi_modality_is_currently_terrible_in_open/)**
+*  **Summary:** Discussion about the state of multimodal models in open source.
+*  **Emotion:** Neutral.
 *  **Top 3 Points of View:**
-    *   The users did not know about this project, it is very good indeed.
-    *   The tool may hit a lot of captchas or bot detection pages.
-    *   This is gonna be a game changer for blind people.
+    * Multimodality is not good in open source.
+    * "Never say never. Ever :)"
 
-**[What are the best code simulations that you guys ask a LLM to run in order to test its capabilities? (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1jk07iw/what_are_the_best_code_simulations_that_you_guys/)**
-*  **Summary:** The thread is about the best code simulations to test the capabilities of LLMs.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   A bot should create a class for storing and operating on LLM weights as efficiently as possible in Java in a byte array.
-    *   Prompts use RAG and so do these.
-    *   I'm interested in the answers as well.
+**[We need a Llama.cpp alternative for AMD. (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1jkl91j/we_need_a_llamacpp_alternative_for_amd/)**
+*   **Summary:** Discussion about the need for `llama.cpp` on AMD.
+*   **Emotion:** Neutral.
+*   **Top 3 Points of View:**
+    *   The top view is the need for a `llama.cpp` alternative for AMD.
+    *   `vLLM` supports AMD but it doesn't have the greatest support for quants.
 
-**[What are the build requirements for running a 70b model at readable speeds with no quant? (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1jk2usg/what_are_the_build_requirements_for_running_a_70b/)**
-*  **Summary:** Users discuss hardware requirements for running a 70b model with no quantisation, and the trade-offs involved.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   A full 70B is 160GB with 8192 context.
-    *   1 t/s is readable and 10 t/S is readable.
-    *   Proper Q8\_0 quantization will be indistinguishable from unquantized model and will be half the size.
-
-**[48GB Build for 32B Model (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1jk3eqy/48gb_build_for_32b_model/)**
-*  **Summary:** The thread is about building a system with 48GB of VRAM for running a 32B model, and the best price/performance balance for the build.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   The best balance in price/performance would be 3090s.
-    *   If you want to save some money get a mobo with DDR4 but to future proof get one with DDR5.
-
-**[Qwen3 blog? or is it fake? (https://qwen3.org/) (Score: 0)](https://i.redd.it/iosc4mre3xqe1.png)**
-*  **Summary:** Users discuss whether a purported blog about Qwen3 is legitimate, with most concluding it is fake due to various inconsistencies.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Considering it doesn't say anything about MOE, most likely fake.
-    *   It's fake.
-    *   No chance this basic page is from Alibaba.
-
-**[This ai race will induce ADHD some day (Score: 0)](https://www.reddit.com/r/LocalLLaMA/comments/1jk05t8/this_ai_race_will_induce_adhd_some_day/)**
-*  **Summary:** The thread is about the rapid pace of AI development and its potential to cause "ADHD."
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   I actually have high hopes for AI to fix my adhd.
-    *   you can't "induce ADHD". It's a chemical imbalance that is either there or not.
-    *   There will be more competition in the software market in the future.
+**[Best tool/workflow to deep clone websites (Score: 0)](https://www.reddit.com/r/LocalLLaMA/comments/1jkihxa/best_toolworkflow_to_deep_clone_websites/)**
+*   **Summary:** Seeking tools to deep clone websites.
+*   **Emotion:** Neutral.
+*   **Top 3 Points of View:**
+    *   Suggestion of using `Aider` to reference HTML pages and use Gemini to modify them.
