@@ -158,7 +158,8 @@ The diagram above illustrates the flow of data through our system, from collecti
                            compute.googleapis.com \
                            bigquery.googleapis.com \
                            storage.googleapis.com \
-                           networkmanagement.googleapis.com
+                           networkmanagement.googleapis.com \
+                           generativelanguage.googleapis.com
       ```
    - Add Roles to main account
       - Project Owner or Editor
@@ -167,7 +168,7 @@ The diagram above illustrates the flow of data through our system, from collecti
       - Compute Admin
       - IAM Admin
       - Service Account Admin
-   - Update (bucket_name, project_id, sa_email, alert_email, alert_password,  docker-registry, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me
+   - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, google-gemini-api-key, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me
    
 
 
