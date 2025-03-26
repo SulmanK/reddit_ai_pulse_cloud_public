@@ -15,7 +15,7 @@ clean-targets:
   - "dbt_packages"
 
 vars:
-  project_id: "reddit-ai-pulse-1"
+  project_id: "{{ env_var('GCP_PROJECT_ID') }}"
   subreddits: ['dataengineering', 'datascience', 'machinelearning', 'claudeai',
    'singularity', 'localllama', 'openai', 'stablediffusion']  # Define all subreddits
   

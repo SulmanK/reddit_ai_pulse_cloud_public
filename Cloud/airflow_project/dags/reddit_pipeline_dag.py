@@ -51,6 +51,10 @@ from airflow_project.plugins.push_to_github import push_gemini_results
 os.environ['PROJECT_ROOT'] = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
 os.environ['DBT_PROJECT_DIR'] = '/opt/airflow/dbt_reddit_summary_cloud'
 
+# Get GCP project for DBT vars
+GCP_PROJECT = os.environ.get('GCP_PROJECT_ID')
+DBT_VARS = f'{{"project_id":"{GCP_PROJECT}"}}'
+
 # Import process connectors
 from scripts.ingest_preprocess_connector import ingest_preprocess_process
 from scripts.summarize_connector import summarize_process
@@ -101,7 +105,7 @@ def parse_join_metrics(**context):
     log_path = get_log_path(context['task_instance'], task_id='run_dbt_join_summary_analysis')
     return extract_join_metrics(log_path)
 
-DBT_TEST_CMD = 'cd /opt/airflow/dbt_reddit_summary_cloud && dbt deps && dbt test --select {selector}'
+DBT_TEST_CMD = f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt deps && dbt test --vars \'{DBT_VARS}\' --select {{selector}}'
 
 def trigger_vm_shutdown(**context):
     """
@@ -199,7 +203,7 @@ with DAG(
     # 5th Stage: Run DBT Staging Models
     dbt_staging_task = BashOperator(
         task_id='run_dbt_staging',
-        bash_command='cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --select current_summary_staging',
+        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select current_summary_staging',
         dag=dag
     )
 
@@ -278,7 +282,7 @@ with DAG(
     # 16th Stage: Join Summarized and Sentiment Data
     dbt_join_summary_analysis_task = BashOperator(
         task_id='run_dbt_join_summary_analysis',
-        bash_command='cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --select +joined_summary_analysis',
+        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select +joined_summary_analysis',
         dag=dag
     )
     
@@ -306,7 +310,7 @@ with DAG(
     # 20th Stage: Update Processing Status
     task_update_status = BashOperator(
         task_id='update_processing_status',
-        bash_command='cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --select update_processing_status',
+        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select update_processing_status',
         dag=dag
     )
 
