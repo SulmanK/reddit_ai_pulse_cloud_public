@@ -105,7 +105,12 @@ def parse_join_metrics(**context):
     log_path = get_log_path(context['task_instance'], task_id='run_dbt_join_summary_analysis')
     return extract_join_metrics(log_path)
 
-DBT_TEST_CMD = f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt deps && dbt test --vars \'{DBT_VARS}\' --select {{selector}}'
+# Define a function to create DBT commands with variables
+def get_dbt_test_cmd(selector):
+    return f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt deps && dbt test --vars \'{DBT_VARS}\' --select {selector}'
+
+def get_dbt_run_cmd(selector):
+    return f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select {selector}'
 
 def trigger_vm_shutdown(**context):
     """
@@ -189,7 +194,7 @@ with DAG(
     # 3rd Stage: DBT Test Raw Sources
     dbt_test_raw_sources = BashOperator(
         task_id='test_raw_sources',
-        bash_command=DBT_TEST_CMD.format(selector='source:raw_data source:processed_data'),
+        bash_command=get_dbt_test_cmd('source:raw_data source:processed_data'),
         dag=dag
     )
 
@@ -203,16 +208,14 @@ with DAG(
     # 5th Stage: Run DBT Staging Models
     dbt_staging_task = BashOperator(
         task_id='run_dbt_staging',
-        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select current_summary_staging',
+        bash_command=get_dbt_run_cmd('current_summary_staging'),
         dag=dag
     )
 
     # 6th Stage: Test Staging Models
     dbt_test_staging_models = BashOperator(
         task_id='test_staging_models',
-        bash_command=DBT_TEST_CMD.format(
-            selector='source:summary_analytics.daily_summary_data source:summary_analytics.current_summary_staging'
-        ),
+        bash_command=get_dbt_test_cmd('source:summary_analytics.daily_summary_data source:summary_analytics.current_summary_staging'),
         dag=dag
     )
 
@@ -240,7 +243,7 @@ with DAG(
     # 10th Stage: Test Summarize Models
     dbt_test_summarize_models = BashOperator(
         task_id='test_summarize_models',
-        bash_command=DBT_TEST_CMD.format(selector='source:summary_analytics.text_summary_results'),
+        bash_command=get_dbt_test_cmd('source:summary_analytics.text_summary_results'),
         dag=dag
     )
 
@@ -268,7 +271,7 @@ with DAG(
     # 14th Stage: Test Sentiment Analysis Models
     dbt_test_sentiment_analysis = BashOperator(
         task_id='test_sentiment_analysis',
-        bash_command=DBT_TEST_CMD.format(selector='source:summary_analytics.sentiment_analysis_results'),
+        bash_command=get_dbt_test_cmd('source:summary_analytics.sentiment_analysis_results'),
         dag=dag
     )
 
@@ -282,7 +285,7 @@ with DAG(
     # 16th Stage: Join Summarized and Sentiment Data
     dbt_join_summary_analysis_task = BashOperator(
         task_id='run_dbt_join_summary_analysis',
-        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select +joined_summary_analysis',
+        bash_command=get_dbt_run_cmd('+joined_summary_analysis'),
         dag=dag
     )
     
@@ -296,7 +299,7 @@ with DAG(
     # 18th Stage: Test Joined Summary Analysis
     dbt_test_joined_summary_analysis_task = BashOperator(
         task_id='test_joined_summary_analysis',
-        bash_command=DBT_TEST_CMD.format(selector='joined_summary_analysis'),
+        bash_command=get_dbt_test_cmd('joined_summary_analysis'),
         dag=dag
     )
 
@@ -310,7 +313,7 @@ with DAG(
     # 20th Stage: Update Processing Status
     task_update_status = BashOperator(
         task_id='update_processing_status',
-        bash_command=f'cd /opt/airflow/dbt_reddit_summary_cloud && dbt run --vars \'{DBT_VARS}\' --select update_processing_status',
+        bash_command=get_dbt_run_cmd('update_processing_status'),
         dag=dag
     )
 
@@ -326,7 +329,7 @@ with DAG(
     # 22th Stage: dbt test update processing status
     dbt_test_update_processing_status = BashOperator(
         task_id='test_update_processing_status',
-        bash_command=DBT_TEST_CMD.format(selector='update_processing_status'),
+        bash_command=get_dbt_test_cmd('update_processing_status'),
         dag=dag
     )
 
