@@ -2,173 +2,133 @@
 title: "Data Engineering Subreddit"
 date: "2025-03-25"
 description: "Analysis of top discussions and trends in the dataengineering subreddit"
-tags: ["data engineering", "reddit", "analysis"]
+tags: ["dataengineering", "reddit", "analysis"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [[D] Where i work there is no concept about costs optimization](https://www.reddit.com/r/dataengineering/comments/1jiss37/where_i_work_there_is_no_concept_about_costs/) (Score: 52)
-    *   The thread discusses the lack of cost optimization in the OP's workplace, with various comments ranging from accepting it to suggesting ways to address it.
-
-2.  [What actually defines a DataFrame?](https://www.reddit.com/r/dataengineering/comments/1jiva8y/what_actually_defines_a_dataframe/) (Score: 26)
-    *   The thread revolves around defining what a DataFrame is, with different users offering their perspectives and interpretations.
-
-3.  [Do you think Fabric will eventually match the performance of competitors?](https://www.reddit.com/r/dataengineering/comments/1jivfi0/do_you_think_fabric_will_eventually_match_the/) (Score: 15)
-    *   This thread discusses Microsoft Fabric's potential to compete with other platforms, with opinions varying from optimism to skepticism regarding its performance and integration.
-
-4.  [Separate file for SQL in python script?](https://www.reddit.com/r/dataengineering/comments/1jjamf1/separate_file_for_sql_in_python_script/) (Score: 7)
-    *   This thread discusses the practice of keeping SQL queries in separate files when using Python, weighing the pros and cons of this approach.
-
-5.  [Redshift Spectrum vs Athena](https://www.reddit.com/r/dataengineering/comments/1jivxcq/redshift_spectrum_vs_athena/) (Score: 5)
-    *   This thread compares Redshift Spectrum and Athena for querying data in S3, with most commenters favoring Athena for its performance and design.
-
-6.  [How to prepare data in a way that can scale up for ML?](https://www.reddit.com/r/dataengineering/comments/1jixwww/how_to_prepare_data_in_a_way_that_can_scale_up/) (Score: 5)
-    *   This thread asks about scaling data preparation for ML, with replies suggesting the use of a lakehouse architecture and distributed processing frameworks.
-
-7.  [Dynamo DB, AWS S3, dbt pipeline](https://www.reddit.com/r/dataengineering/comments/1jj2p4p/dynamo_db_aws_s3_dbt_pipeline/) (Score: 5)
-    *   The thread is about a data pipeline involving DynamoDB, AWS S3, and dbt, with suggestions for direct transformation using Athena.
-
-8.  [Data Sharing Platform Designed for Non-Technical Users](https://www.reddit.com/r/dataengineering/comments/1jixcue/data_sharing_platform_designed_for_nontechnical/) (Score: 3)
-    *   The thread discusses a data sharing platform for non-technical users, with questions about connecting to other platforms.
-
-9.  [Need advice asap](https://www.reddit.com/r/dataengineering/comments/1jixduj/need_advice_asap/) (Score: 3)
-    *   This thread is about someone needing advice in a chaotic environment.
-
-10. [unzipping csv bigger than memory?](https://www.reddit.com/r/dataengineering/comments/1jiwsyi/unzipping_csv_bigger_than_memory/) (Score: 2)
-    *   The thread discusses how to unzip large CSV files that are bigger than memory, with suggestions for streaming the file during decompression.
-
-11. [[Off-topic] Seeking Guidance & Opportunities in Data Engineering](https://www.reddit.com/r/dataengineering/comments/1jizvv3/offtopic_seeking_guidance_opportunities_in_data/) (Score: 2)
-    *   This thread is about seeking guidance and opportunities in data engineering.
-
-12. [Has anyone worked on Redshift to Snowflake migration?](https://www.reddit.com/r/dataengineering/comments/1jj9dx1/has_anyone_worked_on_redshift_to_snowflake/) (Score: 2)
-    *   The thread asks about experiences with Redshift to Snowflake migrations, with some users sharing their experiences and advice.
-
-13. [I'm trying to follow roadmap for DE and show his videos on it. What's you opinion?](https://i.redd.it/at2dxbcwinqe1.png) (Score: 0)
-    *   The thread asks for opinions on following a roadmap for Data Engineering.
-
-14. [Is Microsoft Fabric a good choice in 2025?](https://www.reddit.com/r/dataengineering/comments/1jitcd6/is_microsoft_fabric_a_good_choice_in_2025/) (Score: 0)
-    *   The thread asks whether Microsoft Fabric is a good choice in 2025, with differing opinions on its quality.
-
-15. [Keep or leave Ab Initio for good to become a DE?](https://www.reddit.com/r/dataengineering/comments/1jj401k/keep_or_leave_ab_initio_for_good_to_become_a_de/) (Score: 0)
-    *   The thread asks whether to keep or leave Ab Initio to become a DE.
-
-16. [Need data engineers help for input on open source ETL/ELT tool we are building](https://www.reddit.com/r/dataengineering/comments/1jj6s1z/need_data_engineers_help_for_input_on_open_source/) (Score: 0)
-    *   The thread asks for data engineers help for input on an open source ETL/ELT tool.
+1.  [[D] Passed Microsoft DP-203 with 742/1000 – Some Lessons Learned](https://www.reddit.com/r/dataengineering/comments/1jjfpd7/passed_microsoft_dp203_with_7421000_some_lessons/) (Score: 31)
+    *   The discussion is about someone passing the Microsoft DP-203 exam and sharing their lessons learned.
+2.  [Where's the Timeseries AI?](https://www.reddit.com/r/dataengineering/comments/1jjedpr/wheres_the_timeseries_ai/) (Score: 13)
+    *   The discussion is about the underrepresentation of time series in AI and the challenges in building general-purpose models.
+3.  [Do your teams have assigned QA resource?](https://www.reddit.com/r/dataengineering/comments/1jjjnl5/do_your_teams_have_assigned_qa_resource/) (Score: 7)
+    *   The discussion is about whether teams have dedicated QA resources.
+4.  [Confused between software development and data engineering.](https://www.reddit.com/r/dataengineering/comments/1jjg934/confused_between_software_development_and_data/) (Score: 5)
+    *   The discussion is about the confusion between software development and data engineering roles.
+5.  [SWE to DE](https://www.reddit.com/r/dataengineering/comments/1jjgk4d/swe_to_de/) (Score: 5)
+    *   The discussion revolves around the transition from Software Engineer (SWE) to Data Engineer (DE).
+6.  [Spark Bucketing on a subset of groupBy columns](https://www.reddit.com/r/dataengineering/comments/1jjm6qq/spark_bucketing_on_a_subset_of_groupby_columns/) (Score: 2)
+    *   The discussion is about Spark bucketing on a subset of groupBy columns.
+7.  [Apache Spark/ PySpark with Databrucks resources](https://www.reddit.com/r/dataengineering/comments/1jjooi7/apache_spark_pyspark_with_databrucks_resources/) (Score: 1)
+    *   The discussion is about Apache Spark/ PySpark with Databricks resources.
+8.  [Is there a tool combining natural language-to-SQL with a report builder?](https://www.reddit.com/r/dataengineering/comments/1jjsngi/is_there_a_tool_combining_natural_languagetosql/) (Score: 1)
+    *   The discussion revolves around a tool combining natural language-to-SQL with a report builder.
+9.  [Course dp203 is good enough or should know more ??](https://www.reddit.com/r/dataengineering/comments/1jjdrro/course_dp203_is_good_enough_or_should_know_more/) (Score: 0)
+    *   The discussion is about whether the DP203 course is sufficient or if more knowledge is needed.
+10. [How to increase my visibility to hiring manager as a Jr?](https://www.reddit.com/r/dataengineering/comments/1jjffit/how_to_increase_my_visibility_to_hiring_manager/) (Score: 0)
+    *   The discussion is about how a junior data engineer can increase their visibility to hiring managers.
+11. [C++ vs Python](https://www.reddit.com/r/dataengineering/comments/1jjgmqx/c_vs_python/) (Score: 0)
+    *   The discussion is about the comparison between C++ and Python in the context of data engineering.
+12. [3rd episode of my free "Data engineering with Fabric" course in YouTube is live!](https://www.reddit.com/r/dataengineering/comments/1jjh8i1/3rd_episode_of_my_free_data_engineering_with/) (Score: 0)
+    *   The discussion announces the release of the 3rd episode of a free "Data engineering with Fabric" course on YouTube.
+13. [Are you coding with LLMs? What do you wish you knew about it?](https://www.reddit.com/r/dataengineering/comments/1jjmvng/are_you_coding_with_llms_what_do_you_wish_you/) (Score: 0)
+    *   The discussion is about coding with LLMs and what people wish they knew about it.
+14. [Are Dashboards Dead? How AI Agents Are Rewriting the Future of Observability](https://xata.io/blog/are-ai-agents-the-future-of-observability) (Score: 0)
+    *   The discussion is about whether dashboards are dead and how AI agents are rewriting the future of observability.
 
 # Detailed Analysis by Thread
-
-**[[D] Where i work there is no concept about costs optimization (Score: 52)](https://www.reddit.com/r/dataengineering/comments/1jiss37/where_i_work_there_is_no_concept_about_costs/)**
-*   **Summary:** The thread discusses the lack of cost optimization in the OP's workplace, with various comments ranging from accepting it to suggesting ways to address it.
-*   **Emotion:** The overall emotional tone is neutral, with a mix of factual statements and suggestions. There are some positive sentiments expressing that the OP is "lucky".
+**[[D] Passed Microsoft DP-203 with 742/1000 – Some Lessons Learned (Score: 31)](https://www.reddit.com/r/dataengineering/comments/1jjfpd7/passed_microsoft_dp203_with_7421000_some_lessons/)**
+*   **Summary:**  Someone passed the Microsoft DP-203 exam and is sharing their lessons learned. People are thanking them for the information and inquiring about the exam's deprecation.
+*   **Emotion:** The overall emotional tone is positive due to the success of the test taker and the appreciation from others.
 *   **Top 3 Points of View:**
-    *   Accept the situation if management is okay with it, and focus on other things.
-    *   Cost optimization is crucial and should be addressed, even if it means presenting a plan to management later.
-    *   Cloud migration can lead to cost savings, but initial lift-and-shift migrations should be followed by optimization efforts.
+    *   The original poster is sharing their experience and lessons learned from passing the DP-203 exam.
+    *   Another user is thanking the original poster for sharing the information.
+    *   Another user is questioning if the certification is going to be deprecated soon.
 
-**[What actually defines a DataFrame? (Score: 26)](https://www.reddit.com/r/dataengineering/comments/1jiva8y/what_actually_defines_a_dataframe/)**
-*   **Summary:** The thread revolves around defining what a DataFrame is, with different users offering their perspectives and interpretations.
-*   **Emotion:** The thread's emotional tone is largely neutral, as it's a discussion about a definition. There are some positive sentiments, such as describing dataframes as a place to "frame your data".
+**[Where's the Timeseries AI? (Score: 13)](https://www.reddit.com/r/dataengineering/comments/1jjedpr/wheres_the_timeseries_ai/)**
+*   **Summary:**  The discussion is about the underrepresentation of time series in AI. Challenges include variability in domains and the lack of general-purpose models.
+*   **Emotion:** The emotional tone is mostly neutral, with some negative sentiment expressed about the difficulty of building general-purpose models.
 *   **Top 3 Points of View:**
-    *   A DataFrame is a defined object within a given library, like a class with specific methods.
-    *   A DataFrame is essentially a 2D array.
-    *   A DataFrame is an engineering term without a strictly defined theoretical definition; if it acts like a DataFrame, it probably is one.
+    *   Time series is underrepresented in AI due to challenges like variability and lack of labeled data.
+    *   It's difficult to create both specific and general time series models due to variability across domains.
+    *   Some suggest trying TimeGPT and checking out the M competitions.
 
-**[Do you think Fabric will eventually match the performance of competitors? (Score: 15)](https://www.reddit.com/r/dataengineering/comments/1jivfi0/do_you_think_fabric_will_eventually_match_the/)**
-*   **Summary:** This thread discusses Microsoft Fabric's potential to compete with other platforms, with opinions varying from optimism to skepticism regarding its performance and integration.
-*   **Emotion:** The thread exhibits a mixed emotional tone. While there's a lot of neutral commentary, the presence of both positive and negative sentiments indicates uncertainty and differing opinions about Microsoft Fabric.
+**[Do your teams have assigned QA resource? (Score: 7)](https://www.reddit.com/r/dataengineering/comments/1jjjnl5/do_your_teams_have_assigned_qa_resource/)**
+*   **Summary:**  The discussion is centered around whether data engineering teams have dedicated QA resources. Some do, some don't, and others integrate QA into existing roles.
+*   **Emotion:** The emotional tone is mixed, ranging from neutral to slightly positive where teams have QA resources and slightly negative where they don't.
 *   **Top 3 Points of View:**
-    *   Microsoft has a history of over-promising and under-delivering on integrated software solutions.
-    *   Fabric could be a "killer" platform if Microsoft nails the private networking and authorization model.
-    *   Fabric is being deliberately hobbled by Microsoft to force users into their ecosystem.
+    *   Some teams have dedicated QA leads with offshore resources.
+    *   Many teams do not have dedicated QA, integrating it into existing IT roles.
+    *   Engineers and BAs are responsible for QA, with engineers taking on the majority of the responsibility.
 
-**[Separate file for SQL in python script? (Score: 7)](https://www.reddit.com/r/dataengineering/comments/1jjamf1/separate_file_for_sql_in_python_script/)**
-*   **Summary:** This thread discusses the practice of keeping SQL queries in separate files when using Python, weighing the pros and cons of this approach.
-*   **Emotion:** The emotional tone is generally neutral, focused on the practical aspects of coding style and maintainability.
+**[Confused between software development and data engineering. (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1jjg934/confused_between_software_development_and_data/)**
+*   **Summary:**  The discussion is about distinguishing between software development and data engineering roles, emphasizing the importance of learning the specific tools used in the job, such as Airflow and BigQuery.
+*   **Emotion:** The emotional tone is neutral, focusing on practical advice.
+*   **Top 1 Point of View:**
+    *   To address the confusion, focus on learning the specific tools used in data engineering, like Airflow and BigQuery, to help the team plan features.
+
+**[SWE to DE (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1jjgk4d/swe_to_de/)**
+*   **Summary:**  The discussion revolves around the transition from Software Engineer (SWE) to Data Engineer (DE), with a focus on the necessary skills and experience.
+*   **Emotion:** The emotional tone is mostly neutral, with a hint of encouragement.
 *   **Top 3 Points of View:**
-    *   Using separate .sql files makes code cleaner and easier to version control, particularly for long queries.
-    *   Each query should be in its own .sql file for easier management.
-    *   The choice is a matter of preference, depending on the size and complexity of the queries.
+    *   A good senior backend developer can transition to data engineering quickly.
+    *   SQL is essential. Python is a plus.
+    *   Learning Python and doing LeetCode exercises is helpful for the transition.
 
-**[Redshift Spectrum vs Athena (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1jivxcq/redshift_spectrum_vs_athena/)**
-*   **Summary:** This thread compares Redshift Spectrum and Athena for querying data in S3, with most commenters favoring Athena for its performance and design.
-*   **Emotion:** The emotional tone is mostly neutral, but there are some negative sentiments expressing dissatisfaction with Redshift Spectrum. There's a hint of positivity towards Athena.
-*   **Top 3 Points of View:**
-    *   Athena is generally faster and better designed for querying data in S3.
-    *   Redshift Spectrum is complex and poorly designed.
-    *   Data should be compacted into larger files for better performance, regardless of the query engine.
+**[Spark Bucketing on a subset of groupBy columns (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1jjm6qq/spark_bucketing_on_a_subset_of_groupby_columns/)**
+*   **Summary:** The discussion is about Spark bucketing on a subset of groupBy columns and workarounds for its limitations.
+*   **Emotion:** The emotional tone is neutral, providing technical information.
+*   **Top 1 Point of View:**
+    *   Some companies have developed workarounds for the limitations of Spark bucketing on a subset of groupBy columns.
 
-**[How to prepare data in a way that can scale up for ML? (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1jixwww/how_to_prepare_data_in_a_way_that_can_scale_up/)**
-*   **Summary:** This thread asks about scaling data preparation for ML, with replies suggesting the use of a lakehouse architecture and distributed processing frameworks.
-*   **Emotion:** The thread's emotional tone is primarily neutral, focused on providing technical advice.
-*   **Top 3 Points of View:**
-    *   Use a lakehouse architecture with distinct zones for different data maturity levels.
-    *   Employ distributed processing frameworks like Apache Spark for data preparation.
-    *   Create metadata catalogs for tracking data and preprocessing steps.
-
-**[Dynamo DB, AWS S3, dbt pipeline (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1jj2p4p/dynamo_db_aws_s3_dbt_pipeline/)**
-*   **Summary:** The thread is about a data pipeline involving DynamoDB, AWS S3, and dbt, with suggestions for direct transformation using Athena.
+**[Apache Spark/ PySpark with Databrucks resources (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1jjooi7/apache_spark_pyspark_with_databrucks_resources/)**
+*   **Summary:** You can find a list of community-submitted learning resources here: https://dataengineering.wiki/Learning+Resources
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   Transform directly from Athena.
+*   **Top 1 Point of View:**
+    *   Learning Resources.
 
-**[Data Sharing Platform Designed for Non-Technical Users (Score: 3)](https://www.reddit.com/r/dataengineering/comments/1jixcue/data_sharing_platform_designed_for_nontechnical/)**
-*   **Summary:** The thread discusses a data sharing platform for non-technical users, with questions about connecting to other platforms.
+**[Is there a tool combining natural language-to-SQL with a report builder? (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1jjsngi/is_there_a_tool_combining_natural_languagetosql/)**
+*   **Summary:** React query builder supports natural language explanation of the query and has a search builder feature.
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   Question if the platform can share data from other platforms.
-    *   Bot response with open-source project showcase.
+*   **Top 1 Point of View:**
+    *   React query builder supports natural language explanation of the query and has a search builder feature.
 
-**[Need advice asap (Score: 3)](https://www.reddit.com/r/dataengineering/comments/1jixduj/need_advice_asap/)**
-*   **Summary:** This thread is about someone needing advice in a chaotic environment.
-*   **Emotion:** Positive
+**[Course dp203 is good enough or should know more ?? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jjdrro/course_dp203_is_good_enough_or_should_know_more/)**
+*   **Summary:** The discussion centers on the relevance of the DP-203 course, with users advising to pursue DP-700 instead and emphasizing the need for basic SQL knowledge.
+*   **Emotion:** The emotional tone is neutral, with some negative sentiment due to the DP-203 course being considered outdated.
 *   **Top 3 Points of View:**
-    *   Supportive advice is provided.
+    *   DP-203 is outdated, and DP-700 is a better alternative.
+    *   Basic SQL and database knowledge are essential.
+    *   Clear communication and effective information searching are necessary skills.
 
-**[unzipping csv bigger than memory? (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1jiwsyi/unzipping_csv_bigger_than_memory/)**
-*   **Summary:** The thread discusses how to unzip large CSV files that are bigger than memory, with suggestions for streaming the file during decompression.
-*   **Emotion:** Contains both positive and neutral sentiments.
-*   **Top 3 Points of View:**
-    *   Stream the file during decompression using Python with the gzip module.
-    *   Do not use blobfuse2; implement code that downloads and decompresses as a stream.
-    *   Read the file directly from blob storage and write a simple script to decompress it.
-
-**[[Off-topic] Seeking Guidance & Opportunities in Data Engineering (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1jizvv3/offtopic_seeking_guidance_opportunities_in_data/)**
-*   **Summary:** This thread is about seeking guidance and opportunities in data engineering.
+**[How to increase my visibility to hiring manager as a Jr? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jjffit/how_to_increase_my_visibility_to_hiring_manager/)**
+*   **Summary:** There are more fake jobs posted than real. People apply to "400 jobs" when they have no idea what they're doing.
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   Bot provides link to learning resources.
+*   **Top 1 Point of View:**
+    *   There are more fake jobs posted than real. People apply to "400 jobs" when they have no idea what they're doing.
 
-**[Has anyone worked on Redshift to Snowflake migration? (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1jj9dx1/has_anyone_worked_on_redshift_to_snowflake/)**
-*   **Summary:** The thread asks about experiences with Redshift to Snowflake migrations, with some users sharing their experiences and advice.
+**[C++ vs Python (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jjgmqx/c_vs_python/)**
+*   **Summary:** The discussion is about the comparison between C++ and Python, with arguments for both languages.
+*   **Emotion:** The emotional tone is mostly neutral.
+*   **Top 3 Points of View:**
+    *   Python is generally preferred for data engineering due to its simplicity and available packages, while C++ is not commonly used.
+    *   Learning C++ can improve understanding of fundamental programming concepts, making it easier to learn other languages, including Python.
+    *   If you can write in c++ python or any language for that matter would be no issue. your fundamentals learning a lower level language will also be much better.
+
+**[3rd episode of my free "Data engineering with Fabric" course in YouTube is live! (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jjh8i1/3rd_episode_of_my_free_data_engineering_with/)**
+*   **Summary:** You can find a list of community-submitted learning resources here: https://dataengineering.wiki/Learning+Resources
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   One user implemented redshift with ingestion to s3 using glue and having s3 as external tables in redshift and pivoted to Snowflake, keeping the glue and s3  but having them as external tables in snowflake.
-    *   If the source of data is in s3 what exactly do you need to port from redshift?
+*   **Top 1 Point of View:**
+    *   Learning Resources
 
-**[I'm trying to follow roadmap for DE and show his videos on it. What's you opinion? (Score: 0)](https://i.redd.it/at2dxbcwinqe1.png)**
-*   **Summary:** The thread asks for opinions on following a roadmap for Data Engineering.
-*   **Emotion:** Largely negative.
-*   **Top 3 Points of View:**
-    *   Focus on SQL rather than online courses
-    *   Get a job in the industry before doing courses
-    *   DE architectures can be different across orgs
-
-**[Is Microsoft Fabric a good choice in 2025? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jitcd6/is_microsoft_fabric_a_good_choice_in_2025/)**
-*   **Summary:** The thread asks whether Microsoft Fabric is a good choice in 2025, with differing opinions on its quality.
-*   **Emotion:** Largely negative.
-*   **Top 3 Points of View:**
-    *   Microsoft's products are trash.
-    *   Stay far away from Microsoft Fabric
-    *   Microsoft Fabric has paid BS
-
-**[Keep or leave Ab Initio for good to become a DE? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jj401k/keep_or_leave_ab_initio_for_good_to_become_a_de/)**
-*   **Summary:** The thread asks whether to keep or leave Ab Initio to become a DE.
+**[Are you coding with LLMs? What do you wish you knew about it? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jjmvng/are_you_coding_with_llms_what_do_you_wish_you/)**
+*   **Summary:** "Do my market research for me."
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   Python and SQL should be your primary concern.
+*   **Top 1 Point of View:**
+    *   "Do my market research for me."
 
-**[Need data engineers help for input on open source ETL/ELT tool we are building (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1jj6s1z/need_data_engineers_help_for_input_on_open_source/)**
-*   **Summary:** The thread asks for data engineers help for input on an open source ETL/ELT tool.
+**[Are Dashboards Dead? How AI Agents Are Rewriting the Future of Observability (Score: 0)](https://xata.io/blog/are-ai-agents-the-future-of-observability)**
+*   **Summary:** The discussion is about whether dashboards are dead and how AI agents are rewriting the future of observability.
 *   **Emotion:** Neutral
-*   **Top 3 Points of View:**
-    *   What's the use case for this?
-
+*   **Top 2 Points of View:**
+    *   TLDR: They are not.
+    *   Replacing on-call with a LLM model? Is this a joke?
