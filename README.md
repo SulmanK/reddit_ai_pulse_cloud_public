@@ -144,8 +144,11 @@ The diagram above illustrates the flow of data through our system, from collecti
    - Create a Google Account
    - Create a new project
    - Add in permissions to cloud 
+      - gcloud auth login
+      - gcloud config set project PROJECT_ID
       - gcloud auth application-default login
-      - gcloud auth application-default set-quota-project --PROJ_ID
+      - gcloud config set project PROJECT_ID
+   - Enable billing in account
    - Enable required APIs:
       ```bash
       gcloud services enable cloudresourcemanager.googleapis.com \
@@ -153,6 +156,7 @@ The diagram above illustrates the flow of data through our system, from collecti
                            cloudfunctions.googleapis.com \
                            cloudscheduler.googleapis.com \
                            cloudasset.googleapis.com \
+                           run.googleapis.com \ 
                            artifactregistry.googleapis.com \
                            iam.googleapis.com \
                            compute.googleapis.com \
@@ -169,7 +173,8 @@ The diagram above illustrates the flow of data through our system, from collecti
       - IAM Admin
       - Service Account Admin
    - Create google-gemini-api-key
-   - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, google-gemini-api-key, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me
+   - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, google-gemini-api-key, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me, email
+   - change gcloud config set account
    
 
 
