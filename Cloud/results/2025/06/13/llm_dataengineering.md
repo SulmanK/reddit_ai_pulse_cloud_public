@@ -2,114 +2,160 @@
 title: "Data Engineering Subreddit"
 date: "2025-06-13"
 description: "Analysis of top discussions and trends in the dataengineering subreddit"
-tags: ["data engineering", "reddit", "analysis"]
+tags: ["dataengineering", "reddit", "analysis"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [Databricks forgot to renew their websites certification](https://i.redd.it/7q79jjeylj6f1.png) (Score: 201)
-    *   Discusses an outage related to Databricks, possibly caused by an expired certificate or Cloudflare/GCP issues.
-2.  [AI is literally coming for you job](https://www.reddit.com/r/dataengineering/comments/1l9y4pf/ai_is_literally_coming_for_you_job/) (Score: 158)
-    *   Concerns the impact of AI on data engineering jobs and the challenges of verifying candidates' skills due to AI-generated content.
-3.  [Snowflake Cost is Jacked Up!!](https://www.reddit.com/r/dataengineering/comments/1l9njzn/snowflake_cost_is_jacked_up/) (Score: 47)
-    *   Asks for advice on how to optimize Snowflake costs, with suggestions including query optimization, incremental models, and engaging with SI partners.
-4.  [What is your stack?](https://www.reddit.com/r/dataengineering/comments/1l9psn2/what_is_your_stack/) (Score: 14)
-    *   Asks what data engineering stack people are using.
-5.  [How to synchronize data from a RDS Aurora Postgres Database to a self-hosted Analytics database (Timescale) in near real-time?](https://www.reddit.com/r/dataengineering/comments/1l9pvpg/how_to_synchronize_data_from_a_rds_aurora/) (Score: 5)
-    *   Seeks advice on synchronizing data from an RDS Aurora Postgres database to a self-hosted Timescale database in near real-time.
-6.  [What Airflow Operators for Python do you use at your company?](https://www.reddit.com/r/dataengineering/comments/1l9rix8/what_airflow_operators_for_python_do_you_use_at/) (Score: 5)
-    *   Asks what Airflow Operators for Python people are using at their company.
-7.  [Fundamental of Data Engineering](https://www.reddit.com/r/dataengineering/comments/1l9xkme/fundamental_of_data_engineering/) (Score: 3)
-    *   Discusses the book "Fundamental of Data Engineering" and its value, especially for beginners.
-8.  [Snowflake vs DAIS](https://www.reddit.com/r/dataengineering/comments/1la3se6/snowflake_vs_dais/) (Score: 3)
-    *   A question about Snowflake vs DAIS.
-9.  [How can I send multiple SQLs to Spark at the same time so that it can make better use of the work plans?](https://www.reddit.com/r/dataengineering/comments/1l9rdfz/how_can_i_send_multiple_sqls_to_spark_at_the_same/) (Score: 2)
-    *   Asks for advice on sending multiple SQL queries to Spark to improve work plan utilization.
-10. [Free or cheap stack for small Data warehouse?](https://www.reddit.com/r/dataengineering/comments/1la1ht8/free_or_cheap_stack_for_small_data_warehouse/) (Score: 1)
-    *   Asks for recommendations for a free or cheap data warehouse stack.
-11. [Should I go into data engineering?](https://www.reddit.com/r/dataengineering/comments/1l9ufov/should_i_go_into_data_engineering/) (Score: 0)
-    *   Someone is asking if they should get into Data Engineering
+1.  [You haven’t truly suffered until you’ve debugged a multi-thousand-line stored procedure from 2009 👹](https://i.redd.it/owa6sq3w3o6f1.png) (Score: 270)
+    * The thread is about the pain of debugging long stored procedures.
+2.  [I built a game to simulate the life of a Chief Data Officer](https://www.reddit.com/r/dataengineering/comments/1lagh5z/i_built_a_game_to_simulate_the_life_of_a_chief/) (Score: 161)
+    * The thread discusses a game built to simulate the life of a Chief Data Officer (CDO).
+3.  [Other interns are getting frustrated with me because I actually code instead of using AI for everything , and blame me when their generated code breaks](https://www.reddit.com/r/dataengineering/comments/1laigfo/other_interns_are_getting_frustrated_with_me/) (Score: 65)
+    *  The thread discusses the frustration of an intern who codes manually while colleagues rely on AI-generated code and blame the intern when it breaks.
+4.  [Duckdb real life usecases and testing](https://www.reddit.com/r/dataengineering/comments/1lam6xc/duckdb_real_life_usecases_and_testing/) (Score: 14)
+    * The thread is about DuckDB use cases and testing.
+5.  [Is it good to use Kinesis Firehose to replace SQS if we want to capture changes ASAP?](https://www.reddit.com/r/dataengineering/comments/1labskd/is_it_good_to_use_kinesis_firehose_to_replace_sqs/) (Score: 9)
+    *  The thread discusses whether it is beneficial to use Kinesis Firehose to replace SQS for change data capture.
+6.  [Need suggestions/help on data modelling](https://www.reddit.com/r/dataengineering/comments/1la9hkf/need_suggestionshelp_on_data_modelling/) (Score: 8)
+    * The thread is about seeking suggestions and help on data modelling.
+7.  [is this best practice project structure? (I recently deleted due to hard to read)](https://www.reddit.com/r/dataengineering/comments/1labn2m/is_this_best_practice_project_structure_i/) (Score: 7)
+    * The thread is about the best practice project structure.
+8.  [Is it pointless to learn different technologies/tools as a beginner?](https://www.reddit.com/r/dataengineering/comments/1lalnqz/is_it_pointless_to_learn_different/) (Score: 2)
+    * The thread discusses whether it is pointless to learn different technologies and tools as a beginner.
+9.  [Athena vs Glue Cost/Maintenance](https://www.reddit.com/r/dataengineering/comments/1lady21/athena_vs_glue_costmaintenance/) (Score: 1)
+    * The thread is comparing the cost and maintenance of Athena vs Glue.
+10. [Build data notebooks & Dashboards from Cursor](https://www.reddit.com/r/dataengineering/comments/1lahrf6/build_data_notebooks_dashboards_from_cursor/) (Score: 1)
+    * The thread is about building data notebooks and dashboards from Cursor.
+11. [Code First Girls (education only) - has anyone completed their degree recently and had experience of finding a job after?](https://www.reddit.com/r/dataengineering/comments/1lan84l/code_first_girls_education_only_has_anyone/) (Score: 1)
+    * The thread is asking about Code First Girls education and recent graduates finding jobs after.
+12. [Miscommunication b/w the Interviewer & Recruiter or are they testing me?](https://www.reddit.com/r/dataengineering/comments/1la7c79/miscommunication_bw_the_interviewer_recruiter_or/) (Score: 0)
+    * The thread is about miscommunication between the interviewer and recruiter.
+13. [pyspark parameterized queries very limited? (refer to table?)](https://www.reddit.com/r/dataengineering/comments/1lah8wz/pyspark_parameterized_queries_very_limited_refer/) (Score: 0)
+    * The thread discusses the limitations of PySpark parameterized queries.
+14. [Do i need to learn SQL or can i stay in python?](https://www.reddit.com/r/dataengineering/comments/1lais2x/do_i_need_to_learn_sql_or_can_i_stay_in_python/) (Score: 0)
+    * The thread questions whether it is necessary to learn SQL or if one can stick to Python for data engineering.
+15. [How do you investigate dashboard breakages in production due to a schema changes?](https://www.reddit.com/r/dataengineering/comments/1laknyn/how_do_you_investigate_dashboard_breakages_in/) (Score: 0)
+    * The thread asks how to investigate dashboard breakages in production due to schema changes.
+16. [Where to find freelance DE's?](https://www.reddit.com/r/dataengineering/comments/1laldr9/where_to_find_freelance_des/) (Score: 0)
+    * The thread is about finding freelance Data Engineers.
 
 # Detailed Analysis by Thread
-**[Databricks forgot to renew their websites certification (Score: 201)](https://i.redd.it/7q79jjeylj6f1.png)**
-*   **Summary:** This thread discusses the Databricks outage, initially attributed to a certificate renewal issue.  Later comments suggest the outage may be related to Cloudflare or GCP problems.
-*   **Emotion:** The overall emotional tone is neutral. The discussion is largely informative and technical.
-*   **Top 3 Points of View:**
-    *   The issue was due to Databricks forgetting to renew their website's certification.
-    *   The outage was actually related to Cloudflare or GCP issues.
-    *   Some users experienced no problems with Databricks on Azure.
+**[You haven’t truly suffered until you’ve debugged a multi-thousand-line stored procedure from 2009 👹 (Score: 270)](https://i.redd.it/owa6sq3w3o6f1.png)**
+*  **Summary:**  The thread discusses the challenges and frustrations of debugging multi-thousand-line stored procedures, particularly those written long ago. Many users share similar experiences and express their pain points.
+*  **Emotion:** The overall emotional tone of the thread is Neutral. While the original post expresses frustration ("suffered"), the subsequent comments are mostly neutral in sentiment, describing similar situations. There is a hint of negative sentiment.
+*  **Top 3 Points of View:**
+    *   Debugging old, lengthy stored procedures is a common and painful experience for data engineers.
+    *   The situation is made worse by the presence of dynamic SQL, nested stored procedures, and inadequate error handling.
+    *   Sometimes the business expects bugged output to be replicated because it is considered "correct".
 
-**[AI is literally coming for you job (Score: 158)](https://www.reddit.com/r/dataengineering/comments/1l9y4pf/ai_is_literally_coming_for_you_job/)**
-*   **Summary:**  The thread focuses on the increasing use of AI, like ChatGPT, by job applicants and the difficulties in verifying their skills. Solutions discussed include in-person interviews and unique verification methods.
-*   **Emotion:** The overall emotional tone is neutral. While the initial post title suggests concern, the comments are more focused on problem-solving and sharing experiences.
-*   **Top 3 Points of View:**
-    *   AI is making it harder to assess candidate skills due to AI-generated responses.
-    *   In-person interviews are a good way to verify candidate skills.
-    *   Unique and creative verification methods are needed to identify genuine candidates.
+**[I built a game to simulate the life of a Chief Data Officer (Score: 161)](https://www.reddit.com/r/dataengineering/comments/1lagh5z/i_built_a_game_to_simulate_the_life_of_a_chief/)**
+*  **Summary:**  The thread discusses a game created to simulate the life of a Chief Data Officer. Users are engaging positively with the game, discussing its realism, fun factor, and features.
+*  **Emotion:** The overall emotional tone of the thread is Positive. Users express excitement, enjoyment, and appreciation for the game and the creator's creativity.
+*  **Top 3 Points of View:**
+    *   The game is a fun and realistic simulation of the challenges and responsibilities of a Chief Data Officer.
+    *   Users appreciate the creativity and effort put into developing the game.
+    *   Some users are interested in features like leaderboards and are sharing their experiences and scores.
 
-**[Snowflake Cost is Jacked Up!! (Score: 47)](https://www.reddit.com/r/dataengineering/comments/1l9njzn/snowflake_cost_is_jacked_up/)**
-*   **Summary:**  The thread is a request for advice on how to reduce Snowflake costs.  Commenters suggest query optimization, using incremental models, engaging with SI partners and using tools such as Select.dev.
-*   **Emotion:** The overall emotional tone is positive. The comments are offering helpful advice and sharing successful strategies.
-*   **Top 3 Points of View:**
-    *   Optimize queries and data modeling to reduce processing.
-    *   Use incremental models in DBT projects.
-    *   Engage with a Snowflake SI partner for cost optimization.
+**[Other interns are getting frustrated with me because I actually code instead of using AI for everything , and blame me when their generated code breaks (Score: 65)](https://www.reddit.com/r/dataengineering/comments/1laigfo/other_interns_are_getting_frustrated_with_me/)**
+*  **Summary:**  An intern expresses frustration because their colleagues rely heavily on AI-generated code, blame the intern when it fails, and seem to resent the intern's preference for manual coding. The discussion revolves around the best approach to this situation and the role of AI in coding.
+*  **Emotion:** The overall emotional tone of the thread is Positive. While the original post expresses frustration, many comments offer support and advice, resulting in a positive overall sentiment.
+*  **Top 3 Points of View:**
+    *   The intern should continue to develop their coding skills and not rely solely on AI.
+    *   The intern should communicate with their manager about the situation and clarify expectations regarding AI usage.
+    *   AI should be used to augment, not replace, human coding skills, especially for interns who are still learning.
 
-**[What is your stack? (Score: 14)](https://www.reddit.com/r/dataengineering/comments/1l9psn2/what_is_your_stack/)**
-*   **Summary:**  This thread is a discussion where people share their data engineering stacks, mentioning tools like Airflow, dbt, Snowflake, SQL Server, Python, and cloud platforms like Azure and AWS.
-*   **Emotion:** The overall emotional tone is neutral. It is purely informational.
-*   **Top 3 Points of View:**
-    *   Some use cloud-based solutions like Azure Data Lake and Synapse.
-    *   Others prefer simpler setups with Postgres and Python.
-    *   Some advocate for a stack including Airflow, dbt, and Snowflake.
+**[Duckdb real life usecases and testing (Score: 14)](https://www.reddit.com/r/dataengineering/comments/1lam6xc/duckdb_real_life_usecases_and_testing/)**
+*  **Summary:** The thread discusses DuckDB, its real-life use cases, and testing methodologies.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   Polars and Daft are good replacements for Pandas.
+    *   DuckDB can be used with DBeaver and Python.
+    *   DuckDB and Python can be used for testing purposes.
 
-**[How to synchronize data from a RDS Aurora Postgres Database to a self-hosted Analytics database (Timescale) in near real-time? (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1l9pvpg/how_to_synchronize_data_from_a_rds_aurora/)**
-*   **Summary:** The thread discusses options for synchronizing data from Aurora Postgres to Timescale in near real-time, suggesting tools like Prometheus, Debezium, and NiFi, while acknowledging the difficulty of the task.
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   Prometheus is an option.
-    *   Debezium and Nifi are also possible choices.
-    *   There is no easy solution for near real-time synchronization.
+**[Is it good to use Kinesis Firehose to replace SQS if we want to capture changes ASAP? (Score: 9)](https://www.reddit.com/r/dataengineering/comments/1labskd/is_it_good_to_use_kinesis_firehose_to_replace_sqs/)**
+*  **Summary:** The thread explores the suitability of Kinesis Firehose as a replacement for SQS when capturing changes quickly.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   Kinesis Firehose simplifies S3 loads but might not be the best for sub-second delivery.
+    *   Kinesis Data Streams (or SQS + Lambda) might be better for immediate processing if sub-second delivery is critical.
+    *   MongoDB Atlas Stream Processing could be an alternative to eliminate the need for SNS, SQS, and Kinesis.
 
-**[What Airflow Operators for Python do you use at your company? (Score: 5)](https://www.reddit.com/r/dataengineering/comments/1l9rix8/what_airflow_operators_for_python_do_you_use_at/)**
-*   **Summary:** This thread is a brief exchange about Airflow operators, with mentions of AWS, Snowflake, SQL, Cosmos, and custom Microsoft Teams Webhook operators.
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   AWS Operators are commonly used.
-    *   SQL operator is also popular.
-    *   Custom operators for notifications are used.
+**[Need suggestions/help on data modelling (Score: 8)](https://www.reddit.com/r/dataengineering/comments/1la9hkf/need_suggestionshelp_on_data_modelling/)**
+*  **Summary:** The thread seeks suggestions and help with data modelling.
+*  **Emotion:** The overall emotional tone of the thread is Neutral with some positive comments.
+*  **Top 3 Points of View:**
+    *   Use a bus matrix with disclaimers on key assumptions.
+    *   Kimball's book (3rd edition) can be a useful resource.
+    *   Data engineering and data modelling are distinct expertise.
 
-**[Fundamental of Data Engineering (Score: 3)](https://www.reddit.com/r/dataengineering/comments/1l9xkme/fundamental_of_data_engineering/)**
-*   **Summary:** The thread discusses the book "Fundamental of Data Engineering," with opinions ranging from it being a good introductory glossary to it being too basic for experienced engineers.
-*   **Emotion:** The overall emotional tone is mixed, with both positive and negative sentiments expressed.
-*   **Top 3 Points of View:**
-    *   The book is a good introduction for beginners.
-    *   The book is too basic for experienced data engineers.
-    *   The book is a broad overview, not a deep dive.
+**[is this best practice project structure? (I recently deleted due to hard to read) (Score: 7)](https://www.reddit.com/r/dataengineering/comments/1labn2m/is_this_best_practice_project_structure_i/)**
+*  **Summary:** The thread discusses the best practices for project structure.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   The provided template is a good starting point but should be adapted to the specific project.
+    *   Unit testing is important but often lacking in data engineering.
+    *   Consider using a high-res modern data projects structure.
 
-**[Snowflake vs DAIS (Score: 3)](https://www.reddit.com/r/dataengineering/comments/1la3se6/snowflake_vs_dais/)**
-*   **Summary:** This thread contains only a bot response linking to learning resources.
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   N/A
+**[Is it pointless to learn different technologies/tools as a beginner? (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1lalnqz/is_it_pointless_to_learn_different/)**
+*  **Summary:** The thread discusses the value of learning different technologies and tools as a beginner in data engineering.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 2 Points of View:**
+    *   Learning resources can be found at dataengineering.wiki.
+    *   Beginners should learn tools and patterns on their PC using Docker.
 
-**[How can I send multiple SQLs to Spark at the same time so that it can make better use of the work plans? (Score: 2)](https://www.reddit.com/r/dataengineering/comments/1l9rdfz/how_can_i_send_multiple_sqls_to_spark_at_the_same/)**
-*   **Summary:** The thread discusses whether Spark can optimize multiple SQL queries run at the same time. The response says Spark doesn't optimize like that and queries are treated as self-contained.
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   Spark treats each job as self-contained.
-    *   Explicit caching instructions are needed.
-    *   Someone asked about the use case of thousands of queries.
+**[Athena vs Glue Cost/Maintenance (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1lady21/athena_vs_glue_costmaintenance/)**
+*  **Summary:** The thread compares the cost and maintenance of Athena vs Glue for ETL.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 2 Points of View:**
+    *   Switching to Athena can cut DPU-hour charges but reduce flexibility.
+    *   Both Glue and Athena are very expensive.
 
-**[Free or cheap stack for small Data warehouse? (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1la1ht8/free_or_cheap_stack_for_small_data_warehouse/)**
-*   **Summary:** The thread suggests using serverless functions to reduce costs when building a data warehouse
-*   **Emotion:** The overall emotional tone is neutral.
-*   **Top 3 Points of View:**
-    *   Google version of Fargate or lambda is probably what you want to use
+**[Build data notebooks & Dashboards from Cursor (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1lahrf6/build_data_notebooks_dashboards_from_cursor/)**
+*  **Summary:** The thread discusses building data notebooks and dashboards from Cursor.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 1 Point of View:**
+    *   Open-source projects can be found at dataengineering.wiki.
 
-**[Should I go into data engineering? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1l9ufov/should_i_go_into_data_engineering/)**
-*   **Summary:** This thread provides advice for someone considering a career in data engineering, suggesting starting with analyst or BI roles and highlighting the importance of technical skills.
-*   **Emotion:** The overall emotional tone is positive, offering encouragement and helpful suggestions.
-*   **Top 3 Points of View:**
-    *   Analyst or BI roles are good starting points.
-    *   Analytic DE jobs are a good fit if you like working with people
-    *   Technical skills are more important than soft skills in DE
+**[Code First Girls (education only) - has anyone completed their degree recently and had experience of finding a job after? (Score: 1)](https://www.reddit.com/r/dataengineering/comments/1lan84l/code_first_girls_education_only_has_anyone/)**
+*  **Summary:** The thread inquires about the job prospects of recent graduates from the Code First Girls program.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 1 Point of View:**
+    *   The program might be a scam, and self-learning from the internet is a better option.
+
+**[Miscommunication b/w the Interviewer & Recruiter or are they testing me? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1la7c79/miscommunication_bw_the_interviewer_recruiter_or/)**
+*  **Summary:** The thread discusses potential miscommunication between interviewers and recruiters.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   Recruiters are often not technical and miscommunicate interview details.
+    *   Recruiters are parasites
+    *   So famous
+
+**[pyspark parameterized queries very limited? (refer to table?) (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1lah8wz/pyspark_parameterized_queries_very_limited_refer/)**
+*  **Summary:** The thread discusses the limitations of PySpark parameterized queries.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   F-strings are a fine method for parameterization.
+    *   There's no reason to avoid prepping an SQL query string in a variable and then using spark.sql(var).
+    *   OLTP DB usually receive param from user input, spark sql only receive param from dev.
+
+**[Do i need to learn SQL or can i stay in python? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1lais2x/do_i_need_to_learn_sql_or_can_i_stay_in_python/)**
+*  **Summary:** The thread questions whether SQL is necessary for a data engineer or if Python is sufficient.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 3 Points of View:**
+    *   SQL is essential for data engineering.
+    *   SQL is for simple cases, while Python is for more complex scenarios.
+    *   SQL first, data modeling, and set theory
+
+**[How do you investigate dashboard breakages in production due to a schema changes? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1laknyn/how_do_you_investigate_dashboard_breakages_in/)**
+*  **Summary:** The thread asks about investigating dashboard breakages in production due to schema changes.
+*  **Emotion:** The overall emotional tone of the thread is Neutral.
+*  **Top 1 Point of View:**
+    *   Use semantic models on DBT as an interface between the data model and BI tools.
+
+**[Where to find freelance DE's? (Score: 0)](https://www.reddit.com/r/dataengineering/comments/1laldr9/where_to_find_freelance_des/)**
+*  **Summary:** The thread discusses where to find freelance data engineers.
+*  **Emotion:** The overall emotional tone of the thread is Negative.
+*  **Top 3 Points of View:**
+    *   There are developer markets like Fiver.
+    *   It's not a good idea to hire junior freelance data engineers.
+    *   Post here and get willing people.
