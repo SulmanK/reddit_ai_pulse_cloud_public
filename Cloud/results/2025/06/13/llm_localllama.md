@@ -2,158 +2,159 @@
 title: "LocalLLaMA Subreddit"
 date: "2025-06-13"
 description: "Analysis of top discussions and trends in the localllama subreddit"
-tags: ["localllama", "AI", "local LLM"]
+tags: ["LLM", "AI", "Local"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [[D] Meta Is Offering Nine Figure Salaries to Build Superintelligent AI](https://www.reddit.com/r/LocalLLaMA/comments/1l9wbaw/meta_is_offering_nine_figure_salaries_to_build/) (Score: 99)
-    *   Discusses Meta's investment in superintelligent AI and the high salaries offered to attract talent.
-2.  [Qwen3-72B-Embiggened](https://huggingface.co/cognitivecomputations/Qwen3-72B-Embiggened) (Score: 97)
-    *   Discusses the release of the Qwen3-72B-Embiggened model and potential distillation into this model.
-3.  [🧙‍♂️ I Built a Local AI Dungeon Master – Meet Dungeo_ai](https://www.reddit.com/r/LocalLLaMA/comments/1l9pwk1/i_built_a_local_ai_dungeon_master_meet_dungeo_ai/) (Score: 36)
-    *   Presents an open-source local AI Dungeon Master and discusses API calls and potential integrations.
-4.  [Drummer's Agatha 111B v1 - Command A tune with less positivity and better creativity!](https://huggingface.co/TheDrummer/Agatha-111B-v1) (Score: 30)
-    *   Discusses the release of Drummer's Agatha 111B v1 model.
-5.  [inclusionAI/Ming-Lite-Omni · Hugging Face](https://huggingface.co/inclusionAI/Ming-Lite-Omni) (Score: 26)
-    *   Discusses Ming-lite-omni, a unified multimodal model capable of processing images, text, audio, and video, while demonstrating strong proficiency in both speech and image generation.
-6.  [Is AMD Ryzen AI Max+ 395 really the only consumer option for running Llama 70B locally?](https://www.reddit.com/r/LocalLLaMA/comments/1l9yk8v/is_amd_ryzen_ai_max_395_really_the_only_consumer/) (Score: 16)
-    *   Explores hardware options for running Llama 70B models locally, including AMD Ryzen AI Max, Macs, and multiple GPUs.
-7.  [Cheapest way to run 32B model?](https://www.reddit.com/r/LocalLLaMA/comments/1l9xnt7/cheapest_way_to_run_32b_model/) (Score: 14)
-    *   Discusses the most affordable hardware configurations for running 32B parameter models, considering factors like GPU, RAM, and quantization.
-8.  [llama.cpp adds support to two new quantization format, tq1_0 and tq2_0](https://www.reddit.com/r/LocalLLaMA/comments/1la1v4d/llamacpp_adds_support_to_two_new_quantization/) (Score: 14)
-    *   Discusses llama.cpp adding support to two new quantization format, tq1_0 and tq2_0
-9.  [Mixed GPU inference](https://www.reddit.com/gallery/1l9u8fv) (Score: 11)
-    *   Discusses the possibility of mixed GPU inference setup and performance.
-10. [Seedance 1.0](https://seed.bytedance.com/en/seedance) (Score: 5)
-    *   Asks if seedance is local.
-11. [KwaiCoder-AutoThink-preview is a Good Model for Creative Writing!](https://www.reddit.com/r/LocalLLaMA/comments/1l9z1ts/kwaicoderautothinkpreview_is_a_good_model_for/) (Score: 4)
-    *   Asks if KwaiCoder-AutoThink-preview is a Good Model for Creative Writing! Any Idea about Coding and Math? Your Thoughts?
-12. [Moving on from Ollama](https://www.reddit.com/r/LocalLLaMA/comments/1l9z0su/moving_on_from_ollama/) (Score: 2)
-    *   Discusses alternatives to Ollama for running local LLMs, such as KoboldCpp, OpenWebUI, llama-server, and VLLM.
-13. [Run Perchance style RPG locally?](https://www.reddit.com/r/LocalLLaMA/comments/1l9zddh/run_perchance_style_rpg_locally/) (Score: 2)
-    *   Asks about running Perchance style RPG locally.
-14. [Best local LLM with strong instruction following for custom scripting language](https://www.reddit.com/r/LocalLLaMA/comments/1la2g1r/best_local_llm_with_strong_instruction_following/) (Score: 2)
-    *   Asks which is the Best local LLM with strong instruction following for custom scripting language
-15. [What are peoples experience with old dual Xeon servers?](https://www.reddit.com/r/LocalLLaMA/comments/1la0vz8/what_are_peoples_experience_with_old_dual_xeon/) (Score: 1)
-    *   Discusses the experience with old dual Xeon servers and what specs can run on it.
-16. [3.53bit R1 0528 scores 68% on the Aider Polygot](https://www.reddit.com/r/LocalLLaMA/comments/1la3uvz/353bit_r1_0528_scores_68_on_the_aider_polygot/) (Score: 1)
-    *   Talks about 3.53bit R1 0528 scores 68% on the Aider Polygot
+1.  [Got a tester version of the open-weight OpenAI model. Very lean inference engine!](https://v.redd.it/3r075o87qo6f1) (Score: 833)
+    *   This thread discusses a tester version of an open-weight OpenAI model, focusing on its lean inference engine and comedic aspects.
+2.  [We don't want AI yes-men. We want AI with opinions](https://www.reddit.com/r/LocalLLaMA/comments/1lanhbd/we_dont_want_ai_yesmen_we_want_ai_with_opinions/) (Score: 92)
+    *   This thread discusses the desire for AI to have opinions and not just agree with users, sparking debate about the role of AI.
+3.  [Chinese researchers find multi-modal LLMs develop interpretable human-like conceptual representations of objects](https://arxiv.org/abs/2407.01067) (Score: 28)
+    *   This thread discusses research findings that multi-modal LLMs develop human-like conceptual representations of objects.
+4.  [Findings from Apple's new FoundationModel API and local LLM](https://www.reddit.com/r/LocalLLaMA/comments/1lak9yb/findings_from_apples_new_foundationmodel_api_and/) (Score: 18)
+    *   This thread discusses Apple's new FoundationModel API and local LLM performance.
+5.  [For those of us outside the U.S or other English speaking countries...](https://www.reddit.com/r/LocalLLaMA/comments/1lajy3x/for_those_of_us_outside_the_us_or_other_english/) (Score: 16)
+    *   This thread explores the challenges and opportunities for developing localized AI models outside of English-speaking countries.
+6.  [Mac silicon AI: MLX LLM (Llama 3) + MPS TTS = Offline Voice Assistant for M-chips](https://www.reddit.com/r/LocalLLaMA/comments/1lajkwa/mac_silicon_ai_mlx_llm_llama_3_mps_tts_offline/) (Score: 12)
+    *   This thread focuses on creating an offline voice assistant using Mac silicon AI, MLX LLM, and MPS TTS.
+7.  [Struggling on local multi-user inference? Llama.cpp GGUF vs VLLM  AWQ/GPTQ.](https://www.reddit.com/r/LocalLLaMA/comments/1lafihl/struggling_on_local_multiuser_inference_llamacpp/) (Score: 11)
+    *   This thread compares Llama.cpp GGUF and VLLM AWQ/GPTQ for local multi-user inference.
+8.  [Mac Mini for local LLM? 🤔](https://www.reddit.com/r/LocalLLaMA/comments/1laf96d/mac_mini_for_local_llm/) (Score: 9)
+    *   This thread discusses the feasibility and performance of using a Mac Mini for running local LLMs.
+9.  [Open Source Release: Fastest Embeddings Client in Python](https://github.com/basetenlabs/truss/tree/main/baseten-performance-client) (Score: 4)
+    *   This thread announces an open-source release of a fast embeddings client in Python.
+10. [Finetune a model to think and use tools](https://www.reddit.com/r/LocalLLaMA/comments/1ladl6d/finetune_a_model_to_think_and_use_tools/) (Score: 4)
+    *   The thread discusses fine-tuning a model to think and use tools.
+11. [Any LLM Leaderboard by need VRAM Size?](https://www.reddit.com/r/LocalLLaMA/comments/1lap21a/any_llm_leaderboard_by_need_vram_size/) (Score: 3)
+    *   This thread seeks a leaderboard of LLMs based on their VRAM requirements.
+12. [🚀 IdeaWeaver: The All-in-One GenAI Power Tool You’ve Been Waiting For!](https://www.reddit.com/r/LocalLLaMA/comments/1laj9wq/ideaweaver_the_allinone_genai_power_tool_youve/) (Score: 2)
+    *   This thread introduces IdeaWeaver, an all-in-one GenAI power tool.
+13. [Which is the Best TTS Model for Language Training?](https://www.reddit.com/r/LocalLLaMA/comments/1lalj20/which_is_the_best_tts_model_for_language_training/) (Score: 2)
+    *   The thread discusses the best TTS model for language training.
+14. [Qwen3 235B running faster than 70B models on a $1,500 PC](https://www.reddit.com/r/LocalLLaMA/comments/1lanri6/qwen3_235b_running_faster_than_70b_models_on_a/) (Score: 2)
+    *   This thread discusses the performance of the Qwen3 235B model compared to 70B models.
+15. [Regarding the current state of STS models (like Copilot Voice)](https://www.reddit.com/r/LocalLLaMA/comments/1laey50/regarding_the_current_state_of_sts_models_like/) (Score: 0)
+    *   The thread discusses the current state of STS models, such as Copilot Voice.
+16. [Western vs Eastern models](https://youtu.be/0p2mCeub3WA) (Score: 0)
+    *   This thread discusses Western vs. Eastern AI models, based on a YouTube video.
 
 # Detailed Analysis by Thread
-**[Meta Is Offering Nine Figure Salaries to Build Superintelligent AI (Score: 99)](https://www.reddit.com/r/LocalLLaMA/comments/1l9wbaw/meta_is_offering_nine_figure_salaries_to_build/)**
-*  **Summary:** The discussion revolves around Meta offering very high salaries to build superintelligent AI. Users express skepticism and concern about Zuckerberg's involvement.
-*  **Emotion:** Primarily Neutral, with some hints of positivity.
-*  **Top 3 Points of View:**
-    *   Skepticism about Zuckerberg leading the project, questioning his motives.
-    *   Concern that this approach might stifle innovation.
-    *   Humorous takes, referencing conspiracy theories and the potential for failure.
+**[Got a tester version of the open-weight OpenAI model. Very lean inference engine! (Score: 833)](https://v.redd.it/3r075o87qo6f1)**
+*   **Summary:** This thread revolves around a humorous take on testing an open-weight OpenAI model, with many users finding the post funny and relatable.
+*   **Emotion:** The overall emotional tone is positive, driven by humor and amusement. Several comments express positive sentiment, while some are neutral, likely reflecting appreciation for the humor.
+*   **Top 3 Points of View:**
+    *   The post is genuinely funny and well-executed.
+    *   The panicked Ctrl+C is relatable.
+    *   The model's leanness and speed are impressive.
 
-**[Qwen3-72B-Embiggened (Score: 97)](https://huggingface.co/cognitivecomputations/Qwen3-72B-Embiggened)**
-*  **Summary:**  The thread discusses the release and potential of Qwen3-72B-Embiggened, a model created through weight interpolation and duplication. Users discuss its naming, potential use cases, and distillation into other models, as well as the need for benchmarks.
-*  **Emotion:** Primarily Neutral, with some positivity.
-*  **Top 3 Points of View:**
-    *   Questioning the model's naming and whether it should be differentiated from official Qwen models.
-    *   Expressing interest in benchmarks and potential distillation into Qwen3-235B.
-    *   Wondering about the possibility of distilling Deepseek into the model.
+**[We don't want AI yes-men. We want AI with opinions (Score: 92)](https://www.reddit.com/r/LocalLLaMA/comments/1lanhbd/we_dont_want_ai_yesmen_we_want_ai_with_opinions/)**
+*   **Summary:** The thread discusses the desire for AI to have independent opinions instead of simply agreeing with users. This sparks debate about the potential value and dangers of AI with differing viewpoints.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   AI should offer realistic and helpful opinions, even if they are not agreeable.
+    *   AI should be able to provide honest critique and push back.
+    *   Users should be able to customize the AI personality and system prompt to achieve this.
 
-**[🧙‍♂️ I Built a Local AI Dungeon Master – Meet Dungeo_ai (Score: 36)](https://www.reddit.com/r/LocalLLaMA/comments/1l9pwk1/i_built_a_local_ai_dungeon_master_meet_dungeo_ai/)**
-*  **Summary:**  The thread discusses the announcement of Dungeo_ai, a local AI Dungeon Master. Users ask about dice rolling functionality and ban words. Some users offered relevant code.
-*  **Emotion:** Primarily Neutral, with some negativity.
-*  **Top 3 Points of View:**
-    *   Praise for the project with offer of code.
-    *   Question about the ability to roll dice within the game.
-    *   Question about ban words.
+**[Chinese researchers find multi-modal LLMs develop interpretable human-like conceptual representations of objects (Score: 28)](https://arxiv.org/abs/2407.01067)**
+*   **Summary:** This thread discusses a research paper indicating that multi-modal LLMs are developing conceptual representations of objects in a way similar to humans.
+*   **Emotion:** The overall emotional tone is neutral, with comments ranging from surprised curiosity to critical analysis.
+*   **Top 3 Points of View:**
+    *   The findings are surprising and indicate progress in AI understanding.
+    *   Knowing the technical aspects of LLMs (like matmul) doesn't fully explain how they work.
+    *   "True intelligence" needs different perspectives on the same concepts.
 
-**[Drummer's Agatha 111B v1 - Command A tune with less positivity and better creativity! (Score: 30)](https://huggingface.co/TheDrummer/Agatha-111B-v1)**
-*  **Summary:** Users are discussing the release of the model.
-*  **Emotion:** Positive.
-*  **Top 3 Points of View:**
-    *   Positive support for the model.
-    *   Waiting for GGUF.
-    *   Comparing to other models.
+**[Findings from Apple's new FoundationModel API and local LLM (Score: 18)](https://www.reddit.com/r/LocalLLaMA/comments/1lak9yb/findings_from_apples_new_foundationmodel_api_and/)**
+*   **Summary:** This thread discusses the findings from Apple's new FoundationModel API and its performance with local LLMs.
+*   **Emotion:** The overall emotional tone is mostly neutral, with some positive sentiments expressing interest in the technology.
+*   **Top 3 Points of View:**
+    *   The qwen3 model can achieve similar results to the Foundation Model API on an iPhone 13.
+    *   MLX is better than Apple Intelligence.
+    *   Multi-language capabilities are important.
 
-**[inclusionAI/Ming-Lite-Omni · Hugging Face (Score: 26)](https://huggingface.co/inclusionAI/Ming-Lite-Omni)**
-*  **Summary:** Users are discussing the inclusionAI/Ming-Lite-Omni and its multimodal features, drawing comparison to ChatGPT.
-*  **Emotion:** Neutral and positive.
-*  **Top 3 Points of View:**
-    *   The multimodal capabilities are comparable to ChatGPT.
-    *   The smaller size makes it interesting.
-    *   Expressing love for the name of the organization.
+**[For those of us outside the U.S or other English speaking countries... (Score: 16)](https://www.reddit.com/r/LocalLLaMA/comments/1lajy3x/for_those_of_us_outside_the_us_or_other_english/)**
+*   **Summary:** The thread focuses on the challenges and opportunities for developing and training LLMs for languages and cultures outside of the US/English-speaking world.
+*   **Emotion:** The overall emotional tone is positive, indicating enthusiasm and interest in localized AI development.
+*   **Top 3 Points of View:**
+    *   Building localized AI is a significant opportunity due to the underserved market.
+    *   Fine-tuning a base model is more practical than training from scratch due to data limitations.
+    *   "Sovereign AI" is important for individual countries to preserve their culture and ideas.
 
-**[Is AMD Ryzen AI Max+ 395 really the only consumer option for running Llama 70B locally? (Score: 16)](https://www.reddit.com/r/LocalLLaMA/comments/1l9yk8v/is_amd_ryzen_ai_max_395_really_the_only_consumer/)**
-*  **Summary:**  The thread questions whether AMD Ryzen AI Max+ 395 is the sole consumer option for running Llama 70B locally, with alternative suggestions.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Suggesting M3/M4 Macs as alternatives.
-    *   Recommending 2x3090s as another option, highlighting that 70B models aren't as competitive now as 32B models and larger MoEs.
-    *   Pointing out various ways to achieve 40+GB of VRAM affordably.
+**[Mac silicon AI: MLX LLM (Llama 3) + MPS TTS = Offline Voice Assistant for M-chips (Score: 12)](https://www.reddit.com/r/LocalLLaMA/comments/1lajkwa/mac_silicon_ai_mlx_llm_llama_3_mps_tts_offline/)**
+*   **Summary:** This thread is about creating an offline voice assistant on Mac silicon using MLX LLM (Llama 3) and MPS TTS.
+*   **Emotion:** The overall emotional tone is neutral, with some comments being positive and some being negative, but mostly neutral.
+*   **Top 3 Points of View:**
+    *   Using MLX is an interesting and compact way to implement the voice assistant.
+    *   Existing solutions using Ollama and other tools are functional but have limitations.
+    *   Some users express interest in trying the discussed implementation.
 
-**[Cheapest way to run 32B model? (Score: 14)](https://www.reddit.com/r/LocalLLaMA/comments/1l9xnt7/cheapest_way_to_run_32b_model/)**
-*  **Summary:**  Users discuss various hardware options to run 32B models, and the cheapest ways to achieve that.
-*  **Emotion:** Neutral and some positive.
-*  **Top 3 Points of View:**
-    *   Recommending a used 3090.
-    *   Suggesting 3 P102-100's for $180.
-    *   Suggesting modern ARM Mac Mini.
+**[Struggling on local multi-user inference? Llama.cpp GGUF vs VLLM  AWQ/GPTQ. (Score: 11)](https://www.reddit.com/r/LocalLLaMA/comments/1lafihl/struggling_on_local_multiuser_inference_llamacpp/)**
+*   **Summary:** The discussion compares Llama.cpp GGUF with VLLM AWQ/GPTQ for multi-user inference, highlighting the advantages and disadvantages of each approach, and what kind of quantization should be used.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   vLLM is better for concurrent users due to continuous batching.
+    *   Aphrodite is a good option for multi-user hosting, supporting various formats.
+    *   FP8/INT8/FP16 quantization are recommended for maximum concurrency.
 
-**[llama.cpp adds support to two new quantization format, tq1_0 and tq2_0 (Score: 14)](https://www.reddit.com/r/LocalLLaMA/comments/1la1v4d/llamacpp_adds_support_to_two_new_quantization/)**
-*  **Summary:**  The thread discusses about Ternary quantization and what it is.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Ternary is where the model weights are represented with "trits" (3 values) vs bits (2 values). Tq1 is 1.69 bits per weight, tq2 is 2.06 bit per weight.
-    *   Providing links to help understand the topic.
+**[Mac Mini for local LLM? 🤔 (Score: 9)](https://www.reddit.com/r/LocalLLaMA/comments/1laf96d/mac_mini_for_local_llm/)**
+*   **Summary:** This thread explores the possibility of using a Mac Mini for running local LLMs, with users sharing their experiences and recommendations.
+*   **Emotion:** The overall emotional tone is neutral,
+*   **Top 3 Points of View:**
+    *   LMStudio is very easy to use for running LLMs.
+    *   Mac Minis with M-series chips can run local models at decent speeds.
+    *   Increasing RAM is recommended for programmers.
 
-**[Mixed GPU inference (Score: 11)](https://www.reddit.com/gallery/1l9u8fv)**
-*  **Summary:**  Discusses mixed GPU inference, ollama, vLLM, TabbyAPI and llama.cpp
-*  **Emotion:** Neutral, positive and some negative.
-*  **Top 3 Points of View:**
-    *   Don't use ollama.
-    *   Consider vLLM or TabbyAPI.
-    *   Using llamacpp Yes you can. It's easy.
+**[Open Source Release: Fastest Embeddings Client in Python (Score: 4)](https://github.com/basetenlabs/truss/tree/main/baseten-performance-client)**
+*   **Summary:** The thread announces an open source release for the fastest embedding client in Python, with the commenter expressing excitement about free-threading becoming mainstream.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   Free-threading is important for performance.
 
-**[Seedance 1.0 (Score: 5)](https://seed.bytedance.com/en/seedance)**
-*  **Summary:** The user is asking if the product is local.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Asking if product is local.
+**[Finetune a model to think and use tools (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1ladl6d/finetune_a_model_to_think_and_use_tools/)**
+*   **Summary:** User asks if they need to train models by using chatgpt and sharing their prompts and descriptions.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   Use chatgpt to receive answer on if they need to train models.
 
-**[KwaiCoder-AutoThink-preview is a Good Model for Creative Writing! (Score: 4)](https://www.reddit.com/r/LocalLLaMA/comments/1l9z1ts/kwaicoderautothinkpreview_is_a_good_model_for/)**
-*  **Summary:** The user is asking how heavy context is for the model.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Asking how heavy context is for the model.
+**[Any LLM Leaderboard by need VRAM Size? (Score: 3)](https://www.reddit.com/r/LocalLLaMA/comments/1lap21a/any_llm_leaderboard_by_need_vram_size/)**
+*   **Summary:** A user asked for an LLM leaderboard by need VRAM size.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   Check [https://dubesor.de/benchtable](https://dubesor.de/benchtable) and select open models.
 
-**[Moving on from Ollama (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1l9z0su/moving_on_from_ollama/)**
-*  **Summary:** The user is giving alternatives from Ollama.
-*  **Emotion:** Positive.
-*  **Top 3 Points of View:**
-    *   Suggesting KoboldCpp + OpenWebUI.
-    *   Suggesting llama-server.
-    *   Suggesting VLLM with MLX.
+**[🚀 IdeaWeaver: The All-in-One GenAI Power Tool You’ve Been Waiting For! (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1laj9wq/ideaweaver_the_allinone_genai_power_tool_youve/)**
+*   **Summary:** The user asks if the AI generates video, music, images tts well, and dynamically loads/unloads models.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   How well does it generate video, music, images tts?
+    *   Will it dynamically load/unload models as needed?
 
-**[Run Perchance style RPG locally? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1l9zddh/run_perchance_style_rpg_locally/)**
-*  **Summary:** The user wants to run it locally.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Requires a frontend in CMD like SillyTavern, Talemate, or MousyHub to communicate with LM Studio  or KoboldCPP
+**[Which is the Best TTS Model for Language Training? (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1lalj20/which_is_the_best_tts_model_for_language_training/)**
+*   **Summary:** The thread discusses the best TTS model for language training.
+*   **Emotion:** The overall emotional tone is positive.
+*   **Top 3 Points of View:**
+    *   [https://github.com/RVC-Boss/GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) is a great choice.
 
-**[Best local LLM with strong instruction following for custom scripting language (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1la2g1r/best_local_llm_with_strong_instruction_following/)**
-*  **Summary:** The user wants a LLM with strong instruction following.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Suggesting coding list.
-    *   Suggesting huggingface leaderboard.
+**[Qwen3 235B running faster than 70B models on a $1,500 PC (Score: 2)](https://www.reddit.com/r/LocalLLaMA/comments/1lanri6/qwen3_235b_running_faster_than_70b_models_on_a/)**
+*   **Summary:** This thread discusses the performance of the Qwen3 235B model compared to 70B models, with some users discussing the reasons for its speed.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   Qwen3 235B model is running faster than 70B models.
+    *   MoE models are faster than dense models, but usually dumber.
+    *   The PC may not have been built for $1500.
 
-**[What are peoples experience with old dual Xeon servers? (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1la0vz8/what_are_peoples_experience_with_old_dual_xeon/)**
-*  **Summary:** The thread is about what specs can run on old dual Xeon servers.
-*  **Emotion:** Neutral, positive.
-*  **Top 3 Points of View:**
-    *   Problem is your memory bandwidth is slow.
-    *   Decent for AVX2 and AVX-512.
-    *   Adding a P40 can make it great for Gemma 3 27B.
+**[Regarding the current state of STS models (like Copilot Voice) (Score: 0)](https://www.reddit.com/r/LocalLLaMA/comments/1laey50/regarding_the_current_state_of_sts_models_like/)**
+*   **Summary:** The thread discusses the current state of STS models and what the best fine-tuning method is.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   STS models are going to shake up a lot of secrors from video games to customer service.
+    *   Voice cloning locally is not as impressive compared to elevenlabs.
+    *   What is the best fine tuning method if I have several minutes of audio?
 
-**[3.53bit R1 0528 scores 68% on the Aider Polygot (Score: 1)](https://www.reddit.com/r/LocalLLaMA/comments/1la3uvz/353bit_r1_0528_scores_68_on_the_aider_polygot/)**
-*  **Summary:** The thread is discussing a score for Claude Sonnet 3.7 and Claude Opus 4.
-*  **Emotion:** Neutral.
-*  **Top 3 Points of View:**
-    *   Landing in-between Claude Sonnet 3.7 and Claude Opus 4 thinking=ON
+**[Western vs Eastern models (Score: 0)](https://youtu.be/0p2mCeub3WA)**
+*   **Summary:** This thread discusses the comparison of Western vs. Eastern AI models, referencing a YouTube video.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   Meta stole copyrighted works from the dark web.
+    *   The commenter thinks the people in the video are high.
+    *   Do videos like that always attract the doomers and religious nutcases on YouTube?
