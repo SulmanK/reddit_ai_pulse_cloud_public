@@ -175,6 +175,7 @@ The diagram above illustrates the flow of data through our system, from collecti
    - Create google-gemini-api-key
    - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, google-gemini-api-key, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me, email
    - change gcloud config set account
+   - clear terraform cache: .terraform, .terraform.lock.hcl -> go into terraform directory and terraform init
    
 
 
