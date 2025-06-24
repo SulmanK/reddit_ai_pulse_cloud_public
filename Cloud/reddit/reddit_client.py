@@ -91,7 +91,7 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
                 "title": "There are no posts for this subreddit today",
                 "author": "placeholder",
                 "url": f"https://www.reddit.com/r/{subreddit_name}/",
-                "score": 0,
+                "score": 1,
                 "created_utc": batch_timestamp.timestamp(),
                 "ingestion_timestamp": batch_timestamp.timestamp(),
                 "comments": [dummy_comment]  # Include a properly structured dummy comment
