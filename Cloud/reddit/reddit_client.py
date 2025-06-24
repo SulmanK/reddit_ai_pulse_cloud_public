@@ -28,10 +28,37 @@ from config.config import REDDIT_CONFIG
 # Configure logging
 logger = get_logger(__name__)
 
+# Subreddit name mapping to ensure correct capitalization
+SUBREDDIT_NAME_MAPPING = {
+    'dataengineering': 'dataengineering',
+    'datascience': 'datascience', 
+    'machinelearning': 'MachineLearning',
+    'claudeai': 'ClaudeAI',
+    'singularity': 'singularity',
+    'localllama': 'LocalLLaMA',
+    'openai': 'OpenAI',
+    'stablediffusion': 'StableDiffusion'
+}
+
+def get_correct_subreddit_name(config_name: str) -> str:
+    """
+    Maps config subreddit names to their correct Reddit capitalization.
+    
+    Args:
+        config_name: The subreddit name as defined in config
+        
+    Returns:
+        The correctly capitalized subreddit name
+    """
+    return SUBREDDIT_NAME_MAPPING.get(config_name.lower(), config_name)
+
 def extract_post_data(post: praw.models.Submission) -> Dict:
     """Extracts relevant data from a Reddit post."""
+    # Use the correct subreddit name from the mapping
+    correct_subreddit_name = get_correct_subreddit_name(str(post.subreddit))
+    
     post_data = {
-        'subreddit': str(post.subreddit),
+        'subreddit': correct_subreddit_name,
         'post_id': post.id,
         'title': post.title,
         'author': str(post.author),
@@ -64,10 +91,13 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
                 subreddit_name: str, posts: List[Dict]) -> None:
     """Saves posts data to Google Cloud Storage."""
     try:
+        # Get the correct subreddit name for consistency
+        correct_subreddit_name = get_correct_subreddit_name(subreddit_name)
+        
         # Get bucket
         bucket = storage_client.bucket(bucket_name)
         
-        # Generate blob name with current timestamp
+        # Generate blob name with current timestamp (use config name for paths)
         batch_timestamp = datetime.utcnow()
         blob_name = get_gcs_blob_name(subreddit_name, batch_timestamp)
         blob = bucket.blob(blob_name)
@@ -86,18 +116,18 @@ def save_to_gcs(storage_client: storage.Client, bucket_name: str,
             }
             
             dummy_post = {
-                "subreddit": subreddit_name,
+                "subreddit": correct_subreddit_name,  # Use correct name here
                 "post_id": f"no_posts_{timestamp_str}",
                 "title": "There are no posts for this subreddit today",
                 "author": "placeholder",
-                "url": f"https://www.reddit.com/r/{subreddit_name}/",
+                "url": f"https://www.reddit.com/r/{correct_subreddit_name}/",
                 "score": 1,
                 "created_utc": batch_timestamp.timestamp(),
                 "ingestion_timestamp": batch_timestamp.timestamp(),
-                "comments": [dummy_comment]  # Include a properly structured dummy comment
+                "comments": [dummy_comment]
             }
             ndjson_data = json.dumps(dummy_post)
-            logger.info(f"No posts found for {subreddit_name}, creating dummy file: {blob_name}")
+            logger.info(f"No posts found for {correct_subreddit_name}, creating dummy file: {blob_name}")
         else:
             # Convert to newline-delimited JSON
             ndjson_data = '\n'.join(json.dumps(post) for post in posts)
@@ -218,11 +248,14 @@ def fetch_and_save_posts(reddit: praw.Reddit, storage_client: storage.Client,
                         dataset_id: str, bucket_name: str, subreddit_name: str) -> None:
     """Fetches posts from a subreddit and saves them to GCS and BigQuery."""
     try:
-        # Get last processed timestamp
+        # Get the correct subreddit name for API calls and data consistency
+        correct_subreddit_name = get_correct_subreddit_name(subreddit_name)
+        
+        # Get last processed timestamp (use config name for metadata lookup)
         last_timestamp = get_last_processed_timestamp(bigquery_client, project_id, dataset_id, subreddit_name)
         
-        # Fetch and process posts
-        subreddit = reddit.subreddit(subreddit_name)
+        # Fetch and process posts (use correct name for Reddit API)
+        subreddit = reddit.subreddit(correct_subreddit_name)
         new_posts = []
         latest_timestamp = last_timestamp
 
@@ -238,16 +271,16 @@ def fetch_and_save_posts(reddit: praw.Reddit, storage_client: storage.Client,
             try:
                 post_data = extract_post_data(post)
                 new_posts.append(post_data)
-                logger.info(f"Collected post {post.id} from r/{subreddit_name}")
+                logger.info(f"Collected post {post.id} from r/{correct_subreddit_name}")
             except Exception as e:
                 logger.error(f"Error processing post {post.id}: {e}")
                 continue
 
-        # Always save to GCS, even if new_posts is empty
+        # Always save to GCS, even if new_posts is empty (use config name for paths)
         save_to_gcs(storage_client, bucket_name, subreddit_name, new_posts)
         
         if new_posts:
-            # Update processing metadata with retry logic
+            # Update processing metadata with retry logic (use config name for consistency)
             update_processing_metadata(
                 bigquery_client,
                 project_id,
@@ -256,8 +289,8 @@ def fetch_and_save_posts(reddit: praw.Reddit, storage_client: storage.Client,
                 latest_timestamp
             )
         else:
-            logger.info(f"No new posts to process for r/{subreddit_name}")
+            logger.info(f"No new posts to process for r/{correct_subreddit_name}")
 
     except Exception as e:
-        logger.error(f"Failed to fetch posts from r/{subreddit_name}: {e}")
+        logger.error(f"Failed to fetch posts from r/{correct_subreddit_name}: {e}")
         raise 
