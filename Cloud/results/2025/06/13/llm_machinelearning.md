@@ -2,154 +2,116 @@
 title: "Machine Learning Subreddit"
 date: "2025-06-13"
 description: "Analysis of top discussions and trends in the machinelearning subreddit"
-tags: ["machinelearning", "AI", "deeplearning"]
+tags: ["machine learning", "NLP", "AI"]
 ---
 
 # Overall Ranking and Top Discussions
-1.  [[P] I reimplemented all of frontier deep learning from scratch to help you learn](https://www.reddit.com/r/MachineLearning/comments/1l9lb0c/p_i_reimplemented_all_of_frontier_deep_learning/) (Score: 118)
-    * The thread discusses a reimplementation of frontier deep learning from scratch, with users providing feedback on the correctness, completeness, and potential AI-generated aspects of the code.
-2.  [[D] Are GNNs/GCNs dead ?](https://www.reddit.com/r/MachineLearning/comments/1l9l86m/d_are_gnnsgcns_dead/) (Score: 68)
-    * The thread debates the relevance and future of Graph Neural Networks (GNNs) and Graph Convolutional Networks (GCNs) in light of the popularity of LLMs, with many arguing that GNNs are still valuable for structured data.
-3.  [[R] ABBA: Highly Expressive Hadamard Product Adaptation for Large Language Models](https://www.reddit.com/r/MachineLearning/comments/1l9mtu2/r_abba_highly_expressive_hadamard_product/) (Score: 36)
-    * The thread discusses a new adaptation method for large language models called ABBA, with users questioning its performance compared to full fine-tuning and LoRA.
-4.  [[D] Image generation using latent space learned from similar data](https://www.reddit.com/r/MachineLearning/comments/1l98aqp/d_image_generation_using_latent_space_learned/) (Score: 33)
-    * The thread discusses generating images using latent spaces learned from similar data, focusing on disentangling factors of variation and applying transformations within the latent space.
-5.  [[P] SWE-rebench Major Update: Tool Usage, Claude Sonnet 3.5/4, OpenAI o3 and May Data](https://www.reddit.com/r/MachineLearning/comments/1l9l5dt/p_swerebench_major_update_tool_usage_claude/) (Score: 27)
-    * The thread announces a major update to SWE-rebench, a benchmarking tool, and discusses the inclusion of new models like Claude Sonnet 3.5/4.
-6.  [[P] Nanonets-OCR-s: An Open-Source Image-to-Markdown Model with LaTeX, Tables, Signatures, checkboxes & More](https://www.reddit.com/r/MachineLearning/comments/1l9poxd/p_nanonetsocrs_an_opensource_imagetomarkdown/) (Score: 12)
-    * The thread introduces Nanonets-OCR-s, an open-source image-to-markdown model, and users inquire about benchmarks.
-7.  [[D] What are the advantages of Monte Carlo Tree Search over flat Monte Carlo?](https://www.reddit.com/r/MachineLearning/comments/1l9a1ec/d_what_are_the_advantages_of_monte_carlo_tree/) (Score: 11)
-    * The thread compares Monte Carlo Tree Search (MCTS) with flat Monte Carlo methods, explaining the advantages of MCTS in terms of efficient tree searching and prioritization of promising moves.
-8.  [[D] ICML Financial Aid - How does it work?](https://www.reddit.com/r/MachineLearning/comments/1l9v4ix/d_icml_financial_aid_how_does_it_work/) (Score: 5)
-    * The thread discusses ICML financial aid, with users sharing their experiences and asking for advice.
-9.  [[D] How to validate a replicated model without the original dataset?](https://www.reddit.com/r/MachineLearning/comments/1l9f042/d_how_to_validate_a_replicated_model_without_the/) (Score: 1)
-    * The thread discusses how to validate a replicated model without the original dataset and recommends checking for public data or finding similar projects with available data.
-10. [[D] Geometric NLP](https://www.reddit.com/r/MachineLearning/comments/1la2t9o/d_geometric_nlp/) (Score: 1)
-    * The thread discusses geometric NLP, especially hyperbolic embeddings.
-11. [[D] Supervised fine-tuning with Alchemist?](https://www.reddit.com/gallery/1l9p9hi) (Score: 0)
-    * The thread discusses supervised fine-tuning with Alchemist.
-12. [[P] How to Approach a 3D Medical Imaging Project? (RSNA 2023 Trauma Detection)](https://www.reddit.com/r/MachineLearning/comments/1l9dd18/p_how_to_approach_a_3d_medical_imaging_project/) (Score: 0)
-    * The thread discusses approaches to 3D medical imaging projects, with suggestions on algorithms, architectures, and handling data.
-13. [[D] those employed in Deep Learning](https://www.reddit.com/r/MachineLearning/comments/1l9fdu9/d_those_employed_in_deep_learning/) (Score: 0)
-    * The thread discusses the experiences and backgrounds of people employed in deep learning.
-14. [[D] benchmarks for new hires?](https://www.reddit.com/r/MachineLearning/comments/1l9fesa/d_benchmarks_for_new_hires/) (Score: 0)
-    * The thread discusses benchmarks for new hires in the field of machine learning.
-15. [[D] Semantic-Preserving Quantization Theory: A New Approach to Efficient Representation Learning](https://www.reddit.com/r/MachineLearning/comments/1l9ikz9/d_semanticpreserving_quantization_theory_a_new/) (Score: 0)
-    * The thread discusses semantic-preserving quantization theory as a new approach to efficient representation learning.
+1.  [[D] The effectiveness of single latent parameter autoencoders: an interesting observation](https://www.reddit.com/r/MachineLearning/comments/1la6plp/d_the_effectiveness_of_single_latent_parameter/) (Score: 67)
+    *   A discussion about the effectiveness of single latent parameter autoencoders, with users sharing insights, asking questions about the model's structure, and suggesting improvements.
+2.  [[D] Geometric NLP](https://www.reddit.com/r/MachineLearning/comments/1la2t9o/d_geometric_nlp/) (Score: 15)
+    *   A discussion on geometric NLP, specifically focusing on hyperbolic embeddings and their applications and limitations compared to Euclidean embeddings.
+3.  [[D][R] Collaborative Learning in Agentic Systems: A Collective AI is Greater Than the Sum of Its Parts](https://www.reddit.com/r/MachineLearning/comments/1laflyy/dr_collaborative_learning_in_agentic_systems_a/) (Score: 12)
+    *   A discussion on collaborative learning in agentic systems, exploring the potential for scalable distributed learning and the intriguing aspect of systems improving without direct coordination.
+4.  [[P]  Residual Isolation Forest](https://www.reddit.com/r/MachineLearning/comments/1lafghh/p_residual_isolation_forest/) (Score: 11)
+    *   A discussion about Residual Isolation Forest, with a user sharing related work on tracing datapoint's paths through clustered latent semantic space and observing how words are routed based on their semantics in GPT2.
+5.  [[D] ICML Financial Aid - How does it work?](https://www.reddit.com/r/MachineLearning/comments/1l9v4ix/d_icml_financial_aid_how_does_it_work/) (Score: 8)
+    *   Inquiries and advice regarding ICML financial aid, including questions about notification status and suggestions to contact financial aid offices or department offices.
+6.  [2506.06105] Text-to-LoRA: Instant Transformer Adaption (Score: 8)
+    *   The paper introduces Text-to-LoRA (T2L), a model capable of adapting large language models (LLMs) on the fly based on a natural language description of the target task
+7.  [[D] Why Is Enterprise Data Integration Always So Messy? My Clients’ Real-Life Nightmares](https://www.reddit.com/r/MachineLearning/comments/1la46eq/d_why_is_enterprise_data_integration_always_so/) (Score: 5)
+    *   A discussion about the challenges of enterprise data integration, with users sharing anecdotes and insights into the complexities, incentives, and necessary organizational structures involved.
+8.  [[P] Live Speech To Text in Arabic](https://www.reddit.com/r/MachineLearning/comments/1laevga/p_live_speech_to_text_in_arabic/) (Score: 1)
+    *   Suggestion to fine-tune a whisper model for live speech to text in Arabic.
+9.  [[P] I created NexFace. A High Quality Face Swap to Image and Video](https://www.reddit.com/r/MachineLearning/comments/1ladz9i/p_i_created_nexface_a_high_quality_face_swap_to/) (Score: 0)
+    *   A user asks questions about the NexFace tool, specifically regarding skipping minimum image sizes, upscaling, GFPGAN enhancement, and the maximum resolution it accepts.
+10. [[D] The Huge Flaw in LLMs’ Logic](https://www.reddit.com/r/MachineLearning/comments/1lal94m/d_the_huge_flaw_in_llms_logic/) (Score: 0)
+    *   A discussion on the flaws in LLMs logic, focusing on a particular problem about dividing apples and oranges among people.
+11. [[R] Polynomial Mirrors: Expressing Any Neural Network as Polynomial Compositions](https://www.reddit.com/r/MachineLearning/comments/1lam6ep/r_polynomial_mirrors_expressing_any_neural/) (Score: 0)
+    *   A discussion about Polynomial Mirrors, which is expressing any neural network as polynomial compositions, specifically focusing on Taylor approximation, Kolmogorov Arnold Networks (KAN), and interpretability.
 
 # Detailed Analysis by Thread
-**[[P] I reimplemented all of frontier deep learning from scratch to help you learn (Score: 118)](https://www.reddit.com/r/MachineLearning/comments/1l9lb0c/p_i_reimplemented_all_of_frontier_deep_learning/)**
-*  **Summary:** The thread discusses a reimplementation of frontier deep learning from scratch, with users providing feedback on the correctness, completeness, and potential AI-generated aspects of the code.
-*  **Emotion:** The overall emotional tone is positive, with some elements of negativity and neutrality. Users are generally appreciative of the effort but offer constructive criticism.
-*  **Top 3 Points of View:**
-    *   The reimplementation is a helpful resource for learning.
-    *   The claim of implementing "all of frontier ml research" is an overstatement.
-    *   Some parts of the code may have been generated by AI.
+**[[D] The effectiveness of single latent parameter autoencoders: an interesting observation (Score: 67)](https://www.reddit.com/r/MachineLearning/comments/1la6plp/d_the_effectiveness_of_single_latent_parameter/)**
+*   **Summary:** The thread discusses the effectiveness of using a single latent parameter in autoencoders. The original poster shared their observation, and others are asking questions, offering suggestions, and showing interest in the results.
+*   **Emotion:** The overall emotional tone is neutral, with elements of positive sentiment due to the shared interest and excitement about the findings. Some comments reflect curiosity and a desire for more information.
+*   **Top 3 Points of View:**
+    *   The observation that a single latent parameter autoencoder can be surprisingly effective.
+    *   Inquiries about the type of data used for training the autoencoder and reconstruction quality on held-out data.
+    *   Suggestions for improving the model, such as using progressive dropout.
 
-**[[D] Are GNNs/GCNs dead ? (Score: 68)](https://www.reddit.com/r/MachineLearning/comments/1l9l86m/d_are_gnnsgcns_dead/)**
-*  **Summary:** The thread debates the relevance and future of Graph Neural Networks (GNNs) and Graph Convolutional Networks (GCNs) in light of the popularity of LLMs, with many arguing that GNNs are still valuable for structured data.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   GNNs are not dead and remain useful for structured data.
-    *   Transformers are a special case of GNNs.
-    *   Many researchers have shifted their focus to LLMs, potentially overshadowing GNN research.
+**[[D] Geometric NLP (Score: 15)](https://www.reddit.com/r/MachineLearning/comments/1la2t9o/d_geometric_nlp/)**
+*   **Summary:** This thread centers around a discussion on Geometric NLP, particularly the use of hyperbolic embeddings. The discussion highlights the challenges in training hyperbolic embeddings compared to Euclidean embeddings and their effectiveness for specific tasks.
+*   **Emotion:** The emotional tone is mostly neutral with some comments being positive, specifically the user expressing the post is awesome.
+*   **Top 3 Points of View:**
+    *   Hyperbolic embeddings are difficult to train and lack stable optimization techniques.
+    *   Euclidean embeddings are easier to scale and train with modern hardware and optimizers.
+    *   Hyperbolic embeddings do not automatically provide hierarchical representations and are better suited for specific tasks.
 
-**[[R] ABBA: Highly Expressive Hadamard Product Adaptation for Large Language Models (Score: 36)](https://www.reddit.com/r/MachineLearning/comments/1l9mtu2/r_abba_highly_expressive_hadamard_product/)**
-*  **Summary:** The thread discusses a new adaptation method for large language models called ABBA, with users questioning its performance compared to full fine-tuning and LoRA.
-*  **Emotion:** The overall emotional tone is positive, with the sentiment that ABBA might be an impressive and cool new method.
-*  **Top 3 Points of View:**
-    *   The ABBA method provides better performance than full fine-tuning.
-    *   It is unclear how the method compares to LoRA.
-    *   The method might require more memory.
+**[[D][R] Collaborative Learning in Agentic Systems: A Collective AI is Greater Than the Sum of Its Parts (Score: 12)](https://www.reddit.com/r/MachineLearning/comments/1laflyy/dr_collaborative_learning_in_agentic_systems_a/)**
+*   **Summary:** The discussion revolves around a paper on collaborative learning in agentic systems. Users find the concept intriguing, particularly the idea of scalable distributed learning without forced coordination. They speculate about the potential applications in industrial settings.
+*   **Emotion:** The overall emotional tone is positive, with expressions of excitement and interest in the research.
+*   **Top 3 Points of View:**
+    *   The approach is considered a realistic step toward scalable distributed learning.
+    *   The lack of forced coordination is a particularly intriguing aspect of the system.
+    *   Speculation about the potential use of the system in messy, low-signal industrial settings.
 
-**[[D] Image generation using latent space learned from similar data (Score: 33)](https://www.reddit.com/r/MachineLearning/comments/1l98aqp/d_image_generation_using_latent_space_learned/)**
-*  **Summary:** The thread discusses generating images using latent spaces learned from similar data, focusing on disentangling factors of variation and applying transformations within the latent space.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Disentangling the latent space to isolate specific factors of variation is key.
-    *   Latent space arithmetic can be used for image generation.
-    *   Conditioning the encoder and decoder on stage can improve results.
+**[[P]  Residual Isolation Forest (Score: 11)](https://www.reddit.com/r/MachineLearning/comments/1lafghh/p_residual_isolation_forest/)**
+*   **Summary:** The thread discusses "Residual Isolation Forest", with a user sharing related work on tracing datapoint's paths through clustered latent semantic space.
+*   **Emotion:** The emotional tone is neutral and informative.
+*   **Top 3 Points of View:**
+    *   Discussion about how words are routed based on their semantics in GPT2.
+    *   Observation of how pronouns get routed into different pathways based on their semantics.
+    *   In GPT2 most words have converged into 'entity' and 'function' highways.
 
-**[[P] SWE-rebench Major Update: Tool Usage, Claude Sonnet 3.5/4, OpenAI o3 and May Data (Score: 27)](https://www.reddit.com/r/MachineLearning/comments/1l9l5dt/p_swerebench_major_update_tool_usage_claude/)**
-*  **Summary:** The thread announces a major update to SWE-rebench, a benchmarking tool, and discusses the inclusion of new models like Claude Sonnet 3.5/4.
-*  **Emotion:** The overall emotional tone is positive.
-*  **Top 3 Points of View:**
-    *   The update and benchmarks are welcome.
-    *   There is interest in the details of the Claude 4 Sonnet implementation.
-    *   Users are asking about adding other popular models
+**[2506.06105] Text-to-LoRA: Instant Transformer Adaption (Score: 8)](https://arxiv.org/abs/2506.06105)**
+*   **Summary:** The discussion revolves around Text-to-LoRA (T2L), a model capable of adapting large language models (LLMs) on the fly based on a natural language description of the target task.
+*   **Emotion:** The emotional tone is neutral and informative.
+*   **Top 3 Points of View:**
+    *   T2L can compress hundreds of LoRA instances and zero-shot generalize to entirely unseen tasks.
+    *   T2L is a hypernetwork trained to construct LoRAs in a single inexpensive forward pass.
+    *   After training T2L on a suite of 9 pre-trained LoRA adapters (GSM8K, Arc, etc.), the ad-hoc reconstructed LoRA instances match the performance of task-specific adapters across the corresponding test sets.
 
-**[[P] Nanonets-OCR-s: An Open-Source Image-to-Markdown Model with LaTeX, Tables, Signatures, checkboxes & More (Score: 12)](https://www.reddit.com/r/MachineLearning/comments/1l9poxd/p_nanonetsocrs_an_opensource_imagetomarkdown/)**
-*  **Summary:** The thread introduces Nanonets-OCR-s, an open-source image-to-markdown model, and users inquire about benchmarks.
-*  **Emotion:** The overall emotional tone is positive.
-*  **Top 3 Points of View:**
-    *   The model looks great.
-    *   Benchmarks are needed.
-    *   It's a powerful and impressive model
+**[[D] ICML Financial Aid - How does it work? (Score: 8)](https://www.reddit.com/r/MachineLearning/comments/1l9v4ix/d_icml_financial_aid_how_does_it_work/)**
+*   **Summary:** The thread is about ICML Financial Aid, with users asking questions about the process and others offering advice.
+*   **Emotion:** The emotional tone is neutral and helpful.
+*   **Top 3 Points of View:**
+    *   Inquiry about whether notifications have been sent out.
+    *   Suggestion to reach out to the school's financial aid office.
+    *   Advice to be friendly with the office admin staff for assistance.
 
-**[[D] What are the advantages of Monte Carlo Tree Search over flat Monte Carlo? (Score: 11)](https://www.reddit.com/r/MachineLearning/comments/1l9a1ec/d_what_are_the_advantages_of_monte_carlo_tree/)**
-*  **Summary:** The thread compares Monte Carlo Tree Search (MCTS) with flat Monte Carlo methods, explaining the advantages of MCTS in terms of efficient tree searching and prioritization of promising moves.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   MCTS efficiently searches the tree.
-    *   MCTS prioritizes promising parts of the tree while soft-pruning unpromising ones.
-    *   MCTS restricts the search space to only the most promising avenues.
+**[[D] Why Is Enterprise Data Integration Always So Messy? My Clients’ Real-Life Nightmares (Score: 5)](https://www.reddit.com/r/MachineLearning/comments/1la46eq/d_why_is_enterprise_data_integration_always_so/)**
+*   **Summary:** The thread discusses why enterprise data integration is always messy, with users sharing their experiences and insights.
+*   **Emotion:** The overall emotional tone is neutral.
+*   **Top 3 Points of View:**
+    *   There is an incentive for employees to make themselves irreplaceable by making their work hard to understand.
+    *   Breaking down data silos is a losing battle.
+    *   Healthcare and law data integration is particularly challenging due to proprietary formats and closed portals.
 
-**[[D] ICML Financial Aid - How does it work? (Score: 5)](https://www.reddit.com/r/MachineLearning/comments/1l9v4ix/d_icml_financial_aid_how_does_it_work/)**
-*  **Summary:** The thread discusses ICML financial aid, with users sharing their experiences and asking for advice.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Some users haven't received a notification about financial aid.
-    *   Reaching out to the school's financial aid office is recommended.
-    *   Being friendly with administrative staff can be helpful.
+**[[P] Live Speech To Text in Arabic (Score: 1)](https://www.reddit.com/r/MachineLearning/comments/1laevga/p_live_speech_to_text_in_arabic/)**
+*   **Summary:** A user suggests fine-tuning a whisper model to do live speech to text in Arabic.
+*   **Emotion:** The emotional tone is neutral and helpful.
+*   **Top 1 Points of View:**
+    *   Fine-tuning whisper model to do this
 
-**[[D] How to validate a replicated model without the original dataset? (Score: 1)](https://www.reddit.com/r/MachineLearning/comments/1l9f042/d_how_to_validate_a_replicated_model_without_the/)**
-*  **Summary:** The thread discusses how to validate a replicated model without the original dataset and recommends checking for public data or finding similar projects with available data.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Check for publicly available data/models.
-    *   Find a similar project with available data.
+**[[P] I created NexFace. A High Quality Face Swap to Image and Video (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1ladz9i/p_i_created_nexface_a_high_quality_face_swap_to/)**
+*   **Summary:** A user asks questions about the NexFace tool, specifically regarding skipping minimum image sizes, upscaling, GFPGAN enhancement, and the maximum resolution it accepts.
+*   **Emotion:** The emotional tone is neutral and inquisitive.
+*   **Top 3 Points of View:**
+    *   Can we skip the minimum image sizes and the upscaling/resizing?
+    *   Can we also skip the GFPGAN enhancement?
+    *   What is the maximum resolution it accepts?
 
-**[[D] Geometric NLP (Score: 1)](https://www.reddit.com/r/MachineLearning/comments/1la2t9o/d_geometric_nlp/)**
-*  **Summary:** The thread discusses geometric NLP, especially hyperbolic embeddings.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Hyperbolic embeddings do not make tree structures easier to represent.
-    *   Topological methods and probabilistic modelling are more useful.
+**[[D] The Huge Flaw in LLMs’ Logic (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1lal94m/d_the_huge_flaw_in_llms_logic/)**
+*   **Summary:** This thread discusses a flaw in LLMs' logic, presenting a problem where the model struggles to determine how many oranges one person can get when dividing apples and oranges among four people.
+*   **Emotion:** The emotional tone varies from negative (frustration) to positive as users discuss solutions and the limitations of LLMs.
+*   **Top 3 Points of View:**
+    *   The problem is underspecified and requires additional assumptions not considered by LLMs.
+    *   LLMs do not actually reason, they just follow patterns.
+    *   The problem could be solved if there was a condition that everyone gets an equal amount of items.
 
-**[[D] Supervised fine-tuning with Alchemist? (Score: 0)](https://www.reddit.com/gallery/1l9p9hi)**
-*  **Summary:** The thread discusses supervised fine-tuning with Alchemist.
-*  **Emotion:** The overall emotional tone is positive.
-*  **Top 3 Points of View:**
-    *   Alchemist improves image quality.
-    *   It has potential for realistic renderings.
-
-**[[P] How to Approach a 3D Medical Imaging Project? (RSNA 2023 Trauma Detection) (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1l9dd18/p_how_to_approach_a_3d_medical_imaging_project/)**
-*  **Summary:** The thread discusses approaches to 3D medical imaging projects, with suggestions on algorithms, architectures, and handling data.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Representing something in 3D is almost always better than in 2D.
-    *   Unet is a standard segmentation architecture, but you need to tune it well.
-    *   Use multi-label classification where labels are not mutually exclusive.
-
-**[[D] those employed in Deep Learning (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1l9fdu9/d_those_employed_in_deep_learning/)**
-*  **Summary:** The thread discusses the experiences and backgrounds of people employed in deep learning.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   ML engineering is not just training and finetuning models all day.
-    *   Luck plays a role in finding a job in the field.
-    *   Self-doubt is common.
-
-**[[D] benchmarks for new hires? (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1l9fesa/d_benchmarks_for_new_hires/)**
-*  **Summary:** The thread discusses benchmarks for new hires in the field of machine learning.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   Initiative and intellectual curiosity are essential.
-    *   Python and a deep learning framework are non-negotiable.
-    *   Original thinking is critical for a researcher.
-
-**[[D] Semantic-Preserving Quantization Theory: A New Approach to Efficient Representation Learning (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1l9ikz9/d_semanticpreserving_quantization_theory_a_new/)**
-*  **Summary:** The thread discusses semantic-preserving quantization theory as a new approach to efficient representation learning.
-*  **Emotion:** The overall emotional tone is neutral.
-*  **Top 3 Points of View:**
-    *   The approach seems really interesting.
-    *   The GPT-generated readme is a bit hard to follow.
+**[[R] Polynomial Mirrors: Expressing Any Neural Network as Polynomial Compositions (Score: 0)](https://www.reddit.com/r/MachineLearning/comments/1lam6ep/r_polynomial_mirrors_expressing_any_neural/)**
+*   **Summary:** The thread discusses the paper "Polynomial Mirrors: Expressing Any Neural Network as Polynomial Compositions". The discussion revolves around the limitations and potential issues with the approach, such as exploding gradients, dealing with NaN values, and the question of whether it truly improves interpretability compared to neural networks.
+*   **Emotion:** The emotional tone is primarily neutral.
+*   **Top 3 Points of View:**
+    *   Taylor approximation is only good at the point x0 and requires higher-order polynomials further away from x0, which usually yields a NaN.
+    *   Polynomial Mirrors has the same function as Kolmogorov Arnold Networks (KAN).
+    *   Interpretability is a red herring and a false idol.
