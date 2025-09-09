@@ -212,7 +212,7 @@ The diagram above illustrates the flow of data through our system, from collecti
 
 1. **Initialize Infrastructure**
    ```bash
-   cd infrastructure/terraform
+   cd infrastructure/terraform/resource_scripts
    ./build_res.sh
    ```
 2. **Github Actions**
