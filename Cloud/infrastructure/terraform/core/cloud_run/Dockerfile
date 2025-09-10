@@ -1,17 +1,16 @@
 # Use Python 3.11 slim image
 FROM python:3.11-slim
 
-# Install Google Cloud SDK and SSH client
+# Install dependencies and Google Cloud SDK
 RUN apt-get update && apt-get install -y \
     curl \
-    gnupg \
-    openssh-client && \
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
-    apt-get update && \
-    apt-get install -y google-cloud-sdk && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    openssh-client \
+    && curl https://sdk.cloud.google.com | bash \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add gcloud to PATH
+ENV PATH="/root/google-cloud-sdk/bin:${PATH}"
 
 # Set working directory
 WORKDIR /app
