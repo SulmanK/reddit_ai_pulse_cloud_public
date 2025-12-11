@@ -39,6 +39,7 @@ x-common-env: &common-env
   AIRFLOW__SMTP__SMTP_SSL: "false"
   BIGQUERY_DATASET_PROCESSED: ${BIGQUERY_DATASET_PROCESSED}
   BIGQUERY_DATASET_RAW: ${BIGQUERY_DATASET_RAW}
+  MLFLOW_TRACKING_URI: http://mlflow:5000
 
 x-common-volumes: &common-volumes
   - ..:/opt/airflow
@@ -156,7 +157,7 @@ services:
     volumes:
       - ../mlflow:/mlflow
     environment:
-      - MLFLOW_TRACKING_URI=http://localhost:5000
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
     restart: always
 
   prometheus:

@@ -151,19 +151,20 @@ The diagram above illustrates the flow of data through our system, from collecti
    - Enable billing in account
    - Enable required APIs:
       ```bash
-      gcloud services enable cloudresourcemanager.googleapis.com \
-                           cloudbuild.googleapis.com \
-                           cloudfunctions.googleapis.com \
-                           cloudscheduler.googleapis.com \
-                           cloudasset.googleapis.com \
-                           run.googleapis.com \ 
-                           artifactregistry.googleapis.com \
-                           iam.googleapis.com \
-                           compute.googleapis.com \
-                           bigquery.googleapis.com \
-                           storage.googleapis.com \
-                           networkmanagement.googleapis.com \
-                           generativelanguage.googleapis.com
+      gcloud services enable \
+         cloudresourcemanager.googleapis.com \
+         cloudbuild.googleapis.com \
+         cloudfunctions.googleapis.com \
+         cloudscheduler.googleapis.com \
+         cloudasset.googleapis.com \
+         run.googleapis.com \
+         artifactregistry.googleapis.com \
+         iam.googleapis.com \
+         compute.googleapis.com \
+         bigquery.googleapis.com \
+         storage.googleapis.com \
+         networkmanagement.googleapis.com \
+         generativelanguage.googleapis.com
       ```
    - Add Roles to main account
       - Project Owner or Editor
