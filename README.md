@@ -201,7 +201,7 @@ The diagram above illustrates the flow of data through our system, from collecti
    gcloud auth login
    gcloud config set project YOUR_PROJECT_ID
    gcloud auth application-default login
-   gcloud auth application-default set-quota-project --PROJ_ID
+   gcloud auth application-default set-quota-project PROJ_ID
    ```
 
 3. **Environment Configuration**
