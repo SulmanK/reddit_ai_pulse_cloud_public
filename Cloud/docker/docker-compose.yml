@@ -158,6 +158,7 @@ services:
       - ../mlflow:/mlflow
     environment:
       - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_SERVER_ALLOWED_HOSTS=localhost,mlflow,127.0.0.1,0.0.0.0,mlflow:5000,localhost:5000
     restart: always
 
   prometheus:
