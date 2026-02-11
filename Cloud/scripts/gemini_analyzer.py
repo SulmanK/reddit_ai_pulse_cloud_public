@@ -267,7 +267,7 @@ def analyze_data():
 
         # 2. Initialize model
         genai.configure(api_key=GEMINI_CONFIG['GOOGLE_GEMINI_API_KEY'])
-        model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         logger.info("Model loaded")
 
         # 3. Connect to BigQuery and GCS
