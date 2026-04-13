@@ -161,17 +161,16 @@ def summarize_posts():
                     logger.error(f"Error processing comment {comment_id}: {str(e)}")
                     continue
 
-            # Batch insert results to BigQuery
+            # Batch upsert results to BigQuery using MERGE
             if summaries:
                 table_id = 'processed_data.text_summary_results'
                 
                 try:
-                    # Get table reference
-                    table_ref = client.dataset('processed_data').table('text_summary_results')
-                    table = client.get_table(table_ref)
+                    # Create temporary table with new data
+                    temp_table_id = f"{table_id}_temp_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
                     
                     # Convert results to rows
-                    rows_to_insert = [
+                    rows_to_upsert = [
                         {
                             'comment_id': summary['comment_id'],
                             'comment_summary': summary['comment_summary']
@@ -179,17 +178,45 @@ def summarize_posts():
                         for summary in summaries
                     ]
                     
-                    # Insert data
-                    errors = client.insert_rows_json(table, rows_to_insert)
+                    # Load data into temporary table
+                    job_config = bigquery.LoadJobConfig(
+                        schema=[
+                            bigquery.SchemaField("comment_id", "STRING", mode="REQUIRED"),
+                            bigquery.SchemaField("comment_summary", "STRING", mode="NULLABLE"),
+                        ],
+                        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
+                    )
                     
-                    if errors:
-                        logger.error(f"Encountered errors while inserting rows: {errors}")
-                        raise Exception(f"Failed to insert rows: {errors}")
-                    else:
-                        logger.info(f"Successfully inserted {len(rows_to_insert)} summaries")
+                    load_job = client.load_table_from_json(
+                        rows_to_upsert,
+                        temp_table_id,
+                        job_config=job_config
+                    )
+                    load_job.result()
+                    logger.info(f"Loaded {len(rows_to_upsert)} rows into temporary table")
+                    
+                    # Execute MERGE query
+                    merge_query = f"""
+                        MERGE `{table_id}` T
+                        USING `{temp_table_id}` S
+                        ON T.comment_id = S.comment_id
+                        WHEN MATCHED THEN
+                            UPDATE SET comment_summary = S.comment_summary
+                        WHEN NOT MATCHED THEN
+                            INSERT (comment_id, comment_summary)
+                            VALUES (S.comment_id, S.comment_summary)
+                    """
+                    
+                    merge_job = client.query(merge_query)
+                    merge_job.result()
+                    logger.info(f"Successfully merged {len(rows_to_upsert)} summaries")
+                    
+                    # Clean up temporary table
+                    client.delete_table(temp_table_id, not_found_ok=True)
+                    logger.info(f"Cleaned up temporary table {temp_table_id}")
                         
                 except Exception as e:
-                    logger.error(f"Error inserting results to BigQuery: {str(e)}")
+                    logger.error(f"Error upserting results to BigQuery: {str(e)}")
                     raise
 
     except Exception as e:

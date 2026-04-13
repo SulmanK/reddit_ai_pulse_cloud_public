@@ -6,7 +6,7 @@ resource "google_bigquery_dataset" "raw_data" {
   location    = "US"
   project     = var.project
 
-  delete_contents_on_destroy = false  # Protect against accidental data loss
+  delete_contents_on_destroy = false # Protect against accidental data loss
 }
 
 resource "google_bigquery_dataset" "processed_data" {
@@ -21,12 +21,12 @@ resource "google_bigquery_dataset" "processed_data" {
 # Dynamic raw tables for each subreddit
 resource "google_bigquery_table" "raw_subreddit_tables" {
   for_each = toset(var.subreddits)
-  
+
   dataset_id = google_bigquery_dataset.raw_data.dataset_id
   table_id   = "raw_${lower(each.value)}"
   project    = var.project
 
-  deletion_protection = false  # Set to true in production
+  deletion_protection = false # Set to true in production
 
   schema = jsonencode([
     {
@@ -80,7 +80,7 @@ resource "google_bigquery_table" "raw_subreddit_tables" {
 # Dynamic processed posts tables for each subreddit
 resource "google_bigquery_table" "processed_posts_tables" {
   for_each = toset(var.subreddits)
-  
+
   dataset_id = google_bigquery_dataset.processed_data.dataset_id
   table_id   = "posts_${lower(each.value)}"
   project    = var.project
@@ -134,7 +134,7 @@ resource "google_bigquery_table" "processed_posts_tables" {
 # Dynamic processed comments tables for each subreddit
 resource "google_bigquery_table" "processed_comments_tables" {
   for_each = toset(var.subreddits)
-  
+
   dataset_id = google_bigquery_dataset.processed_data.dataset_id
   table_id   = "comments_${lower(each.value)}"
   project    = var.project
@@ -244,6 +244,9 @@ resource "google_bigquery_table" "text_summary" {
 
   deletion_protection = false
 
+  # comment_id should be unique - enforced at application level via MERGE operations
+  clustering = ["comment_id"]
+
   schema = jsonencode([
     {
       name = "comment_id",
@@ -264,6 +267,9 @@ resource "google_bigquery_table" "sentiment_analysis" {
   project    = var.project
 
   deletion_protection = false
+
+  # comment_id should be unique - enforced at application level via MERGE operations
+  clustering = ["comment_id"]
 
   schema = jsonencode([
     {

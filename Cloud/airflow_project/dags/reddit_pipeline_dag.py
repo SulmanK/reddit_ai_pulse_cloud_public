@@ -310,14 +310,15 @@ with DAG(
         provide_context=True
     )
 
-    # 20th Stage: Update Processing Status
+    # 20th Stage: Update Processing Status (MOVED HERE - right after join tests pass)
+    # This minimizes the failure window - all core processing is complete
     task_update_status = BashOperator(
         task_id='update_processing_status',
         bash_command=get_dbt_run_cmd('update_processing_status'),
         dag=dag
     )
 
-    # 21th Stage: Update Processing Status Metrics
+    # 21st Stage: Update Processing Status Metrics
     test_processing_status_metrics = PythonOperator(
         task_id='test_processing_status_metrics',
         python_callable=lambda ti: extract_update_status_metrics(
@@ -326,14 +327,14 @@ with DAG(
         dag=dag
     )
 
-    # 22th Stage: dbt test update processing status
+    # 22nd Stage: dbt test update processing status
     dbt_test_update_processing_status = BashOperator(
         task_id='test_update_processing_status',
         bash_command=get_dbt_test_cmd('update_processing_status'),
         dag=dag
     )
 
-    # 23th Stage: Test Update Processing Status Metrics
+    # 23rd Stage: Test Update Processing Status Metrics
     dbt_test_update_processing_status_metrics = PythonOperator(
         task_id='parse_dbt_test_update_processing_status_metrics',
         python_callable=parse_dbt_metrics('test_update_processing_status'),
@@ -347,7 +348,7 @@ with DAG(
         dag=dag
     )
 
-    # 25th Stage; Log Gemini Metrics
+    # 25th Stage: Log Gemini Metrics
     test_gemini_metrics = PythonOperator(
         task_id='test_gemini_metrics',
         python_callable=lambda ti: extract_gemini_metrics(
