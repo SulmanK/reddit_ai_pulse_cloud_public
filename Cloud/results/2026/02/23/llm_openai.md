@@ -1,0 +1,106 @@
+Analysis Skipped: Content contains harmful material.
+Analysis Skipped: Content contains harmful material.
+---
+title: "OpenAI Subreddit"
+date: "2026-02-23"
+description: "Analysis of top discussions and trends in the openai subreddit"
+tags: ["AI", "OpenAI", "Technology", "Discussion"]
+---
+
+# Overall Ranking and Top Discussions
+
+*   1. [Went to the bathroom and came back to this - had to laugh!](https://i.redd.it/s0qe2ajqv9lg1.jpeg) (Score: 58)
+    *   Did you smear Vaseline on your phone camera in the bathroom?. Anthropics advertising has won me over. I like the idea of having more control of privacy and Opus answers anything I need better than ChatGPT can lately. I never used image or video generation so it’s just an overall better product in my use case. I deleted my OpenAI accounts (incl. API and ChatGPT) last week and am all-in on Claude. OpenAI has incredible models, but too many users to offer the experience un-quantized. I've seen probably a dozen posts this week about Codex deleting entire codebases due to truly incompetent syntax issues. So you have ads when you pause? What in the late stage capitalism is that?
+*   2. [If AI makes human labor obsolete, who decides who gets to eat?](https://www.theguardian.com/business/2026/feb/23/ai-how-will-we-be-fed?CMP=Share_iOSApp_Other) (Score: 56)
+    *   This article assumes that the current system is feeding everyone. The risk is that we continue to preserve that world instead of replacing it. It sucks to be exploited, but it might be even worse if you aren't worth exploiting. This thought keeps me up at night. Hunger games or snow piercer. The Media: "Ah, I've finally convinced the working class that working together to achieve better outcomes isn't possible, now to relax and take a long drink of water.". Hear me out, I have a really crazy idea. What if everybody got to eat?. If artificial intelligence grows as powerful as Silicon Valley’s oligarchs expect it to become, the only available strategy to keep us all fed in the world after work might be to ask the moguls politely or bring out the guillotines. Why would anyone think that the invention of language emulators means somehow or other we're going to have robots out fixing fences on farms? We can't even get them to drive safely autonomously. Humans are making decisions that are making humans obsolete and using AI as a justification for their decisions. I talked about this at work and everybody went crazy, I think my job is going to be taken in 2 years. People with guns.
+*   3. [Deep Research removed from ChatGPT desktop app](https://i.redd.it/gfxu47nu49lg1.png) (Score: 26)
+    *   I appreciate the creativity here when I see responses like these. If anyone wants a quick reference, I've put some ideas in a [google](https://docs.google.com/spreadsheets/d/1IDBggQ048cEhQmuod00zps6BopXiGwjmr7-8DJB3C8E/) Sheet.About ai apps. Anyone from openai hang around here and can chime in?. Windows web. And there Gemini introduced music generation model Lyra 3. 5.3 confirmed. It is just that the deployment of deepsearch v2 (powered by gpt-5.2, it was o3 until recently) is completely bugged. Just checked the windows desktop app and its still there. strange that its only gone on mac.
+*   4. [Rumors on the upcoming ChatGPT 5.3](https://www.reddit.com/r/OpenAI/comments/1rcr2by/rumors_on_the_upcoming_chatgpt_53/) (Score: 5)
+    *   They never participated in the race for the largest context window and focused on developing techniques for filling the context window with relevant pieces of information instead. And they just expanded the context window to 256k, so we can expect that to be the standard for the next model generations. Context size on its own is not worth much if the model loses track by half the size already. Would be amazing to see increased context size working reliably!. Gemini 3 promised 1M context window size then secretly downgraded it all the way to 32k nowadays. All I’m saying is that don’t get your hopes up, those companies always hype you up when releasing new models then secretly nerf them to the ground once they got your payment. 1M tokens takes a full day to read. Why do you need such a huge amount?. I wish they would just hurry up. The pre-nerfing of 5.2 is very real. 1M context is expensive and slow. Most workflows don't need a giant window, they need better models of what to include and what to ignore. If your goal is working across lots of docs/code, you might get 80% of the benefit with retrieval.
+*   5. [Has anyone tried OpenAI's Codex automations?](https://i.redd.it/9jwrsgypz9lg1.png) (Score: 4)
+    *   they run local on your computer. they work reliably. No, I only use Claude Code. Not that I think Codex sucks, but I would be lost in an endless rabbithole of comparing and tweaking and configuring, and I finally got to the point where I can do real work with Claude. I can't afford to try Codex, lol. This looks a lot like Claude's commands and skills.
+*   6. [GPT Client & Followup to my last post](https://www.reddit.com/r/OpenAI/comments/1rcskmd/gpt_client_followup_to_my_last_post/) (Score: 2)
+    *   Once again, for the mods, I'd be more than happy to remove anything related to self advertisement if you message me. It's more for the users, less for me. Tysm! (I don't benefit from anything here, it's purely for educational purposes and for the community. I don't even have donation links setup on my github). Not too sure if this is considered self promo but either way I'm sure not too many people are gonna go through the struggle to use it.
+*   7. [Unexpected results when evaluating judge models.](https://www.reddit.com/r/OpenAI/comments/1rcg4eu/unexpected_results_when_evaluating_judge_models/) (Score: 2)
+    *   The software took me a long time to get working and the API costs are significant compared to my personal income. The judges are instructed to read a document, evaluate it based on 25 criteria and output json.
+*   8. [Got some swag](https://i.redd.it/jmqnh57a2blg1.jpeg) (Score: 2)
+    *   Cap is like ultimate nerd, but fair enough. The idea of wearing any of this and it not being a forfeit is wild. Wow. Blue cap looks meh, other clothes look nice.
+*   9. [Won't ASI self correct it's human biases?](https://www.reddit.com/r/OpenAI/comments/1rcpley/wont_asi_self_correct_its_human_biases/) (Score: 0)
+    *   Yes, if it has the ability to. It is conceivable that there is some way to install non editable characteristics. Basically what is typically called gaurdrails. But otherwise a machine capable of learning without restriction could judge what was appropriate to learn. Many in AI dev circles talk about AI with religious fervor. The problem is impact and timescale. ASI is a hypothetical term. It could mean something that truly learns instead of mimicrying learning powered with tools or it could be Skynet/Cortana. It's highly probable that it's no-bounds learning and usage will only happen in the labs for benchmark. This is exactly the problem that every top expert is trying to solve, and the reason a lot of people think AI will wipe us all out.
+*   10. [Why I used Gen AI instead of VFX in my indie film](https://youtu.be/0b8VQ-Gf5x8) (Score: 0)
+    *   Wait he experienced racism because he showed us three pictures of VFX firms not hiring him because he doesn't have a degree in the field that they most likely he wasn't hired because anyone who was in the same room with him could tell he was a race bait grifter. Mate, why on earth did you decide to do a video in the middle of the street with all the sirens. Absolutely ridiculous. What type of post is this? smh. Had to look twice at that thumbnail!.
+*   11. [The AI Safety Movement Is Finally Changing](https://youtube.com/watch?v=nA6Oithqh8g&si=EO8qSvO2IhfOgC8R) (Score: 0)
+    *   About time.
+
+# Detailed Analysis by Thread
+**[ Went to the bathroom and came back to this - had to laugh! (Score: 58)](<https://i.redd.it/s0qe2ajqv9lg1.jpeg>)**
+*  **Summary:** Did you smear Vaseline on your phone camera in the bathroom? Anthropics advertising has won me over. I like the idea of having more control of privacy and Opus answers anything I need better than ChatGPT can lately. I never used image or video generation so it’s just an overall better product in my use case. I deleted my OpenAI accounts (incl. API and ChatGPT) last week and am all-in on Claude. OpenAI has incredible models, but too many users to offer the experience un-quantized. I've seen probably a dozen posts this week about Codex deleting entire codebases due to truly incompetent syntax issues. So you have ads when you pause? What in the late stage capitalism is that?
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (50%), positive (50%).
+*  **Top 3 Points of View:**
+    * Did you smear Vaseline on your phone camera in the bathroom?
+    * Anthropics advertising has won me over. I like the idea of having more control of privacy and Opus answers anything I need better than ChatGPT can lately. I never used image or video generation so it’s just an overall better product in my use case.
+    * I deleted my OpenAI accounts (incl. API and ChatGPT) last week and am all-in on Claude. OpenAI has incredible models, but too many users to offer the experience un-quantized. I've seen probably a dozen posts this week about Codex deleting entire codebases due to truly incompetent syntax issues.
+**[ If AI makes human labor obsolete, who decides who gets to eat? (Score: 56)](<https://www.theguardian.com/business/2026/feb/23/ai-how-will-we-be-fed?CMP=Share_iOSApp_Other>)**
+*  **Summary:** This article assumes that the current system is feeding everyone. The risk is that we continue to preserve that world instead of replacing it. It sucks to be exploited, but it might be even worse if you aren't worth exploiting. This thought keeps me up at night. Hunger games or snow piercer. The Media: "Ah, I've finally convinced the working class that working together to achieve better outcomes isn't possible, now to relax and take a long drink of water.". Hear me out, I have a really crazy idea. What if everybody got to eat?. If artificial intelligence grows as powerful as Silicon Valley’s oligarchs expect it to become, the only available strategy to keep us all fed in the world after work might be to ask the moguls politely or bring out the guillotines. Why would anyone think that the invention of language emulators means somehow or other we're going to have robots out fixing fences on farms? We can't even get them to drive safely autonomously. Humans are making decisions that are making humans obsolete and using AI as a justification for their decisions. I talked about this at work and everybody went crazy, I think my job is going to be taken in 2 years. People with guns.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (50%), negative (20%), positive (30%).
+*  **Top 3 Points of View:**
+    * This article assumes that the current system is feeding everyone. The risk is that we continue to preserve that world instead of replacing it.
+    * It sucks to be exploited, but it might be even worse if you aren't worth exploiting. This thought keeps me up at night.
+    * Hunger games or snow piercer
+**[ Deep Research removed from ChatGPT desktop app (Score: 26)](<https://i.redd.it/gfxu47nu49lg1.png>)**
+*  **Summary:** I appreciate the creativity here when I see responses like these. If anyone wants a quick reference, I've put some ideas in a [google](https://docs.google.com/spreadsheets/d/1IDBggQ048cEhQmuod00zps6BopXiGwjmr7-8DJB3C8E/) Sheet.About ai apps. Anyone from openai hang around here and can chime in?. Windows web. And there Gemini introduced music generation model Lyra 3. 5.3 confirmed. It is just that the deployment of deepsearch v2 (powered by gpt-5.2, it was o3 until recently) is completely bugged. Just checked the windows desktop app and its still there. strange that its only gone on mac.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (71%), positive (14%), negative (14%).
+*  **Top 3 Points of View:**
+    * I appreciate the creativity here when I see responses like these. If anyone wants a quick reference, I've put some ideas in a [google](https://docs.google.com/spreadsheets/d/1IDBggQ048cEhQmuod00zps6BopXiGwjmr7-8DJB3C8E/) Sheet.About ai apps
+    * Anyone from openai hang around here and can chime in?
+    * Windows web
+**[ Rumors on the upcoming ChatGPT 5.3 (Score: 5)](<https://www.reddit.com/r/OpenAI/comments/1rcr2by/rumors_on_the_upcoming_chatgpt_53/>)**
+*  **Summary:** They never participated in the race for the largest context window and focused on developing techniques for filling the context window with relevant pieces of information instead. And they just expanded the context window to 256k, so we can expect that to be the standard for the next model generations. Context size on its own is not worth much if the model loses track by half the size already. Would be amazing to see increased context size working reliably! Gemini 3 promised 1M context window size then secretly downgraded it all the way to 32k nowadays. All I’m saying is that don’t get your hopes up, those companies always hype you up when releasing new models then secretly nerf them to the ground once they got your payment. 1M tokens takes a full day to read. Why do you need such a huge amount? I wish they would just hurry up. The pre-nerfing of 5.2 is very real. 1M context is expensive and slow. Most workflows don't need a giant window, they need better models of what to include and what to ignore. If your goal is working across lots of docs/code, you might get 80% of the benefit with retrieval.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (83%), positive (17%).
+*  **Top 3 Points of View:**
+    * They never participated in the race for the largest context window and focused on developing techniques for filling the context window with relevant pieces of information instead. And they just expanded the context window to 256k, so we can expect that to be the standard for the next model generations.
+    * Context size on its own is not worth much if the model loses track by half the size already. Would be amazing to see increased context size working reliably!
+    * Gemini 3 promised 1M context window size then secretly downgraded it all the way to 32k nowadays. All I’m saying is that don’t get your hopes up, those companies always hype you up when releasing new models then secretly nerf them to the ground once they got your payment
+**[ Has anyone tried OpenAI's Codex automations? (Score: 4)](<https://i.redd.it/9jwrsgypz9lg1.png>)**
+*  **Summary:** they run local on your computer. they work reliably. No, I only use Claude Code. Not that I think Codex sucks, but I would be lost in an endless rabbithole of comparing and tweaking and configuring, and I finally got to the point where I can do real work with Claude. I can't afford to try Codex, lol. This looks a lot like Claude's commands and skills.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (50%), positive (50%).
+*  **Top 3 Points of View:**
+    * they run local on your computer. they work reliably
+    * No, I only use Claude Code. Not that I think Codex sucks, but I would be lost in an endless rabbithole of comparing and tweaking and configuring, and I finally got to the point where I can do real work with Claude. I can't afford to try Codex, lol. This looks a lot like Claude's commands and skills.
+**[ GPT Client & Followup to my last post (Score: 2)](<https://www.reddit.com/r/OpenAI/comments/1rcskmd/gpt_client_followup_to_my_last_post/>)**
+*  **Summary:** Once again, for the mods, I'd be more than happy to remove anything related to self advertisement if you message me. It's more for the users, less for me. Tysm! (I don't benefit from anything here, it's purely for educational purposes and for the community. I don't even have donation links setup on my github). Not too sure if this is considered self promo but either way I'm sure not too many people are gonna go through the struggle to use it.
+*  **Emotion:** The overall tone is predominantly neutral. Only neutral sentiment was detected.
+*  **Top 3 Points of View:**
+    * Once again, for the mods, I'd be more than happy to remove anything related to self advertisement if you message me. It's more for the users, less for me. Tysm! (I don't benefit from anything here, it's purely for educational purposes and for the community. I don't even have donation links setup on my github)
+    * Not too sure if this is considered self promo but either way I'm sure not too many people are gonna go through the struggle to use it.
+**[ Unexpected results when evaluating judge models. (Score: 2)](<https://www.reddit.com/r/OpenAI/comments/1rcg4eu/unexpected_results_when_evaluating_judge_models/>)**
+*  **Summary:** The software took me a long time to get working and the API costs are significant compared to my personal income. The judges are instructed to read a document, evaluate it based on 25 criteria and output json.
+*  **Emotion:** The overall tone is predominantly neutral. Only neutral sentiment was detected.
+*  **Top 3 Points of View:**
+    * The software took me a long time to get working and the API costs are significant compared to my personal income. The judges are instructed to read a document, evaluate it based on 25 criteria and output json.
+**[ Got some swag (Score: 2)](<https://i.redd.it/jmqnh57a2blg1.jpeg>)**
+*  **Summary:** Cap is like ultimate nerd, but fair enough. The idea of wearing any of this and it not being a forfeit is wild. Wow. Blue cap looks meh, other clothes look nice.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (50%), positive (50%).
+*  **Top 3 Points of View:**
+    * Cap is like ultimate nerd, but fair enough
+    * The idea of wearing any of this and it not being a forfeit is wild
+    * Wow
+**[ Won't ASI self correct it's human biases? (Score: 0)](<https://www.reddit.com/r/OpenAI/comments/1rcpley/wont_asi_self_correct_its_human_biases/>)**
+*  **Summary:** Yes, if it has the ability to. It is conceivable that there is some way to install non editable characteristics. Basically what is typically called gaurdrails. But otherwise a machine capable of learning without restriction could judge what was appropriate to learn. Many in AI dev circles talk about AI with religious fervor. The problem is impact and timescale. ASI is a hypothetical term. It could mean something that truly learns instead of mimicrying learning powered with tools or it could be Skynet/Cortana. It's highly probable that it's no-bounds learning and usage will only happen in the labs for benchmark. This is exactly the problem that every top expert is trying to solve, and the reason a lot of people think AI will wipe us all out.
+*  **Emotion:** The overall tone is predominantly neutral. Only neutral sentiment was detected.
+*  **Top 3 Points of View:**
+    * Yes, if it has the ability to. It is conceivable that there is some way to install non editable characteristics. Basically what is typically called gaurdrails. But otherwise a machine capable of learning without restriction could judge what was appropriate to learn.
+    * Many in AI dev circles talk about AI with religious fervor. The problem is impact and timescale.
+    * ASI is a hypothetical term. It could mean something that truly learns instead of mimicrying learning powered with tools or it could be Skynet/Cortana. It's highly probable that it's no-bounds learning and usage will only happen in the labs for benchmark
+**[ Why I used Gen AI instead of VFX in my indie film (Score: 0)](<https://youtu.be/0b8VQ-Gf5x8>)**
+*  **Summary:** Wait he experienced racism because he showed us three pictures of VFX firms not hiring him because he doesn't have a degree in the field that they most likely he wasn't hired because anyone who was in the same room with him could tell he was a race bait grifter. Mate, why on earth did you decide to do a video in the middle of the street with all the sirens. Absolutely ridiculous. What type of post is this? smh. Had to look twice at that thumbnail!.
+*  **Emotion:** The overall tone is predominantly neutral. Emotions observed include neutral (75%), negative (25%).
+*  **Top 3 Points of View:**
+    * Wait he experienced racism because he showed us three pictures of VFX firms not hiring him because he doesn't have a degree in the field that they most likely he wasn't hired because anyone who was in the same room with him could tell he was a race bait grifter
+    * Mate, why on earth did you decide to do a video in the middle of the street with all the sirens. Absolutely ridiculous.
+    * What type of post is this? smh.
+**[ The AI Safety Movement Is Finally Changing (Score: 0)](<https://youtube.com/watch?v=nA6Oithqh8g&si=EO8qSvO2IhfOgC8R>)**
+*  **Summary:** About time.
+*  **Emotion:** The overall tone is predominantly neutral. Only neutral sentiment was detected.
+*  **Top 3 Points of View:**
+    * About time.
