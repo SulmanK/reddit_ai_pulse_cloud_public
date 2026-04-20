@@ -15,6 +15,8 @@ from dotenv import load_dotenv
 from google.cloud import bigquery
 from google.cloud import storage
 from typing import Dict
+import time
+from google.api_core import retry
 
 # Add the Cloud directory to Python path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +34,17 @@ logger = setup_logging(script_name='gemini_analyzer', log_dir=LOGS_DIR)
 
 # Constants
 RESULTS_PREFIX = "results"
+
+# Quota management constants
+MAX_TOP_POSTS_PER_SUBREDDIT = 15  # Limit to top 15 posts per subreddit
+MAX_COMMENTS_PER_POST = 10  # Limit to top 10 comments per post
+MAX_DAILY_REQUESTS = 200  # Stay well under the 250 RPD limit
+MAX_REQUESTS_PER_MINUTE = 8  # Stay under the 10 RPM limit
+REQUEST_DELAY_SECONDS = 8  # Delay between requests (60s / 8 = 7.5s, round up to 8)
+
+# Request tracking
+request_count = 0
+last_request_time = None
 
 
 def upload_to_gcs(local_file_path: str, gcs_blob_path: str, storage_client: storage.Client):
@@ -67,6 +80,84 @@ def get_gcs_path(year: str, month: str, day: str, filename: str) -> str:
         str: Full GCS path
     """
     return f"{RESULTS_PREFIX}/{year}/{month}/{day}/{filename}"
+
+def check_and_wait_for_quota():
+    """
+    Enforce rate limiting by tracking requests and adding delays.
+    Implements both per-minute and per-day quota checks.
+    
+    Returns:
+        bool: True if request can proceed, False if daily quota exceeded
+    """
+    global request_count, last_request_time
+    
+    # Check daily quota
+    if request_count >= MAX_DAILY_REQUESTS:
+        logger.error(f"Daily quota of {MAX_DAILY_REQUESTS} requests reached. Stopping to avoid hitting API limits.")
+        return False
+    
+    # Enforce delay between requests to stay under RPM limit
+    if last_request_time is not None:
+        time_since_last_request = time.time() - last_request_time
+        if time_since_last_request < REQUEST_DELAY_SECONDS:
+            sleep_time = REQUEST_DELAY_SECONDS - time_since_last_request
+            logger.info(f"Rate limiting: sleeping for {sleep_time:.2f} seconds")
+            time.sleep(sleep_time)
+    
+    return True
+
+def make_gemini_request_with_retry(model, prompt, max_retries=3):
+    """
+    Make a Gemini API request with exponential backoff for rate limit errors.
+    
+    Args:
+        model: The Gemini model instance
+        prompt (str): The prompt to send
+        max_retries (int): Maximum number of retry attempts
+        
+    Returns:
+        response: The API response
+        
+    Raises:
+        Exception: If all retries are exhausted
+    """
+    global request_count, last_request_time
+    
+    for attempt in range(max_retries):
+        try:
+            # Check quota before making request
+            if not check_and_wait_for_quota():
+                raise Exception("Daily quota exceeded")
+            
+            # Make the request
+            response = model.generate_content(prompt)
+            
+            # Update tracking
+            request_count += 1
+            last_request_time = time.time()
+            logger.info(f"Request successful. Total requests today: {request_count}/{MAX_DAILY_REQUESTS}")
+            
+            return response
+            
+        except Exception as e:
+            error_str = str(e)
+            
+            # Check if it's a rate limit error
+            if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str or "quota" in error_str.lower():
+                if attempt < max_retries - 1:
+                    # Exponential backoff: 30s, 60s, 120s
+                    wait_time = 30 * (2 ** attempt)
+                    logger.warning(f"Rate limit hit. Waiting {wait_time} seconds before retry {attempt + 1}/{max_retries}")
+                    time.sleep(wait_time)
+                else:
+                    logger.error(f"Max retries exhausted. Rate limit error: {error_str}")
+                    raise
+            else:
+                # Not a rate limit error, raise immediately
+                logger.error(f"Non-rate-limit error: {error_str}")
+                raise
+    
+    raise Exception("Failed to make request after all retries")
 
 def create_prompt_template():
     """Return the standard prompt template for Gemini analysis."""
@@ -158,22 +249,53 @@ def get_formatted_subreddit_name(subreddit: str) -> str:
     return f"{subreddit_formats.get(subreddit.lower(), subreddit)} Subreddit"
 
 def process_subreddit(model, client, subreddit, output_dir):
-    """Process a single subreddit's data."""
+    """
+    Process a single subreddit's data with quota management.
+    Only processes top posts to stay within API limits.
+    
+    Args:
+        model: The Gemini model instance
+        client: BigQuery client
+        subreddit (str): Subreddit name
+        output_dir (str): Output directory path
+        
+    Returns:
+        bool: True if processing succeeded, False otherwise
+    """
     logger.info(f"Analyzing data for subreddit: {subreddit}")
     
-    # Fetch data from BigQuery
+    # Fetch data from BigQuery - get top posts by score
+    # Using a subquery to get top posts, then join with comments
     query = """
-        SELECT post_id, subreddit, post_score, post_url, comment_id,
-               summary_date, post_content, comment_body, comment_summary,
-               sentiment_score, sentiment_label
-        FROM `processed_data.joined_summary_analysis`
-        WHERE LOWER(subreddit) = LOWER(@subreddit)
-        ORDER BY post_score DESC
+        WITH top_posts AS (
+            SELECT DISTINCT post_id
+            FROM `processed_data.joined_summary_analysis`
+            WHERE LOWER(subreddit) = LOWER(@subreddit)
+            ORDER BY post_score DESC
+            LIMIT @max_posts
+        ),
+        ranked_comments AS (
+            SELECT 
+                jsa.*,
+                ROW_NUMBER() OVER (PARTITION BY jsa.post_id ORDER BY jsa.post_score DESC) as comment_rank
+            FROM `processed_data.joined_summary_analysis` jsa
+            INNER JOIN top_posts tp ON jsa.post_id = tp.post_id
+            WHERE LOWER(jsa.subreddit) = LOWER(@subreddit)
+        )
+        SELECT 
+            post_id, subreddit, post_score, post_url, comment_id,
+            summary_date, post_content, comment_body, comment_summary,
+            sentiment_score, sentiment_label
+        FROM ranked_comments
+        WHERE comment_rank <= @max_comments
+        ORDER BY post_score DESC, comment_rank ASC
     """
     
     job_config = bigquery.QueryJobConfig(
         query_parameters=[
-            bigquery.ScalarQueryParameter("subreddit", "STRING", subreddit)
+            bigquery.ScalarQueryParameter("subreddit", "STRING", subreddit),
+            bigquery.ScalarQueryParameter("max_posts", "INT64", MAX_TOP_POSTS_PER_SUBREDDIT),
+            bigquery.ScalarQueryParameter("max_comments", "INT64", MAX_COMMENTS_PER_POST)
         ]
     )
     
@@ -182,15 +304,25 @@ def process_subreddit(model, client, subreddit, output_dir):
 
     if not rows:
         logger.info(f"No data found for subreddit: {subreddit}")
-        return
+        return False
+    
+    # Log data reduction stats
+    total_posts = len(set(row.post_id for row in rows))
+    total_comments = len(rows)
+    logger.info(f"Processing {total_posts} posts with {total_comments} comments for {subreddit} "
+                f"(limited to top {MAX_TOP_POSTS_PER_SUBREDDIT} posts, {MAX_COMMENTS_PER_POST} comments each)")
 
-    # Prepare prompt
+    # Prepare prompt with limited data
     text_files = "".join(format_text_file(row) for row in rows)
     final_prompt = create_prompt_template() + text_files
+    
+    # Estimate token count (rough approximation: 1 token ≈ 4 characters)
+    estimated_tokens = len(final_prompt) // 4
+    logger.info(f"Estimated token count for {subreddit}: ~{estimated_tokens:,} tokens")
 
-    # Format the response after getting it from Gemini
+    # Make request with retry logic
     try:
-        response = model.generate_content(final_prompt)
+        response = make_gemini_request_with_retry(model, final_prompt)
         formatted_response = response.text
         
         # Replace both title and description with proper formatting
@@ -208,9 +340,11 @@ def process_subreddit(model, client, subreddit, output_dir):
         with open(output_file_path, "w", encoding="utf-8") as f:
             f.write(formatted_response)
         logger.info(f"Output saved to {output_file_path}")
+        return True
         
     except Exception as e:
         logger.error(f"Error processing subreddit {subreddit}: {e}")
+        return False
 
 def clean_markdown_file(file_path):
     """
@@ -250,10 +384,16 @@ def analyze_data():
     1. Set up logging and output directory with current date
     2. Initialize Gemini model
     3. Connect to BigQuery and GCS
-    4. Process each subreddit
+    4. Process each subreddit (limited to top posts to stay within quota)
     5. Clean generated markdown files
     6. Upload results to GCS
+    
+    Note:
+        Implements quota management to avoid hitting daily API limits.
+        Processes only top posts per subreddit to reduce token usage.
     """
+    global request_count
+    
     try:
         # 1. Set up output directory with year/month/day structure
         current_date = datetime.now()
@@ -268,18 +408,34 @@ def analyze_data():
         # 2. Initialize model
         genai.configure(api_key=GEMINI_CONFIG['GOOGLE_GEMINI_API_KEY'])
         model = genai.GenerativeModel('gemini-2.5-flash')
-        logger.info("Model loaded")
+        logger.info("Model loaded: gemini-2.5-flash")
+        logger.info(f"Quota settings: Max {MAX_DAILY_REQUESTS} requests/day, {MAX_REQUESTS_PER_MINUTE} RPM, "
+                   f"Top {MAX_TOP_POSTS_PER_SUBREDDIT} posts per subreddit, "
+                   f"{MAX_COMMENTS_PER_POST} comments per post")
 
         # 3. Connect to BigQuery and GCS
         bq_client = bigquery.Client()
         storage_client = storage.Client()
         logger.info("BigQuery and GCS clients initialized")
 
-        # 4. Process subreddits
+        # 4. Process subreddits with quota tracking
+        successful_subreddits = []
+        failed_subreddits = []
+        
         for subreddit in SUBREDDITS:
-            process_subreddit(model, bq_client, subreddit, output_dir)
+            success = process_subreddit(model, bq_client, subreddit, output_dir)
+            if success:
+                successful_subreddits.append(subreddit)
+            else:
+                failed_subreddits.append(subreddit)
+                # If we hit quota limit, stop processing remaining subreddits
+                if request_count >= MAX_DAILY_REQUESTS:
+                    logger.warning(f"Quota limit reached. Skipping remaining subreddits: "
+                                 f"{SUBREDDITS[SUBREDDITS.index(subreddit)+1:]}")
+                    break
             
         # 5. Clean markdown files and upload to GCS
+        uploaded_files = 0
         for filename in os.listdir(output_dir):
             if filename.endswith('.md'):
                 local_file_path = os.path.join(output_dir, filename)
@@ -290,7 +446,18 @@ def analyze_data():
                 # Upload to GCS
                 gcs_blob_path = get_gcs_path(year, month, day, filename)
                 upload_to_gcs(local_file_path, gcs_blob_path, storage_client)
+                uploaded_files += 1
 
+        # 6. Log final summary
+        logger.info("=" * 60)
+        logger.info("ANALYSIS SUMMARY")
+        logger.info("=" * 60)
+        logger.info(f"Total API requests made: {request_count}/{MAX_DAILY_REQUESTS}")
+        logger.info(f"Successful subreddits ({len(successful_subreddits)}): {', '.join(successful_subreddits)}")
+        if failed_subreddits:
+            logger.warning(f"Failed subreddits ({len(failed_subreddits)}): {', '.join(failed_subreddits)}")
+        logger.info(f"Files uploaded to GCS: {uploaded_files}")
+        logger.info("=" * 60)
         logger.info("Analysis complete - all files processed and uploaded to GCS")
 
     except Exception as e:
