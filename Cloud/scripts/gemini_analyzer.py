@@ -265,19 +265,26 @@ def process_subreddit(model, client, subreddit, output_dir):
     logger.info(f"Analyzing data for subreddit: {subreddit}")
     
     # Fetch data from BigQuery - get top posts by score
-    # Using a subquery to get top posts, then join with comments
+    # Step 1: Get top N posts ranked by score (one row per post)
+    # Step 2: Join back to get comments, limited to top M comments per post
     query = """
         WITH top_posts AS (
-            SELECT DISTINCT post_id
+            SELECT 
+                post_id,
+                MAX(post_score) AS post_score
             FROM `processed_data.joined_summary_analysis`
             WHERE LOWER(subreddit) = LOWER(@subreddit)
+            GROUP BY post_id
             ORDER BY post_score DESC
             LIMIT @max_posts
         ),
         ranked_comments AS (
             SELECT 
                 jsa.*,
-                ROW_NUMBER() OVER (PARTITION BY jsa.post_id ORDER BY jsa.post_score DESC) as comment_rank
+                ROW_NUMBER() OVER (
+                    PARTITION BY jsa.post_id 
+                    ORDER BY jsa.sentiment_score DESC
+                ) AS comment_rank
             FROM `processed_data.joined_summary_analysis` jsa
             INNER JOIN top_posts tp ON jsa.post_id = tp.post_id
             WHERE LOWER(jsa.subreddit) = LOWER(@subreddit)
