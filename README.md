@@ -164,8 +164,10 @@ The diagram above illustrates the flow of data through our system, from collecti
          bigquery.googleapis.com \
          storage.googleapis.com \
          networkmanagement.googleapis.com \
-         generativelanguage.googleapis.com
+         aiplatform.googleapis.com
       ```
+      > Note: Gemini insight generation runs on **Vertex AI** (`aiplatform.googleapis.com`),
+      > authenticated via the Airflow service account (no API key required).
    - Add Roles to main account
       - Project Owner or Editor
       - BigQuery Admin
@@ -174,8 +176,8 @@ The diagram above illustrates the flow of data through our system, from collecti
       - IAM Admin
       - Service Account Admin
       - Service Account Key Admin
-   - Create google-gemini-api-key
-   - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, google-gemini-api-key, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me, email
+      - Vertex AI User (for Gemini access via Vertex AI)
+   - Update (bucket_name, project_id, sa_email, alert_email, alert_password, docker-registry, dbt_project.yml: proj id, Update website bucket secret) # Notes for Me, email
    - change gcloud config set account
    - clear terraform cache: .terraform, .terraform.lock.hcl -> go into terraform directory and terraform init
    

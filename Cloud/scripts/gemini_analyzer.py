@@ -1,29 +1,42 @@
 """
-Gemini Analysis Module for Cloud Environment
+Gemini Analysis Module for Cloud Environment (Vertex AI)
 
-This module uses Google's Gemini AI to analyze Reddit data, generating insights
-and summaries from processed posts and comments in BigQuery.
+This module uses Google's Gemini models via Vertex AI to analyze Reddit data,
+generating insights and summaries from processed posts and comments in BigQuery.
+
+Authentication: Uses GCP service account credentials (GOOGLE_APPLICATION_CREDENTIALS)
+instead of an AI Studio API key. This bypasses AI Studio account-level quotas/blocks
+and uses the GCP project's billing & quota system.
+
+SDK: Uses the unified `google-genai` SDK (the successor to `vertexai.generative_models`,
+which is deprecated and slated for removal in June 2026).
+
+Setup requirements:
+    1. Vertex AI API must be enabled on the GCP project:
+       https://console.cloud.google.com/apis/library/aiplatform.googleapis.com
+    2. Service account needs role: 'roles/aiplatform.user' (Vertex AI User)
+    3. Billing must be enabled on the GCP project (free $300 credit works)
 
 Owner: Sulman Khan
 """
 
 import os
 import sys
-import google.generativeai as genai
+import time
 from datetime import datetime
-from dotenv import load_dotenv
+from typing import Optional
+
+from google import genai
+from google.genai import types as genai_types
 from google.cloud import bigquery
 from google.cloud import storage
-from typing import Dict
-import time
-from google.api_core import retry
 
 # Add the Cloud directory to Python path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CLOUD_DIR = os.path.dirname(SCRIPT_DIR)
 sys.path.append(CLOUD_DIR)
 
-from config.config import SUBREDDITS, GCS_BUCKET_NAME, GEMINI_CONFIG
+from config.config import SUBREDDITS, GCS_BUCKET_NAME, GCP_CONFIG, get_gcp_credentials
 from utils.custom_logging import get_logger, setup_logging
 
 # Configure logging with absolute path
@@ -35,12 +48,22 @@ logger = setup_logging(script_name='gemini_analyzer', log_dir=LOGS_DIR)
 # Constants
 RESULTS_PREFIX = "results"
 
-# Quota management constants
+# Model configuration (Vertex AI)
+# Vertex AI quotas are MUCH higher than AI Studio free tier and use pay-as-you-go pricing.
+# For Gemini 2.5 Flash-Lite in us-central1, default quota is ~4,000 RPM (vs 15 on AI Studio).
+# Pricing (per 1M tokens, Apr 2026): Flash-Lite ~$0.10 in / $0.40 out, Flash ~$0.30 in / $2.50 out.
+# Estimated cost for this pipeline: <$1/month at current usage.
+GEMINI_MODEL = 'gemini-2.5-flash-lite'
+
+# Data limits - kept conservative to control token costs (not because of rate limits)
 MAX_TOP_POSTS_PER_SUBREDDIT = 15  # Limit to top 15 posts per subreddit
 MAX_COMMENTS_PER_POST = 10  # Limit to top 10 comments per post
-MAX_DAILY_REQUESTS = 200  # Stay well under the 250 RPD limit
-MAX_REQUESTS_PER_MINUTE = 8  # Stay under the 10 RPM limit
-REQUEST_DELAY_SECONDS = 8  # Delay between requests (60s / 8 = 7.5s, round up to 8)
+
+# Rate limiting - Vertex AI is generous, but we stay polite. We only make ~8 requests
+# per pipeline run (one per subreddit), so these limits are mostly safety nets.
+MAX_DAILY_REQUESTS = 500  # Safety cap; one run = ~8 requests
+MAX_REQUESTS_PER_MINUTE = 60  # Vertex AI default is much higher, but stay polite
+REQUEST_DELAY_SECONDS = 1  # Brief delay between requests
 
 # Request tracking
 request_count = 0
@@ -106,57 +129,83 @@ def check_and_wait_for_quota():
     
     return True
 
-def make_gemini_request_with_retry(model, prompt, max_retries=3):
+def make_gemini_request_with_retry(
+    genai_client: genai.Client,
+    prompt: str,
+    max_retries: int = 3,
+) -> genai_types.GenerateContentResponse:
     """
     Make a Gemini API request with exponential backoff for rate limit errors.
-    
+
     Args:
-        model: The Gemini model instance
-        prompt (str): The prompt to send
-        max_retries (int): Maximum number of retry attempts
-        
+        genai_client: The google-genai Client instance (configured for Vertex AI)
+        prompt: The prompt to send
+        max_retries: Maximum number of retry attempts
+
     Returns:
-        response: The API response
-        
+        The GenerateContentResponse from Vertex AI
+
     Raises:
         Exception: If all retries are exhausted
     """
     global request_count, last_request_time
-    
+
     for attempt in range(max_retries):
         try:
-            # Check quota before making request
             if not check_and_wait_for_quota():
                 raise Exception("Daily quota exceeded")
-            
-            # Make the request
-            response = model.generate_content(prompt)
-            
-            # Update tracking
+
+            response = genai_client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt,
+            )
+
             request_count += 1
             last_request_time = time.time()
             logger.info(f"Request successful. Total requests today: {request_count}/{MAX_DAILY_REQUESTS}")
-            
+
             return response
             
         except Exception as e:
             error_str = str(e)
-            
-            # Check if it's a rate limit error
+
+            # Unrecoverable Vertex AI errors - retrying won't help. Common causes:
+            #   - Vertex AI API not enabled on the project
+            #   - Service account missing 'roles/aiplatform.user'
+            #   - Billing not enabled on the project
+            #   - Model not available in the selected region
+            unrecoverable_errors = [
+                "PERMISSION_DENIED",
+                "permission denied",
+                "billing",
+                "has not been used",  # API not enabled
+                "is not enabled",
+                "NOT_FOUND",  # model not available in region
+                "INVALID_ARGUMENT",
+            ]
+            if any(err.lower() in error_str.lower() for err in unrecoverable_errors):
+                logger.error(f"Unrecoverable Vertex AI error - retrying won't help: {error_str}")
+                logger.error(
+                    "Check: (1) Vertex AI API enabled, (2) service account has "
+                    "'roles/aiplatform.user', (3) billing enabled on project "
+                    f"'{GCP_CONFIG.get('project_id')}', (4) model available in region "
+                    f"'{GCP_CONFIG.get('region')}'"
+                )
+                raise
+
+            # Rate limit / quota error - worth retrying with backoff
             if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str or "quota" in error_str.lower():
                 if attempt < max_retries - 1:
-                    # Exponential backoff: 30s, 60s, 120s
                     wait_time = 30 * (2 ** attempt)
-                    logger.warning(f"Rate limit hit. Waiting {wait_time} seconds before retry {attempt + 1}/{max_retries}")
+                    logger.warning(f"Rate limit hit. Waiting {wait_time}s before retry {attempt + 1}/{max_retries}")
                     time.sleep(wait_time)
                 else:
                     logger.error(f"Max retries exhausted. Rate limit error: {error_str}")
                     raise
             else:
-                # Not a rate limit error, raise immediately
                 logger.error(f"Non-rate-limit error: {error_str}")
                 raise
-    
+
     raise Exception("Failed to make request after all retries")
 
 def create_prompt_template():
@@ -248,19 +297,24 @@ def get_formatted_subreddit_name(subreddit: str) -> str:
     }
     return f"{subreddit_formats.get(subreddit.lower(), subreddit)} Subreddit"
 
-def process_subreddit(model, client, subreddit, output_dir):
+def process_subreddit(
+    genai_client: genai.Client,
+    bq_client: bigquery.Client,
+    subreddit: str,
+    output_dir: str,
+) -> bool:
     """
     Process a single subreddit's data with quota management.
     Only processes top posts to stay within API limits.
-    
+
     Args:
-        model: The Gemini model instance
-        client: BigQuery client
-        subreddit (str): Subreddit name
-        output_dir (str): Output directory path
-        
+        genai_client: The google-genai Client instance (configured for Vertex AI)
+        bq_client: BigQuery client
+        subreddit: Subreddit name
+        output_dir: Output directory path
+
     Returns:
-        bool: True if processing succeeded, False otherwise
+        True if processing succeeded, False otherwise
     """
     logger.info(f"Analyzing data for subreddit: {subreddit}")
     
@@ -306,7 +360,7 @@ def process_subreddit(model, client, subreddit, output_dir):
         ]
     )
     
-    query_job = client.query(query, job_config=job_config)
+    query_job = bq_client.query(query, job_config=job_config)
     rows = list(query_job.result())
 
     if not rows:
@@ -329,7 +383,7 @@ def process_subreddit(model, client, subreddit, output_dir):
 
     # Make request with retry logic
     try:
-        response = make_gemini_request_with_retry(model, final_prompt)
+        response = make_gemini_request_with_retry(genai_client, final_prompt)
         formatted_response = response.text
         
         # Replace both title and description with proper formatting
@@ -412,25 +466,40 @@ def analyze_data():
         os.makedirs(output_dir, exist_ok=True)
         logger.info(f"Output directory set to {output_dir}")
 
-        # 2. Initialize model
-        genai.configure(api_key=GEMINI_CONFIG['GOOGLE_GEMINI_API_KEY'])
-        model = genai.GenerativeModel('gemini-2.5-flash')
-        logger.info("Model loaded: gemini-2.5-flash")
-        logger.info(f"Quota settings: Max {MAX_DAILY_REQUESTS} requests/day, {MAX_REQUESTS_PER_MINUTE} RPM, "
-                   f"Top {MAX_TOP_POSTS_PER_SUBREDDIT} posts per subreddit, "
-                   f"{MAX_COMMENTS_PER_POST} comments per post")
+        # 2. Initialize Vertex AI client (google-genai SDK)
+        project_id = GCP_CONFIG["project_id"]
+        region = GCP_CONFIG["region"]
+        if not project_id or not region:
+            raise ValueError(
+                "GCP_PROJECT_ID and GCP_REGION must be set in environment for Vertex AI"
+            )
+
+        # Use the same service account credentials we use for BigQuery/GCS
+        credentials = get_gcp_credentials()
+        genai_client = genai.Client(
+            vertexai=True,
+            project=project_id,
+            location=region,
+            credentials=credentials,
+        )
+        logger.info(f"Vertex AI client initialized | project={project_id} region={region} model={GEMINI_MODEL}")
+        logger.info(
+            f"Limits: max {MAX_DAILY_REQUESTS} req/day, {MAX_REQUESTS_PER_MINUTE} RPM, "
+            f"top {MAX_TOP_POSTS_PER_SUBREDDIT} posts/subreddit, "
+            f"{MAX_COMMENTS_PER_POST} comments/post"
+        )
 
         # 3. Connect to BigQuery and GCS
-        bq_client = bigquery.Client()
-        storage_client = storage.Client()
+        bq_client = bigquery.Client(credentials=credentials, project=project_id)
+        storage_client = storage.Client(credentials=credentials, project=project_id)
         logger.info("BigQuery and GCS clients initialized")
 
         # 4. Process subreddits with quota tracking
         successful_subreddits = []
         failed_subreddits = []
-        
+
         for subreddit in SUBREDDITS:
-            success = process_subreddit(model, bq_client, subreddit, output_dir)
+            success = process_subreddit(genai_client, bq_client, subreddit, output_dir)
             if success:
                 successful_subreddits.append(subreddit)
             else:

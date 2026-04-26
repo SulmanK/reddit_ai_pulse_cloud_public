@@ -33,6 +33,13 @@ resource "google_project_iam_member" "sa_user_permissions" {
   member  = "serviceAccount:${google_service_account.airflow_service_account.email}"
 }
 
+# Grant Vertex AI User permissions (for Gemini analysis via Vertex AI)
+resource "google_project_iam_member" "vertex_ai_permissions" {
+  project = var.project
+  role    = "roles/aiplatform.user"
+  member  = "serviceAccount:${google_service_account.airflow_service_account.email}"
+}
+
 # Grant Cloud Run service account logging permissions
 resource "google_project_iam_member" "cloud_run_logging" {
   project = var.project
