@@ -68,6 +68,26 @@ TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 echo "[$TIMESTAMP] Setting gcloud project and configuring Docker..."
 gcloud config set project "$GCP_PROJECT_ID"
 
+# Enable required GCP APIs (idempotent - safe to re-run)
+TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+echo "[$TIMESTAMP] Enabling required GCP APIs..."
+gcloud services enable \
+    cloudresourcemanager.googleapis.com \
+    cloudbuild.googleapis.com \
+    cloudfunctions.googleapis.com \
+    cloudscheduler.googleapis.com \
+    cloudasset.googleapis.com \
+    run.googleapis.com \
+    artifactregistry.googleapis.com \
+    iam.googleapis.com \
+    compute.googleapis.com \
+    bigquery.googleapis.com \
+    storage.googleapis.com \
+    networkmanagement.googleapis.com \
+    aiplatform.googleapis.com \
+    --quiet
+echo "[$TIMESTAMP] GCP APIs enabled successfully"
+
 # Configure Docker auth using gcloud credentials
 echo "[$TIMESTAMP] Setting up Docker authentication..."
 gcloud auth configure-docker us-central1-docker.pkg.dev --quiet

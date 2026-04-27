@@ -474,13 +474,17 @@ def analyze_data():
                 "GCP_PROJECT_ID and GCP_REGION must be set in environment for Vertex AI"
             )
 
-        # Use the same service account credentials we use for BigQuery/GCS
-        credentials = get_gcp_credentials()
+        # Vertex AI requires credentials explicitly scoped to cloud-platform.
+        # BigQuery/GCS client libraries manage their own scopes internally,
+        # so they receive unscoped credentials.
+        vertex_credentials = get_gcp_credentials(
+            scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
         genai_client = genai.Client(
             vertexai=True,
             project=project_id,
             location=region,
-            credentials=credentials,
+            credentials=vertex_credentials,
         )
         logger.info(f"Vertex AI client initialized | project={project_id} region={region} model={GEMINI_MODEL}")
         logger.info(
@@ -490,8 +494,9 @@ def analyze_data():
         )
 
         # 3. Connect to BigQuery and GCS
-        bq_client = bigquery.Client(credentials=credentials, project=project_id)
-        storage_client = storage.Client(credentials=credentials, project=project_id)
+        bq_credentials = get_gcp_credentials()
+        bq_client = bigquery.Client(credentials=bq_credentials, project=project_id)
+        storage_client = storage.Client(credentials=bq_credentials, project=project_id)
         logger.info("BigQuery and GCS clients initialized")
 
         # 4. Process subreddits with quota tracking

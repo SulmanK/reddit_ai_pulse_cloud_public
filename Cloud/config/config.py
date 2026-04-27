@@ -10,7 +10,7 @@ from google.cloud import storage  # type: ignore
 from google.cloud import bigquery  # type: ignore
 from google.oauth2 import service_account
 from dotenv import load_dotenv
-from typing import Dict, Any
+from typing import Dict, Any, List, Optional
 
 # Load environment variables
 load_dotenv()
@@ -58,14 +58,27 @@ GEMINI_CONFIG = {
 # GCS Bucket Configuration
 GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME")
 
-def get_gcp_credentials():
+def get_gcp_credentials(
+    scopes: Optional[List[str]] = None,
+) -> service_account.Credentials:
     """
     Get GCP credentials from service account key file.
-    
+
+    Args:
+        scopes: Optional list of OAuth2 scopes to attach to the credentials.
+            GCP client libraries (BigQuery, GCS) manage scopes internally, so
+            leave this as None for them.  The google-genai Vertex AI client
+            requires explicit scopes — pass
+            ["https://www.googleapis.com/auth/cloud-platform"] for it.
+
     Returns:
         google.oauth2.service_account.Credentials: GCP credentials object
     """
     credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+    if scopes:
+        return service_account.Credentials.from_service_account_file(
+            credentials_path, scopes=scopes
+        )
     return service_account.Credentials.from_service_account_file(credentials_path)
 
 def get_storage_client():
