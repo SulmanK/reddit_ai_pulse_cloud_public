@@ -55,25 +55,33 @@ apt-get install -y \
     python3-venv \
     python3-pip
 
-# Add Docker's official GPG key and repository
-echo "Setting up Docker repository..."
-install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
+# Install Docker only if it is not already present on the (persistent) VM disk.
+# Rationale: the GCE metadata script runner does not allocate a pseudo-TTY, so
+# piping the Docker GPG key through `gpg --dearmor` fails with
+# "gpg: cannot open '/dev/tty': No such device or address" on newer gpg versions.
+# We avoid gpg entirely by saving the ASCII-armored key as a .asc file directly,
+# and we skip the whole block on subsequent boots since Docker persists on disk.
+if ! command -v docker &>/dev/null; then
+    echo "Setting up Docker repository..."
+    install -m 0755 -d /etc/apt/keyrings
+    curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+    chmod a+r /etc/apt/keyrings/docker.asc
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+      tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Install Docker packages
-echo "Installing Docker..."
-apt-get update
-apt-get install -y \
-    docker-ce \
-    docker-ce-cli \
-    containerd.io \
-    docker-buildx-plugin \
-    docker-compose-plugin
+    echo "Installing Docker..."
+    apt-get update
+    apt-get install -y \
+        docker-ce \
+        docker-ce-cli \
+        containerd.io \
+        docker-buildx-plugin \
+        docker-compose-plugin
+else
+    echo "Docker already installed, skipping Docker setup."
+fi
 
 # Create airflow user and set up Docker permissions
 echo "Setting up airflow user and Docker permissions..."
